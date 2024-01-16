@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family:  Verdana, sans-serif;
+}
+.bar {
+    background-color: #f9f9fb;
+    padding:15px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+}
+.content {
+    max-width: 100%;
+    margin: auto;
+    grid-gap: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.footer {
+    min-height: 100px;
+    border-top: solid 1px #cdcdcd;
+}
+.anchors {
+    border-left: solid 1px #cdcdcd;
+    padding-left: 15px;
+}
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+}
+figure {
+    text-align: center;
+}
+ 
+
+
+.logo-nome {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+    color: #ff0000;  
+    text-shadow: 2px 2px 5px #595955;
+}
+
+.logo-nome::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    margin-top: 5px;
+}
+
+ 
+
+
+h2 {
+    color: #333; /* Cor do título */
+    
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaçamento inferior do título */
+}
+ 
+ul {
+    list-style: none;
+    list-style-type: none; /* Remover marcadores de lista padrão */
+    padding-left: 5px;  /* Remover espaçamento interno padrão da lista */
+    margin: 0; /* Remover margens padrão da lista */
+}
+ 
+li {
+    margin-bottom: 10px; /* Espaçamento inferior entre os itens da lista */
+}
+
+a {
+    text-decoration: none; /* Remover sublinhado dos links */
+    color: #007bff; /* Cor dos links */
+    font-weight: bold; /* Texto em negrito nos links */
+    font-size: 20px; /* Ajusta o tamanho do texto */
+}
+a:hover {
+    text-decoration: underline; /* Adicionar sublinhado ao passar o mouse sobre os links */
+    color: #2600ff; /* Cor dos links */
+    font-weight: bold; /* Texto em negrito nos links */
+}
+
+
+.logo-Css {
+   
+    font-size: 5em;
+    font-weight: bold;
+    color: #3498db;  
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 5px #a8a5a5;
+    width: 100%; /* Ajusta a largura da imagem automaticamente */
+    background-color: #ffffff; /* Cor de fundo para visualização */
+    margin: 20px 0; /* Adicione margem superior e inferior para controle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+    height: auto; /* Mantém a proporção da altura */
+}
+
+ 
+h1 {
+    color: #0066cc;
+}
+
+.imagem-centralizadas {
+    width: 100%; /* Ajusta a largura da imagem automaticamente */
+    background-color: #fffefe; /* Cor de fundo para visualização */
+    margin: 20px 0; /* Adicione margem superior e inferior para controle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+    height: auto; /* Mantém a proporção da altura */
+}
+
+.sinopse {
+    margin-bottom: 20px;
+    text-align: justify; /* Justificar o texto */
+    font-size: 17px; /* Ajusta o tamanho do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+ 
+}
+
+.producao {
+    font-style: italic;
+    color: #666;
+}
+
+
+ 
+
+.imagem-centralizadas {
+    width: 100%; /* Ajusta a largura da imagem automaticamente */
+    background-color: #fffefe; /* Cor de fundo para visualização */
+    margin: 20px 0; /* Adicione margem superior e inferior para controle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+    height: auto; /* Mantém a proporção da altura */
+}
+
+.imagem-centralizada img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+    height: auto; /* Mantém a proporção da altura */
+}
