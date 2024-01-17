@@ -2,9 +2,13 @@
 
 html{
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
     border: 1px solid #fffffff7;
- 
+    height: auto; /* Altura em pixels */
+    background-color: #f8186a;
+    width: auto; /* Largura da página em relação à largura do viewport */
+    padding: 10px;
+    box-sizing: border-box; /* Garante que padding não altere as dimensões finais */
 }
 
 body {
@@ -14,6 +18,8 @@ body {
     justify-content: center;
     margin: 0;
     border: 1px solid #fffffff7;
+    width: 100%; /* Largura da página em relação à largura do viewport */
+  
      
 }
 .wrapper {
@@ -21,12 +27,16 @@ body {
     display: flex; /* grid */
     background-color: rgb(255, 82, 209);
     border: 1px solid #fffffff7;
+    width: 100%; /* Largura da página em relação à largura do viewport */
+  
 }
 .main{
     padding: 5px;
      
     background-color: rgb(251, 145, 223);
     border: 1px solid #fffffff7;
+    width: 100%; /* Largura da página em relação à largura do viewport */
+  
 }
 
 .menu {
@@ -34,22 +44,27 @@ body {
     padding: 10px;
     background-color: #7d9502;
     width: auto;
-    
+    min-height: 800px;
     border: 1px solid #fffffff7;
  
 }
+
 .menu-section {
     padding: 10px;
     background-color: #acce03;
     border: 1px solid #fffffff7;
 }
+
+/* 
 .menu > .menu-section > .menu-p {
-    font-size: 20px;
-    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 25px;
+ 
     color: #000000;
-    margin: 0 auto 10px; /* Centraliza horizontalmente e adiciona espaço inferior */
+    margin: 0 auto 10px;  
     border: 1px solid #fffffff7;
 }
+*/
+
 .menu > .menu-section > .menu-section-ul {
     background-color: #d4fe02;
     display: grid; /* flex / grid */
@@ -58,49 +73,91 @@ body {
     border: 1px solid #fffffff7;
  
 }
+
 .menu > .menu-section > .menu-section-ul > .menu-section-ul-li {
     margin-top: 5px; /* Adiciona espaçamento superior */
     margin-right: 5px; /* Adiciona espaçamento à direita */
     margin-bottom: 5px; /* Adiciona espaçamento inferior */
     margin-left: 5px; /* Adiciona espaçamento à esquerda */
     border: 1px solid #fffffff7;
+    font-size: 20px;
 }
+
 .menu > .menu-section > .menu-section-ul > .menu-section-ul-li  > .menu-section-ul-li-a {
     background-color: #f1ffab;
-    text-decoration: none; /* Remove a decoração de link padrão */
-    color: #040000; /* Define a cor do texto dos links */
-    display: block; /* Faz com que os links ocupem toda a largura do contêiner pai */
-    padding: 10px; /* Adiciona preenchimento aos links para melhorar a experiência do usuário */
     border: 1px solid #fffffff7;
+ 
+    width: auto;
+    height: 70px;
+    border-radius: 20%; /* Faz com que os botões sejam redondos */
+    display: flex;
+    flex-direction: column;
+ 
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+ 
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    padding: 14px 16px;
 }
+
+ 
+ 
+
 .menu > .menu-section > .menu-section-ul > .menu-section-ul-li  > .menu-section-ul-li-a:hover {
     color: #2e00fc;
     background-color: #05a0ae;
     border: 1px solid #fffffff7;
+ 
 }
 
 .header {
-    padding: 5;
+    padding: 5px;
     background-color: rgb(0, 183, 255);
     min-height: 150px;
     border: 1px solid #fffffff7;
 }
+
 header > img {
-    width: 400px;
-    height: 150px;
-    margin: 0 auto 10px; /* Centraliza horizontalmente e adiciona espaço inferior */
-    display: block; /* Garante que a margem automática funcione corretamente */
-    padding: 5px;
-    border: 1px solid #fffffff7;
+
+    background-color: #fffefe; /* Cor de fundo para visualização */
+    margin: 20px 0; /* Adicione margem superior e inferior para controle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+    max-width: 50%; /* Garante que a imagem não ultrapasse a largura da div */
+    height: auto; /* Mantém a proporção da altura */
 }
 
 .content {
     background-color: rgb(82, 199, 246);
-    min-height: 500px;
-    padding: 20px;
+    min-height: 800px;
+    padding: 5px;
     border: 1px solid #fffffff7;
+ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+
+    text-align: justify; /* Justificar o texto */
+    font-size: 20px; /* Ajusta o tamanho do texto */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    
+ 
+    color: #000000;  
+   
+ 
+
+   /* Adicione margem superior e inferior para controle */
+    justify-content: left;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+    height: auto; /* Mantém a proporção da altura */
+ 
 }
 .footer {
+    padding: 5px;
     background-color: rgb(159, 228, 255);
     min-height: 150px;
     border: 1px solid #fffffff7;
@@ -129,7 +186,7 @@ section {
 #formulario-contato {
     max-width: auto;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
+    
     background-color: rgb(82, 199, 246);
     padding: 10px;
     border-radius: 10px;
@@ -170,3 +227,6 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+
+ 

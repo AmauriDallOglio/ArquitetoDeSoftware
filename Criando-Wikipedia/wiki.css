@@ -56,7 +56,23 @@ figure {
 }
 
  
+.h1-formatado{
+    font-size: 10;
+    color: #0066cc;  
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 2px 5px #a8a5a5;
+    background-color: #ffffff; /* Cor de fundo para visualização */
+    margin: 20px 0; /* Adicione margem superior e inferior para controle */
+    justify-content: left;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+    height: auto; /* Mantém a proporção da altura */
+}
 
+h1 {
+    color: #0066cc;
+}
 
 h2 {
     color: #333; /* Cor do título */
@@ -109,9 +125,6 @@ a:hover {
 }
 
  
-h1 {
-    color: #0066cc;
-}
 
 .imagem-centralizadas {
     width: 100%; /* Ajusta a largura da imagem automaticamente */
