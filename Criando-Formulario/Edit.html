@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: none; /*center*/
+            /*justify-content: center;*/
+            padding-top: 50px;
+            /* height: 100vh; */
+            border: 1px solid #37ff00f7;
+        }
+
+        input[type="text1"] {
+            padding: 20px;
+            margin: 20px;
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 20px;
+            
+        }
+
+ 
+        .bloco {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px; /* Adicionando margem ao redor do bloco */
+            background-color: #18034d;
+            padding: 20px;
+            border: 1px solid #37ff00f7;
+        }
+
+        
+
+        .bloco input {
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 20px 40px;
+            margin: 20px;
+            font-size: 20px;
+            
+        }
+
+ 
+
+        .cancel-button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .submit-button {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="bloco">
+        <input type="text1" placeholder="Digite algo...">
+    </div>
+
+
+    <form class="bloco">
+        <input type="text" placeholder="Nome">
+        <input type="text" placeholder="E-mail">
+        <input type="text" placeholder="Telefone">
+
+        <div></div> <!-- Espaço vazio para criar uma coluna vazia -->
+
+ 
+    </form>
+    
+    <form class="bloco">
+ 
+        <button class="cancel-button">Cancelar</button>
+        <button class="submit-button">Enviar</button>
+    </form>
+</body>
+</html>
