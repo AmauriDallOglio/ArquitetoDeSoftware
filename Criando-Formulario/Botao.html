@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .grid-varios-tamanhos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .meu-botao {
+            display: inline-block;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+ 
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            color: #3498db;
+            background-color: #fff;
+         
+ 
+        }
+
+        .meu-botao.largo {
+            grid-column: span 2;
+          
+        
+        }
+
+        .meu-botao.sombra {
+            grid-column: span 1;
+            border-radius: 10px;
+            box-shadow: 0px 0px 1px   #3498db; 
+        
+        }
+        .meu-botao.sombra:hover {
+            text-shadow: 1px 1px 1px #0062ff;
+            box-shadow: 1px 2px 3px   #0053b9; 
+
+        }
+
+        .meu-botao.alto {
+            grid-row: span 2;
+         
+        }
+
+        .meu-botao:hover {
+            background-color: #3498db;
+            color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #botao1 { font-family: 'Arial', sans-serif; }
+        #botao2 { font-family: 'Times New Roman', serif; }
+        #botao3 { font-family: 'Courier New', monospace; }
+        #botao4 { font-family: 'Verdana', sans-serif; }
+        #botao5 { font-family: 'Roboto', sans-serif; }
+
+        .container {
+            background-color: rgb(77, 76, 76);
+            padding: 10px;
+            width: 500px;
+            height: auto;
+            border-radius: 15px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 11px;
+
+        }
+        .container:hover {
+            background-color: rgb(99, 99, 99);
+            text-shadow: 1px 1px 1px silver;
+            box-shadow: 1px 2px 3px  silver;
+        
+         
+        }
+
+        .meu-botao-click {
+            width: 90px;
+            height: 90px;
+            background-color: gray;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 15px;
+        
+        }
+        .meu-botao-click:hover{
+            background-color: rgb(77, 76, 76);
+            box-shadow: 0px 0px 10px #ff00f2, 
+                        0px 0px 10px #ff00f2 inset;
+            border: 3px solid #ff00b7;
+        }
+        
+ 
+        .bloco {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px; /* Adicionando margem ao redor do bloco */
+            background-color: #18034d;
+            padding: 20px;
+        }
+
+        .caixa1, .caixa2, .caixa3, .caixa4 {
+            width: 100px;
+            height: 100px;
+            background-color: #18034d;;
+            color: #11ff00;
+            text-shadow: 1px 1px 1px #2da6a6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .caixa1{
+            box-shadow: 0px 0px 10px #ff00f2, 
+                        0px 0px 10px #ff00f2 inset;
+            border: 3px solid #ff00b7;
+        }
+        .caixa1:hover{
+            box-shadow: 0px 0px 10px #2fff00, 
+                        0px 0px 10px #15ff00 inset;
+        }
+
+        .caixa2{
+            box-shadow:   0px 0px 10px #ff00f2 inset;
+            border: 3px solid #ff00b7;
+        }
+        .caixa3{
+            box-shadow: 10px 10px 10px #ff00f2, 
+                        0px 0px 5px #ff00f2 inset;
+            border: 3px solid #ff00b7;
+        }
+
+        .caixa4{
+            box-shadow: 10px 10px 10px #ff00f2, 
+                        10px 10px 10px #ff00f2 inset;
+            border: 3px solid #ff00b7;
+        }
+
+        .square1{
+            border-radius: 20%;
+        }
+
+        .square2{
+            border-radius: 25% 10%;
+        }
+
+        .square3{
+            border-radius: 50%;
+    
+        }
+
+        .square4{
+            border-radius: 50% 20%;
+        }
+
+        .square5{
+            border-radius: 10% 30% 50% 70%;
+        }
+
+    </style>
+
+</head>
+<body>
+ 
+
+    <div class="grid-varios-tamanhos">
+        <a href="#" id="botao1" class="meu-botao">Botão 1 'Arial', sans-serif</a>
+        <a href="#" id="botao2" class="meu-botao alto">Botão 2 (Alto) 'Times New Roman', serif </a>
+        <a href="#" id="botao3" class="meu-botao">Botão 3 'Courier New', monospace </a>
+        <a href="#" id="botao4" class="meu-botao">Botão 4 'Verdana', sans-serif; </a>
+        <a href="#" id="botao5" class="meu-botao">Botão 5 'Roboto', sans-serif; </a>
+        <a href="#" id="botao1" class="meu-botao">Botão 6 'Arial', sans-serif</a>
+        <a href="#" id="botao2" class="meu-botao">Botão 7 'Times New Roman', serif</a>
+        <a href="#" id="botao3" class="meu-botao largo">Botão 8 (Largo) 'Courier New', monospace</a>
+        <a href="#" id="botao4" class="meu-botao sombra">Botão 9 'Verdana', sans-serif; </a>
+        <a href="#" id="botao5" class="meu-botao">Botão 10 'Roboto', sans-serif; </a>
+    </div>
+
+    <div class="container">
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+        <button class="meu-botao-click">Clique em mim</button>
+    </div>
+
+    <div class="bloco" >
+        <div class="caixa1">
+            Caixa 1
+        </div>
+    
+        <div class="caixa2">
+            Caixa 2
+        </div>
+        <div class="caixa3">
+            Caixa 3
+        </div>
+        <div class="caixa4">
+            Caixa 4
+        </div>
+    </div>
+
+    <div class="bloco" >
+        <div class="caixa1 square1">
+            Caixa 1
+        </div>
+    
+        <div class="caixa2 square2">
+            Caixa 2
+        </div>
+        <div class="caixa1 square3">
+            Caixa 3
+        </div>
+        <div class="caixa2 square4">
+            Caixa 4
+        </div>
+        <div class="caixa1 square5">
+            Caixa 4
+        </div>
+    </div>
+
+</body>
+</html>
