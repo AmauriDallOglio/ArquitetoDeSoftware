@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog</title>
+        <style>
+            body {
+                font-family: 'Century Gothic', sans-serif;
+                padding: 10px;
+                margin: 5px;
+                border: 1px solid #d7d7d7c3; 
+                /* border: 1px solid #26d100c3; */
+                background-color: #ffffff; /* green; */
+            }
+
+
+            /******************** header ********************/
+            header {
+                padding: 10px;
+                margin: 5px;
+                color: #000000;
+                text-align: center;
+                border: 1px solid #d7d7d7c3; 
+                /* border: 1px solid #09ff00f7; */
+                background-color: #ffffff; /* #c4ffc2f7; */
+            }
+            .imagem-info-header {
+                display: flex;
+                align-items: center;
+         
+            }
+            .imagem-header {
+                margin-right: 20px;
+            
+            }
+            .imagem-header img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+         
+            }
+            .info-header {
+                text-align: center;
+                
+            }
+            .system-name {
+                margin: 0;
+            }
+            nav {
+                padding: 20px;
+                margin: 5px;
+                color: #000000;
+                text-decoration: none;
+            
+                /* border: 3px solid #26ff00c3; */
+            }
+            nav a {
+                padding: 10px;
+                margin: 5px;
+                color: #000000;
+                font-family: 'Century Gothic', sans-serif;
+                text-decoration: none;
+                border: 1px solid #d7d7d7c3; 
+                /* border: 3px solid #26ff00c3; */
+            }
+            /******************** header ********************/
+
+            main {
+               /* Usa flex para organizar a seção e a barra lateral */
+                flex: 1; /* Ajusta para ocupar o restante da altura disponível */
+                width: 100%;
+                background-color: #ffffff; /* #5c5c5d; */
+    
+                /* border: 3px solid #000000f7; */
+            }
+
+            section {
+                flex: 8; /* 70% da largura da tela */
+                background-color: #ffffff; /* #ec98ff; */
+             
+                /* border: 3px solid #f200fff7; */
+            }
+
+            article {
+                padding: 10px;
+                margin: 5px;
+                margin-bottom: 0px;
+ 
+                /* border: 3px solid #ff7802f7; */
+                background-color: #ffffff; /* #fcad68f7; */
+                width: auto;
+            }
+
+            .div-section, .div-article, .div-aside {
+                padding: 5px;
+                color: #000000;
+ 
+                /* border: 3px solid #0a02fff7; */
+                background-color: #ffffff; /* #2ab8fff7; */
+                box-sizing: border-box; /* Garante que a largura inclua a borda e o preenchimento */
+                text-align: justify; /* Justificar o texto */
+            }
+
+            .div-article {
+                width: 70%;
+                float: left;
+                margin-right: 1%;
+                border: 1px solid #d7d7d7c3; 
+            }
+
+            .div-aside {
+                width: 29%;
+                float: left;
+                border: 1px solid #d7d7d7c3; 
+        
+  
+            }
+
+            aside {
+                padding: 10px;
+                margin: 5px;
+                float: none;
+                width: auto;
+             
+                /* border: 3px solid #ff0000f7; */
+                background-color:  #ffffff; /* #f86f6ff7; */
+            }
+
+            figure {
+                padding: 10px;
+                margin: 5px;
+        
+      
+                border: 1px solid #d7d7d7c3; 
+                /* border: 1px solid #ffff00f7; */
+                background-color: #ffffff; /* #c6c012f7; */
+                width: auto;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden; /* Garante que a imagem não ultrapasse os limites da div */
+                max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+                height: auto; /* Mantém a proporção da altura */
+
+            }
+
+            figcaption {
+                padding: 10px;
+                margin: 5px;
+                font-style: italic;
+                color: #777;
+                margin-top: 5px;
+                text-align: center;
+                
+                /* border: 1px solid #f6ff00f7; */
+                background-color: #ffffff; /* #ebfc99f7; */
+    
+            }
+
+            footer {
+                padding: 10px;
+                margin: 5px;
+                color: #000000;
+                text-align: center;
+                clear: both; /* Limpa os elementos flutuantes */
+                border: 1px solid #d7d7d7c3; 
+                /* border: 3px solid #26d100c3; */
+                background-color: #ffffff; /* #affd9dc3; */
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="imagem-info-header">
+                <div class="imagem-header">
+                    <img src="modelo.png" alt="Foto do usuário">
+        
+                </div>
+                <div class="info-header">
+                    <h1 class="system-name">Bem-vindo ao nosso blog</h1>
+                    <h2 class="system-name">O primeiro blog feito para você!</h2>
+                    <h3 class="system-name">Quer saber mais novidades, toda segunda-feira novas informações!</h3>
+                </div>
+            </div>
+  
+       
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Destaque</a>
+                <a href="#">Arquivo</a>
+                <a href="#">Arquivo</a>
+                <a href="#">Arquivo</a>
+                <a href="#">Arquivo</a>
+                <a href="#">Arquivo</a>
+         
+
+            </nav>
+       
+  
+        </header>
+        <main>
+            <div class="div-section">
+                <section>
+                     
+                    <h1>Últimos Posts</h1>
+
+                    <div class="div-article">
+                        <article>
+                         
+                            <h2>O Mundo dos Elementos HTML</h2>
+                            <p>Data: 20/01/2024 - 03:45 PM</p>
+                        
+                                <P>
+                                    Utilizada as tags HTML elementos semânticos que são utilizados para estruturar e organizar o conteúdo em uma página web. Eles fornecem informações sobre a função e a estrutura do conteúdo, facilitando a compreensão tanto para os desenvolvedores quanto para os navegadores e motores de busca
+                                </P>
+                                <p>
+                                    <h3> header </h3>
+                                    <h4>Função: Representa o cabeçalho da página ou de uma seção específica. Normalmente, inclui elementos como títulos, logotipos, menus de navegação, e outras informações introdutórias.</h4>
+                                    <h4>Exemplo: <code>&lt;header&gt;&lt;h1&gt;Meu Site&lt;/h1&gt;&lt;/header&gt;</code></h4>
+                                </p>
+
+                                <p>
+                                    <h3> footer </h3>
+                                    <h4>Função: Representa o rodapé da página ou de uma seção específica. Geralmente, contém informações de copyright, links para páginas relacionadas, dados de contato ou outras informações de finalização.</h4>
+                                    <h4>Exemplo: <code>&lt;footer&gt;&amp;copy; 2024 Meu Site. Todos os direitos reservados.&lt;/footer&gt;</code></h4>
+                                </p>
+                                <p>
+                                    <h3> nav </h3>
+                                    <h4>Função: Indica uma seção de navegação. É usado para agrupar links de navegação para outras páginas ou recursos dentro do site.</h4>
+                                    <h4>Exemplo: <code>&lt;nav&gt;&lt;a href="/"&gt;Home&lt;/a&gt; &lt;a href="/sobre"&gt;Sobre&lt;/a&gt;&lt;/nav&gt;</code></h4>
+                                </p>
+
+                                <p>
+                                    <h3> section </h3>
+                                    <h4>Função: Define uma seção genérica em um documento. Pode ser uma seção temática ou de conteúdo independente.</h4>
+                                    <h4>Exemplo: <code>&lt;section&gt;&lt;h2&gt;Seção de Notícias&lt;/h2&gt;&lt;p&gt;Conteúdo das notícias...&lt;/p&gt;&lt;/section&gt;</code></h4>
+                                </p>
+
+                                <p>
+                                    <h3> article </h3>
+                                    <h4>Função: Representa um conteúdo independente e autônomo, como um artigo, post de blog ou notícia.</h4>
+                                    <h4>Exemplo: <code>&lt;article&gt;&lt;h2&gt;Novo Artigo&lt;/h2&gt;&lt;p&gt;Conteúdo do artigo...&lt;/p&gt;&lt;/article&gt;</code></h4>
+                                </p>
+
+                                <p>
+                                    <h3> aside </h3>
+                                    <h4>Função: Representa um conteúdo que é tangencial ao conteúdo ao redor, muitas vezes usado para barras laterais ou conteúdo relacionado.</h4>
+                                    <h4>Exemplo: <code>&lt;aside&gt;&lt;h3&gt;Publicidade&lt;/h3&gt;&lt;p&gt;Anúncios relacionados...&lt;/p&gt;&lt;/aside&gt;</code></h4>
+                                </p>
+
+                                
+                                <p>
+                                    <h3> figure </h3>
+                                    <h4>Função: Utilizado para agrupar qualquer conteúdo que seja referenciado a partir do conteúdo principal, geralmente imagens, gráficos ou vídeos.</h4>
+                                    <h4>Exemplo: <code>&lt;figure&gt;&lt;img src="imagem.jpg" alt="Descrição da imagem"&gt;&lt;figcaption&gt;Legenda da imagem&lt;/figcaption&gt;&lt;/figure&gt;</code></h4>
+                                </p>
+
+                                <p>
+                                    <h3> figcaption </h3>
+                                    <h4>Função: Fornece uma legenda para o conteúdo dentro de um elemento &lt;figure&gt;.</h4>
+                                    <h4>Exemplo: <code>&lt;figure&gt;&lt;img src="imagem.jpg" alt="Descrição da imagem"&gt;&lt;figcaption&gt;Legenda da imagem&lt;/figcaption&gt;&lt;/figure&gt;</code></h4>
+                                </p>
+
+
+             
+                            <figure>
+                                <img src="modelo.png" alt="Exemplo de uma imagem">
+                                <figcaption>Legenda: Modelo da arquitetura da página!</figcaption>
+                            </figure>
+                       
+                            <article>
+                             
+                                <h2>O Mundo dos Elementos HTML</h2>
+                                <p>Data: São Paulo, SP - 12/11/2013 - 03:45 PM</p>
+                            
+                                <p>Ao usar essas tags de maneira apropriada, você contribui para a acessibilidade, manutenção e compreensão semântica do seu código HTML. Além disso, esses elementos ajudam os motores de busca a entender a estrutura e o significado do seu conteúdo.
+                             
+                                Comentários:       
+                                <article>
+                                    <p> 
+                                        Olá, você esta bem?
+                                    </p>
+                                </article>
+                                <article>
+                                    <p> 
+                                        Sim, e você?
+                                    </p>
+                                </article>
+                            </article>
+                        </article>
+                    </div>
+                    <div class="div-aside">
+                        <aside>
+                       
+                            <h2>Destaques</h2>
+                            <p>Confira nossos artigos mais recentes e populares. Fique atualizado com as últimas notícias e tendências.</p>
+                        </aside>
+                    </div>
+                </section>
+            </div>
+ 
+        </main>
+        <footer>
+    
+            <p>&copy; 2024 Nosso Site. Todos os direitos reservados. Agradecemos por visitar!</p>
+        </footer>
+    </body>
+
+</html>
+
+<!--
+<P>
+    <body> body
+        <header> header 
+                <nav> nav 
+                    <main> main 
+                        <div class="div-section">div-section  
+                            <section> section 
+                                <div class="div-article"> div-article  
+                                    <article> article 
+                                        <div class="div-aside">div-aside   
+                                            <aside> aside 
+                                                <figure> figure 
+                                                    <figcaption> figcaption
+                                                    </figcaption>
+                                                </figure>
+                                            </aside>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+                        </div>
+                    </main>
+                </nav>
+            </footer>
+        </header>
+    </body>
+    <footer> footer </footer>
+</P>
+-->
