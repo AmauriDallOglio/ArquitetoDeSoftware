@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Gráfico</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background: #252429;
+            height: 100%;
+            margin: 0;
+            padding: 20px;
+        }
+
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        .line-chart {
+            animation: fadeIn 600ms cubic-bezier(.57,.25,.65,1) 1 forwards;
+            opacity: 0;
+            max-width: 640px;
+            width: 100%;
+        }
+
+        .aspect-ratio {
+            height: 0;
+            padding-bottom: 50%; /* 495h / 990w */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="line-chart">
+        <div class="aspect-ratio">
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script>
+
+        var chart    = document.getElementById('chart').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 450);
+            gradientd = chart.createLinearGradient(0, 0, 0, 450);
+
+
+        gradient.addColorStop(0, 'rgba(242, 87,116, 0.5)');
+        gradient.addColorStop(0.5, 'rgba(242, 87,116, 0.25)');
+        gradient.addColorStop(1, 'rgba(242, 87,116, 0)');
+        gradientd.addColorStop(0, 'rgba(242, 202, 80, 0.5)');
+        gradientd.addColorStop(0.5, 'rgba(242, 202, 80, 0.25)');
+        gradientd.addColorStop(1, 'rgba(242, 202, 80, 0)');
+
+        var data  = {
+            labels: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Julho', 'Julho', 'Agosto', 'Setembro', 'Outrubro', 'Novembro', 'Dezembro' ],
+            datasets: [{
+                    label: '2023',
+                    backgroundColor: gradient,
+                    pointBackgroundColor: '#F25774',
+                    borderWidth: 1,
+                    borderColor: '#F25774',
+                    data: [1000.49, 1500.34, 1600.41, 1700.16, 1800.81, 2000.82, 2200.85, 3000, 4000, 5000, 6000, 7000]
+            },{
+                    label: '2024',
+                    backgroundColor: gradientd,
+                    pointBackgroundColor: '#F2CA50',
+                    borderWidth: 1,
+                    borderColor: '#F2CA50',
+                    data: [1500, 2600, 3700, 4800, 5900, 6000, 7000, 8000, 0, 0, 0, 0]
+            }
+                                    
+                ]
+        };
+
+
+
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        color: 'rgba(200, 200, 200, 0.05)',
+                        lineWidth: 1
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        color: 'rgba(200, 200, 200, 0.08)',
+                        lineWidth: 1
+                    }
+                }]
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            legend: {
+                display: false
+            },
+            point: {
+                backgroundColor: 'white'
+            },
+            tooltips: {
+                titleFontFamily: 'Open Sans',
+                backgroundColor: 'rgba(0,0,0,0.3)',
+                titleFontColor: 'white',
+                caretSize: 5,
+                cornerRadius: 2,
+                xPadding: 10,
+                yPadding: 10
+            }
+        };
+
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+                options: options
+        });
+    </script>
+</body>
+</html>

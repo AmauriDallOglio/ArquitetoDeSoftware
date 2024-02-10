@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Grid com CRUD</title>
+    <style>
+
+ 
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"] {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li a{
+            padding: 10px 15px;
+            color: blue;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav ul li a:hover{
+            color: white;
+            background: blue;
+        }
+        blockquote{
+            background: rgb(243, 242, 242);
+            padding: 15px;
+            margin-left: 0px;
+            border-left: royalblue solid 5px;
+        }
+        pre{
+            background: #f2f2f2;
+        }        
+        pre > code{
+            background: #f2f2f2;
+            color: red;
+        }
+        pre > p{
+            font-style: italic;
+            color: gray;
+            padding-left: 30px;
+        }
+        details > p > code{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de Grid com CRUD</h1>
+
+        <nav>
+            <ul>
+                <li><a href="">Item 1</a></li>
+                <li><a href="">Item 2</a></li>
+                <li><a href="">Item 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <p> Tudo bem?</p>
+            <article>
+                <p>Sim</p>
+            </article>
+        </article>
+        <article>
+            <h1>Descoberta de vida em outro planeta</h1>
+            <p>Artigo publicado em <time pubdate> 04/01/2024 17:16</time></p>
+            <p>Diferentes especialistas estão otimistas em detectar sinais de vida em um mundo distante ainda durante a vida das gerações atuais — possivelmente nos próximos anos.</time></p>
+            <p> Inúmeras missões que estão em andamento ou prestes a começar marcam uma nova corrida espacial em busca da maior descoberta científica de todos os tempos. Vivemos em um universo infinito, com estrelas e planetas infinitos. E para muitos de nós, tem sido óbvio que não podemos ser os únicos seres inteligentes no universo", diz a professora Catherine Heymans, Astrônoma Real da Escócia (um título honorário). Agora finalmente temos a tecnologia e a capacidade para respondermos à pergunta se estamos mesmo sozinhos no cosmos."</p>
+            <blockquote cite="https://g1.globo.com/ciencia/noticia/2023/10/03/por-que-cientistas-dizem-que-estamos-perto-de-achar-vida-em-outro-planeta.ghtml">
+                <p> Europa, uma das luas geladas de Júpiter, é o lugar mais provável em nosso sistema solar para abrigar vida alienígena — Foto: ESA</p>
+            </blockquote>
+        </article>
+
+        <input list="browsers" type="search" name="search" />
+        <datalist id="browsers">
+            <option> Google </option>
+            <option> Edge </option>
+        </datalist>
+
+
+        <p> Para copiar esta informação, pressione <kbd>CRTL</kbd> + <kdb>C</kdb>  </p>
+        <p> para trocar o fundo de um elemento, utilize o comando <code>background-color</code> </p>
+        <pre>
+            <p> //Neste momento você aplica desta forma</p>
+            <code>
+                code{
+                    background-color: #f2f2f2;
+                    color: red;
+                }
+
+            </code>
+        </pre>
+
+        <details>
+            <summary>Saiba mais! </summary>
+            <p> A primeira indicação desse tipo de descoberta surgiu no início deste mês. <code> Amauri quem falou:</code> O possível sinal de um gás que na Terra é produzido por organismos marinhos simples foi detectado na atmosfera de um planeta chamado K2-18b, que está a 120 anos-luz de distância. </p>
+        </details>
+
+        <meter max="100" min="0" value="35"> </meter>
+        <progress id="progress" max="100" min="0" value="0"> </progress>
+        <script>
+            var progress = document.getElementById('progress');
+            const interval = setInterval(() => 
+            {
+                progress.value += 20;
+                if (progress.value >= 100)
+                {
+                    clearInterval(interval);
+            
+                }}, 1000);
+            progress.value = 0;
+        </script>
+
+        
+        <body>
+            <br>
+            <input type="text" id="buscar">  
+            <p id="descricao"> 
+                Usando o que funciona como um escudo solar de alta tecnologia, ele minimiza a luz da estrela em torno da qual um planeta orbita. Isso significa que ele será capaz de identificar e analisar as atmosferas de planetas semelhantes ao nosso.
+                Também entrará em operação ainda nesta década o Telescópio Extremamente Grande (ELT, na sigla em inglês), que observará a partir do solo os céus cristalinos do deserto chileno.
+                Ele possui o maior espelho de qualquer instrumento construído, com 39 metros de diâmetro, e pode, portanto, observar muito mais detalhes nas atmosferas planetárias do que seus antecessores.
+                Esses três telescópios de análise de atmosfera usam a mesma técnica utilizada por químicos por centenas de anos para discernir os produtos químicos dentro de materiais com base na luz que eles emitem.
+                Eles são tão incrivelmente poderosos que conseguem fazer isso a partir do pequeno ponto de luz proveniente da atmosfera de um planeta que orbita uma estrela, a centenas de anos-luz de distância.
+            </p> 
+            <script>
+                var searchField = document.getElementById('buscar');
+                var descriptionObject = document.getElementById('descricao');
+                var textToSearch = descriptionObject.innerHTML;
+
+                function realizaBusca(busca) {
+                    const regex = new RegExp(`(${busca})(?!(.(?!<mark>))*</mark>)+`, 'ig');
+                    const ocurrences = textToSearch.match(regex);
+                    descriptionObject.innerHTML = textToSearch.replace(regex, `<mark>${busca}</mark>`);
+                }
+
+                searchField.addEventListener('keyup', function() {
+                    realizaBusca(this.value);
+                });
+            </script>
+        </body>
+
+
+
+        <section>
+            <h2>Seção Principal</h2>
+            
+            <form id="form">
+                <input type="text" id="nome" placeholder="Insira um nome" required>
+                <button type="button" onclick="adicionarNome()">Adicionar</button>
+            </form>
+        
+            <table id="grid">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <!-- Aqui serão adicionados os nomes -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Rodapé - © 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+   
+    <script src="./script.js"></script>
+
+</body>
+</html>
