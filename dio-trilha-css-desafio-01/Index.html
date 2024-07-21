@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Trilha de CSS - DIO</title>
     <style>
-    
+          * {
+          font-family: 'Raleway', sans-serif;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+          
         html{
             background-color: #000000;
         }
@@ -17,21 +23,23 @@
           text-align: center;
  
         }
-   
+        p{
+            color: #fff;
+        }
+                
 
         .banner {
-          background: url('images/banner.png') center/cover no-repeat,
+          background: url(images/banner.png) center/cover no-repeat,
                       linear-gradient(to right, #100a34 12%, #000000 100%); 
        
           padding: 20px;
+          width: 100%;
           background-color: black;
           border: 1px solid #00c8fff7;
-          margin-bottom: 10%;
- 
-          width: 100%; /* Largura da página em relação à largura do viewport */
+          margin-bottom: 0%;
   
         }
-
+    
         .banner-content {
           display: flex;
           flex-direction: column;
@@ -93,9 +101,6 @@
           color: #fff;
         }
 
-
- 
-    
         h2{
           color: #008adf;
           text-transform: uppercase;
@@ -104,32 +109,82 @@
           font-size: 20px;
         }
 
- 
-
-        #p-divisao2{
-          margin: 10px 0;
-          color: #ffffff;
-          width: 400px;
-          height: auto;
-          padding: 0%;
-        }
-
         .modules-list{
           margin: 10px 0;
           color: #9c0707;
           text-align: center;
           padding: 0%;
         }
+  
+        .main {
+          border: 1px solid #00c8fff7;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 30px;
+        }
 
+        #course-content .modules-list {
+            margin: 24px 0;
+            padding: 30px;
+        }
+        #course-content .modules-list .module {
+            color: #fff;
+            width: 530px;
+            margin: 0 auto 24px;
+            border: 1px solid #33a8db;
+            background-color: #252525;
+            padding: 16px;
+            border-radius: 100px;
+            box-shadow: inset -5px 6px 8px rgb(0 0 0 / 70%);
+        }
+        #course-content .modules-list .module span {
+            color: #33a8db;
+        }
+        #transform-world {
+            height: 650px;
+            width: 100%;
+            background-size: cover;
+            background-image: url(images/woman-code.png);
+            background-attachment: fixed;
+            border-top: 1px solid #33a8db80;
+            border-bottom: 1px solid #33a8db80;
+            padding: 200px;
+            
+        }
+        #transform-world p {
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-transform: lowercase;
+            max-width: 250px;
+            text-shadow: 3px 2px #33a8db;
+        }
+        #professional-challenges {
+            text-align: center;
+            width: 800px;
+            padding: 50px;
+        }
+        #professional-challenges img {
+            margin: 32px 0;
+        }
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
+            border-top: 1px solid #33a8db80;
+        }
+        footer .dio-logo {
+            width: 300px;
+        }
+        footer a {
+            color: #33a8db;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
- 
- 
-
- 
- 
- 
     </style>
 </head>
+
 <body>
       <header class="banner">
         <div class="banner-content">
@@ -141,10 +196,10 @@
           <button>Quero me inscrever</button>
         </div>
       </header>
-      <main>
-        <section id="divisao2">
+      <main class="main">
+        <section id="course-content">
           <h2>O que vou aprender?</h2>
-          <p id="p-divisao2">
+          <p class="module">
             Temos 3 módulos recheados de conteúdos do básico ao avançado para que você aprenda a 
             desenvolver sites profissionais utilizando somente HTML e CSS: sem nenhuma biblioteca ou framework a mais.
           </p>
@@ -179,4 +234,5 @@
         <p>Acesse <a href="https://dio.me">dio.me</a> e se cadastre agora</p>
       </footer>
 </body>
+
 </html>
