@@ -36,7 +36,9 @@ figure {
     text-align: center;
 }
  
-
+.palavra-texto{
+    text-align: justify;
+}
 
 .logo-nome {
     font-size: 3rem;
