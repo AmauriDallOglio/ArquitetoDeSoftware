@@ -1,0 +1,340 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu YouTube</title>
+  
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #ffffff;
+            color: rgb(8, 8, 8);
+            padding: 10px 0px 10px 15px ;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-rectangle {
+            width: 40px;
+            height: 28px;
+            background-color: #FF0000;
+            border-radius: 4px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 8px;
+        }
+
+        .logo-play {
+            width: 0;
+            height: 0;
+            border-left: 12px solid white;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+        .container {
+          
+            display: flex;
+            flex: 1;
+            background-color: #f9f9f9;
+        }
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+          
+        }
+        .left-column {
+            flex: 3;
+            background-color: #F1F1F1;
+            padding: 1rem;
+        }
+
+
+
+
+        .video-player {
+            /*flex: 3;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .video {
+            width: 1000px;
+            height: 600px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar {
+            background-color: #FFFFFF;
+            
+            padding: 10px 0px 0px 0px;
+            margin-bottom: 1rem;
+        }
+        .sidebar > .titulo{
+            font-weight: bold;
+            background-color: #FFFFFF;
+            font-size: 1.5em;
+            padding: 0px 0px 8px 0px;
+        }
+        .sidebar > .subTitulo{
+            background-color: #FFFFFF;
+            font-size: 1.0em;
+            padding: 0px 0px 8px 0px;
+        }
+        .sidebar > .detalhes{
+            background-color: #FFFFFF;
+            font-size: 0.7em;
+            padding: 0px 0px 10px 0px;
+        
+        }
+
+        .sidebar > h5 {
+            background-color: #FFFFFF;
+            padding: 0px 0px 5px 0px;
+        }
+        .sidebar > h6 {
+            background-color: #FFFFFF;
+            padding: 0px 0px 5px 0px;
+            text-align: justify;
+        }
+
+
+ 
+
+        .right-column {
+            flex: 1;
+            background-color: #F1F1F1;
+        }
+
+        .main-content {
+            background-color: #F1F1F1;
+        
+        }
+
+        
+        .card {
+            background-color: #F1F1F1;
+            border-radius: 0px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+
+      
+            text-align: left;
+            display: flex;
+            justify-content: left;
+            margin: 16px 0px 5px 0px;
+           
+        }
+
+        .card img {
+            width: auto;
+            height: 100px;
+            border-radius: 0px;
+        }
+
+    
+        .card__right{
+             
+            text-align: left;
+      
+        }
+      
+        .card__right > p {
+            padding: 1px;
+            font-size: 09px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 0px 0px 0px 10px;
+        }
+
+        .card__right > .card_right_titulo {
+            font-weight: bold;
+            font-size: 12px;
+         
+        }
+
+
+  
+ 
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-rectangle">
+                <div class="logo-play"></div>
+            </div>
+            <h1>YouClube</h1>
+        </div>
+ 
+    </header>
+    <div class="container">
+        <div class="left-column">
+
+            <div class="video-player">
+                <div class="video">Vídeo em reprodução</div>
+           
+            </div>
+
+            <div class="sidebar">
+                <p class="titulo">Semana font-end | Dia 1: Construindo uma Landing Page no mundo invertido do html e css</h3>
+          
+                <p class="subTitulo">28.418 visualizações  Transmitido ao vivo em 23 ago. de 2022 </p>
+                <p class="detalhes">Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma landing page com a temática da série Stranger Things, a qual contará com a implementação de um theme switcher (light e dark) para explorarmos os mistérios do mundo invertido.</p>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="main-content">
+      
+
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Geração Tech Unimed - BH - Ciência de Dados</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>2,1 mil visualizações Transmitido há 2 dias</p>
+                        
+                    </div>
+ 
+                </div>
+
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Scrum Talks</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>1,6 mil visualizações
+                            Transmitido há 3 dias</p>
+                         
+                        
+                    </div>
+ 
+                </div>
+
+
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Machine Learning Avançado - Fast Track</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>1,7 mil visualizações
+                            Transmitido há 4 dias</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Global Skills #2 - Project Planning</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>971 visualizações
+                            Transmitido há 5 dias</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Como aprender a programar Python do ZERO</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>711 visualizações
+                            Transmitido há 6 dias</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Geração Tech Unimed - BH - Ciência de Dados</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>2,1 mil visualizações
+                            Transmitido há 2 dias</p>
+                    </div>
+                </div>
+
+
+                
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Scrum Talks</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>1,6 mil visualizações
+Transmitido há 3 dias</p>
+                    </div>
+                </div>
+
+                
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Machine Learning Avançado - Fast Track</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>1,7 mil visualizações
+                            Transmitido há 4 dias</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card__left">
+                        <img src="imagem/curso.png" alt="" srcset="">
+                    </div>
+                    <div class="card__right">
+                        <p class="card_right_titulo">Global Skills #2 - Project Planning</p>
+                        <p>DigitalInnovationOne</p>
+                        <p>971 visualizações
+                            Transmitido há 5 dias</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
