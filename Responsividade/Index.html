@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header{
+            background-color: lightblue;
+            padding: 60px;
+            text-align: center;
+        }
+
+        header > h2{
+            font-size: 1rem;
+            font-weight: normal;
+            
+        }
+
+        main {
+            padding: 30px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h3{
+            text-transform: uppercase;
+        }
+
+        .details{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .card{
+            background-color: lightblue;
+            padding: 16px;
+            border-radius: 4px;
+        }
+
+        .image-card{
+            background-color: lightblue;
+            border: 1px solid red;
+            padding: 10px;
+            flex-basis: 200px;
+        }
+
+        .image-card img{
+            width: 100%;
+        }
+
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class=""> Layouts Flexíveis</h1>
+        <h2> Layouts flexíveis - Flexbox</h2>
+    </header>
+</body>
+<main>
+    <section>
+        <h3> Saiba mais</h3>
+        <div class="details">
+            <div class="card">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</div>
+            <div class="card">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</div>
+            <div class="card">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Galeria de imagem</h3>
+        <div class="image-card">
+            <div class="gallery">
+                <img src="flexbox.png" alt="" class="">
+            </div>
+        </div>
+        <div class="image-card">
+            <div class="gallery">
+                <img src="flexbox.png" alt="" class="">
+            </div>
+        </div>
+        <div class="image-card">
+            <div class="gallery">
+                <img src="flexbox.png" alt="" class="">
+            </div>
+        </div>
+        <div class="image-card">
+            <div class="gallery">
+                <img src="flexbox.png" alt="" class="">
+            </div>
+        </div>
+        <div class="image-card">
+            <div class="gallery">
+                <img src="flexbox.png" alt="" class="">
+            </div>
+        </div>      
+
+    </section>
+</main>
+</html>
