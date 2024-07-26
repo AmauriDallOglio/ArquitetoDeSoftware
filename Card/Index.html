@@ -1,0 +1,68 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+  
+    <style>
+
+        .card{
+            width: 50%;
+            box-shadow: 10px 9px 27px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 10px 9px 27px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 9px 27px 0px rgba(0,0,0,0.75);;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .card__left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10px;
+        }
+        
+        .card__left > span{
+            font-weight: 400;
+        }
+        
+        .card__left > a{
+            margin-top: 15px;
+            font-size: 25px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .card__left > p{
+            color: gray;
+        }
+        
+  
+ 
+    </style>
+
+</head>
+<body>
+    <div class="container">
+      <div class="card">  
+        <div class="card__left">
+          <span>
+            Amauri
+          </span>
+          <h1>
+           Darth Vader Contra Devs
+          </h1>
+          <p>
+           Darth Vader procura desenvolvedores que saibam trabalhar com componentes.
+          </p>
+        </div>
+        <div class="card__right">
+          <img src="usuario.jpg" alt="" class="">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

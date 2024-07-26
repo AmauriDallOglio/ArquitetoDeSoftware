@@ -1,0 +1,46 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componetes Card</title>
+ 
+    <script src="CardNews.js" defer></script>
+    <script src="TituloDinamico.js" defer></script>
+    <style>
+
+        .app-root{
+            color: black;
+  
+            padding: 0px 5px 20px 10px;
+            border: 2px solid transparent;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            
+
+        }
+        .card-news{
+            border: 10px solid transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="app-root">  
+        <card-news class="card-news"
+            autor="Amauri"
+            title="Darth Vader Contra Devs"
+            link-url="www.google.com"
+            photo="usuario.jpg"
+                   
+            content="Darth Vader procura desenvolvedores que saibam trabalhar com componentes."
+        >
+        </card-news>
+    
+        <card-news 
+            title="Yoda convence republica a utlizar componentes."
+            link-url="www.google.com"
+            content="Yoda se pronuncia e choca a republica."
+        >
+        </card-news>
+</body>
+</html>
