@@ -12,3 +12,7 @@ Neste Desafio você colocará a mão na massa e irá clonar a página do YouTube
 
 ![image](https://github.com/user-attachments/assets/8beaa39b-5647-4c11-9a56-0d4fa7e8254b)
 
+Trabalhando com Web Components no Front-end
+
+![image](https://github.com/user-attachments/assets/28aff7c7-6d2f-402b-9e4d-e5907e7b99b5)
+
