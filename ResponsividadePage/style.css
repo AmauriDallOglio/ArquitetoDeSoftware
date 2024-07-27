@@ -24,7 +24,7 @@ header, nav, section, footer{
 
 header{
     background-color: lightblue;
-  
+
     grid-area: header;
 }
 
