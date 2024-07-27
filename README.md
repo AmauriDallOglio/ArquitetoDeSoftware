@@ -16,3 +16,6 @@ Trabalhando com Web Components no Front-end
 
 ![image](https://github.com/user-attachments/assets/28aff7c7-6d2f-402b-9e4d-e5907e7b99b5)
 
+Neste Desafio você colocará a mão na massa e irá construir a Página de Listagem de vídeos no YouTube com CSS colocando em prática todos os conceitos aprendidos, principalmente sobre Grid Layout.
+
+![image](https://github.com/user-attachments/assets/bff658ba-033f-44c8-8ef4-801398e169ea)
