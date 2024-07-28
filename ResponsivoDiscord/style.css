@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    display: grid;
+    font-family: 'Roboto', sans-serif; 
+ 
+    text-align: center;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px 400px 400px 400px 400px 150px;
+    grid-template-areas: 
+        "header header"
+        "section1 section1"
+        "section2 section2"
+        "section3 section3"
+        "section4 section4"
+        "footer footer"
+    ;
+}
+
+header{
+    grid-area: header;
+    width: auto;
+    height: auto;
+ 
+    background-color: transparent;
+    margin-bottom: 0%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+header .imagemHeader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  /*  border: 1px solid #95e219 ; */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+header .conteudo{
+    color: white;
+    width: 800px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .conteudo .titulo{
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+header .conteudo .subTitulo{
+    font-size: 20px;
+    text-align: justify;
+}
+
+header .button-container{
+    justify-content: center;
+}
+
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #23272a;
+    color: white;
+}.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.section1{
+    grid-area: section1;
+   /* background-color: coral; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.card{
+   /* border: 1px solid rgb(255, 0, 0); */
+    display: flex;
+    gap: 0px; /* Espaçamento entre as colunas */
+}
+
+.card .card_imagem{
+   /* border: 1px solid white; */
+    flex: 1; /* Faz com que as colunas tenham tamanhos iguais */
+    background-color: #f0f0f0;
+    padding: 20px;
+   /* border: 1px solid #ff0404; */
+    text-align: center;
+}
+.card .card_imagem img {
+    width: 80%;
+    height: 80%;
+    padding-top: 20px;
+}
+
+.card .card_texto{
+    flex: 1; /* Faz com que as colunas tenham tamanhos iguais */
+    background-color: #f0f0f0;
+    /*border: 1px solid #ff0404;*/
+    
+}
+.card_texto > .titulo {
+    font-weight: bold;
+    font-size: 35px;
+    padding: 40px 150px 10px 180px;
+    font-family: 'Eras Bold ITC', sans-serif;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+
+}
+.card_texto > .subtitulo {
+    font-size: 15px;
+    padding: 0px 150px 10px 180px;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+}
+
+.section2{
+    grid-area: section2;
+    background-color: #ffffff;
+}
+
+.section3{
+    grid-area: section3;
+    background-color: #f0f0f0;
+}
+
+.section4{
+    grid-area: section4;
+    background-color: #ffffff;
+}
+
+.footer{
+    grid-area: footer;
+  /*  background-color: #f409d4; */
+}

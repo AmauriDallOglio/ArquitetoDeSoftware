@@ -1,0 +1,135 @@
+/* Estilos para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    body {
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main aside"
+            "footer footer";
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilos para desktops */
+@media (min-width: 1025px) {
+    body {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "nav main aside"
+            "nav main aside"
+            "footer footer footer";
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(252, 3, 219);
+    text-align: center;
+    display: grid;
+ 
+ 
+}
+
+header {
+    background-color: lightcoral;
+    grid-area: header;
+    padding: 20px;
+}
+
+nav {
+    background-color: lightsalmon;
+    grid-area: nav;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+aside {
+    background-color: lightgreen;
+    grid-area: aside;
+    padding: 20px;
+}
+
+main {
+    background-color: limegreen;
+    grid-area: main;
+    padding: 20px;
+}
+
+article, section {
+    margin: 20px 0;
+}
+
+blockquote {
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    border-left: 5px solid gray;
+}
+
+figure {
+    margin: 20px;
+}
+
+figure img {
+    width: 100px;
+    height: 100px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+details {
+    margin: 20px;
+}
+
+details summary {
+    cursor: pointer;
+}
+
+footer {
+    background-color: lightseagreen;
+    grid-area: footer;
+    padding: 10px;
+}
+
