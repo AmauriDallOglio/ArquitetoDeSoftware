@@ -19,3 +19,7 @@ Trabalhando com Web Components no Front-end
 Neste Desafio você colocará a mão na massa e irá construir a Página de Listagem de vídeos no YouTube com CSS colocando em prática todos os conceitos aprendidos, principalmente sobre Grid Layout.
 
 ![image](https://github.com/user-attachments/assets/bff658ba-033f-44c8-8ef4-801398e169ea)
+
+Construindo um Layout Responsivo Para o Site do Discord Com CSS
+
+![image](https://github.com/user-attachments/assets/c4cce02c-73b9-47bf-8b45-c30219b016e0)
