@@ -6,10 +6,9 @@
     <title>Menu</title>
     <link rel="stylesheet" href="/ResponsividadeMenu/style.css">
 </head>
-
-<body>
+<body class="corpo">
     <header>
-        <h1>Meu Website</h1>
+        <h1>Design Responsivo com CSS</h1>
     </header>
 
     <nav>
@@ -22,62 +21,89 @@
     </nav>
 
     <aside>
-        <h2>Notícias Recentes</h2>
-        <p>Últimas atualizações e eventos.</p>
+        <h2>Ferramentas Utilizadas</h2>
+        <ul class="menuFerramenta">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <div class="flex-container">
+            <div class="flex-item">flex 1</div>
+            <div class="flex-item">flex 2</div>
+            <div class="flex-item">flex 3</div>
+            <div class="flex-item">flex 4</div>
+            <div class="flex-item">flex 5</div>
+            <div class="flex-item">flex 6</div>
+            <div class="flex-item">flex 7</div>
+            <div class="flex-item">flex 8</div>
+            <div class="flex-item">flex 9</div>
+        </div>
     </aside>
 
     <main>
+
+        <div class="conteiner">
+            <article class="card">
+                <div class="preview">
+                    <img src="Imagem/html.webp" alt="html...">
+                </div>
+                <div class="content">
+                    <div class="card-content">
+                        <h2>
+                            Titulo
+                        </h2>
+                        <p> sa hida aahu hui hhgihd i hdgihhsg hgs hd gshhgdshkdsgjkgsuh ghdshg u hh gush u s sdguhgs hukudsgksh hguhk</p>
+                        <a class="link-saibaMais" href="" class="read-more">
+                            saiba mais
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+
         <article>
-            <h2>Artigo Principal</h2>
+            <h2>Introdução ao Design Responsivo</h2>
             <section>
-                <h3>Seção 1</h3>
-                <p>Conteúdo da primeira seção.</p>
+                <h3>Layouts Flexíveis - Multicolunas</h3>
+                <p>Utilizando colunas para criar layouts flexíveis.</p>
             </section>
             <section>
-                <h3>Seção 2</h3>
-                <p>Conteúdo da segunda seção.</p>
+                <h3>Layouts Flexíveis - Flexbox</h3>
+                <p>Flexbox facilita a criação de layouts flexíveis.</p>
             </section>
-            <blockquote>
-                <p>"Uma citação importante do artigo."</p>
-            </blockquote>
+            <section>
+                <h3>Layouts Flexíveis - Grid</h3>
+                <p>CSS Grid Layout é a técnica mais poderosa para criar layouts de duas dimensões na web.</p>
+            </section>
         </article>
 
         <section>
-            <h2>Galeria de Imagens</h2>
-            <figure>
-                <img src="Imagem/html.webp" alt="Descrição da imagem 1">
-                <figcaption>Legenda da imagem 1</figcaption>
-            </figure>
-            <figure>
-                <img src="Imagem/CSS.webp" alt="Descrição da imagem 2">
-                <figcaption>Legenda da imagem 2</figcaption>
-            </figure>
+            <h2>Meta tag viewport</h2>
+            <p>A meta tag viewport é usada para controlar o layout em navegadores móveis.</p>
+        </section>
+
+        <section>
+            <h2>O que são Media Queries</h2>
+            <p>Media queries são usadas para aplicar estilos diferentes para dispositivos diferentes.</p>
+        </section>
+
+        <section>
+            <h2>Media Types</h2>
+            <p>Media types permitem definir diferentes estilos para diferentes tipos de dispositivos.</p>
         </section>
 
         <details>
             <summary>Mais Informações</summary>
-            <p>Informações adicionais que podem ser reveladas.</p>
+            <p>Informações adicionais sobre design responsivo.</p>
         </details>
 
-        <section>
-            <h2>Formulário de Contato</h2>
-            <form>
-                <fieldset>
-                    <legend>Informações Pessoais</legend>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome"><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br>
-                    <label for="mensagem">Mensagem:</label><br>
-                    <textarea id="mensagem" name="mensagem"></textarea><br>
-                    <button type="submit">Enviar</button>
-                </fieldset>
-            </form>
-        </section>
+        <img  src="/ResponsividadeMenu/Imagem/html.webp" alt="html...">
+        
     </main>
 
     <footer>
-        <p>&copy; 2024 Meu Website. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Design Responsivo com CSS. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

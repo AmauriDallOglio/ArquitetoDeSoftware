@@ -39,7 +39,8 @@
     }
 
     nav ul {
-        justify-content: flex-start;
+        flex-direction: column;
+        text-align: left;
     }
 }
 
@@ -88,10 +89,16 @@ aside {
     padding: 20px;
 }
 
+aside > ul{
+    list-style: none;
+    text-align: left;
+}
+
 main {
     background-color: limegreen;
     grid-area: main;
     padding: 20px;
+    
 }
 
 article, section {
@@ -133,3 +140,163 @@ footer {
     padding: 10px;
 }
 
+
+
+
+.conteiner{
+    max-width: auto;
+    width: 100%;
+    text-align: justify;
+}
+.card{
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    flex-direction: column;
+    box-shadow: 0px 2px 6px rgb(0, 30, 255);
+}
+.card-content{
+    font-size:  1rem;
+}
+.card-content > h2{
+    color: rgb(30, 19, 230);
+}
+.card-content > p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: rgb(14, 3, 234);
+}
+.preview {
+    margin: 2px;
+}
+.conteiner .card .preview img{
+    width: 15%;
+    height: auto;  
+}
+.conteiner .card-content .link-saibaMais{
+    
+    font-size:  1rem;
+    color: rgb(33, 33, 186);
+}
+
+
+
+.conteiner{
+    max-width: auto;
+    width: 100%;
+    text-align: justify;
+}
+.card{
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    flex-direction: column;
+    box-shadow: 0px 2px 6px rgb(0, 30, 255);
+}
+.preview{
+    margin: 2px;
+}
+.conteiner .card .preview img{
+    width: 20%;
+    height: auto;
+    border: 1px solid red;
+    border-radius: 5%;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+.content{
+    color: rgb(232, 239, 8);
+}
+.card-content{
+    color: rgb(232, 239, 8);
+}
+.card-content > h2{
+    font-size:  2rem;
+    color: rgb(30, 19, 230);
+}
+.conteiner .card-content > p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: rgb(255, 3, 150);
+}
+.conteiner .card-content .link-saibaMais{   
+    font-size:  1rem;
+    color: rgb(197, 13, 13);
+}
+
+
+::first-letter{
+    color: red;
+}
+
+::first-line{
+    color: blue;
+}
+
+.flex-container .flex-item::first-line{
+    color: blueviolet;
+    background: lightblue;
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
+
+.menuFerramenta::marker{
+    content: ":)";
+}
+
+::selection{
+    background-color: rgb(0, 0, 0);
+    color: rgb(77, 255, 0);
+}
+
+ 
+
+.flex-container {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    gap: 10px;
+    justify-content: center;
+    padding: 2px 2px 2px 2px;
+    
+}.flex-item {
+    flex: 0 100%; /* Flex-grow, flex-shrink, flex-basis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    border: 1px solid black;
+    color: white;
+    border-radius: 8px;
+}
+
+img {
+    width: 15%;
+    height: 10%;
+    border: 1px solid red;
+    border-radius: 5%;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+   
+}
+img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, red);
+}
+
+.flex-container .flex-item{
+    color: red;
+    
+}
