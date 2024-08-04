@@ -1,14 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+
+/*
+import { Container } from './styles';
+function App() {
+  return (
+    <Container>
+      OK, djddjjdjkd
+    </Container>
+  )
+}
+  */
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-            Edit <code>src/App.js</code> and save to reload.
-        </p>
+        
+    
         <p>
             npm config get prefix 
         </p>
@@ -36,6 +47,19 @@ function App() {
      
         </p>
        
+        <p>
+        Verifique a política de execução atual: Get-ExecutionPolicy
+     
+        </p>
+        <p>
+        Altere a política de execução: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+     
+        </p>
+        <p>
+        Execute o comando do Yarn: yarn add styled-components
+     
+        </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -48,5 +72,6 @@ function App() {
     </div>
   );
 }
+  
 
 export default App;
