@@ -9,4 +9,7 @@ export const ButtonContainer = styled.button`
     font-jeight:700;
     flex: 1;
 
+    &:hover{
+        opacity: 0.6;
+    }
 `
