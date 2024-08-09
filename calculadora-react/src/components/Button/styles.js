@@ -8,8 +8,9 @@ export const ButtonContainer = styled.button`
     font-size: 24px;
     font-jeight:700;
     flex: 1;
+    border-radius: 12px;
 
     &:hover{
         opacity: 0.6;
-    }
+    };
 `
