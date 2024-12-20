@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumário de Requisitos Arquiteturais e Modelagem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .sumario {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .sumario ul {
+      /*list-style-type: none;*/
+      padding: 10;
+    }
+    .sumario li {
+      margin: 10px 0;
+    }
+    .sumario a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .sumario a:hover {
+      text-decoration: underline;
+    }
+    .capitulo {
+      margin-top: 40px;
+      border-top: 2px solid #ccc;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="sumario">
+    <h2>Sumário</h2>
+    <ul>
+      <li><a href="#modulo-1">Módulo 1: Fundamentos de Arquitetura de Software</a></li>
+      <ul>
+        <li><a href="#modulo-1-capitulo-0">Capítulo 0: Visão Geral do Módulo</a></li>
+        <li><a href="#modulo-1-capitulo-1">Capítulo 1: Introdução à Arquitetura de Software</a></li>
+        <li><a href="#modulo-1-capitulo-2">Capítulo 2: O Profissional de Arquitetura de Software</a></li>
+        <li><a href="#modulo-1-capitulo-3">Capítulo 3: Arquitetura de Software Moderna</a></li>
+        <li><a href="#modulo-1-capitulo-4">Capítulo 4: Estilos Arquiteturais Monolíticos</a></li>
+        <li><a href="#modulo-1-capitulo-5">Capítulo 5: Estilos Arquiteturais Distribuídos</a></li>
+        <li><a href="#modulo-1-exercicios-fixacao">Exercícios de Fixação</a></li>
+        <li><a href="#modulo-1-capitulo-7">Capítulo 7: Conduzindo o Processo Decisório</a></li>
+        <li><a href="#modulo-1-capitulo-8">Capítulo 8: Gerenciando Riscos</a></li>
+        <li><a href="#modulo-1-capitulo-9">Capítulo 9: Frameworks Arquiteturais</a></li>
+        <li><a href="#modulo-1-capitulo-10">Capítulo 10: Engenharia e Arquitetura de Software</a></li>
+        <li><a href="#modulo-1-capitulo-11">Capítulo 11: DEVOPS</a></li>
+      </ul>
+      <li><a href="#modulo-2">Módulo 2: Requisitos Arquiteturais e Modelagem Arquitetural</a></li>
+      <ul>
+        <li><a href="#modulo-2-capitulo-0">Capítulo 0: Visão Geral do Módulo</a></li>
+        <li><a href="#modulo-2-capitulo-1">Capítulo 1: Introdução à Arquitetura de Software</a></li>
+        <li><a href="#modulo-2-capitulo-2">Capítulo 2: O Profissional de Arquitetura de Software</a></li>
+        <li><a href="#modulo-2-capitulo-3">Capítulo 3: Arquitetura de Software Moderna</a></li>
+        <li><a href="#modulo-2-capitulo-4">Capítulo 4: Estilos Arquiteturais Monolíticos</a></li>
+        <li><a href="#modulo-2-capitulo-5">Capítulo 5: Estilos Arquiteturais Distribuídos</a></li>
+        <li><a href="#modulo-2-exercicios-fixacao">Exercícios de Fixação</a></li>
+        <li><a href="#modulo-2-capitulo-7">Capítulo 7: Conduzindo o Processo Decisório</a></li>
+        <li><a href="#modulo-2-capitulo-8">Capítulo 8: Gerenciando Riscos</a></li>
+        <li><a href="#modulo-2-capitulo-9">Capítulo 9: Frameworks Arquiteturais</a></li>
+        <li><a href="#modulo-2-capitulo-10">Capítulo 10: Engenharia e Arquitetura de Software</a></li>
+        <li><a href="#modulo-2-capitulo-11">Capítulo 11: DEVOPS</a></li>
+      </ul>
+      <li><a href="#modulo-3">Módulo 3: Design Patterns, Estilos e Padrões Arquiteturais</a></li>
+      <ul>
+        <li><a href="#modulo-3-capitulo-0">Capítulo 0 - Visão Geral do Módulo</a></li>
+        <li><a href="#modulo-3-capitulo-1">Capítulo 1 - Arquitetura de Software e Qualidade de Código</a></li>
+        <li><a href="#modulo-3-capitulo-2">Capítulo 2 - Catálogos de Padrões</a></li>
+        <li><a href="#modulo-3-capitulo-3">Capítulo 3 - GoF - Padrões de Criação</a></li>
+        <li><a href="#modulo-3-capitulo-4">Capítulo 4 - GoF - Padrões Estruturais</a></li>
+        <li><a href="#modulo-3-capitulo-5">Capítulo 5 - GoF - Padrões Comportamentais</a></li>
+        <li><a href="#modulo-3-capitulo-6">Primeira Aula Interativa - Capítulo 6 - Princípios SOLID</a></li>
+        <li><a href="#modulo-3-capitulo-7">Capítulo 7 - Estilos Arquiteturais</a></li>
+        <li><a href="#modulo-3-capitulo-8">Capítulo 8 - Padrões Arquiteturais</a></li>
+        <li><a href="#modulo-3-capitulo-9">Capítulo 9 - Arquiteturas de Camadas</a></li>
+        <li><a href="#modulo-3-capitulo-10">Capítulo 10 - Padrões para Sistemas Distribuídos</a></li>
+        <li><a href="#modulo-3-capitulo-11">Capítulo 11 - Arquiteturas de Sistemas Distribuídos</a></li>
+        <li><a href="#modulo-3-capitulo-12">Segunda Aula Interativa - Capítulo 12 - Aplicação de Padrões Arquiteturais</a></li>
+      </ul>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>Arquitetura de software</h1>
+
+    <div id="modulo-1">
+        <h2>Módulo 1: Fundamentos de Arquitetura de Software</h2>
+        <div id="modulo-1-capitulo-0" class="capitulo">
+            <h3>Capítulo 0: Visão Geral do Módulo</h3>
+            <ul>
+              <li>0.1. Apresentação do Professor</li>
+              <li>0.2. Apresentação do Módulo</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-1" class="capitulo">
+            <h2>Capítulo 1: Introdução à Arquitetura de Software</h2>
+            <ul>
+                <li>1.1. Introdução à Arquitetura</li>
+                    <p> A arquitetura de software é fundamental para o desenvolvimento de sistemas robustos e escaláveis, neste capítulo exploramos três níveis principais. 
+                    A arquitetura de software que foca na estrutura interna dos sistemas e na organização dos componentes, para garantir desempenho e manutenibilidade.
+                    </p>
+                    <p>A arquitetura de soluções que trata da integração de múltiplos sistemas e aplicações dentro de uma organização para resolver problemas específicos. 
+                    A arquitetura corporativa que alinha a tecnologia, aos objetivos estratégicos de longo prazo da empresa. 
+                    </p>
+                    <p>O arquiteto de softwares deve ter uma combinação de hard skills, como design patterns e clean cold e soft skills, como comunicação e liderança. Além disso, atua como um elo de comunicação entre diferentes equipes garantindo que as soluções atendam tanto as necessidades técnicas quanto empresariais.
+                    </p>
+                <li>1.2. Princípios Gerais de uma boa Arquitetura</li>
+                
+                
+                <li>1.3. Trade-Offs Arquiteturais</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-2" class="capitulo">
+            <h2>Capítulo 2: O Profissional de Arquitetura de Software</h2>
+            <P>Gerindo o processo de arquitetura, neste capitulo o foco está na gestão do processo de arquitetura. Um arquiteto precisa conhecer ferramentas como a matriz de decisão que ajuda a escolher em diferentes soluções e a análise de premissas e restrições, que garante que a arquitetura esteja de acordo com os limites do projeto. Além disso, frameworks como Hackman e o togas fornecem estruturas para desenvolver arquiteturas corporativas que atentam às necessidades de negócios. </P>
+            
+            <ul>
+                <li>2.1. Arquitetura de Software x Soluções x Corporativa</li>
+                <li>2.2. Soft e Hard Skills</li>
+                <li>2.3. Papel do Arquiteto</li>
+                <li>2.4. A arquitetura dentro das grandes organizações</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-3" class="capitulo">
+            <h2>Capítulo 3: Arquitetura de Software Moderna</h2>
+            <p>Governança da arquitetura, a governança da arquitetura envolve garantir que as soluções arquiteturais estejam sendo implementadas corretamente e que as decisões sigam padrões estabelecidos. O arquiteto deve garantir a conformidade das soluções através de revisões periódicas e assegurar que as decisões sejam documentadas adequadamente, contribuindo para a evolução da arquitetura. </p>
+            <ul>
+              <li>3.1. Arquitetura Intencional</li>
+              <li>3.2. Engenharia de Software Ágil</li>
+              <li>3.3. Arquitetura Evolutiva</li>
+              <li>3.4. Arquitetura Emergente</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-4" class="capitulo">
+            <h2>Capítulo 4: Estilos Arquiteturais Monolíticos</h2>
+            <p>Evoluções e tendências da arquitetura, neste capitulo o foco é na evolução da arquitetura e nas novas tendências tecnológicas. O arquiteto de software precisa estar atendo às mudanças e inovações para adaptar e melhorar as soluções atuais. Isso inclui a adoção de práticas como DevOps, cloud computing e arquiteturas evolutivas que são essenciais para manter a competividade e atender as demandas dinâmicas do mercado. </p>
+            <ul>
+              <li>4.1. Conceitos Gerais</li>
+              <li>4.2. Arquitetura em Camadas</li>
+              <li>4.3. Arquitetura Pipeline</li>
+              <li>4.4. Arquitetura Microkernel</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-5" class="capitulo">
+            <h2>Capítulo 5: Estilos Arquiteturais Distribuídos</h2>
+            <ul>
+              <li>5.1. Conceitos Gerais</li>
+              <li>5.2. Arquitetura Orientada a Serviços</li>
+              <li>5.3. Arquitetura Microserviços</li>
+              <li>5.4. Arquitetura Orientada a Eventos</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-exercicios-fixacao" class="capitulo">
+            <h2>Exercícios de Fixação</h2>
+            <ul>
+              <li>Primeira Aula Interativa - Trabalhando Estilos Arquiteturais</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-7" class="capitulo">
+            <h2>Capítulo 7: Conduzindo o Processo Decisório</h2>
+            <ul>
+              <li>7.1. Matriz de Decisão</li>
+              <li>7.2. Análise de Premissas e Restrições</li>
+              <li>7.3. Análise de Custo da Solução</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-8" class="capitulo">
+            <h2>Capítulo 8: Gerenciando Riscos</h2>
+            <ul>
+              <li>8.1. Conceitos de Riscos</li>
+              <li>8.2. Como identificar Riscos</li>
+              <li>8.3. Como classificar Riscos</li>
+              <li>8.4. Prática Riscos</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-9" class="capitulo">
+            <h2>Capítulo 9: Frameworks Arquiteturais</h2>
+            <ul>
+              <li>9.1. ZACHMAN</li>
+              <li>9.2. TOGAF</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-10" class="capitulo">
+            <h2>Capítulo 10: Engenharia e Arquitetura de Software</h2>
+            <ul>
+              <li>10.1. Ciclo de Vida de Software</li>
+              <li>10.2. Arquiteturas Monolíticas, Deploy Único e Desenvolvimento Cascata</li>
+              <li>10.3. Arquiteturas Evolucionárias, Deploy e Desenvolvimento Incremental</li>
+              <li>10.4. Engenharia e Arquiteturas Software Considerações</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-1-capitulo-11" class="capitulo">
+            <h2>Capítulo 11: DEVOPS</h2>
+            <ul>
+              <li>11.1. Princípios DevOps</li>
+              <li>11.2. Pilares DevOps</li>
+              <li>11.3. Ferramentas e Práticas Comuns em DevOps</li>
+              <li>11.4. Integrando DevOps e Arquitetura de Software</li>
+            </ul>
+          </div>
+          
+    </div>
+
+    <div id="modulo-2">
+        <div id="modulo-2-capitulo-0" class="capitulo">
+            <h2>Capítulo 0: Visão Geral do Módulo</h2>
+            <ul>
+              <li>0.1. Apresentação do Professor</li>
+              <li>0.2. Apresentação do Módulo</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-1" class="capitulo">
+            <h2>Capítulo 1: Introdução à Arquitetura de Software</h2>
+            <ul>
+              <li>1.1. Introdução à Arquitetura</li>
+              <li>1.2. Princípios Gerais de uma boa Arquitetura</li>
+              <li>1.3. Trade-Offs Arquiteturais</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-2" class="capitulo">
+            <h2>Capítulo 2: O Profissional de Arquitetura de Software</h2>
+            <ul>
+              <li>2.1. Arquitetura de Software x Soluções x Corporativa</li>
+              <li>2.2. Soft e Hard Skills</li>
+              <li>2.3. Papel do Arquiteto</li>
+              <li>2.4. A arquitetura dentro das grandes organizações</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-3" class="capitulo">
+            <h2>Capítulo 3: Arquitetura de Software Moderna</h2>
+            <ul>
+              <li>3.1. Arquitetura Intencional</li>
+              <li>3.2. Engenharia de Software Ágil</li>
+              <li>3.3. Arquitetura Evolutiva</li>
+              <li>3.4. Arquitetura Emergente</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-4" class="capitulo">
+            <h2>Capítulo 4: Estilos Arquiteturais Monolíticos</h2>
+            <ul>
+              <li>4.1. Conceitos Gerais</li>
+              <li>4.2. Arquitetura em Camadas</li>
+              <li>4.3. Arquitetura Pipeline</li>
+              <li>4.4. Arquitetura Microkernel</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-5" class="capitulo">
+            <h2>Capítulo 5: Estilos Arquiteturais Distribuídos</h2>
+            <ul>
+              <li>5.1. Conceitos Gerais</li>
+              <li>5.2. Arquitetura Orientada a Serviços</li>
+              <li>5.3. Arquitetura Microserviços</li>
+              <li>5.4. Arquitetura Orientada a Eventos</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-exercicios-fixacao" class="capitulo">
+            <h2>Exercícios de Fixação</h2>
+            <ul>
+              <li>Primeira Aula Interativa - Trabalhando Estilos Arquiteturais</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-7" class="capitulo">
+            <h2>Capítulo 7: Conduzindo o Processo Decisório</h2>
+            <ul>
+              <li>7.1. Matriz de Decisão</li>
+              <li>7.2. Análise de Premissas e Restrições</li>
+              <li>7.3. Análise de Custo da Solução</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-8" class="capitulo">
+            <h2>Capítulo 8: Gerenciando Riscos</h2>
+            <ul>
+              <li>8.1. Conceitos de Riscos</li>
+              <li>8.2. Como identificar Riscos</li>
+              <li>8.3. Como classificar Riscos</li>
+              <li>8.4. Prática Riscos</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-9" class="capitulo">
+            <h2>Capítulo 9: Frameworks Arquiteturais</h2>
+            <ul>
+              <li>9.1. ZACHMAN</li>
+              <li>9.2. TOGAF</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-10" class="capitulo">
+            <h2>Capítulo 10: Engenharia e Arquitetura de Software</h2>
+            <ul>
+              <li>10.1. Ciclo de Vida de Software</li>
+              <li>10.2. Arquiteturas Monolíticas, Deploy Único e Desenvolvimento Cascata</li>
+              <li>10.3. Arquiteturas Evolucionárias, Deploy e Desenvolvimento Incremental</li>
+              <li>10.4. Engenharia e Arquiteturas Software Considerações</li>
+            </ul>
+          </div>
+          
+          <div id="modulo-2-capitulo-11" class="capitulo">
+            <h2>Capítulo 11: DEVOPS</h2>
+            <ul>
+              <li>11.1. Princípios DevOps</li>
+              <li>11.2. Pilares DevOps</li>
+              <li>11.3. Ferramentas e Práticas Comuns em DevOps</li>
+              <li>11.4. Integrando DevOps e Arquitetura de Software</li>
+            </ul>
+          </div>
+    </div>
+
+    <div id="modulo-3">
+      <h2>Módulo 3: Introdução ao Desenvolvimento de Software</h2>
+         <!-- Capítulos -->
+        <div id="modulo-3-capitulo-0" class="capitulo">
+            <h2>Capítulo 0 - Introdução</h2>
+            <ul>
+            <li>0.1. O que são Design Patterns</li>
+            <li>0.2. Por que usar padrões de design</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-1" class="capitulo">
+            <h2>Capítulo 1 - Conceitos Iniciais</h2>
+            <ul>
+            <li>1.1. Conceitos de Software</li>
+            <li>1.2. Requisitos Funcionais e Não Funcionais</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-2" class="capitulo">
+            <h2>Capítulo 2 - Fundamentos de Arquitetura</h2>
+            <ul>
+            <li>2.1. Camadas e Modularidade</li>
+            <li>2.2. Componentização</li>
+            <li>2.3. Padrões e Frameworks</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-3" class="capitulo">
+            <h2>Capítulo 3 - GoF - Padrões de Criação</h2>
+            <ul>
+            <li>3.1. Singleton</li>
+            <li>3.2. Builder</li>
+            <li>3.3. Factory Method</li>
+            <li>3.4. Abstract Factory</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-4" class="capitulo">
+            <h2>Capítulo 4 - GoF - Padrões Estruturais</h2>
+            <ul>
+            <li>4.1. Adapter</li>
+            <li>4.2. Facade</li>
+            <li>4.3. Flyweight</li>
+            <li>4.4. Composite</li>
+            <li>4.5. Decorator</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-5" class="capitulo">
+            <h2>Capítulo 5 - GoF - Padrões Comportamentais</h2>
+            <ul>
+            <li>5.1. Command</li>
+            <li>5.2. Template Method</li>
+            <li>5.3. State</li>
+            <li>5.4. Strategy</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-6" class="capitulo">
+            <h2>Capítulo 6 - Princípios SOLID</h2>
+            <ul>
+            <li>6.1. Single Responsibility Principle</li>
+            <li>6.2. Open Closed Principle</li>
+            <li>6.3. Liskov Substitution Principle</li>
+            <li>6.4. Interface Segregation Principle</li>
+            <li>6.5. Dependency Inversion Principle</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-7" class="capitulo">
+            <h2>Capítulo 7 - Estilos Arquiteturais</h2>
+            <ul>
+            <li>7.1. Estilos Arquiteturais</li>
+            <li>7.2. Estilos Arquiteturais - Estrutura</li>
+            <li>7.3. Estilos Arquiteturais - Mensagens</li>
+            <li>7.4. Estilos Arquiteturais - Sistemas Adaptativos</li>
+            <li>7.5. Estilos Arquiteturais - Sistemas Distribuídos</li>
+            <li>7.6. Estilos Arquiteturais - Implantação</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-8" class="capitulo">
+            <h2>Capítulo 8 - Padrões Arquiteturais</h2>
+            <ul>
+            <li>8.1. Model View Controller (MVC)</li>
+            <li>8.2. Model View Presenter (MVP)</li>
+            <li>8.3. Model View ViewModel (MVVM)</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-9" class="capitulo">
+            <h2>Capítulo 9 - Arquiteturas de Camadas</h2>
+            <ul>
+            <li>9.1. Arquitetura Hexagonal</li>
+            <li>9.2. Arquitetura de Cebola (Onion)</li>
+            <li>9.3. Clean Architecture</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-10" class="capitulo">
+            <h2>Capítulo 10 - Padrões para Sistemas Distribuídos</h2>
+            <ul>
+            <li>10.1. Padrões Point to Point Channel</li>
+            <li>10.2. Padrões Publish Subscribe Channel</li>
+            <li>10.3. Padrões de Concorrência</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-11" class="capitulo">
+            <h2>Capítulo 11 - Arquiteturas de Sistemas Distribuídos</h2>
+            <ul>
+            <li>11.1. Enterprise Application Integration (EAI)</li>
+            <li>11.2. Service Oriented Architecture (SOA)</li>
+            <li>11.3. Enterprise Service BUS (ESB)</li>
+            </ul>
+        </div>
+
+        <div id="modulo-3-capitulo-12" class="capitulo">
+            <h2>Capítulo 12 - Aplicação de Padrões Arquiteturais</h2>
+            <ul>
+            <li>12.1. Implementação de MVC</li>
+            <li>12.2. Implementação de MVP</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
