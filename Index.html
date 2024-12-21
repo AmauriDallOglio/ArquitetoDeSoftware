@@ -45,6 +45,7 @@
  
 <body>
   <div class="sumario">
+    <h1>Arquitetura de software</h1>
     <h2>Sumário</h2>
     <ul>
       <li><a href="#modulo-1">Módulo 1: Fundamentos de Arquitetura de Software</a></li>
@@ -112,19 +113,95 @@
           <div id="modulo-1-capitulo-1" class="capitulo">
             <h2>Capítulo 1: Introdução à Arquitetura de Software</h2>
             <ul>
-                <li>1.1. Introdução à Arquitetura</li>
-                    <p> A arquitetura de software é fundamental para o desenvolvimento de sistemas robustos e escaláveis, neste capítulo exploramos três níveis principais. 
+              <li>1.1. Introdução à Arquitetura</li>
+                <P> O que é arquitetura de software? É uma modelagem do produto deve ser fito no final, o estudo do fluxo dos dados, especificação das atribuições dos módulos, composição de alto nível, um retrato do que deve ser construído, somente é detalhado o que é extremamente importante, não precisa adiantar uma decisão que não será feito hoje, pelo motivo de mudar a arquitetura, conclusão design do sistema, difícil de mudar e apoiada em padrões, baseado em padrões;</P>
+                <p> Principais componentes da arquitetura: 
+                  <p> •	Componentes do sistema; </p>
+                  <p> •	Camadas; </p>
+                  <p> •	Comunicação; </p>
+                  <p> •	Tecnologias; </p>
+                  <p> •	Práticas de desenvolvimento; </p>
+                  <p> Decisões arquiteturais: </p>
+                  <p> •	Decisões estratégicas; </p>
+                  <p> •	Monólito </p>
+                  <p> •	Micro serviços  </p>
+                  <p> •	Decisões de longo prazo; </p>
+                  <p> •	Mostram quais características estarão presentes ou ausentes na solução; </p>
+                  <p> •	Impactada pela disponibilidade de recursos; </p>
+                </p>
+                <p> A arquitetura de software é fundamental para o desenvolvimento de sistemas robustos e escaláveis, neste capítulo exploramos três níveis principais. 
                     A arquitetura de software que foca na estrutura interna dos sistemas e na organização dos componentes, para garantir desempenho e manutenibilidade.
-                    </p>
-                    <p>A arquitetura de soluções que trata da integração de múltiplos sistemas e aplicações dentro de uma organização para resolver problemas específicos. 
-                    A arquitetura corporativa que alinha a tecnologia, aos objetivos estratégicos de longo prazo da empresa. 
-                    </p>
-                    <p>O arquiteto de softwares deve ter uma combinação de hard skills, como design patterns e clean cold e soft skills, como comunicação e liderança. Além disso, atua como um elo de comunicação entre diferentes equipes garantindo que as soluções atendam tanto as necessidades técnicas quanto empresariais.
-                    </p>
-                <li>1.2. Princípios Gerais de uma boa Arquitetura</li>
+                </p>
+                <p>A arquitetura de soluções que trata da integração de múltiplos sistemas e aplicações dentro de uma organização para resolver problemas específicos. 
+                  A arquitetura corporativa que alinha a tecnologia, aos objetivos estratégicos de longo prazo da empresa. 
+                </p>
+                <p>O arquiteto de softwares deve ter uma combinação de hard skills, como design patterns e clean cold e soft skills, como comunicação e liderança. Além disso, atua como um elo de comunicação entre diferentes equipes garantindo que as soluções atendam tanto as necessidades técnicas quanto empresariais.
+                </p>
+              <li>1.2. Princípios Gerais de uma boa Arquitetura</li>
+                <p> Princípios fundamentais; </p>
+                  <p> SOLID; </p>
+                  <p> Outros princípios; </p>
+                  <p> Conclusão; </p>
+
+                  <p> Princípios fundamentais </p>
+                  <div class="">
+                    <img src="/Imagem/cleanarqui.jpg">
+                  </div>
+
+                  <p> •	Modularidade; </p>
+                    <p> o	É utilização de separação por módulos a divisão das suas responsabilidades; </p>
+                  <p> •	Separação de preocupações; </p>
+                  <p> •	Interfaces bem definidas; </p>
+                    <p> o	Validação da necessidade de um modulo de pagamento precisa ter comunicação com o módulo de estoque, é saber a necessidade dos processos; </p>
+                  <p> •	Escalabilidade; </p>
+                  <p> •	Flexibilidade e adaptação; </p>
+                  <p> •	Uso de padrões; </p>
+                  <p> •	SOLID </p>
+                    <p> o	Responsabilidade única; </p>
+                      <p> 	Garantir que um elemento faça o algo específico, regra com método especifico da classe; </p>
+                    <p> o	Open/Closed; </p>
+                      <p> 	Derivação das classes, quando posso criar novos métodos ou alterar; </p>
+                    <p> o	Liskov; </p>
+                    <p> o	Segregação de interface; </p>
+                    <p> o	Inversão de dependência; </p>
+                  <p> •	Princípio da menor surpresa; </p>
+                  <p> •	Princípio do menos estorço (Lei de Zipf) </p>
+                  <p> •	Princípio do custo de oportunidade; </p>
+                  <p> •	Princípio do custo do atraso; </p>
+                </p>
+              
+              <li>1.3. Trade-Offs Arquiteturais</li>
+                <p> Trade-off refere-se ao ato de equilibrar ou fazer concessões entre dois ou mais atributos de qualidade ou características de um sistema, onde a melhoria de um atributo geralmente leva à degradação de outro. Isso ocorre porque os recursos (como tempo, custo, desempenho, etc) são limitados e as decisões arquiteturais impactam múltiplos aspectos do sistema. </p>
+                <p>Exemplo: Segurança dos dados manter em cache ou em criptografia;</p>
+                <p> •	Atributos de qualidade de software </p>
+                  <p> o	Custo </p>
+                  <p> o	Tempo </p>
+                  <p> o	Escopo </p>
+                  <p> o	Qualidade </p>
+                <p> •	Skills equipe </p>
+                  <p> o	Capacitação da equipe; </p>
+                <p> •	Objetivos de négocio </p>
+                <p> •	Processo de engenharia </p>
+                <p> •	Estilo arquitetural, validação da necessidade de qual modelo adotar </p>
+                  <p> o	  </p>
+                  <p> o	Monólito  </p>
+                  <p> o	Micro serviço </p>
+                  <p> o	 </p>
+                  <p> o	NoSql  </p>
+                  <p> o	SQL </p>
+                <p> •	Exemplo: Caso prático, sistema de pagamento on-line, requisitos principais: Desempenho, Segurança e Interoperabilidade; </p>
+                  <p> o	Trade-off: Desempenho X Segurança </p>
+                    <p> 	Caminho 1: cache, menos criptografia; </p>
+                    <p> 	Caminho 2: criptografia pesada, MFA, mas o desempenho aumenta o tempo para o pagamento; </p>
+                    <p> 	 </p>
+               
+                    <p> Resumo: A arquitetura de software é crucial para desenvolver sistemas robustos e escaláveis, dividindo-se em três níveis principais: </p>
+                      <p> 1.	Arquitetura de Software: Focada na estrutura interna, organização dos componentes, desempenho e manutenibilidade.</p>
+                        <p> 2.	Arquitetura de Soluções: Responsável pela integração de múltiplos sistemas e aplicações para resolver problemas específicos. </p>
+                          <p> 3.	Arquitetura Corporativa: Alinha tecnologia aos objetivos estratégicos da empresa, garantindo suporte às metas de longo prazo. </p>
+                            <p> O arquiteto de software combina hard skills (como design patterns e Clean Code) e soft skills (como liderança e comunicação) e atua como elo entre equipes técnicas e de negócio.</p>
                 
-                
-                <li>1.3. Trade-Offs Arquiteturais</li>
+         
             </ul>
           </div>
           
@@ -134,9 +211,65 @@
             
             <ul>
                 <li>2.1. Arquitetura de Software x Soluções x Corporativa</li>
+                  <p>Nesta seção, exploraremos três pilares essenciais da engenharia de sistemas: arquitetura de software, arquitetura de soluções e arquitetura corporativa. A arquitetura de soluções expande esse conceito ao nível da integração de múltiplos sistemas, abordando como diferentes aplicações e serviços se conectam para resolver problemas específicos de negócios. Por fim, a arquitetura corporativa fornece uma visão holística e estratégica, alinhando a tecnologia com os objetivos empresariais e garantindo que todas as solu ções tecnológicas suportem a visão e as metas de longo prazo da organização. Juntos, esses níveis de arquitetu ra formam uma base sólida para a criação de sistemas eficientes, adaptáveis e alinhados com as necessidades dinâmicas do mercado. </p>
+                  <p> Arquitetura de Software </p>
+                  <p>A arquitetura de software se concentra na estrutura in terna e na organização dos componentes de um siste ma, garantindo que ele seja robusto, escalável e manu tenível. Esta área é a responsável pela organização da solução em um nível mais próximo do código e dos de senvolvedores. Algumas decisões e atividades que são responsabilidade deste profissional, por exemplo: </p>
+                    <p> • Participação de revisões de código. </p>
+                    <p> • Direcionar a implantação de paradigmas de de senvolvimento (ex: TDD, BDD...) </p>
+                    <p> • Desenvolver modelos e design de componen tes (diagrama de classes, componentes...) de arquiteturas para soluções específicas.</p>
+                    <p> • Apoiar o processo decisório da equipe de de senvolvimento na construção de soluções es pecíficas. Os profissionais que atuam como arquiteto de softwares normalmente têm grande bagagem técnica e experiên cia profissional no contexto do desenvolvimento do sis tema, relativamente habitual termos desenvolvedores experientes que se tornaram arquitetos. Esses profissionais eventualmente atuam como respon sáveis técnicos ou tech lead, apoiando diretamente a equipe de desenvolvimento em dúvidas relacionadas à arquitetura emergente ao longo do projeto de construção da solução. </p>
+                  <p>Arquitetura de Soluções </p>
+                    <p> Um arquiteto de soluções se concentra na integração de múltiplos sistemas e aplicações dentro de uma organização. Isso inclui definir como diferentes sistemas (por exemplo, ERP, CRM, e-commerce) se comunicam e trabalham juntos, utilizando middleware, APIs e outras tecnologias de integração para garantir que todas as partes funcionem de maneira coesa e eficiente. </p>
+                  <p> Arquitetura Corporativa  </p>
+                    <p> Um arquiteto corporativo é responsável por alinhar as estratégias de TI com os objetivos de negócios da organização. Isso envolve a criação de roadmaps tecnológicos, definição de políticas e padrões de arquitetura, e a garantia de que todas as iniciativas de TI suportem a visão e os objetivos de longo prazo da empresa, promovendo a agilidade e a inovação dentro da organização. Esse profissional normalmente tem uma atuação mais estratégica/gerencial e menos técnica</p>
+
                 <li>2.2. Soft e Hard Skills</li>
+                  <p>Um arquiteto (a) de software deve ter habilidades (skills) diversas. Durante muito tempo valorizou-se apenas as skills técnicas relacionadas à área de arqui tetura de software, tais como modelagem. Contudo, cada vez mais o mercado demanda de um profissional que também tenha soft skills que vão permitir a este profissional ter habilidades comportamentais para li dar, influenciar, persuadir e conquistar o apoio dos mais diversos públicos relacionados a sua atividade fim. </p>
+                  <p> Hard Skills São as habilidades técnicas adquiridas ao longo do tempo, sejam por processos educacionais, leitura de livros e artigos, estudo de novas tecnologias, experiên cia prática... Estas atividades normalmente podem ser medidas e comprovadas (ex: experiência profissional comprovada, certificados, diplomas...). Alguns exemplos de hard skills são: </p>
+                    <p> • Programação Orientada a Objetos. </p>
+                    <p> • SOLID. </p>
+                    <p> • Design Patterns. </p>
+                    <p> • DDD, BDD, TDD. </p>
+                    <p> • Clean Code</p>
+                  <p> Soft Skills São as habilidades relacionadas aos aspectos compor tamentais, que devem ser desenvolvidas ao longo do tempo e que normalmente não são comprovadas de forma quantitativa ou através de certificados, o que não quer dizer que não devam ser largamente estuda das. Dentre as principais soft skills esperadas de um arquiteto podemos citar: </p>
+                    <p> • Inovação.</p> 
+                    <p> • Comunicação. </p>
+                    <p> • Capacidade de Persuasão.  </p>
+                    <p> • Capacidade de Influência.  </p>
+                    <p> • Aprendizado contínuo.  </p>
+                    <p> • Liderança </p>
+
+
+
+
                 <li>2.3. Papel do Arquiteto</li>
+                  <p> Nesta seção iremos estudar sobre diversas atividades e funções que devem ser desempenhadas por um arqui teto de software no dia a dia profissional. O que seria o Papel do Arquiteto? Um arquiteto de software é um profissional essencial no desenvolvimento de sistemas complexos, atuando como o responsável por definir a estrutura e os padrões de uma aplicação. Suas atividades incluem a criação de modelos de arquitetura, que descrevem a estrutura ge ral do sistema e detalham como seus componentes in teragem. Isso envolve escolher tecnologias adequadas, determinar a configuração de servidores e estabelecer padrões de codificação. Além disso, o arquiteto de sof tware deve garantir que a solução seja escalável, sus tentável e de fácil manutenção, considerando aspectos como desempenho, segurança e integração com outros sistemas. Outra função crucial do arquiteto de software é servir como um elo de comunicação entre diferentes equipes de desenvolvimento. Ele trabalha estreitamente com desenvolvedores, gerentes de projeto, analistas de ne gócios e outras partes interessadas para garantir que os requisitos técnicos e funcionais sejam compreendi dos e implementados corretamente. Isso pode envol ver a elaboração de documentação técnica detalhada, a realização de reuniões e workshops para alinhar expec tativas e resolver conflitos, além de orientar e revisar o trabalho das equipes de desenvolvimento para assegu rar a conformidade com os padrões estabelecidos. Além de suas responsabilidades técnicas e de comu nicação, o arquiteto de software também desempenha um papel estratégico dentro da organização. Ele contri bui para a visão de longo prazo da empresa, ajudando a definir a direção tecnológica e garantindo que as so luções arquitetônicas suportem os objetivos de negó cios. Isso inclui a avaliação e a adoção de novas tecno logias e tendências, a realização de análises de risco e a garantia de que a arquitetura proposta possa evoluir conforme as necessidades do mercado e da organiza ção mudem. Assim, o arquiteto de software não só ga rante a robustez e a eficiência dos sistemas atuais, mas também prepara a empresa para desafios futuros </p>
                 <li>2.4. A arquitetura dentro das grandes organizações</li>
+                  <p> As principais atividades de um arquiteto de software abrangem uma ampla gama de responsabilidades téc nicas e de gestão. Essas atividades podem ser agrupa das em diversas categorias, citando algumas delas: </p>
+                    <p> 1. Definição da Arquitetura do Sistema: </p>
+                      <p> • Documentação Técnica: Criar e manter documen tação detalhada sobre a arquitetura do sistema, in cluindo diagramas, especificações e manuais de re ferência. </p>
+                      <p> • Orientação e Mentoria: Fornecer orientação técnica e mentoria para os membros da equipe de desenvol vimento, ajudando a resolver problemas complexos e garantindo a adesão aos padrões arquitetônicos. </p>
+                    <p> 2. Coordenação e Comunicação: </p>
+                      <p> • Análise e Avaliação de Riscos: Identificar potenciais riscos técnicos e de projeto, propondo soluções para mitigá-los e garantir a robustez do sistema. </p>
+                      <p> • Adaptação e Evolução da Arquitetura: Monitorar novas tendências tecnológicas e incorporar inova ções relevantes à arquitetura existente para manter a competitividade e a eficiência do sistema. </p>
+                      <p> • Revisão e Otimização do Desempenho: Realizar re visões periódicas do desempenho do sistema, identi f icando áreas para otimização e melhorias contínuas. </p>
+                    <p>3. Avaliação e Melhoria Contínua: </p>
+                      <p>• Criação de Modelos Arquitetônicos: Desenvolver diagramas e modelos que representem a estrutura do sistema, detalhando como os componentes interagem entre si.  </p>
+                      <p> • Escolha de Tecnologias e Ferramentas: Selecionar as tecnologias e ferramentas adequadas para a implementação do sistema, considerando aspectos como escalabilidade, desempenho e manutenção.</p>
+                      <p> • Definição de Padrões e Práticas: Estabelecer padrões de codificação, práticas de desenvolvimento e diretrizes que a equipe deve seguir para garantir a consistência e qualidade do software. </p>
+                    <p> 4. Análise de trade-off e visibilidade: </p>
+                      <p> • Colaboração com as Partes Interessadas: Trabalhar com desenvolvedores, gerentes de projeto, analistas de negócios e outras partes interessadas para entender os requisitos do projeto e garantir que a ar quitetura atenda às necessidades do negócio. </p>
+                      <p> • Análise de trade-off: Ato de escolher alguma coisa em detrimento de outra e vai consistir em uma análise de pontos positivos e negativos de cada uma das escolhas que faremos. Isto significa ba sicamente que escolhendo uma opção estaremos carregando os pontos negativos e positivos dela e estaremos perdendo os pontos positivos e negati vos da outra opção. Na engenharia de software existe um método que ajuda nesse processo de decisão, o ATAM (Architecture Tradeo f f Analysis Method). Seu objetivo é ajudar a escolher uma arquitetura adequada para um sistema de software, des cobrindo compensações e pontos de sensibilidade.</p>
+                    <p> Apresentar ATAM – Apresentar o conceito de ATAM aos stakeholders e esclarecer dúvidas sobre o processo. </p>
+                      <p>  • Representantes da área de negócio – todos no processo apresentam e avaliam os motivadores de negócios para o sistema em questão.  </p>
+                      <p> • Apresente a arquitetura - o arquiteto apresenta a arquitetura de alto nível para a equipe, com um ‘nível de detalhe apropriado’ </p>
+                      <p> • Identifique as abordagens arquitetônicas – dife rentes abordagens arquitetônicas do sistema são apresentadas pela equipe e discutidas. </p>
+                      <p> • Gerar árvore de utilitários de atributos de qua lidade - definir o negócio principal e os requisitos técnicos do sistema e mapeá-los para uma pro priedade arquitetônica apropriada. Apresente um cenário para este determinado requisito. • Análise das abordagens arquitetônicas – anali se cada cenário, classificando-os por prioridade. A arquitetura é então avaliada em relação a cada cenário.  </p>
+                      <p> • Faça um brainstorming e priorize cenários – en tre o grupo maior de partes interessadas, apresen te os cenários atuais e expanda. </p>
+                      <p> • Analise as abordagens arquitetônicas – execute a etapa 6 novamente com o conhecimento agre gado da comunidade mais ampla de partes inte ressadas.  </p>
+                      <p> • Apresentar resultados – fornece toda a documen tação às partes interessadas. Durante todo o processo do ATAM, as soluções encon tradas serão sabatinadas e analisada a viabilidade, até que se defina o modelo arquitetural do projeto.  </p>
+                    <p> 5. Liderança técnica:  </p>
+                      <p> Direcionar as equipes de desenvolvimento na esco lha, especificação e implantação de tecnologias, as sim como a definição e evolução de padrões de de senvolvimento. Poderíamos citar diversas outras atividades (ex: mo nitoração, prototipação....), o grande ponto no mo mento é compreender que as hard e soft skills com binadas ajudam o arquiteto a desempenhar suas funções com excelência </p>
             </ul>
           </div>
           
@@ -145,6 +278,12 @@
             <p>Governança da arquitetura, a governança da arquitetura envolve garantir que as soluções arquiteturais estejam sendo implementadas corretamente e que as decisões sigam padrões estabelecidos. O arquiteto deve garantir a conformidade das soluções através de revisões periódicas e assegurar que as decisões sejam documentadas adequadamente, contribuindo para a evolução da arquitetura. </p>
             <ul>
               <li>3.1. Arquitetura Intencional</li>
+                <p> É a visão inicial determinando o fluxo do início do sistema, são as ideias gerais do sistema, análise de requisitos e projeto, é composta pelas decisões estruturais antes do desenvolvimento do sistema, conceito que enfatiza a importância de tomar decisões arquiteturais e conscientes, com o objetivo de alinhar a arquitetura do sistema com os objetivos e requisitos do negócio.  </p>
+                    <p> •	Visão clara e compartilhada;</p>
+                    <p> •	Foco em qualidade;</p>
+                    <p> •	Uso de padrões e melhores práticas;</p>
+                    <p> •	Adaptabilidade e flexibilidade;</p>
+
               <li>3.2. Engenharia de Software Ágil</li>
               <li>3.3. Arquitetura Evolutiva</li>
               <li>3.4. Arquitetura Emergente</li>
@@ -154,6 +293,7 @@
           <div id="modulo-1-capitulo-4" class="capitulo">
             <h2>Capítulo 4: Estilos Arquiteturais Monolíticos</h2>
             <p>Evoluções e tendências da arquitetura, neste capitulo o foco é na evolução da arquitetura e nas novas tendências tecnológicas. O arquiteto de software precisa estar atendo às mudanças e inovações para adaptar e melhorar as soluções atuais. Isso inclui a adoção de práticas como DevOps, cloud computing e arquiteturas evolutivas que são essenciais para manter a competividade e atender as demandas dinâmicas do mercado. </p>
+
             <ul>
               <li>4.1. Conceitos Gerais</li>
               <li>4.2. Arquitetura em Camadas</li>
