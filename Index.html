@@ -1792,9 +1792,18 @@
         <p><strong>Capítulo 5 – GoF – Padrões Comportamentais</strong></p>
         <ul>
           <li>5.1. Command</li>
+          <p> O padrão Command na teoria da orientação do projeto é definido que as classes representam os conceitos do domínio do problema todas as entidades todos os agentes que estão envolvidos na simulação Viva do problema são candidatos a se tornarem classes dentro do sistema e as ações desempenhadas por esses agentes por essas entidades devem ser encapsuladas e implementadas em métodos dessas classes porém alguns cenários nós precisamos representar ações que vão ser desempenhadas num sistema ou seja os Command que são executados Porém Aqui essas ações elas não são métodos elas são as classes do sistema e o padrão Calma que propõe encapsular as informações necessárias para a execução de um objeto ou seja tratar todas as informações necessárias encapsuladas em um objeto aquelas ações sejam executadas não somente executá-las mas também criar uma interface comum de execução para essas ações na demonstração dessa aula nós vamos ver como nós podemos representar ações nos sistemas encapsulas dentro de uma classe e permitir com que em determinado agente do sistema Execute diferentes ações uma vez que nós vamos ter essa representação padrão para requisições de Command.</p>
+          <p> Flexibilizar a execução de ações nos sistemas por diferentes mecanismos ele permite a implementação de mecanismos de fazer e desfazer e agrega muitas funcionalidades interessantes quando nós precisamos criar um consumidor que tem o papel de disparar ações dentro do sistema além de permitir reusar essas ações para serem executadas em diferentes canais. </p>
           <li>5.2. Template Method</li>
+          <p> O padrão Template Method algumas vezes nós nos deparamos com situações onde uma funcionalidade precisa ser implementada mas existem variações desse comportamento a classe que implementa essa funcionalidade pode não ser capaz de determinar como implementar todas as etapas desse algoritmo porém algumas das etapas ela consegue definir e implementar e as outras ela sabe apenas que elas existem o padrão não tem método ele vive a criar uma estrutura por um esqueleto dessa funcionalidade Ou seja a classe o pai a classe que concentra o ponto de acesso a essa funcionalidade vai determinar todos os passos daquela funcionalidade as etapas que ele consegue implementar ele já vai implementadas e aquelas que ele não é capaz de implementar ele vai delegar para as classes filhas com isso a diferentes variações que são as classes filhas vão poder definir como aquelas etapas de um pai não foi capaz de implementar devem ser construídas e como o esqueleto da funcionalidade foi definido na classe ai todas as variações automaticamente vão herdar as implementações que já foram definidas na classe esse padrão se assemelha muito a oferta e método mas aqui o foco é o comportamento e para nós vermos a diferença entre um e outro e as particularidades.</p>
+          <p> Nós vimos que o padrão permite reduzir a implementação de algoritmos extensos reduz a possibilidade de duplicação de código e simplifica a manutenção e a evolução de Especialidades de variações presentes no algoritmo uma vez que nós conseguimos concentrar as regras comuns nas classes pais e delegar para as filhas as etapas que são de suas responsabilidades </p>
           <li>5.3. State</li>
+          <p>Ele atua em cenários onde nós temos uma classe com diferentes comportamentos porém a implementação desses comportamentos depende diretamente do estado dos atributos da classe um grande exemplo de implementação desse padrão é quando nós temos algum jogo eletrônico como por exemplo Mário se nós representarmos o personagem em uma classe ele vai ter um estado que determina Qual a situação do personagem no jogo tem diversas ações podem ser desempenhadas na medida que o usuário interage é um jogo estou com meu personagem sendo a fase inicial do Mário.</p>
+          <p>Ele vai pular como intensidade ele pode correr como uma determinada intensidade um botão que é o personagem pode não fazer nada porém se eu pego uma flor de Fogo o meu personagem vai se transformar eu vou mudar o estado do personagem não faz mais por exemplo aqui eu continuo tendo personagem Mário porém dependendo do como eu for implementar esse personagem eu vou ter que fazer dentro do método correr dentro do método saltar ações que correspondem a situação do pai Mário Além disso se eu era o Mário as mesmas ações mudam de acordo com o estado do personagem nesse momento só pega uma pena das ações mudam de novo se todas essas situações por representadas todos os métodos de ações do personagem vão ter uma série de uma série de uma séries quando ele ficar qual é a situação do personagem ele Visa atuar sobre esse tipo de situação ele vai permitir que o objeto Mude o seu comportamento e cada estado vai ter uma classe separada com a implementação das ações que refletem aquele Estado então eu tiro da classe a implementação das ações e gera uma classe com os métodos com as responsabilidades para cada situação do objeto e as transições de estados vão fazer com que vem na classe por exemplo e coloca dentro do estado dele a classe que desempenha essas ações de acordo com a situação do personagem. </p>
+          <p>Contribui para reduzir a complexidade de implementação de objeto com múltiplos estados ele permite criar representações que encapsulam a situação atual de um determinado objeto com ele é possível melhorar a responsabilidade única das classes remover estruturas indesejadas de Infiel e substituir isso por exemplo.</p>
           <li>5.4. Strategy</li>
+          <p>Sobre um Strategy a manutenção de um software pode se tornar uma grande dor de cabeça quando existem códigos que possuem muitas ramificações os famosos e emaranhados de fiel e suíte Case essas estruturas se tornam suscetíveis à evolução e constantes que acabam gerando novas ramificações problemas indesejados e muitas vezes nós não somos capazes de identificar e entender o que aquela estrutura realmente faz por meio do padrão estratos nós encapsulamos cada uma dessas derivações do algoritmo alvo em classes específicas essa ideia é muito parecida com que nós estudamos o padrão state mas lá nós separamos as ações com base no estado do objeto aqui nós vamos pegar um determinado algoritmo independente deles Independente de um estado ou não mas ele é uma ramificação de um algoritmo maior e encapsular em uma classe A classe principal que antes da implementação de padrão tem todas as ramificações passa armazenar uma referência para a estratégia ou seja por objeto que tem aquela ramificação.</p>
+          <p>Tem como ponto positivo o fato de tornar possível alternar a forma de execução de um determinado algorífico em tempo de execução ele permite contornar algumas limitações do uso de herança usando por exemplo composição e contribui para que nós não tenhamos uma quantidade grande de fiel Sweet Case tempo de nosso sistema Em contrapartida aí eficácia de implementação desse padrão depende do índice de ocorrências das variações quanto maior a quantidade de variações mais fácil fundamentar a adoção desse padrão o consumidor principal passa a ser responsável por definir essa estratégia Então quem vai usar o objeto principal que contém a estratégia acaba sendo responsável por materializar a estratégia que ele quer utilizar mudando a ótica de dependências dentro da situação do sistema e em algumas linguagens ele pode Hoje ser substituído por recursos nativos da própria linguagem então é muito importante que vocês conhecerem a ferramenta que você usam porque pode ser que você já tem um recurso nativos, por meio do padrão é possível isolar implementações de algoritmo e alternar o seu uso mantendo a coesão de cada implementação  </p>
         </ul>
       </div>
 
@@ -1804,12 +1813,13 @@
 
       <div id="modulo-3-capitulo-7" class="capitulo">
         <p><strong>Primeira Aula Interativa - Capítulo 6 – Princípios SOLID</strong></p>
+        <p>Os princípios SOLID são diretrizes fundamentais para o design de software orientado a objetos, promovendo código mais modular, flexível e fácil de manter. Eles foram definidos por Robert C. Martin (Uncle Bob) e são amplamente utilizados no desenvolvimento de sistemas.        </p>
         <ul>
-          <li>6.1. Simple Responsibility Principle</li>
-          <li>6.2. Open Closed Principle</li>
-          <li>6.3. Liskov Substitution Principle</li>
-          <li>6.4. Interface Segregation Principle</li>
-          <li>6.5. Dependency Inversion Principle</li>
+          <li>6.1. Simple Responsibility Principle: Single Responsibility Principle (SRP) – Cada classe ou módulo deve ter uma única responsabilidade, ou seja, deve existir apenas uma razão para modificar a classe. Isso melhora a coesão e facilita a manutenção do código.          </li>
+          <li>6.2. Open Closed Principle: O código deve ser aberto para extensão, mas fechado para modificação. Isso significa que novas funcionalidades devem ser adicionadas sem alterar o código existente, geralmente utilizando abstração e herança.</li>
+          <li>6.3. Liskov Substitution Principle: Objetos de uma classe derivada devem poder substituir objetos da classe base sem alterar o comportamento do sistema. Esse princípio garante a correta utilização da herança e evita dependências frágeis.</li>
+          <li>6.4. Interface Segregation Principle:  Interfaces devem ser específicas para cada contexto, evitando interfaces muito grandes e genéricas. Isso impede que classes sejam forçadas a implementar métodos desnecessários, tornando o sistema mais modular.</li>
+          <li>6.5. Dependency Inversion Principle: Módulos de alto nível não devem depender de módulos de baixo nível, ambos devem depender de abstrações. Isso reduz o acoplamento e melhora a flexibilidade do sistema ao utilizar injeção de dependência.</li>
         </ul>
       </div>
 
@@ -1817,11 +1827,59 @@
         <p><strong>Capítulo 7 – Estilos Arquiteturais</strong></p>
         <ul>
           <li>7.1. Estilos Arquiteturais</li>
+          <p>A concepção da arquitetura de um software é uma equação complexa que envolve inúmeras variáveis, oriundas, principalmente, dos requisitos esperados para o sistema. Esse processo demanda a análise e ponderação dos trade offs de cada possível abordagem candidata e o arquiteto deve ser capaz de avaliá–las em um alto nível de abstração, uma vez que o sistema ou componente está em fase preliminar de concepção. Se o arquiteto tiver em mãos diretrizes que permitem organizar as abordagens candidatas de forma a reconhecer suas características e permitir determinar se o sistema alvo é semelhante a outros no qual cada abordagem já foi aplicada ele será capaz de avaliar os benefícios e os pontos negativos e, assim, fundamentar suas decisões. Porém, as soluções precisam ser abstratas o suficiente de forma a viabilizar a comparação independente de tecnologias e ramo de atuação de negócio. Tudo isso torna fundamental o conhecimento dos estilos arquiteturais. Estilos arquiteturais descrevem soluções para resolução de problemas na arquitetura de software, porém, atuam em alto nível, permitindo caracterizar uma família de sistemas do ponto de vista da sua organização estrutural. Isso significa que eles produzem uma terminologia que caracteriza componentes de software com base no aspecto identificável da sua organização, sempre a partir de uma visão do nível mais alto de abstração e independente de tecnologia. O estilo arquitetural de um software permite descrever como as camadas, os componentes e os módulos irão se comunicar, identificando e isolando suas responsabilidades. Não existe um estilo arquitetural universal capaz de resolver todos os problemas, uma vez que cada tipo de sistema possui uma característica marcante. Por isso, cada estilo arquitetural é capaz de resolver uma classe de problemas. Existem sistemas que demandam requisitos elevados de segurança, enquanto outros podem ter como característica fundamental o desempenho, a replicação global de dados ou um elevado índice de disponibilidade. Desta forma, os sistemas que seguirem um determinado estilo arquitetural se beneficiarão de determinados atributos em favor de outros. É importante salientar que estilos arquiteturais não são sinônimos de padrões arquiteturais. Um padrão arquitetural apresenta uma solução amplamente testada, documentada e replicável para problemas recorrentes de arquitetura dentro de um estilo arquitetural. Esses termos são frequentemente confundidos, porém, atuam em níveis distintos da solução. Estilos arquiteturais fornecem uma visão periférica em torno do problema enquanto padrões arquiteturais descrevem o processo de como a solução deve ser construída, focado em uma solução concreta. As seções a seguir detalham os principais tipos de estilos arquiteturais.</p>
           <li>7.2. Estilos Arquiteturais – Structure</li>
+          <p>Os estilos arquiteturais do tipo Structure têm por objetivo suportar o planejamento da arquitetura do sistema fornecendo diretrizes para a decomposição e organização dos componentes e comportamentos do sistema. Também são conhecidos pelo jargão “From mud to structure”. </p>
+          <p><strong> Os principais são:    </strong></p>
+          <ul>
+            <li>Layered  </li>
+            <li>Pipes and filters  </li>
+            <li>Component-based  </li>
+          </ul>
+          <p>Esses estilos têm alta relevância na teoria de arquitetura de software uma vez que as discussões sobre como distribuir as responsabilidades fazem parte de todos sistemas minimamente estruturados. Em contrapartida, nem todos sistemas demandam requisitos de adaptação, por exemplo.</p>
+          <p>O estilo arquitetural Layered, também conhecido como arquitetura baseada em camadas, sugere a organização dos sistemas em cada camada, em que cada camada possui uma responsabilidade específica e to dos os artefatos de software residentes em uma deter minada camada devem desempenhar um papel asso ciado a essa responsabilidade. Seu uso contribui para desenvolver aplicações mais fáceis de entender, testar e manter, além de auxiliar o desenvolver paralelo e in dependente de cada camada do sistema. </p>
+          <p>O estilo arquitetural por si não define de forma explícita as camadas que devem compor o sistema, ele é frequentemente refinado e transformado em uma solução concreta pelos padrões arquiteturais como MVC, MVP, dentre outros que serão estudados nos capítulos posteriores do curso. Entretanto, é comum encontramos pelo menos qua tro camadas nas principais soluções: </p>
+          <ul>
+            <li>Presentation Layer </li>
+            <li>Business Layer </li>
+            <li>Persistence Layer  </li>
+            <li>Database Layer.  </li>
+          </ul>
+          <p>Já o estilo arquitetural Pipe and Filters, ilustrado em Figura 8, visa decompor um processo complexo de forma que cada tarefa é encapsulada em elementos distintos e reutilizados e, a execução do processo como um todo ocorre através do encadeamento de tais componentes. Além de permitir o reuso das atividades, esse modelo arquitetural contribui para a melhoria do desempenho dos processos e simplifica o processo evolutivo, permitindo que novas etapas sejam facilmente inseridas ou removidas do fluxo de processamento.</p>
+          <p>Padrão Registry - As premissas do estilo Pipe and Filters são utilizadas na organização de componentes autônomos de sis temas distribuídos, no processamento de requisições HTTP de servidores web e também na organização de camadas em alguns padrões arquiteturais que estuda remos nos capítulos posteriores, como Hexagonal Ar chitecture.</p>
           <li>7.3. Estilos Arquiteturais – Message Styles</li>
+          <p>O processamento assíncrono entre sistemas distribuídos pode ser utilizado para garantir a conformidade com diferentes requisitos de qualidade de um sistema que, via integração síncrona, podem não ser tecnicamente viáveis. Os estilos arquiteturais deste tipo classificam as diferentes abordagens frequentemente adotadas no uso de processamento de mensagens, sendo os principais: </p>
+          <p><strong>    </strong></p>
+          <ul>
+            <li>Implicit invocation  </li>
+            <li>Asynchronous messaging  </li>
+            <li>Publish-subscribe  </li>
+          </ul>
+          <p>Esses três estilos arquiteturais formam a base das principais arquiteturas modernas, em que a presença de middlewares orientados a mensagens nas integrações entre aplicações e componentes da própria aplicação e o uso de eventos para processamento assíncrono estão cada vez mais presentes.</p>
           <li>7.4. Estilos Arquiteturais – Adaptive Systems</li>
+          <p> Existem cenários que imputam aos sistemas a necessidade de serem flexíveis e customizáveis, permitindo que mudanças nos requisitos funcionais e não funcionais sejam aplicadas diretamente pelos consumidores do sistema. Os estilos arquiteturais deste tipo categorizam as principais soluções adotadas para satisfazer essa necessidade. Os principais estilos arquiteturais catalogados nesta categoria são: </p>
+          <ul>
+            <li> Microkernel </li>
+            <li> Reflection </li>
+            <li>Domain-specific language </li>
+          </ul>
           <li>7.5. Estilos Arquiteturais – Distributed Systems</li>
+          <p>Um arquiteto deve dominar as boas práticas de projeto e desenvolvimento de sistemas distribuídos e os estilos arquiteturais desta categoria permitem identificar as características chaves das principais abordagens para composição de sistemas distribuídos e integração entre aplicações. Os principais estilos arquiteturais desta categoria são: </p>
+          <ul>
+            <li>Service-oriented  </li>
+            <li>Peer to peer style  </li>
+            <li>Object request broker  </li>
+            <li>Cloud native. </li>
+          </ul>
           <li>7.6. Estilos Arquiteturais – Deployment</li>
+          <p>A arquitetura é uma disciplina holística e envolve as diversas fases do ciclo de vida de um software e suas diferentes necessidades. Saber classificar e analisar o trade offs dos principais modelos de implantação dos sistemas é fundamental para o sucesso de um software, uma vez que a escolha do modelo de implantação incorreto pode anular todos os pontos positivos do projeto de um software. Os estilos arquiteturais mais conhecidos deste tipo são:</p>
+          <ul>
+            <li>Client-Server  </li>
+            <li>N-tier  </li>
+          </ul>
+          <p>No estilo arquitetural Client-Server visa distribuir o runtime do software é distribuído entre dois tipos de nós e ambos se integram por meio de um canal de comunicação. Os componentes presentes nos clientes podem, ainda, serem estruturados com base em uma separação de camadas lógicas (layers), assim como no servidor. Além disso, um cliente pode se comunicar com um ou vários servi dores diferentes utilizando vários protocolos.</p>
+          <p>Um cliente pode requisitar dados e algoritmos para um servidor. Além disso, os clientes podem ser classificados como Thin Clients e Fat Clients. O critério para essa definição se baseia na capacidade de processa mento e quantidade de responsabilidades atribuídas para os componentes de software que rodam no cliente. A arquitetura N-tier se baseia nos princípios do esti lo arquitetural N-tier, porém, tem foco na distribuição física do software (tiers). Seu principal objetivo é distribuir o software em camadas físicas de acordo com a complexidade e os requisitos arquiteturais do software. Embora a implementação mais tradicional seja a separação em três camadas, nas aplicações modernas é comum a utilização de várias camadas como pode ser observado no exemplo ilustrado na Figura 10.</p>
+          <p>Um sistema pode demandar diversos estilos arquiteturais para atender às suas necessidades, além disso, eles podem ser combinados, produzindo soluções híbridas. Este capítulo descreve brevemente os estilos arquiteturais e devem ser utilizados como um guia para o aprofundamento dos estudos. </p>
         </ul>
       </div>
 
@@ -1829,28 +1887,322 @@
         <p><strong>Capítulo 8 – Padrões Arquiteturais</strong></p>
         <ul>
           <li>8.1. Padrões Arquiteturais</li>
+          <p>Vamos dar início ao estudo dos padrões arquiteturais nós vamos estudar nessa aula os conceitos do padrões arquiteturais com base naquilo que nós vimos nos estilos arquiteturais é a primeira aula do módulo Eu comentei que existem diferentes definições de arquitetura mas todas elas têm um lucro em comum como nós podemos ver a definição do prêmio do gato definir arquitetura como a estrutura dos componentes suas inter-relações e os princípios e diretrizes que regem o seu design e a evolução ao longo do tempo por mais que a estrutura do português dessa definição seja um pouco diferente da outra ela tem a mesma estrutura em comum que é definir as partes o papel dessas partes as regras de relacionamento entre elas e também outros elementos como as regras e evolução ao longo do tempo as características do ambiente ao qual o software se inclui mas a definição de arquitetura ele tem sempre esses três pilares fundamentais e quando nós falamos padrões nós estamos falando de essências de soluções que visam resolver problemas recorrentes que são amplamente testados e podem ser replicados e adaptadas em inúmeros contextos diferentes isso é válido padrões de projeto de análise e também será válido para padrões eleitorais então quando nós falamos de padrões arquiteturais nós estamos falando de essência de soluções que descrevem abordagens para a organização da estrutura de um sistema aqui nós não estamos mais preocupados com a estrutura de um código fonte específico ou como implementar uma solução por um problema de projeto do código fonte nós olhamos para uma ótica maior que é a organização do sistema quer pegar um determinado que define as características de um sistema as características Chaves de um sistema e propor soluções para problemas que acontecem dentro desses universo o foco passa a ser então separação de interesses culturais também são capazes de imprimir características desejadas a um sistema dependendo do padrão adotado no sistema pode ter um comportamento uma capacidade ele não terá por isso é muito importante conhecer as características a proposta de cada padrão para que quando nós Recebemos o que é esperado no sistema nós conseguimos fundamentar todas as decisões que nós vamos tomar e escolher os padrões adequados a escolha do padrão deve levar em consideração Além disso ele simplificam a definição da arquitetura de preferência é aquela que foi Projetada pelo sistema uma vez que eu adoro padrões eu consigo comunicar de uma forma mais simples uma forma padronizada O que é esperado de referência tenha eles também contribui para minimizar o esforço necessário para o desenvolvimento e a manutenção do sistema principalmente testados quando nós paramos tecnologias eles não focam resolver problemas concretos eles focam em caracterizar o sistema melhor dizendo eles focam em caracterizar famílias pegar diversos sistemas que possuem características que distinguem essa família para isso nós precisamos basear nas características que discriminam essas famílias componentes os padrões eles vão se basear e existem padrões para resolver esse problema se o meu problema é a organização estrutural eu posso dar por exemplo se eu estou trabalhando em eventos no meu sistema então Além disso eu posso ainda combinar os padrões porque eles têm propósito diferente existem inúmeros outros tipos naturais o caso do sistema interativos são muito conhecidos como MVC, MVP ou MVVM, desejáveis para um determinados  vimos que os padrões arquiteturais propõem soluções para problemas recorrentes na elaboração de uma arquitetura de um software eles permitem aplicar características desejáveis para um determinado sistema e devem ser utilizados em conjunto com os estilos arquiteturais.</p>
           <li>8.2. Model View Controller (MVC)</li>
+          <p>O padrão arquitetural MVC, um dos mais conhecidos na literatura de desenvolvimento de sistemas. Formalizado em 1979 a partir de um estudo sobre a linguagem, o padrão MVC tem sido amplamente utilizado em sistemas orientados a objetos. A proposta desse padrão visa organizar a estrutura de um sistema, separando os interesses do sistema e, principalmente, em sistemas interativos, ou seja, aqueles que envolvem interação Homem-Máquina. </p>
+          <p>Como um padrão arquitetural, o MVC possui um problema-alvo, uma proposta de solução e os elementos que fazem parte dessa proposta, como vimos nos padrões de projeto. Ele pode ser de alta complexidade, exigindo um esforço considerável no projeto, manutenção e desenvolvimento dos componentes. No entanto, equipes que buscam uma abordagem para maximizar recursos e a portabilidade dos componentes podem se beneficiar significativamente desse padrão. Sua proposta está diretamente relacionada ao conceito de arquitetura que discutimos anteriormente. </p>
+          <p>O primeiro pilar do MVC é a definição das partes e suas responsabilidades, além do relacionamento entre elas. O MVC é composto por três camadas: </p>
+          <p><strong> Os Três Pilares do MVC   </strong></p>
+          <ul>
+            <li><strong>Model: </strong>Responsável por gerenciar os dados e o estado da aplicação. O model processa os dados e os envia para a fonte de persistência. Em algumas variações do MVC, o model pode ser ativo ou passivo. Quando ativo, ele transmite o resultado do processamento; quando passivo, ele recebe as demandas e transmite o resultado para fora da aplicação, sem interagir diretamente com a view. </li>
+            <li><strong>View:</strong>: A view apresenta os dados ao usuário e coordena a interação entre o usuário e a aplicação. Ela coleta as informações fornecidas pelo usuário antes de acionar o controller. A view não é responsável pela lógica de negócios, apenas pela interface com o usuário, e envia as ações do usuário ao controller para que a demanda seja executada.            </li>
+            <li><strong>Controller: </strong> O controller atua como um intermediário entre a view e o model. Ele coordena as ações do model, decide qual view exibir com base no contexto de execução e escolhe a view apropriada para renderizar o resultado para o usuário. O controller é essencial para rastrear as mudanças no model e determinar qual view deve ser exibida.</li>
+          </ul>
+          <p><strong> Comunicação entre as Camadas   </strong></p>
+          <ul>
+            <li>O terceiro pilar do MVC refere-se às regras de comunicação entre as camadas. O processo de comunicação começa com a interação do usuário na view, que envia uma ação ao controller. O controller então atualiza o model, realizando as ações necessárias. Uma vez que a regra de negócio seja executada, o controller examina o modelo atualizado e escolhe qual view será exibida ao usuário. O controller entrega o modelo à view, e esta passa a exibir os dados ao usuário. </li>
+            <li>Uma característica importante do MVC é que o controller pode escolher diferentes views, dependendo do contexto da execução. Por exemplo, se o fluxo principal for seguido sem erros, o controller pode escolher uma view específica. Caso contrário, ele pode optar por uma view de erro, dependendo da situação. </li>
+          </ul>
+          <p><strong>  Vantagens do MVC  </strong></p>
+          <p>Entre as principais vantagens do padrão MVC, podemos destacar:</p>
+          <ul>
+            <li><strong>Isolamento: </strong>O padrão oferece uma estrutura modular, onde alterações em uma camada não afetam as demais. Isso facilita a manutenção e evolução do sistema. </li>
+            <li><strong>Estabilidade:  </strong>O MVC facilita o teste de camadas de forma independente, o que contribui para uma maior estabilidade no sistema. </li>
+            <li><strong>Reusabilidade: </strong> O padrão permite o reaproveitamento de views, modelos e controllers em diferentes partes do sistema.</li>
+            <li><strong>Portabilidade: </strong> Com o MVC, é possível manter um controller e trocar as views sem afetar a lógica do sistema.</li>
+          </ul>
+          <p><strong>  Variações do MVC  </strong></p>
+          <ul>
+            <li>Existem várias variações do padrão MVC, como o MVP e o MVVM, que mantêm a essência do MVC, mas com algumas diferenças nas responsabilidades e nos fluxos de comunicação entre as camadas. Essas variações têm alvos diferentes, mas continuam utilizando a estrutura básica do MVC para separar as responsabilidades e facilitar o desenvolvimento. </li>
+          </ul>
+          <p>Conclusão:O padrão MVC contribui significativamente para a melhoria do desenvolvimento e manutenção de sistemas, oferecendo uma abordagem sistemática para modelagem, separação de interesses, e maximizando o reuso e a portabilidade dos componentes. Ele é uma solução robusta e testada que continua a ser amplamente adotada em diversos tipos de sistemas. </p>
           <li>8.3. Model View Presenter (MVP)</li>
+          <p> O MVP é uma variação do padrão MVC (Model-View-Controller) e foi proposto nos anos 90 pela Talent, uma empresa formada por Apple, IBM e HP. Esse padrão introduz algumas diferenças em relação ao MVC, principalmente na separação de responsabilidades entre a interface do usuário e as regras de negócios. </p>
+          <p>No MVC, embora exista uma separação de preocupações, as regras de navegação e de apresentação do dado ficam delegadas à view (a interface gráfica). Isso pode ser um problema porque muitas vezes as regras de navegação envolvem validações, transformação de dados para apresentação e controle do fluxo dentro da interface. No MVP, essa responsabilidade é retirada da view e delegada ao presenter.</p>
+          <p>Ao separarmos as regras de navegação, o MVP permite que o código relacionado à interface gráfica seja mais testável, já que muitas vezes, em outros padrões, as interfaces gráficas dependem de componentes antigos ou não concebidos com foco em estabilidade. Isso dificulta a realização de testes, especialmente quando se trata de regras de navegação complexas. Com o MVP, conseguimos testar essas regras de forma isolada, já que estão encapsuladas no presenter, e não diretamente na view.</p>
+          <p>Outro benefício do MVP é que ele proporciona maior portabilidade. Quando o model ou o presenter são alterados, o impacto nas views é minimizado, pois elas não têm relacionamento direto com os controles de negócios. Isso torna o sistema mais modular e facilita a manutenção. </p>
+          <p>Agora, vamos entender melhor os três pilares do MVP:</p>
+          <p><strong>  O MVP é composto por três partes:  </strong></p>
+          <ul>
+            <li> <strong> Model: </strong> Representa os dados e as regras de negócios. Ele é responsável pela persistência e pelo processamento dos dados.     </li>
+            <li> <strong> View: </strong> Responsável pela interface com o usuário. A view não possui lógica de negócios, apenas exibe os dados que o presenter fornece.     </li>
+            <li> <strong> Presenter:  </strong> É o intermediário entre o model e a view. Ele encapsula as regras de navegação e lógica de apresentação, manipulando os dados do model e formatando-os para exibição na view. Cada presenter está associado a uma view específica.     </li>
+          </ul>
+          <p><strong> Responsabilidades das Partes   </strong></p>
+          <ul>
+            <li>Model: Encapsula as regras de negócio e a persistência de dados. Ele notifica o presenter sobre as mudanças no sistema. </li>
+            <li>View: A view é passiva, ou seja, ela depende do presenter para fornecer os dados e as interações. Ela não toma decisões sobre como os dados são apresentados. </li>
+            <li>Presenter: O presenter é responsável por coordenar a interação entre o model e a view. Ele processa os dados do model e os formata de forma que a view possa exibi-los corretamente. </li>
+          </ul>
+          <p><strong> Comunicação entre as Partes   </strong></p>
+          <ul>
+            <li> O fluxo de comunicação no MVP começa quando a view envia para o presenter as ações do usuário (por exemplo, um clique em um botão). O presenter então atualiza o model, que retorna os dados processados e notifica o presenter sobre a nova realidade do sistema. O presenter então processa esses dados e os envia para a view, que apenas os exibe. </li>
+          </ul>
+          <p><strong>Vantagens do MVP:    </strong></p>
+          <ul>
+            <li>Isolamento das Regras de Negócio: O MVP permite uma separação clara entre as regras de negócio e a interface gráfica, o que melhora a manutenção e a testabilidade do código. </li>
+            <li>Estabilidade: Como a lógica de navegação e de apresentação é isolada no presenter, é mais fácil manter o código estável, evitando problemas típicos de teste e manutenção da interface gráfica. </li>
+            <li>Testabilidade: O código de navegação e lógica de apresentação pode ser testado de forma mais eficaz, pois não depende diretamente da interface gráfica, que é mais difícil de testar. </li>
+          </ul>
+          <p>Conclusão: O MVP promove uma separação clara de responsabilidades, com um foco maior no isolamento das regras de negócio da interface do usuário. O presenter tem um relacionamento de um para um com a view, diferente do que temos no MVC. Isso torna o sistema mais modular, estável e testável, além de facilitar a manutenção e portabilidade. </p>
           <li>8.4. Model View ViewModel (MVVM)</li>
+          <p>O padrão MVVM. Criado em 2005 por Jangosman, o MVVM é uma variação do padrão MVP e, por sua vez, do MVC. O foco principal do MVVM é a separação lógica entre a interface do usuário e as regras de negócio, proporcionando uma maior flexibilidade e organização do código.</p>
+          <p>Para entendermos melhor o MVVM, é importante relembrar os três pilares que definem a arquitetura de sistemas:</p>
+          <p><strong>Definição das Partes (Camadas):     </strong></p>
+          <ul>
+            <li><strong>View:</strong> Responsável pela apresentação dos dados e coleta das entradas do usuário.</li>
+            <li><strong>ViewModel: </strong>Atua como um "orquestrador", sendo o intermediário entre a interface gráfica e a lógica de negócios. </li>
+            <li><strong>Model: </strong>Representa a inteligência do negócio, contendo as regras de processamento e manipulação de dados.  </li>
+          </ul>
+          <p><strong>  Papel de Cada Parte:  </strong></p>
+          <ul>
+            <li>View: Continua sendo a responsável pela apresentação dos dados e pela coleta dos inputs do usuário, mas com uma maior separação das lógicas de negócio.</li>
+            <li>ViewModel: Ao contrário do MVP, onde o apresentador tem um papel mais ativo, no MVVM o ViewModel tem a responsabilidade de orquestrar a interação entre a View e o Model. Ele manipula os dados do modelo e prepara essas informações para serem apresentadas na interface. </li>
+            <li>Model: Representa a parte lógica do negócio, realizando o processamento e interagindo com fontes de dados, como bancos de dados ou APIs.</li>
+          </ul>
+          <p> No MVVM, a comunicação entre as camadas é baseada no conceito de Data Binding (vinculação de dados). O ViewModel interage com o Model para atualizar os dados, e, por meio de Data Binding, a View é automaticamente atualizada quando os dados no ViewModel mudam.</p>
+          <p>No MVVM, quando há uma alteração no estado do Model, essas mudanças são refletidas no ViewModel, que, por sua vez, atualiza a View de forma automática, sem a necessidade de chamadas explícitas de atualização.</p>
+          <p> Como funciona o Data Binding no MVVM?</p>
+          <p>No MVVM, a principal diferença em relação ao MVP está no uso do Data Binding. O ViewModel possui propriedades que estão diretamente vinculadas aos controles da interface (como campos de texto ou grids). Quando um valor no ViewModel é alterado, o Data Binding garante que essas alterações sejam refletidas automaticamente na interface do usuário. Além disso, se o usuário alterar os dados na interface, o ViewModel será atualizado automaticamente.</p>
+          <p>Por exemplo, imagine que o nome de usuário está sendo exibido em um campo de texto. Quando o nome do usuário é alterado no Model, o ViewModel captura essa alteração e a reflete na View. O Data Binding pode até permitir que a View envie as alterações diretamente ao ViewModel, sem necessidade de código adicional.</p>
+          <p>Diferença do MVVM para o MVC e MVP</p>
+          <p>No MVC e MVP, a comunicação entre as camadas é mais explícita. O Controller ou o Presenter assume a responsabilidade de atualizar a View com base nas alterações no Model. Já no MVVM, a maior parte dessa comunicação é automática através do Data Binding, o que facilita a manutenção e a reutilização do código, além de reduzir a quantidade de código de ligação entre as camadas.</p>
+          <p>Conclusão: O MVVM permite uma separação clara entre as regras de interface de usuário e as regras de negócio, facilitando a manutenção, reutilização e testes. O uso do Data Binding torna a comunicação entre as camadas mais eficiente e menos propensa a erros, já que as atualizações são feitas automaticamente. Com isso, o MVVM se torna uma excelente escolha para sistemas interativos, especialmente em plataformas como WPF, Xamarin e outras que oferecem suporte nativo ao Data Binding. </p>
         </ul>
       </div>
 
       <div id="modulo-3-capitulo-10" class="capitulo">
         <p><strong>Capítulo 9 – Arquiteturas de Camadas</strong></p>
+        <p>As arquiteturas centradas em domínio focam no isolamento das regras de negócio, garantindo que o núcleo da aplicação fique independente das interações externas e tecnologias específicas.</p>
         <ul>
-          <li>9.1. Hexagonal Architecture</li>
-          <li>9.2. Onion Architecture</li>
+          <li><strong>9.1. Hexagonal Architecture</strong></li>
+          <p>Esse modelo propõe um núcleo isolado (hexágono) onde estão as regras de negócio, enquanto a comunicação com o mundo externo ocorre por portas e adaptadores.</p>
+          <ul>
+            <li> <strong>Núcleo:  </strong>  Contém a lógica de negócio, independente de tecnologia.    </li>
+            <li> <strong>Portas:  </strong>  Abstrações que expõem funcionalidades do núcleo e interagem com tecnologias externas.    </li>
+            <ul>
+              <li> <strong> Driver Ports (entrada): </strong>  Disparam regras de negócio.    </li>
+              <li> <strong> Driven Ports (saída): </strong>  Acessam serviços externos.    </li>
+            </ul>
+            <li> <strong>Adaptadores:   </strong>  Implementam as portas.    </li>
+            <ul>
+              <li> <strong> Driver Adapters:  </strong> Chamam o núcleo (APIs, UI). Conectam o núcleo a serviços externos (banco de dados, APIs).    </li>
+            </ul>
+          </ul>
+          <p><strong>Exemplo Prático: Sistema de Corretora de Valores   </strong></p>
+          <ul>
+            <li> <strong> Domínio: </strong>  Entidades como Ação, Conta, Carteira e Custódia.    </li>
+            <li> <strong> Regras de Negócio: </strong>  Exemplo do método ComprarAcao, que executa etapas como validação, criação de ordens e envio à B3.    </li>
+            <li> <strong> Isolamento de Tecnologia:  </strong>  O núcleo acessa tecnologias via portas, permitindo troca de implementações sem impacto no código de negócios.    </li>
+          </ul>
+          <p><strong> Benefícios   </strong></p>
+          <ul>
+            <li> <strong>  Isolamento do Domínio : </strong> Lógica desacoplada de infraestrutura.      </li>
+            <li> <strong>Testabilidade :  </strong>  Possibilidade de testes unitários sem dependências externas.    </li>
+            <li> <strong> Flexibilidade e Manutenibilidade:  </strong>  Troca de tecnologias sem afetar o núcleo.     </li>
+            <li> <strong>Portabilidade:  </strong> Adaptação a novos cenários com mudanças mínimas.     </li>
+          </ul>
+          <p>Aplicabilidade: Ideal para sistemas com múltiplos canais de execução, domínios complexos e requisitos elevados de testabilidade e flexibilidade.</p>
+          <li><string>9.2. Onion Architecture</string></li>
+          <p>A Onion Architecture, um modelo arquitetural interessante e prático.</p>
+          <p>Ao estudar arquiteturas baseadas em camadas, frequentemente encontramos estruturas onde o fluxo de dependência é de cima para baixo. Ou seja, uma camada depende diretamente da camada logo abaixo, criando o que chamamos de dependência transitória. Por exemplo:</p>
+          <ul>
+            <li>A camada de interface do usuário depende da camada de regra de negócio. </li>
+            <li>A camada de regra de negócio depende da camada de dados. </li>
+            <li>Consequentemente, a camada de interface do usuário também acaba dependendo indiretamente da camada de dados. </li>
+            <li>Embora este fluxo seja comum, ele gera problemas quando as camadas dependem diretamente de infraestrutura ou tecnologias específicas. Nesse cenário, a tecnologia se espalha por diferentes camadas do sistema, criando um acoplamento indesejado </li>
+          </ul>
+          <p>A Onion Architecture resolve esses problemas reorganizando as dependências de maneira concêntrica. As camadas seguem um fluxo de dependência de fora para dentro:</p>
+          <ul>
+            <li>Camada Externa (Tecnologia): Mais periférica, lida com detalhes de tecnologia, como infraestrutura e frameworks. </li>
+            <li>Camada de Aplicação: Contém os serviços e lógica de aplicação que orquestram o sistema. </li>
+            <li>Camada de Domínio: Localizada no núcleo, é composta por regras de negócio puras, sem dependências externas. </li>
+            <li>Quanto mais próximo do núcleo, mais tratamos do negócio. Quanto mais periférico, mais lidamos com a tecnologia. </li>
+          </ul>
+          <p><strong>  Principais Diretrizes  </strong></p>
+          <ul>
+            <li>Isolamento da Tecnologia: As camadas internas (regra de negócio e domínio) não devem depender diretamente da tecnologia. ara isso, utilizam-se abstrações que as camadas externas devem implementar.  </li>
+            <li>Modelagem do Domínio: O núcleo contém as regras e modelos do domínio. Ele pode ser extensível e permitir subdivisões conforme a complexidade do negócio. </li>
+            <li>Implementação das Abstrações: As camadas externas implementam as abstrações definidas internamente e realizam a composição da aplicação. </li>
+          </ul>
+          <p> Benefícios </p>
+          <ul>
+            <li> Maior Manutenibilidade: Separação clara de responsabilidades.</li>
+            <li> Estabilidade: Redução do impacto de mudanças tecnológicas no domínio.</li>
+            <li> Aceitação de Mudanças: Adaptação mais simples a novos requisitos de negócio.</li>
+          </ul>
+          <p><strong>  Limitações  </strong></p>
+          <ul>
+            <li> Complexidade Inicial: Requer maior esforço de implementação e maior curva de aprendizado.</li>
+            <li> Não Ideal para Sistemas Simples: É mais adequado para sistemas complexos e de longa duração.</li>
+          </ul>
+          <p>Considerações Finais: A Onion Architecture organiza camadas de forma concêntrica, colocando o domínio no núcleo. Essa abordagem promove o isolamento da tecnologia e ajuda a manter o foco no negócio. Embora possa exigir maior esforço inicial, o retorno em estabilidade e manutenibilidade justifica sua adoção, especialmente em projetos de grande escala e longo prazo.  </p>
+          
           <li>9.3. Clean Architecture</li>
+          <p>O Clean Architecture é um modelo arquitetural centrado no domínio, estruturado em camadas concêntricas para separar regras de negócio de detalhes tecnológicos. Diferente de outras abordagens, como a Hexagonal Architecture, ele enfatiza a organização clara das camadas e suas responsabilidades.</p>
+          <p><strong> Estrutura   </strong></p>
+          <ul>
+            <li> <strong> Entidades (Central):  </strong>   Regras de negócio corporativas reutilizáveis em diversos sistemas.    </li>
+            <li> <strong> Use Cases: </strong>  Regras de negócio específicas da aplicação, expondo abstrações para dependências externas.            </li>
+            <li> <strong> Interface Adapters: </strong>  Adaptadores para APIs, controladores e outros canais de comunicação.    </li>
+            <li> <strong> Frameworks and Drivers: </strong>   Integrações externas, como bancos de dados e servidores web, sem lógica de negócio.    </li>
+          </ul>
+          <p><strong> Fluxo de Informação   </strong></p>
+          <ul>
+            <li> A interação começa com eventos externos (ex.: chamadas de API). </li>
+            <li> A informação flui para dentro, passando pelos Use Cases e sendo processada pelas regras de negócio. </li>
+            <li> O resultado é preparado para apresentação ao usuário por meio de portas de saída. </li>
+          </ul>
+          <p><strong>  Benefícios  </strong></p>
+          <ul>
+            <li> <strong> Separação de Interesses: </strong>   Isola regras de negócio de infraestrutura.    </li>
+            <li> <strong> Flexibilidade: </strong> Facilita a troca de tecnologias sem impactar o domínio.     </li>
+            <li> <strong> Escalabilidade: </strong>  Ideal para aplicações modernas e de grande porte.     </li>
+            <p>O Clean Architecture permite um fluxo bem definido, onde as dependências sempre apontam para dentro, promovendo manutenibilidade e aderência às melhores práticas de desenvolvimento de software. </p>
+          </ul>
         </ul>
       </div>
 
       <div id="modulo-3-capitulo-11" class="capitulo">
         <p><strong>Capítulo 10 – Padrões para Sistemas Distribuídos</strong></p>
+        <p>Bem-vindo ao décimo capítulo do módulo Design Patterns! Hoje, vamos iniciar o estudo dos padrões voltados para sistemas distribuídos, explorando seus desafios, modelos arquiteturais e boas práticas. </p>
+        <p><strong> Revisão dos Capítulos Anteriores   </strong></p>
+        <ul>
+          <li> </li>
+          <li> </li>
+          <li> </li>
+          <li> </li>
+          <li> </li>
+          <li> <strong> Padrões de projeto: </strong> Conceitos fundamentais para organização do código.     </li>
+          <li> <strong> Padrões de sistemas interativos: </strong>  Como MVC e MVP.    </li>
+          <li> <strong> Padrões focados em domínio: </strong>  Separação de responsabilidades no software.    </li>
+        </ul>
+        <p>Agora, nosso foco será a integração entre aplicações, explorando sistemas autônomos que se comunicam por canais de comunicação.</p>
         <ul>
           <li>10.1. Padrões para Sistemas Distribuídos</li>
-          <li>10.2. Enterprise Application Patterns – Point to Point Channel</li>
+          <p>A Importância dos Sistemas Distribuídos, atualmente, é raro encontrar aplicações que funcionem isoladamente. A integração com outras aplicações e o reaproveitamento de sistemas legados são tendências cada vez mais comuns. No entanto, essa comunicação introduz desafios que tornam essencial o uso de padrões arquiteturais. </p>
+          <p><strong> Principais Desafios   </strong></p>
+          <ul>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> <strong>  Heterogeneidade </strong>      </li>
+            <ul>
+              <li>Sistemas executando em diferentes plataformas. </li>
+              <li>Variações de latência e largura de banda nas conexões. </li>
+              <li>Integração entre sistemas operacionais distintos. </li>
+            </ul>
+            <li> <strong> Escalabilidade </strong>      </li>
+            <ul>
+              <li>Capacidade de suportar um grande volume de acessos sem perda de desempenho. </li>
+            </ul>
+            <li> <strong> Segurança </strong>      </li>
+            <ul>
+              <li>Proteção dos dados não apenas nos servidores, mas também na comunicação entre eles. </li>
+            </ul>
+            <li> <strong>  Flexibilidade e Tratamento de Falhas </strong>      </li>
+            <ul>
+              <li>Garantia de confiabilidade, mesmo diante de falhas. </li>
+            </ul>
+          </ul>
+          <p><strong> Modelos Arquiteturais em Sistemas Distribuídos   </strong></p>
+          <p>Dentre os principais modelos de arquitetura, destacam-se:</p>
+          <p><strong> Modelo Cliente-Servidor   </strong></p>
+          <ul>
+            <li>O modelo mais comum, onde: Um processo cliente solicita recursos a um processo servidor. </li>
+            <li> Dependendo do fluxo, um sistema pode assumir ambos os papéis. </li>
+            <li>Variações, uso de clusters para maior disponibilidade.  </li>
+            <li>Variações, Sincronização de servidores em bancos de dados críticos (exemplo: transações financeiras). </li>
+          </ul>
+          <p><strong>Modelo Peer-to-Peer (P2P)    </strong></p>
+          <ul>
+            <li> Todos os nós podem atuar como cliente e servidor simultaneamente.</li>
+            <li> Utilizado em: Compartilhamento de arquivos. Edição colaborativa de documentos. Redes blockchain </li>
+            <li> Desafios: Maior complexidade de implementação. Garantia de compatibilidade entre diferentes nós.  Riscos de segurança no compartilhamento direto de informações.  </li>
+          </ul>
+          <p><strong>  Middleware em Sistemas Distribuídos:  </strong> O middleware atua como um intermediário entre a aplicação e a camada de rede, proporcionando um modelo de programação coeso e homogêneo. Ele facilita a comunicação entre sistemas heterogêneos e abstrai detalhes técnicos da rede.</p>
+          <p><strong>Catálogos de Padrões: </strong> Para aprofundar o estudo sobre sistemas distribuídos, recomenda-se referências como: Martin Fowler, Gregory e Bob </p>
+
+
+          <li>10.2. Enterprise Application Patterns – Point-to-Point Channel</li>
+          <p>O padrão Point-to-Point Channel é um modelo de comunicação assíncrona em sistemas distribuídos, garantindo que cada mensagem enviada seja entregue exclusivamente a um único receptor. </p>
+          <p><strong>  Middleware Orientado a Mensagens (MOM)  </strong></p>
+          <p>O Middleware Orientado a Mensagens (MOM) facilita a comunicação entre aplicações sem exigir conexão direta entre elas. Em vez disso, as mensagens são enviadas para um canal, que:</p>
+          <ul>
+            <li> Armazena a mensagem.</li>
+            <li> Garante sua entrega ao receptor posteriormente.</li>
+            <li>Permite comunicação assíncrona, garantindo alta velocidade e confiabilidade. </li>
+          </ul>
+          <p><strong>  Elementos-chave do MOM:  </strong></p>
+          <ul>
+            <li> Messenger: Integra aplicações via middleware.</li>
+            <li>Message: Dados enviados contendo comandos ou eventos. </li>
+            <li>Channel: Meio que conecta emissor e receptor. </li>
+          </ul>
+          <p><strong> Implementação e funcionamento   </strong></p>
+          <p>O MOM geralmente opera por meio de filas:</p>
+          <ul>
+            <li> O emissor insere mensagens na fila gerenciada pelo middleware.</li>
+            <li> O receptor recupera as mensagens quando disponível.</li>
+            <li> A comunicação é fracamente acoplada, pois o receptor pode estar indisponível no momento do envio.</li>
+          </ul>
+          <p><strong> Vantagens do Middleware Orientado a Mensagens   </strong></p>
+          <ul>
+            <li>Permite comunicação mesmo quando o receptor está offline. </li>
+            <li>Garante entrega da mensagem assim que o receptor estiver ativo. </li>
+            <li> Suporta envio assíncrono, otimizando a escalabilidade do sistema.</li>
+          </ul>
+          <p><strong> O Padrão Point-to-Point Channel   </strong></p>
+          <p>Esse padrão garante que:</p>
+          <ul>
+            <li>Cada mensagem seja processada por apenas um receptor, evitando duplicações. </li>
+            <li>Mensagens sejam enviadas em ordem e com prioridade, dependendo da configuração do middleware. </li>
+            <li> O sistema seja escalável, distribuindo mensagens entre múltiplos receptores sem que uma mesma mensagem seja processada mais de uma vez.</li>
+          </ul>
+          <p>Conclusão: O Point-to-Point Channel é um padrão essencial para garantir comunicação confiável em sistemas distribuídos. Ele permite processamento exclusivo de mensagens, essencial para cenários onde a duplicação de processamento pode gerar inconsistências ou prejuízos. </p>
           <li>10.3. Enterprise Application Patterns – Publish Subscribe Channel</li>
+          <p>O padrão Publish Subscribe Channel é uma abordagem essencial para sistemas distribuídos orientados a eventos, permitindo que múltiplos receptores sejam notificados de um evento de forma assíncrona.</p>
+          <p><strong> Funcionamento do Publish Subscribe Channel   </strong></p>
+          <ul>
+            <li>Publicador (Publisher): O emissor do evento publica mensagens em um canal de comunicação. </li>
+            <li>Canal de Mensagens: Armazena notificações e garante a entrega a todos os assinantes. </li>
+            <li>Assinantes (Subscribers): Sistemas ou processos interessados no evento são notificados assim que a mensagem estiver disponível. </li>
+            <li>Garantia de Entrega: Um evento só é removido do canal após ser entregue a todos os assinantes, evitando perda de mensagens. </li>
+          </ul>
+          <p><strong>  Diferença entre Fila e Tópico  </strong></p>
+          <ul>
+            <li> Fila: Utilizada no padrão Point-to-Point Channel, onde cada mensagem é entregue a um único receptor.</li>
+            <li> Tópico: Utilizado no Publish Subscribe Channel, permitindo que múltiplos assinantes recebam a mesma mensagem simultaneamente. </li>
+          </ul>
+          <p><strong> Vantagens do Publish Subscribe Channel   </strong></p>
+          <ul>
+            <li> Comunicação assíncrona: Publicador e assinantes não precisam estar ativos ao mesmo tempo.</li>
+            <li>Garantia de entrega: Todos os interessados recebem a notificação, mesmo que estejam temporariamente offline. </li>
+            <li>Escalabilidade: Permite que um evento seja enviado para múltiplos receptores ao mesmo tempo. </li>
+          </ul>
+          <p>Conclusão:O Publish Subscribe Channel é um padrão eficiente para integração de sistemas distribuídos, garantindo comunicação assíncrona confiável e possibilitando notificações em larga escala. </p>
           <li>10.4. Enterprise Application Patterns – Concurrency</li>
+          <p>A concorrência em sistemas distribuídos é um dos desafios mais complexos do desenvolvimento, pois envolve múltiplas transações acessando os mesmos dados simultaneamente, o que pode levar a problemas difíceis de prever e testar. </p>
+          <p><strong> Problemas Clássicos de Concorrência   </strong></p>
+          <ul>
+            <li>Perda de Update: Uma transação sobrescreve a alteração de outra, causando perda de dados. </li>
+            <li> Leitura Suja: Uma transação lê um dado não confirmado por outra transação, levando a inconsistências caso haja rollback.</li>
+            <li> Leitura Não Repetível: Uma transação lê um dado que é alterado por outra antes de finalizar, gerando valores inconsistentes. </li>
+            <li>Leitura Fantasma: Uma consulta inicial retorna um conjunto de dados que muda antes da transação terminar, causando inconsistências. </li>
+          </ul>
+          <p><strong>  Soluções para Concorrência  </strong></p>
+          <ul>
+            <li>Imutabilidade: Torna os dados inalteráveis, eliminando conflitos, mas aumentando o uso de armazenamento. </li>
+            <li> Isolamento: Garante que apenas uma transação por vez acesse um conjunto de dados, prevenindo inconsistências. </li>
+            <li> Controle de Concorrência: </li>
+            <ul>
+              <li> Otimista: Assume que conflitos são raros e resolve problemas apenas quando ocorrem, ideal para sistemas distribuídos com poucas atualizações simultâneas.</li>
+              <li>Pessimista: Bloqueia registros para evitar concorrência, garantindo consistência, mas podendo impactar o desempenho.  </li>
+            </ul>
+          </ul>
+          <p>O controle de concorrência é essencial para sistemas distribuídos e deve ser escolhido com base nos requisitos de escalabilidade, custo de processamento e necessidade de sincronização offline.</p>
         </ul>
       </div>
 
@@ -1858,8 +2210,100 @@
         <p><strong>Capítulo 11 – Arquiteturas de Sistemas Distribuídos</strong></p>
         <ul>
           <li>11.1. Enterprise Application Integration (EAI)</li>
+          <p>A Enterprise Application Integration (EAI) é uma abordagem arquitetural que busca integrar aplicações empresariais de forma eficiente e escalável, eliminando a complexidade da comunicação ponto a ponto.</p>
+          <p><strong>  Problemas da Integração Direta (Ad Hoc)  </strong></p>
+          <ul>
+            <li> Dificuldade de gerenciar múltiplas conexões.</li>
+            <li>Impacto imprevisível de mudanças em aplicações. </li>
+            <li>Diversidade de tecnologias (JSON, XML, bancos de dados distintos).</li>
+            <li>Complexidade crescente com sistemas legados e redundantes.</li>
+          </ul>
+          <p><strong>Solução EAI    </strong></p>
+          <p>O EAI centraliza a comunicação entre aplicações por meio de um backbone de integração, facilitando:</p>
+          <ul>
+            <li> A padronização da troca de informações.</li>
+            <li> A comunicação transparente entre sistemas heterogêneos.</li>
+            <li>O suporte a múltiplos padrões (arquivos, bancos de dados, RPC, mensagens assíncronas). </li>
+          </ul>
+          <p><strong> Benefícios do EAI   </strong></p>
+          <ul>
+            <li>Melhora o relacionamento com clientes e parceiros. </li>
+            <li> Prolonga o ciclo de vida de sistemas legados.</li>
+            <li>Reduz o time-to-market, acelerando a transformação digital. </li>
+            <li> Facilita fusões e aquisições, simplificando a unificação de sistemas.</li>
+            <li>Otimiza processos internos, promovendo padronização e eficiência. </li>
+          </ul>
+          <p>O EAI é uma solução robusta para a integração corporativa, combinando processos, software e hardware com um backbone central para garantir escalabilidade e eficiência.</p>
+          
           <li>11.2. Service Oriented Architecture (SOA)</li>
+          <p>A Service Oriented Architecture (SOA) é um padrão arquitetural que visa integrar aplicações por meio de serviços reutilizáveis, garantindo flexibilidade, governança e redução de custos.</p>
+          <p><strong>  Motivações para Adotar o SOA  </strong></p>
+          <ul>
+            <li>Reduzir custos de manutenção e desenvolvimento. </li>
+            <li>Melhorar a governança e rastreabilidade das integrações. </li>
+            <li> Aumentar a flexibilidade e a escalabilidade da TI.</li>
+          </ul>
+          <p><strong>  Proposta do SOA  </strong></p>
+          <ul>
+            <li>Encapsular processos comuns de negócio em serviços. </li>
+            <li>Expor serviços por meio de interfaces abertas e padronizadas. </li>
+            <li>Integrar aplicações sem a necessidade de modificar sistemas existentes. </li>
+          </ul>
+          <p><strong>Serviços no SOA    </strong></p>
+          <ul>
+            <li> São tarefas repetitivas do negócio, como consultar cotações ou contratar funcionários.</li>
+            <li>Exposição de dados corporativos, tornando informações acessíveis sem alterar aplicações. </li>
+            <li>Governança para controlar acessos, reuso e eficiência dos serviços. </li>
+          </ul>
+          <p><strong> Antes e Depois do SOA   </strong></p>
+          <ul>
+            <li> Antes: Sistemas isolados, sem reaproveitamento e com múltiplos acessos diretos a bases de dados.</li>
+            <li>Depois: Aplicações compostas por serviços reutilizáveis e organizados. </li>
+          </ul>
+          <p><strong> Benefícios do SOA   </strong></p>
+          <ul>
+            <li>Maior reutilização de serviços e sistemas legados. </li>
+            <li>Padronização e interoperabilidade entre diferentes tecnologias. </li>
+            <li>Automação de processos e melhoria na qualidade e segurança. </li>
+            <li>Redução do tempo de manutenção e maior eficiência operacional. </li>
+          </ul>
+          <p><strong>   SOA x Web Services </strong></p>
+          <ul>
+            <li> Web services são uma tecnologia para integração.</li>
+            <li> SOA é um conceito mais amplo, focado em governança, reutilização e abstração.</li>
+          </ul>
+          <p><strong> Governança no SOA   </strong></p>
+          <ul>
+            <li>Garante controle e rastreamento do ciclo de vida dos serviços. </li>
+            <li> Define políticas e regras para acesso e utilização dos serviços.</li>
+          </ul>
+          <p><strong> Enterprise Service Bus (ESB)   </strong></p>
+          <ul>
+            <li>Backbone central que organiza a troca de informações entre serviços. </li>
+            <li>Facilita a integração eficiente e estruturada dentro da arquitetura SOA. </li>
+          </ul>
+          <p><strong>Desafios do SOA    </strong></p>
+          <ul>
+            <li>Definir quais processos devem ser transformados em serviços. </li>
+            <li>Modelar os serviços de forma eficaz e sustentável. </li>
+            <li>Implementar uma arquitetura governável e escalável. </li>
+          </ul>
+          <p>O SOA é uma evolução da integração corporativa, estruturando processos e dados em serviços reutilizáveis e governados, proporcionando maior eficiência e flexibilidade para as empresas.</p>
           <li>11.3. Enterprise Service BUS (ESB)</li>
+          <p>O Enterprise Service Bus (ESB) é um componente essencial em arquiteturas SOA (Service-Oriented Architecture), funcionando como um barramento que centraliza a comunicação entre serviços. Ele roteia mensagens, facilita a descoberta de serviços, converte formatos de dados (HTML, XML, JSON, binário) e possibilita a integração de diversas tecnologias.</p>
+          <p><strong>Entre suas principais funcionalidades estão:    </strong></p>
+          <ul>
+            <li>Repositório de Serviços: Elimina integrações ponto a ponto e centraliza a governança. </li>
+            <li>Roteamento e Mediação: Direciona solicitações para o serviço correto sem necessidade de localização física. </li>
+            <li> Suporte a Múltiplos Formatos e Protocolos: Permite integração entre diferentes sistemas.</li>
+            <li> Orquestração e Fachadas de Serviços: Habilita a criação de fluxos de trabalho complexos.</li>
+            <li>Medição e Enriquecimento de Mensagens: Garante entrega confiável e enriquece dados sem codificação adicional. </li>
+            <li> Transformação de Mensagens: Converte formatos como XML para JSON dinamicamente.</li>
+          </ul>
+          <p>Além disso, o ESB oferece segurança, auditoria, alta disponibilidade e estabilidade, atuando como um gateway de mensagens.</p>
+          <p>Aplicações: É amplamente utilizado na integração de sistemas corporativos, portais, aplicações móveis e workflows automatizados.</p>
+          <p>Exemplos de ESB no mercado:Algumas implementações populares incluem IBM WebSphere ESB, Oracle Service Bus e Microsoft BizTalk Server.</p>
+          <p>Conclusão:O ESB simplifica a comunicação entre serviços, melhora a governança e garante flexibilidade na arquitetura SOA, tornando a integração de sistemas mais eficiente e escalável. </p>
         </ul>
       </div>
 
