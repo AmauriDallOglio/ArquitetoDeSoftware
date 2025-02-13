@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1aa369ed-dec4-4523-9aeb-39ae40b13836/resourceGroups/ServicosGrupoRecurso/providers/Microsoft.Web/sites/arquiteturasoftware",
+    "appService.deploySubpath": "."
+}
