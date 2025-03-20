@@ -140,6 +140,28 @@
         <h2>Capítulo 1: Introdução à Arquitetura de Software</h2>
         <ul>
           <li><strong>1.1. Introdução à Arquitetura</strong></li>
+
+
+
+
+            <p>Vamos falar um pouco sobre o que é arquitetura de software, proporcionando uma visão geral e um entendimento sobre essa disciplina e o conteúdo que será abordado.</p>
+            <p>Mas vejam essa representação simplificada: acho que todo mundo aqui, mesmo sem gostar de futebol, já viu em algum momento uma transmissão em que aparece no início um desenho na tela mostrando o esquema tático do time. Algo como "o time vai jogar em 4-3-3" ou "o time vai jogar em 3-5-2". Esse desenho dentro de um campo de futebol indica a posição dos jogadores. Além disso, essa representação simplificada permite entender o estilo do time: se joga mais ofensivamente ou defensivamente.</p>
+            <p>A arquitetura de software é algo semelhante. Criamos um desenho, uma representação simplificada, uma modelagem do que precisa ser feito para que o produto seja entregue no final. Quando olhamos um diagrama arquitetural, podemos visualizar o fluxo de dados, da mesma forma que no futebol vemos a sequência de uma jogada. Assim como um time tem 11 jogadores representados simbolicamente, uma arquitetura apresenta módulos, suas responsabilidades e atribuições.</p>
+            <p>Arquitetura, então, é isso: a construção de uma representação simplificada, uma decomposição de alto nível, como um retrato falado do que precisa ser feito. Se um cliente chega e diz: "Quero um sistema que faça isso, isso e aquilo", o que você faz? Você representa, cria um modelo, uma referência, um desenho de alto nível para entregar esse produto.</p>
+            <p>Um ponto importante: a representação inicial da arquitetura de software normalmente é de alto nível, ou seja, você não detalha tudo, apenas o essencial para aquele momento. Existe um princípio no Lean que diz que devemos postergar decisões sempre que possível. Em outras palavras, se não for necessário decidir algo agora, adie a decisão. Afinal, de hoje até a próxima semana, pode acontecer algo que mude a representação ideal.</p>
+            <p>No início da arquitetura, algumas decisões precisam ser tomadas: será um sistema de entrega única ou incremental? Qual será a linguagem utilizada? Em certos momentos, pode ser necessário definir desde cedo se será usado Java e quais bibliotecas matemáticas farão parte do projeto.</p>
+            <p>Resumindo, a arquitetura é uma representação de alto nível do sistema, incluindo decisões que, uma vez tomadas, não podem ser alteradas facilmente. Por exemplo, se você define a linguagem de programação no início do projeto, mudar depois de seis meses de desenvolvimento não será algo trivial e pode ser extremamente custoso.</p>
+            <p>Na construção de uma arquitetura, é necessário criar um modelo ou abstração que atenda às características desejadas. Se um cliente pede um sistema para emergências, como incêndios, que deve responder rapidamente, a arquitetura precisará priorizar alto desempenho e resposta imediata. Assim, trabalhamos para modelar uma solução que garanta as características desejadas, como disponibilidade, escalabilidade, tolerância a falhas, desempenho, elasticidade, segurança e confiabilidade.</p>
+            <p>As características arquiteturais estão diretamente relacionadas aos requisitos do sistema, principalmente os não funcionais. Por exemplo, um requisito de tempo de resposta está ligado ao desempenho, enquanto um requisito de autenticação por senha está relacionado à segurança.</p>
+            <p>Na prática, tomar decisões arquiteturais nem sempre é simples. Muitas vezes, há trocas a serem feitas: um código mais limpo e enxuto pode ser mais eficiente, mas com menos camadas de segurança. O arquiteto precisa equilibrar esses fatores para criar uma solução que atenda aos requisitos iniciais.</p>
+            <p>Quando falamos de arquitetura, lidamos com componentes e módulos. Esses componentes podem ser agrupados por funcionalidades ou por tecnologia, formando camadas, como as de regras de negócio e de visualização. Além disso, os componentes precisam se comunicar, o que envolve definir padrões como REST, gRPC, entre outros.</p>
+            <p>Se estamos projetando um sistema que exige alta confiabilidade, podemos sugerir abordagens específicas de engenharia para garantir essa robustez. No entanto, tudo depende dos elementos centrais da arquitetura.</p>
+            <p>Decisões arquiteturais são aquelas difíceis de mudar. Por exemplo, se no início optamos por uma arquitetura monolítica e depois precisamos migrar para microserviços, esse processo será demorado e caro. Por isso, essas decisões precisam ser bem planejadas desde o início.</p>
+            <p>Outro ponto crucial: nem sempre tomamos a melhor decisão geral, mas sim a melhor decisão dentro dos recursos disponíveis. Se uma equipe só tem experiência com microserviços, pode ser mais viável seguir por esse caminho, mesmo que outra abordagem fosse tecnicamente superior.</p>
+            <p>Chegamos, então, à reta final. O trabalho do arquiteto é construir um design de sistema. O cliente pode passar horas explicando o que deseja, e o papel do arquiteto é transformar essa informação em um modelo compreensível para os desenvolvedores. Se colocarmos o cliente para conversar diretamente com os programadores, pode haver uma desconexão, pois falam linguagens diferentes. O arquiteto atua como um intermediário técnico, traduzindo requisitos em um desenho que a equipe possa seguir.</p>
+            <p>Por fim, arquitetos não reinventam a roda: utilizamos padrões já estabelecidos para tomar decisões mais seguras e eficientes.
+
+       
             <P> O que é arquitetura de software? É uma modelagem do produto deve ser fito no final, o estudo do fluxo dos dados, especificação das atribuições dos módulos, composição de alto nível, um retrato do que deve ser construído, somente é detalhado o que é extremamente importante, não precisa adiantar uma decisão que não será feito hoje, pelo motivo de mudar a arquitetura, conclusão design do sistema, difícil de mudar e apoiada em padrões, baseado em padrões;</P>
             <p>Arquitetura de software, se refere à estrutura fundamental de um software. Cada estrutura compreende elementos do software, a relação entre eles e também suas propriedades. É de extrema importância pensar na arquitetura desde o primeiro dia da criação de um software, pois cada escolha tem um impacto, especialmente no crescimento do projeto. Escolhas erradas podem resultar em custos mais altos, lentidão nos processos e muito retrabalho.</p>
             <p>O termo "arquitetura de software" é relativamente novo. Seus princípios fundamentais começaram a ser aplicados esporadicamente pelos pioneiros da engenharia de software a partir da metade dos anos 80, mas seu uso mais generalizado só ocorreu a partir dos anos 90. No entanto, o conceito de arquitetura de software tem origem em pesquisas de Edsger Dijkstra em 1968 e de David Parnas no início dos anos 1990. Esses dois cientistas já sabiam que a estrutura de um software é fundamental e que implementar essa estrutura corretamente é essencial. Antes disso, era uma verdadeira bagunça—imagina só quanta gambiarra eles já viram por aí!</p>
@@ -195,6 +217,20 @@
           <p>O arquiteto de softwares deve ter uma combinação de hard skills, como design patterns e clean cold e soft skills, como comunicação e liderança. Além disso, atua como um elo de comunicação entre diferentes equipes garantindo que as soluções atendam tanto as necessidades técnicas quanto empresariais.</p>
 
           <li><strong>1.2. Princípios Gerais de uma boa Arquitetura </strong></li>
+            <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software. Nesta aula, falaremos sobre os princípios gerais aplicados para construir boas arquiteturas, garantindo sistemas e produtos de qualidade.</p>
+            <p>Quais serão nossos tópicos? Vamos abordar alguns princípios fundamentais que devem ser utilizados. Embora essa seja uma aula teórica, talvez seja uma das mais importantes do curso. Esses conceitos básicos, quando bem aplicados, resultam em um produto de qualidade. Não significa que apenas isso seja suficiente, mas é o essencial.</p>
+            <p>Falando sobre princípios, naturalmente, não trataremos de outra coisa senão princípios. Ao estabelecer uma arquitetura, alguns princípios gerais devem estar presentes. Por exemplo, modularizar os componentes é essencial. Quando falamos em modularização, significa que não construímos um sistema inteiro como um grande bloco, mas sim dividimos em pequenas partes que trabalham integradas. Cada módulo deve ter uma função específica. Se estamos desenvolvendo um sistema de compras online, teremos um módulo para pagamentos, outro para controle de pedidos e assim por diante. Esse conceito de "dividir para conquistar" é fundamental.</p>
+            <p>Além de definir esses componentes, é essencial estabelecer as interfaces entre eles. Se um sistema possui cinco módulos, é necessário determinar claramente quais deles interagem entre si e como essa interação ocorre. Um módulo de pagamento, por exemplo, precisa se comunicar com o de pedidos, mas talvez não precise interagir diretamente com o de estoque. Essa interface deve ser bem definida, especificando métodos disponíveis, tipos de parâmetros e retornos esperados.</p>
+            <p>Outro aspecto essencial é a escalabilidade. Inicialmente, um sistema pode atender um pequeno número de usuários, mas e se, em poucos meses, esse número aumentar para 5.000? A arquitetura precisa permitir expansão de forma eficiente. Quando estruturamos bem os módulos e interfaces, conseguimos maior flexibilidade para adaptações. Isso permite que mudanças sejam realizadas sem necessidade de alterar todo o sistema.</p>
+            <p>A utilização de padrões também é um ponto-chave. A ideia não é reinventar soluções para problemas já resolvidos. Se já existem padrões eficientes validados pelo mercado, faz sentido utilizá-los em vez de tentar criar algo do zero. Soluções recorrentes devem ser aplicadas para garantir segurança e eficiência no desenvolvimento.</p>
+            <p>Além dos princípios gerais, existem princípios específicos que se aplicam a diferentes contextos. Por exemplo, desenvolver um sistema de pagamento online é diferente de construir um software de gestão de estoque. No entanto, alguns princípios são universais e sempre aplicáveis.</p>
+            <p>Entre esses princípios, destacamos o de responsabilidade única. Ele garante que cada elemento do sistema tenha uma função bem definida. Se uma classe no código está lidando com diferentes responsabilidades, talvez seja necessário dividi-la. Se a definição do nome de uma classe é difícil, pode ser um indicativo de que ela está abrangendo muitas funções diferentes.</p>
+            <p>Outros princípios, como o de segregacão de interfaces, também são importantes para manter a clareza e manutenção do sistema. Construir componentes modulares e bem definidos facilita a evolução do sistema ao longo do tempo, permitindo a inclusão de novas funcionalidades sem grandes impactos.</p>
+            <p>Outro aspecto relevante é o custo de oportunidade. Se um sistema possui vários módulos e um deles é uma inovação do produto, pode fazer sentido priorizar o desenvolvimento desse módulo primeiro. Se, por outro lado, existe um módulo que já tem soluções estabelecidas no mercado, talvez seja mais vantajoso utilizá-las e focar os esforços no diferencial do produto.</p>
+            <p>Atrasos também devem ser considerados na priorização de entregas. Se uma nova legislação entrará em vigor no próximo ano e um módulo precisa estar em conformidade, ele deve ser priorizado para evitar problemas futuros.</p>
+            <p>A ideia aqui não é decorar todos os princípios, mas compreender sua importância e aplicação. Devemos modularizar bem os sistemas, dividir componentes de forma lógica e definir interfaces claras para comunicação eficiente. O uso de princípios nos ajuda a manter o sistema escalável, flexível e de fácil manutenção.</p>
+            <p>O desenvolvimento arquitetural deve sempre considerar padrões e soluções validadas, evitando a necessidade de criar tudo do zero. O uso de soluções recorrentes traz confiabilidade ao processo de desenvolvimento.</p>
+            <p>Encerramos nossa aula sobre princípios, que são fundamentais para garantir qualidade na arquitetura de software. Na próxima aula, falaremos sobre o conceito de trade-offs e como eles impactam as decisões arquiteturais.</p>
             <p><strong> Princípios fundamentais </strong></p>
             <ul>
               <li>Modularidade:	É utilização de separação por módulos a divisão das suas responsabilidades;</li>
@@ -224,45 +260,28 @@
             <p></p>
 
           <li><strong>1.3. Trade-Offs Arquiteturais</strong></li>
+            <p>Basicamente, temos uma definição de trade-off: o ato de equilibrar ou fazer concessões entre dois ou mais atributos de qualidade e características do sistema. Mas para entender isso na prática, pensem em uma balança: se aumentamos um lado, o outro tende a cair. Esse equilíbrio é essencial para tomar decisões que envolvem características importantes.
+            <p>Por exemplo, quero dirigir com rapidez e segurança. Quanto mais rápido eu dirijo, menos seguro fico, até certo limite. No contexto de sistemas, se quero aumentar muito o desempenho, talvez precise sacrificar um pouco de segurança. Se busco uma resposta extremamente rápida em um sistema, posso comprometer a proteção dos dados.
+            <p><strong> Os trade-offs arquiteturais envolvem diversos atributos de qualidade, como:  </strong></p>
+            <ul>
+              <li> Confiabilidade</li>
+              <li>Desempenho </li>
+              <li>Segurança </li>
+              <li>Estabilidade </li>
+              <li>Elasticidade </li>
+              <li>Agilidade </li>
+              <li>Escalabilidade </li>
+              <li>Disponibilidade </li>
+            </ul>
+            <p>Além disso, fatores como habilidades da equipe também afetam decisões. Por exemplo, se minha equipe só trabalha com determinada linguagem de programação, pode ser necessário equilibrar essa escolha com outras questões de segurança e eficiência.</p>
+            <p> Exemplos de Trade-Offs Arquiteturais</p>
+            <p> Monolito vs. Microserviços: Se optamos por microserviços, temos um software dividido em várias partes, muitas vezes distribuídas geograficamente. Isso pode afetar o desempenho, pois a comunicação não é local, mas ocorre através da rede. Se desempenho for um fator crítico, talvez um monolito seja mais adequado.</p>
+            <p>Banco de Dados Relacional vs. NoSQ: Se escolhemos um banco de dados NoSQL, ganhamos flexibilidade para lidar com grandes volumes de dados diversos, mas sacrificamos estrutura e consistência transacional. Já um banco de dados relacional oferece maior consistência, mas pode não ser tão eficiente para consultas distribuídas e dados não estruturados.</p>
+            <p> Sistema de Pagamento Online: Um cliente solicita um sistema de pagamento online, e precisamos equilibrar desempenho, segurança e interoperabilidade. Podemos armazenar dados de cartões em memória para acesso rápido, melhorando o desempenho, mas isso pode comprometer a segurança. Por outro lado, criptografar e adicionar autenticação multifator melhora a segurança, mas pode tornar o sistema mais lento.</p>
+            <p>Interoperabilidade vs. Desempenho: Se um sistema precisa rodar em vários dispositivos e navegadores diferentes, podemos comprometer a eficiência. Uma solução altamente otimizada para um navegador específico pode ter melhor desempenho, mas ser menos compatível com outros ambientes.</p>
+            <p>No dia a dia do arquiteto de software, as decisões envolvem balançar trade-offs para atender requisitos do cliente e restrições do projeto. Nem sempre escolheremos a solução tecnologicamente mais avançada, mas sim aquela que melhor equilibra qualidade, custo e prazo.</p>
             <p> Trade-off refere-se ao ato de equilibrar ou fazer concessões entre dois ou mais atributos de qualidade ou características de um sistema, onde a melhoria de um atributo geralmente leva à degradação de outro. Isso ocorre porque os recursos (como tempo, custo, desempenho, etc) são limitados e as decisões arquiteturais impactam múltiplos aspectos do sistema. </p>
-            <p>Exemplo: Segurança dos dados manter em cache ou em criptografia;</p>
-            <p><strong> Atributos de qualidade de software   </strong></p>
-              <ul>
-                <li> Custo</li>
-                <li>Tempo </li>
-                <li>Escopo </li>
-              </ul>
-            
-              <p><strong>  Skills equipe  </strong></p>
-              <ul>
-                <li> Capacitação da equipe; </li>
-              </ul>
-              <p><strong> Objetivos de négocio   </strong></p>
-              <ul>
-                <li> </li>
-              </ul>
-
-              <p><strong> Processo de engenharia   </strong></p>
-              <ul>
-                <li> </li>
-              </ul>
-
-              <p><strong> Estilo arquitetural, validação da necessidade de qual modelo adotar   </strong></p>
-              <ul>
-                <li>Monólito </li>
-                <li>Micro serviço </li>
-                <li>NoSql </li>
-                <li>SQL </li>
-              </ul>
-
-              <p><strong> A arquitetura de software é crucial para desenvolver sistemas robustos e escaláveis, dividindo-se em três níveis principais:   </strong></p>
-              <ul>
-                <li> Arquitetura de Software: Focada na estrutura interna, organização dos componentes, desempenho e manutenibilidade.</li>
-                <li> Arquitetura de Soluções: Responsável pela integração de múltiplos sistemas e aplicações para resolver problemas específicos. </li>
-                <li> Arquitetura Corporativa: Alinha tecnologia aos objetivos estratégicos da empresa, garantindo suporte às metas de longo prazo. </li>
-                <li> O arquiteto de software combina hard skills (como design patterns e Clean Code) e soft skills (como liderança e comunicação) e atua como elo entre equipes técnicas e de negócio.</li>
-                <li> </li>
-              </ul>
+ 
         </ul>
       </div>
     
@@ -370,17 +389,24 @@
         
         <ul>
           <li><strong>3.1. Arquitetura Intencional</strong></li>
-          <p> É a visão inicial determinando o fluxo do início do sistema, são as ideias gerais do sistema, análise de requisitos e projeto, é composta pelas decisões estruturais antes do desenvolvimento do sistema, conceito que enfatiza a importância de tomar decisões arquiteturais e conscientes, com o objetivo de alinhar a arquitetura do sistema com os objetivos e requisitos do negócio.  </p>
-              
-          <p>Visão clara e compartilhada;</p>
+            <p> Se estamos falando de Arquitetura de Software Moderna, já conseguimos imaginar que essa arquitetura mudou ao longo do tempo, e é justamente sobre isso que vamos abordar neste capítulo, voltada principalmente ao conceito de Arquitetura Intencional.</p>
+            <p> Quando vocês vão projetar um sistema, criam um desenho ou um diagrama de componentes para mapear os módulos do sistema. Por exemplo, ao utilizar UML, temos diferentes tipos de modelagem: comportamental, estrutural, diagrama de caso de uso, diagrama de classe, diagrama de componente, entre outros. Esses diagramas são criados antes do desenvolvimento do software. A Arquitetura Intencional trata exatamente dessas decisões e determinações tomadas antes do início do desenvolvimento.</p>
+            <p> Ao iniciar um novo sistema, como um sistema de pagamentos online, a primeira coisa a determinar é a forma de distribuição do sistema: será monolítico, microserviços ou serverless? Como serão as conexões? A Arquitetura Intencional envolve essas grandes decisões arquiteturais tomadas antes do desenvolvimento.</p>
+            <p> Esse conceito enfatiza a importância de decisões arquiteturais deliberadas e conscientes, alinhadas aos objetivos do negócio. A partir dos requisitos, tomamos decisões que impactam todo o desenvolvimento. A Arquitetura Intencional é uma representação de alto nível do sistema e não define todos os detalhes, mas cria uma visão clara para que a equipe de desenvolvimento tenha um direcionamento. </p>
+            <p> Uma boa Arquitetura Intencional se baseia em padrões previamente utilizados para replicar boas decisões. O ideal é criar arquiteturas adaptáveis e flexíveis. Como conseguimos isso? Aplicando princípios fundamentais, como modularização, separação de responsabilidades e interfaces bem definidas. Devemos maximizar a comunicação dentro de cada módulo e minimizar a comunicação entre módulos. </p>
+            <p> Seguindo essa abordagem, criamos uma boa Arquitetura Intencional, o que reduz riscos e garante que decisões essenciais sejam tomadas no início do processo. Isso facilita a vida da equipe de desenvolvimento, que não precisa perder tempo decidindo como construir o software, apenas seguir um plano bem definido. Com foco na qualidade, a satisfação do cliente também aumenta. </p>
+            <p> No ciclo de vida clássico do desenvolvimento de software, como o modelo Waterfall (cascata), a Arquitetura Intencional se concentra nas fases iniciais. Baseando-se nas necessidades do cliente, criamos uma representação que serve como referência para a equipe de desenvolvimento. </p>
+            <p> No passado, a Arquitetura Intencional era o principal foco do arquiteto, mas hoje isso mudou. O trabalho do arquiteto continua ao longo de todo o processo de desenvolvimento, teste e implantação. Portanto, a Arquitetura Intencional é essencial, mas não é a única disciplina do trabalho arquitetural. </p>
+            <p> Em resumo, a Arquitetura Intencional trata do design inicial do sistema. Uma boa análise e planejamento no início evitam problemas futuros. Para isso, utilizamos padrões consolidados, tomamos decisões embasadas e documentamos bem todo o processo. Essa documentação é essencial para garantir que a equipe de desenvolvimento tenha uma referência confiável. </p>
+            <p> Arquiteturas Intencionais englobam decisões estruturais que são difíceis de mudar ao longo do tempo. No modelo tradicional, o arquiteto projetava e entregava para o desenvolvimento, sem mais envolvimento. Hoje, essa abordagem mudou. O arquiteto precisa acompanhar todo o ciclo de vida do software, garantindo que a arquitetura continue alinhada aos objetivos do negócio.</p>
+            <p> É a visão inicial determinando o fluxo do início do sistema, são as ideias gerais do sistema, análise de requisitos e projeto, é composta pelas decisões estruturais antes do desenvolvimento do sistema, conceito que enfatiza a importância de tomar decisões arquiteturais e conscientes, com o objetivo de alinhar a arquitetura do sistema com os objetivos e requisitos do negócio.  </p>
+            <p>Visão clara e compartilhada;</p>
             <ul>
               <li>Foco em qualidade; </li>
               <li>	Uso de padrões e melhores práticas; </li>
               <li>Adaptabilidade e flexibilidade; </li>
             </ul>
             <p> Importância arquitetura intencional </p>
-
-
             <ul>
               <li> Redução de riscos </li>
               <li> Eficiência no desenvolvimento  </li>
@@ -388,17 +414,46 @@
             </ul>
             <p></p>
 
-            
-
           <li><strong>3.2. Engenharia de Software Ágil</strong></li>
-            <p>Manifesto Ágil:
-              Princípios e Valores, indivíduos e interações, software em funcionamento, responder a mudanças, colaboração com o cliente;
-              Não trabalha com planejamento total se trabalha em pequenos ciclos;
-              Características métodos ágeis:  Ciclos de entrega, incremental, adaptável, evolutivo;
-              Impactos na arquitetura de software: Menor intencionalidade, modulação, necessidade de flexibilidade, necessidade de sustentação, interfaces;
-              </p>
 
+            <p>É importante lembrar do Manifesto Ágil, criado por volta dos anos 2000 e 2001. Foram cerca de 20 signatários que se reuniram e chegaram a um consenso: desenvolver software não é a mesma coisa que construir um prédio. Sendo assim, projetos de software devem ser conduzidos de maneira diferente de outros tipos de projetos. Eles estabeleceram valores e princípios para guiar esse processo.</p>
+            <p>Não vamos passar por tudo isso agora, mas, por exemplo, independentemente do modelo que você adote, é fundamental entender que: devemos valorizar mais os indivíduos e as interações do que os processos e as ferramentas. Trazendo isso para o contexto da engenharia e arquitetura de software, o que isso quer dizer? Antes de pensar apenas em ferramentas para melhorar a qualidade do código da sua equipe, talvez seja mais interessante desenvolver as habilidades e capacidades das pessoas que produzem esse código.</p>
+            <p>O Manifesto Ágil representou uma ruptura na forma como os projetos de software eram conduzidos. Antes, o planejamento era rígido e linear: criava-se um cronograma do início ao fim e ele era seguido à risca, com a entrega final acontecendo apenas no final do projeto. O Manifesto Ágil trouxe uma nova abordagem: ciclos curtos de trabalho, nos quais pequenas partes do sistema são entregues continuamente.</p>
+            <p>Ao invés de passar meses desenvolvendo um sistema para só então entregá-lo ao cliente, agora trabalhamos de forma iterativa. A cada ciclo (que pode ser, por exemplo, de um mês), uma parte funcional do produto é entregue. O cliente dá seu feedback, que é incorporado nas próximas iterações. Assim, evitamos grandes desperdícios de tempo e dinheiro, pois qualquer necessidade de mudança é identificada rapidamente.</p>
+            <p>Esse conceito está representado no esquema visual ao lado: primeiro, entregamos a essência do produto, garantindo que ele já tenha valor para o cliente. Depois, aprimoramos continuamente, adicionando novos recursos e melhorando a experiência. Isso transformou completamente o processo de engenharia de software, tornando-o mais dinâmico e adaptável.</p>
+            <p>Hoje, a maior parte das empresas trabalha com ciclos de entrega contínuos, muitas vezes de dois em dois meses. Se algo não agradar ao cliente, rapidamente podemos ajustar e adaptar. Essa abordagem evolutiva tornou o conceito de MVP (Minimum Viable Product) essencial: primeiro criamos uma versão simples, testamos no mercado e, só depois de validar a ideia, aprofundamos o desenvolvimento.</p>
+            <p>Essa mudança na engenharia impactou diretamente a arquitetura de software. Antes, a arquitetura intencional era predominante: todas as decisões arquiteturais eram tomadas antes do início do desenvolvimento. Agora, a abordagem é mais flexível: tomamos algumas decisões iniciais, mas deixamos outras para serem ajustadas ao longo do projeto, conforme recebemos feedback.</p>
+            <p>Isso significa que modularizar o sistema tornou-se ainda mais essencial. Precisamos estruturar nossos módulos de forma inteligente, garantindo alta coesão e baixo acoplamento. Quanto mais independentes forem os módulos, mais fácil será adaptar </p>
+            <p>No esquema visual ao lado, podemos observar dois cenários: no primeiro, os módulos se comunicam de forma controlada e eficiente; no segundo, todos os módulos se comunicam indiscriminadamente. O segundo cenário não é ideal, pois um alto nível de comunicação entre módulos pode comprometer o desempenho e dificultar a manutenção. O ideal é maximizar a comunicação dentro dos módulos e minimizar a comunicação entre módulos.</p>
+            <li><strong>Portanto, os impactos da engenharia ágil na arquitetura de software são claros:</strong></li>
+            <ul>
+              <li>Os produtos são mais modularizados. </li>
+              <li>A arquitetura intencional se tornou menos rígida. </li>
+              <li> A necessidade de arquiteturas flexíveis e adaptáveis aumentou. </li>
+              <li>Mudanças contínuas e incrementais fazem parte do processo. </li>
+              <li>Interfaces bem definidas são essenciais para garantir a evolução do sistema sem comprometer sua integridade. </li>
+              <li> Por fim, um dos grandes aprendizados da agilidade é abraçar as mudanças. A mudança não é um problema, mas sim uma oportunidade de aprimorar o produto. Dessa forma, a arquitetura também precisa ser flexível e adaptável, permitindo evolução contínua ao longo do tempo. </li>
+            </ul>
+            <li><strong>Manifesto Ágil:</strong></li>
+            <ul>
+              <li>Princípios e Valores, indivíduos e interações, software em funcionamento, responder a mudanças, colaboração com o cliente; </li>
+              <li>Não trabalha com planejamento total se trabalha em pequenos ciclos; </li>
+              <li>Características métodos ágeis:  Ciclos de entrega, incremental, adaptável, evolutivo; </li>
+              <li>Impactos na arquitetura de software: Menor intencionalidade, modulação, necessidade de flexibilidade, necessidade de sustentação, interfaces; </li>
+            </ul>
+            <p></p>
+ 
           <li><strong>3.3. Arquitetura Evolutiva</strong></li>
+
+            <p>Na disciplina Fundamentos de Arquitetura de Software, agora, vamos falar sobre arquitetura de software evolutiva.</p>
+            <p>Primeiro ponto: acho que vale a pena a gente destacar um conceito muito presente na literatura, o conceito de arquitetura evolutiva. Para nós, aqui, ele será simbolicamente o mesmo conceito do que estamos chamando de arquitetura evolutiva. Podemos entender que ambas se referem a uma arquitetura que, inicialmente, é representada, mas, com o tempo, ela vai evoluindo, se adaptando. Vamos explorar alguns conceitos dessa aula, como o conceito de "big design upfront" (BDUF), especificar o que é arquitetura evolutiva e falar um pouco sobre as características inerentes à arquitetura evolutiva.</p>
+            <p>O que acontece é o seguinte: basicamente, temos dois tipos de arquitetura. A primeira é a arquitetura que é planejada antes do projeto, e a segunda é a arquitetura que se desenvolve ao longo de todo o processo de desenvolvimento. A arquitetura planejada no início é chamada de arquitetura intencional, enquanto a arquitetura que se desenvolve ao longo do projeto é chamada de arquitetura emergente. Quando falamos de BDUF, não estamos trabalhando com arquitetura emergente, mas sim com uma arquitetura intensamente intencional, ou seja, definindo tudo desde o início do projeto. O problema disso é que, como vimos, não conseguimos prever tudo no começo. Assim, você vai fazer um trabalho inicial pesado, com muitas decisões tomadas logo de cara, mas depois terá um alto custo de mudança ao longo do tempo para garantir que o que você entrega ao cliente esteja alinhado com o que ele espera. Esse trabalho inicial, que depois vai gerar custos de mudança, é um problema. No contexto de sistemas críticos, como por exemplo, sistemas embarcados ou de controle de voo, pode até fazer sentido definir tudo desde o início. No entanto, para produtos como um aplicativo de banco digital, que evolui ao longo do tempo, o melhor é adotar uma arquitetura evolutiva.</p>
+            <p>Então, como garantir que uma arquitetura intencional aceite a evolução ao longo do tempo? A resposta está em construir uma arquitetura geral do sistema, que seja composta por decisões arquiteturais intencionais e emergentes. A ideia é permitir que a arquitetura evolua, mas de forma controlada. Nesse sentido, utilizamos o conceito de arquitetura evolutiva: um projeto de arquitetura de software que é flexível e acomoda mudanças de forma contínua e incremental.</p>
+            <p>Quando trabalhamos com arquitetura evolutiva, devemos adotar algumas práticas, como o design incremental e modular, especificando quais módulos serão trabalhados e minimizando a comunicação entre eles. O objetivo é reduzir ao máximo o impacto da complexidade e do débito técnico, entregando o sistema de forma iterativa, em ciclos. A cada entrega, podemos refinar o código e corrigir problemas técnicos, mantendo o foco em entregas satisfatórias para o cliente, e não perfeitas de início. Isso implica que o débito técnico será algo a ser gerido ao longo do tempo, mas que também pode ser uma oportunidade de aprimorar a qualidade.</p>
+            <p>As vantagens de adotar uma arquitetura evolutiva são muitas. Primeiramente, ela permite que a arquitetura se adapte às mudanças do contexto, respondendo rapidamente às necessidades emergentes. Além disso, ela possibilita uma maior valorização da interação entre os componentes e uma entrega incremental, com foco no desenvolvimento de funcionalidades de forma interativa, reduzindo o risco de mudanças imprevistas.</p>
+            <p>Com a arquitetura evolutiva, a equipe de desenvolvimento pode ser mais ágil, pois as mudanças são localizadas e as falhas são mais fáceis de corrigir. A arquitetura se torna resiliente, pois é composta por módulos independentes, e um erro em um módulo não comprometerá o sistema como um todo. Além disso, o processo de modernização e evolução da arquitetura é facilitado, já que você pode entregar aos poucos e ajustar o design conforme o projeto avança.</p>
+            <p>Em resumo, para implementar uma arquitetura evolutiva de sucesso, é essencial adotar uma abordagem de modularização, focar em coesão dentro dos módulos e minimizar o acoplamento entre eles. Isso, combinado com uma boa definição de interfaces e a utilização de conceitos exploratórios, garante que a arquitetura evolua de forma eficient.e O débito técnico, se bem gerido, pode se tornar uma ferramenta útil, pois permite entregar versões funcionais e satisfatórias para o cliente, enquanto o refinamento ocorre ao longo do tempo.</p>
+            <p>Esses são os conceitos e práticas que fazem a arquitetura evolutiva ser uma estratégia eficaz, especialmente em um contexto de desenvolvimento ágil e produtos que precisam evoluir de forma contínua.
             <p>Definição do projeto arquitetura de software voltada para ser flexível e acomodar mudanças de forma contínua e incremental. Escopos pequenos e modularizando com o tempo, não faz o melhor código de primeira, faz conforme o teste e feedback do cliente.</p>
             <ul>
               <li>Design incremental; </li>
@@ -408,7 +463,7 @@
               <li>Gestão de débitos técnicos; </li>
               <li>Uso de conceitos exploratórios; </li>
             </ul>
-            <p>BDUF – É você tomar muitas decisões no início do seu projeto, o problema disso é fazer muito trabalho no início vai ter determinado muitas coisas e depois você vai ter um alto custo de mudanças ao longo do tempo para garantir que isso aqui, que o que você vai entregar para o cliente seja associado ao que o cliente espera.</p>
+            <p>BDUF - É você tomar muitas decisões no início do seu projeto, o problema disso é fazer muito trabalho no início vai ter determinado muitas coisas e depois você vai ter um alto custo de mudanças ao longo do tempo para garantir que isso aqui, que o que você vai entregar para o cliente seja associado ao que o cliente espera.</p>
             <ul>
               <li>Desalinhamento projeto X executado; </li>
               <li>	Surgimento de Bugs; </li>
@@ -419,8 +474,19 @@
             <p>Exemplo de uso: Software embargado para um avião ou maquina, neste caso todas as especificações são obrigatórias;</p>
           
           <li><strong>3.4. Arquitetura Emergente</strong></li>
-            <p>É a estrutura de um sistema que evolui organicamente a partir de práticas e decisões de design contínuas, baseadas em feedback e aprendizado constante ao longo do ciclo de desenvolvimento. Resumindo os problemas que vão surgindo no meio do caminho, a equipe toma decisões junto com o arquiteto;</p>
 
+            <p>Dando sequência à nossa disciplina Fundamentos de Arquitetura de Software, abordando arquitetura de software moderna. A ênfase aqui não é só na arquitetura intencional, que vimos anteriormente, mas também na arquitetura que vamos desenvolver ao longo do processo de desenvolvimento. É sobre essa arquitetura que quero falar com vocês nesta aula: arquitetura de software emergente.</p>
+            <p>Vamos entender um pouco esse conceito de arquitetura de software emergente. Nesta aula, falaremos sobre como ela funciona, os princípios dessa arquitetura, algumas práticas, desafios e, ao final, vamos concluir a respeito desse tema.</p>
+            <p>Se pegarmos a definição literária, a arquitetura emergente é a estrutura de um sistema que evolui de forma orgânica, a partir das decisões de design que são tomadas ao longo do desenvolvimento, baseadas em feedbacks e aprendizado constante.</p>
+            <p>Agora, vamos conversar sobre isso. A arquitetura emergente é o oposto da arquitetura intencional, onde o arquiteto toma decisões centralizadas antes de começar o desenvolvimento. Na arquitetura emergente, as decisões são tomadas pela equipe de desenvolvimento ao longo do processo. Ou seja, ao invés de planejar tudo de uma vez, as decisões vão surgindo conforme os problemas vão sendo encontrados. Por exemplo, na arquitetura intencional, você poderia decidir usar uma linguagem como Java desde o início, mas no processo de desenvolvimento, ao identificar problemas, pode ser necessário mudar para uma biblioteca diferente. Esse tipo de decisão também faz parte da arquitetura. O arquiteto ainda participa, mas o processo é mais colaborativo, com a equipe tomando decisões conforme o desenvolvimento avança.</p>
+            <p>Então, quais são as características dessa arquitetura que vai surgindo ao longo do caminho? Como estamos entregando software de forma interativa e incremental, o planejamento deve ser constante e evolutivo. Em vez de grandes decisões arquiteturais, buscamos soluções menores e mais simples, de forma contínua. A equipe de desenvolvimento participa ativamente da tomada dessas decisões.</p>
+            <p>Muitas vezes, a equipe pode decidir o caminho a seguir. Por exemplo, se uma equipe tem dois membros com 15 anos de experiência em um produto específico, eles podem sugerir soluções mais eficazes do que o arquiteto, que não tem tanta experiência prática. O arquiteto pode guiar o processo, mas não é o único responsável pelas decisões. A utilização de padrões e práticas consolidadas, como o DDD (Domain-Driven Design), também ajuda a melhorar a qualidade do código, permitindo que a equipe corrija problemas e aumente a qualidade ao longo do tempo.</p>
+            <p>Uma prática muito importante para a arquitetura emergente é a arquitetura modular, que já discutimos anteriormente. A arquitetura modular envolve princípios como alta coesão, baixo acoplamento e segregação de responsabilidades. Essas práticas são fundamentais para que o sistema seja flexível e capaz de evoluir conforme as necessidades do projeto.</p>
+            <p>Agora, para fechar, vamos representar a arquitetura de um sistema. Essa arquitetura será composta por duas partes: a arquitetura intencional e a arquitetura emergente. O que buscamos aqui é garantir que essa arquitetura como um todo seja evolutiva. Ao trabalhar com modularização, segregação de responsabilidades e mantendo alta coesão e baixo acoplamento, conseguimos garantir que o sistema evolua de forma eficiente.</p>
+            <p>Sempre será necessário equilibrar a quantidade de arquitetura intencional com a de arquitetura emergente. Se você está desenvolvendo um sistema crítico, a arquitetura intencional será mais predominante. Porém, em sistemas novos ou produtos em constante evolução, a arquitetura emergente será mais relevante. Essa linha vai variar conforme o contexto, e entender quando tomar decisões intencionais e quando deixar a equipe decidir ao longo do processo é essencial.</p>
+            <p>Em resumo, a arquitetura de software evolutiva depende do equilíbrio entre as duas abordagens. Não existe uma regra rígida, mas é importante saber quando aplicar mais de uma e como balanceá-las conforme o contexto. A ideia é construir uma arquitetura que seja adaptável e capaz de evoluir ao longo do tempo.</p>
+            <p>Então, pessoal, o importante é entender que tanto a arquitetura intencional quanto a emergente têm seu papel no desenvolvimento de software. À medida que o projeto avança, você vai aplicando uma ou outra conforme as necessidades surgem. Com isso, fechamos este capítulo. No próximo, vamos falar um pouco sobre tendências atuais e entrar nas questões dos rádios, que são extremamente importantes para o seu aprendizado.</p>
+            <p>É a estrutura de um sistema que evolui organicamente a partir de práticas e decisões de design contínuas, baseadas em feedback e aprendizado constante ao longo do ciclo de desenvolvimento. Resumindo os problemas que vão surgindo no meio do caminho, a equipe toma decisões junto com o arquiteto;</p>
             <ul>
               <li>Iteratividade e incrementalidade; </li>
               <li>Design simples;  </li>
@@ -428,7 +494,7 @@
               <li>Decisões não centralizadas; </li>
               <li>Uso de padrões; </li>
             </ul>
-            <p> Praticas associadas: </p>
+            <p> <strong> associadas:</strong> </p>
               <ul>
                 <li>TDD, BDD; </li>
                 <li>Programação em PAR; </li>
@@ -436,7 +502,7 @@
                 <li>Refatoração;  </li>
                 <li>Arquitetura modular; </li>
               </ul>
-            <p> Desafios: </p>
+            <p> <strong>Desafios: </strong></p>
             <ul>
               <li> Tomada de decisões coletivas;</li>
               <li> Experiência profissional; </li>
@@ -445,7 +511,6 @@
               <li> Soft skill’s;</li>
               <li> </li>
             </ul>
-
             <p> Arquitetura tradicional/convencional: define a estrutura do sistema do início do projeto, com pouca flexibilidade para mudanças.
               Arquitetura emergente: evolui a estrutura do sistema de forma incremental e adaptativa, permitindo mudanças contínuas e respondendo ao feedback;
               Resumo - Foca na conformidade e documentação das soluções, com revisões periódicas para garantir padrões e evolução arquitetural.
