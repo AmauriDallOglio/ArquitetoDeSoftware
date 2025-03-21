@@ -649,20 +649,19 @@
 
           <li><strong>4.4. Arquitetura Microkernel</strong></li>
 
-          Vamos dar sequência à nossa disciplina "Fundamentos de Arquitetura de Software". Hoje, vamos falar sobre mais uma arquitetura monolítica: o conceito de Microkernel.
-          Antes de começarmos, vale a pena esclarecer um ponto importante: o conceito de Microkernel, apesar de ser descrito como monolítico na literatura, na prática, hoje em dia ele é aplicado de forma diferente. Inicialmente, foi idealizado como uma arquitetura monolítica, mas atualmente, com o avanço da tecnologia, ele pode ser usado de forma mais modular e não necessariamente monolítica. Essa diferença não altera o entendimento do conceito de Microkernel, e vamos falar mais sobre isso ao longo da explicação.
-          O que é o Microkernel? Imagine que você tem um sistema com um núcleo central (core), que contém as funcionalidades essenciais e mínimas, e plugins adicionais que fornecem funcionalidades complementares. A ideia é que o núcleo central seja bem enxuto, contendo apenas o que é fundamental, e os plugins possam ser adicionados para expandir a funcionalidade do sistema. Por exemplo, em um sistema bancário, o núcleo pode lidar com o controle de contas, enquanto plugins adicionais podem tratar de investimentos, crédito, empréstimos, etc.
-          O Microkernel tem como principal objetivo proporcionar flexibilidade e evolução do sistema. Se você precisar adicionar novas funcionalidades, como um novo tipo de serviço bancário, basta adicionar um novo plugin sem modificar o núcleo central. Isso facilita a manutenção e a expansão do sistema ao longo do tempo.
-          O comportamento básico do Microkernel é que o núcleo central oferece apenas funcionalidades essenciais, enquanto as funcionalidades adicionais são implementadas como módulos ou plugins que podem ser acoplados ou desacoplados conforme a necessidade. Esse modelo proporciona flexibilidade e adaptação ao longo do tempo.
-          Exemplos de sistemas que utilizam esse tipo de arquitetura incluem navegadores da web, onde o núcleo básico é a funcionalidade de navegação e visualização de páginas, e plugins podem ser adicionados para fornecer recursos como tradutores, bloqueadores de anúncios ou downloads de vídeos. Outro exemplo seria o sistema de streaming como a Netflix, que oferece funcionalidades básicas de visualização de conteúdo, mas pode adicionar plugins para personalizar a experiência do usuário, como recomendações ou ferramentas de teste.
-          Apesar de o Microkernel ser descrito como uma arquitetura monolítica, ele permite a entrega de funcionalidades incrementais. Ou seja, você pode entregar o núcleo primeiro e, em seguida, ir implementando os plugins de forma incremental ao longo do tempo, o que torna o sistema mais flexível.
-          Ao desenvolver uma arquitetura Microkernel, é importante considerar o tamanho do núcleo central. O núcleo deve conter apenas as funcionalidades essenciais para evitar sobrecarregar o sistema. Se o núcleo for muito grande, ele pode ficar pesado e afetar a performance do sistema. A ideia é que o núcleo seja o mais enxuto possível, e os plugins, que são as funcionalidades complementares, possam ser adicionados conforme necessário.
-          As vantagens dessa arquitetura incluem a facilidade de adicionar novas funcionalidades, a flexibilidade para evoluir o sistema ao longo do tempo e a maior disponibilidade. Isso ocorre porque, se um plugin falhar, o sistema continua funcionando, enquanto se o núcleo falhar, todo o sistema é comprometido. Além disso, como cada plugin é independente, é mais fácil fazer alterações e melhorias em partes específicas do sistema.
-          Porém, o Microkernel também tem suas limitações. A principal dificuldade está na integração entre o núcleo e os plugins. Se o número de plugins aumentar muito, o núcleo pode ficar sobrecarregado, o que pode comprometer o desempenho do sistema. Outro desafio é o gerenciamento da comunicação entre os plugins e o núcleo, que deve ser bem dimensionada para evitar sobrecarga.
-          Além disso, os testes de integração podem ser mais complicados, já que o sistema é composto por múltiplos plugins que precisam interagir de forma eficiente. Mesmo com essas dificuldades, a arquitetura Microkernel oferece uma boa solução para sistemas que precisam ser flexíveis e escaláveis, e onde a adição de novas funcionalidades ao longo do tempo é um requisito importante.
-          Boas práticas para essa arquitetura incluem um bom dimensionamento do núcleo central e a definição clara de interfaces entre o núcleo e os plugins. Além disso, é essencial fazer testes de integração para garantir que o sistema funcione como esperado, além dos testes unitários de cada plugin. Isso ajuda a garantir a qualidade do sistema como um todo.
-          Em resumo, o Microkernel oferece uma arquitetura monolítica flexível, permitindo a adição incremental de funcionalidades. Ele melhora a evolução do sistema e a disponibilidade, mas exige um bom gerenciamento do núcleo e a integração cuidadosa dos plugins para evitar sobrecarga no sistema.
-
+            <p>Vamos dar sequência à nossa disciplina "Fundamentos de Arquitetura de Software". Hoje, vamos falar sobre mais uma arquitetura monolítica: o conceito de Microkernel.</p>
+            <p>Antes de começarmos, vale a pena esclarecer um ponto importante: o conceito de Microkernel, apesar de ser descrito como monolítico na literatura, na prática, hoje em dia ele é aplicado de forma diferente. Inicialmente, foi idealizado como uma arquitetura monolítica, mas atualmente, com o avanço da tecnologia, ele pode ser usado de forma mais modular e não necessariamente monolítica. Essa diferença não altera o entendimento do conceito de Microkernel, e vamos falar mais sobre isso ao longo da explicação.</p>
+            <p>O que é o Microkernel? Imagine que você tem um sistema com um núcleo central (core), que contém as funcionalidades essenciais e mínimas, e plugins adicionais que fornecem funcionalidades complementares. A ideia é que o núcleo central seja bem enxuto, contendo apenas o que é fundamental, e os plugins possam ser adicionados para expandir a funcionalidade do sistema. Por exemplo, em um sistema bancário, o núcleo pode lidar com o controle de contas, enquanto plugins adicionais podem tratar de investimentos, crédito, empréstimos, etc.</p>
+            <p>O Microkernel tem como principal objetivo proporcionar flexibilidade e evolução do sistema. Se você precisar adicionar novas funcionalidades, como um novo tipo de serviço bancário, basta adicionar um novo plugin sem modificar o núcleo central. Isso facilita a manutenção e a expansão do sistema ao longo do tempo.</p>
+            <p>O comportamento básico do Microkernel é que o núcleo central oferece apenas funcionalidades essenciais, enquanto as funcionalidades adicionais são implementadas como módulos ou plugins que podem ser acoplados ou desacoplados conforme a necessidade. Esse modelo proporciona flexibilidade e adaptação ao longo do tempo.</p>
+            <p>Exemplos de sistemas que utilizam esse tipo de arquitetura incluem navegadores da web, onde o núcleo básico é a funcionalidade de navegação e visualização de páginas, e plugins podem ser adicionados para fornecer recursos como tradutores, bloqueadores de anúncios ou downloads de vídeos. Outro exemplo seria o sistema de streaming como a Netflix, que oferece funcionalidades básicas de visualização de conteúdo, mas pode adicionar plugins para personalizar a experiência do usuário, como recomendações ou ferramentas de teste.</p>
+            <p>Apesar de o Microkernel ser descrito como uma arquitetura monolítica, ele permite a entrega de funcionalidades incrementais. Ou seja, você pode entregar o núcleo primeiro e, em seguida, ir implementando os plugins de forma incremental ao longo do tempo, o que torna o sistema mais flexível.</p>
+            <p>Ao desenvolver uma arquitetura Microkernel, é importante considerar o tamanho do núcleo central. O núcleo deve conter apenas as funcionalidades essenciais para evitar sobrecarregar o sistema. Se o núcleo for muito grande, ele pode ficar pesado e afetar a performance do sistema. A ideia é que o núcleo seja o mais enxuto possível, e os plugins, que são as funcionalidades complementares, possam ser adicionados conforme necessário.</p>
+            <p>As vantagens dessa arquitetura incluem a facilidade de adicionar novas funcionalidades, a flexibilidade para evoluir o sistema ao longo do tempo e a maior disponibilidade. Isso ocorre porque, se um plugin falhar, o sistema continua funcionando, enquanto se o núcleo falhar, todo o sistema é comprometido. Além disso, como cada plugin é independente, é mais fácil fazer alterações e melhorias em partes específicas do sistema.</p>
+            <p>Porém, o Microkernel também tem suas limitações. A principal dificuldade está na integração entre o núcleo e os plugins. Se o número de plugins aumentar muito, o núcleo pode ficar sobrecarregado, o que pode comprometer o desempenho do sistema. Outro desafio é o gerenciamento da comunicação entre os plugins e o núcleo, que deve ser bem dimensionada para evitar sobrecarga.</p>
+            <p>Além disso, os testes de integração podem ser mais complicados, já que o sistema é composto por múltiplos plugins que precisam interagir de forma eficiente. Mesmo com essas dificuldades, a arquitetura Microkernel oferece uma boa solução para sistemas que precisam ser flexíveis e escaláveis, e onde a adição de novas funcionalidades ao longo do tempo é um requisito importante.</p>
+            <p>Boas práticas para essa arquitetura incluem um bom dimensionamento do núcleo central e a definição clara de interfaces entre o núcleo e os plugins. Além disso, é essencial fazer testes de integração para garantir que o sistema funcione como esperado, além dos testes unitários de cada plugin. Isso ajuda a garantir a qualidade do sistema como um todo.</p>
+            <p>Em resumo, o Microkernel oferece uma arquitetura monolítica flexível, permitindo a adição incremental de funcionalidades. Ele melhora a evolução do sistema e a disponibilidade, mas exige um bom gerenciamento do núcleo e a integração cuidadosa dos plugins para evitar sobrecarga no sistema.</p>
 
             <p> Também conhecida como Plug-in, é um estilo onde o sistema central (Microkernel) fornece funcionalidades mínimas e essenciais, enquanto as funcionalidades adicionais são implementadas como módulos ou plug-in que podem ser acoplados ou desacoplados conforme necessário. </p>
             
@@ -704,140 +703,190 @@
         <h2>Capítulo 5: Estilos Arquiteturais Distribuídos</h2>
         <ul>
           <li><strong>5.1. Conceitos Gerais</strong></li>
-          <p>Arquiteturas utilizadas para projetar e implementar sistemas em que os componentes estão distribuídos em diferentes nós de uma rede. A distribuição dos componentes pode ocorrer por várias razões, como escalabilidade, resiliência, alta disponibilidade ou par aproveitar recursos geograficamente distribuídos; </p>
-          <p><strong> Características:  </strong></p>
-          <ul>
-            <li>Distribuição de componentes; </li>
-            <li>Descentralização;</li>
-            <li>Comunicação de componentes; </li>
-            <li>Tolerância a falhas; </li>
-            <li>Escalabilidade;</li>
-            <li>Heterogeneidade;  </li>
-          </ul>
-          <p><strong> Desafios:   </strong></p>
-          <ul>
-            <li>Segurança;</li>
-            <li>Latência e desempenho;</li>
-            <li>Coordenação e sincronização; </li>
-            <li>Complexidade operacional; </li>
-            <li>Escalabilidade e balanceamento de carga; </li>
-          </ul>
-          <p><strong>Aplicações:    </strong></p>
-          <ul>
-            <li>Amazon web service; </li>
-            <li>Netflix; </li>
-            <li>Google; </li>
-            <li>Uber; </li>
-            <li>Spotify;</li>
-          </ul>
-          <p><strong>  Tendências:  </strong></p>
-          <ul>
-            <li>Arquiteturas serveless; </li>
-            <li> Edge Computing;</li>
-            <li> Arquiteturas multi-cloud;</li>
-            <li>Arquitetura federada; </li>
-
-          </ul>
-        </br>
+            <p>Dando sequência à nossa disciplina de Fundamentos de Arquitetura de Software. Neste capítulo, vamos falar sobre os estilos arquiteturais distribuídos.</p>
+            <p>No capítulo passado, falamos sobre os estilos arquiteturais monolíticos, que envolvem uma entrega única, onde o sistema é centralizado, e frequentemente os componentes estão localizados no mesmo espaço geográfico (embora não seja uma regra). Agora, vamos explorar as arquiteturas distribuídas, que envolvem componentes que estão geograficamente espalhados. Uma característica importante desses sistemas é que, ao contrário dos monolíticos, as entregas geralmente são feitas de forma incremental.</p>
+            <p>As arquiteturas distribuídas são utilizadas para projetar e implementar sistemas onde os componentes estão distribuídos, muitas vezes em locais distintos. Quando você vai utilizar esse tipo de arquitetura? Imagine que você tem um servidor sobrecarregado em uma unidade, mas há outro servidor em uma unidade diferente que está ocioso. Nesse caso, você pode usar recursos distribuídos para melhorar a disponibilidade e a resiliência do sistema. A principal dificuldade aqui é que a comunicação entre os componentes precisa ser eficiente, pois, caso contrário, o desempenho pode ser comprometido.</p>
+            <p>As características principais desses modelos de sistemas incluem a distribuição geográfica dos componentes, descentralização e comunicação entre componentes. Enquanto nos sistemas monolíticos tudo fica concentrado em um único local, nas arquiteturas distribuídas, os componentes estão separados e devem se comunicar entre si. Essa comunicação precisa ser bem gerida, especialmente quando os componentes estão distantes, o que pode afetar o desempenho. Por outro lado, as arquiteturas distribuídas são altamente tolerantes a falhas, ou seja, se uma parte do sistema falhar, as outras partes podem continuar funcionando normalmente. Outro benefício é a escalabilidade, pois você pode aumentar a infraestrutura de componentes que recebem mais requisições sem afetar os outros.</p>
+            <p>A heterogeneidade é outro ponto importante, pois em uma arquitetura distribuída, você pode ter componentes escritos em diferentes linguagens de programação ou rodando em diferentes sistemas operacionais, o que proporciona maior flexibilidade.</p>
+            <p>Dificuldades: Uma das principais dificuldades das arquiteturas distribuídas está relacionada à segurança, pois as mensagens precisam trafegar pela rede, o que pode ser uma preocupação. A comunicação pela rede pode ser mais lenta e menos confiável do que a comunicação local. Além disso, gerenciar a coordenação entre os componentes distribuídos pode se tornar complexo. Portanto, embora as arquiteturas distribuídas tragam muitos benefícios, é importante analisar cuidadosamente o contexto antes de adotar esse modelo, pois nem sempre é a melhor solução para todos os casos.</p>
+            <p>Escalabilidade e balanceamento são mais fáceis de serem implementados em sistemas distribuídos, mas gerenciar isso ao longo do tempo pode ser mais desafiador. A falta de uma visão centralizada torna a administração mais complexa, principalmente quando há muitos componentes a serem geridos.</p>
+            <p> Para ilustrar esses conceitos, podemos falar sobre alguns exemplos práticos de empresas que utilizam arquiteturas distribuídas. Por exemplo, a Amazon Web Services (AWS) oferece uma série de ferramentas, como o S3, que são usadas de forma distribuída e independente para fornecer serviços em várias partes do mundo. O Netflix também usa uma arquitetura distribuída para gerenciar seu grande banco de dados de filmes e permitir que milhões de usuários assistam a conteúdos de forma simultânea. Google, Uber, Spotify e outras grandes empresas também adotam essa arquitetura para lidar com seus usuários e serviços espalhados ao redor do mundo.</p>
+            <p><strong>Características comuns dessas empresas incluem: </strong></p>
+            <ul>
+              <li>Usuários dispersos geograficamente; </li>
+              <li>Necessidade de conectividade de rede eficiente; </li>
+              <li>Elasticidade no número de usuários; </li>
+              <li>Escalabilidade e evolução funcional. </li>
+            </ul>
+            <p>Esses sistemas evoluem ao longo do tempo, como vimos com a Uber e a Netflix, que têm sistemas completamente diferentes hoje em dia em relação a três anos atrás.</p>
+            <p>Arquiteturas distribuídas oferecem grandes vantagens tecnológicas quando bem utilizadas. No entanto, elas não são adequadas para todos os contextos, e é importante fazer uma análise cuidadosa para escolher a solução ideal para cada caso.</p>
+            <p><strong>Tendências atuais incluem: </strong></p>
+            <ul>
+              <li>Arquitetura sem servidor (serverless), que não significa "sem servidores", mas sim "servidores de terceiros", o que permite maior flexibilidade e escalabilidade; </li>
+              <li>Processamento na borda, que melhora a tomada de decisões rápidas e reduz a latência;</li>
+              <li>Arquiteturas multi-cloud, em que empresas armazenam dados em nuvens públicas e privadas, distribuindo o processamento entre diferentes plataformas; </li>
+              <li>Arquitetura federada, que é um conceito interessante, principalmente para grandes organizações. Em uma arquitetura federada, você tem entidades independentes que colaboram entre si, como no modelo de governo federal, com um poder central, mas com autonomia local. </li>
+              <li>Esses conceitos de federação podem ser aplicados em sistemas distribuídos para garantir maior flexibilidade e autonomia entre os componentes. </li>
+            </ul>
+            <p>Arquiteturas distribuídas são uma excelente opção para muitos cenários, especialmente quando você precisa de escalabilidade, resiliência e flexibilidade. No entanto, elas exigem um gerenciamento cuidadoso e uma análise crítica sobre quando e como utilizá-las.</p>
+            <p>Arquiteturas utilizadas para projetar e implementar sistemas em que os componentes estão distribuídos em diferentes nós de uma rede. A distribuição dos componentes pode ocorrer por várias razões, como escalabilidade, resiliência, alta disponibilidade ou par aproveitar recursos geograficamente distribuídos; </p>
+            <p><strong> Características:  </strong></p>
+            <ul>
+              <li>Distribuição de componentes; </li>
+              <li>Descentralização;</li>
+              <li>Comunicação de componentes; </li>
+              <li>Tolerância a falhas; </li>
+              <li>Escalabilidade;</li>
+              <li>Heterogeneidade;  </li>
+            </ul>
+            <p><strong> Desafios:   </strong></p>
+            <ul>
+              <li>Segurança;</li>
+              <li>Latência e desempenho;</li>
+              <li>Coordenação e sincronização; </li>
+              <li>Complexidade operacional; </li>
+              <li>Escalabilidade e balanceamento de carga; </li>
+            </ul>
+            <p><strong>Aplicações:    </strong></p>
+            <ul>
+              <li>Amazon web service; </li>
+              <li>Netflix; </li>
+              <li>Google; </li>
+              <li>Uber; </li>
+              <li>Spotify;</li>
+            </ul>
+            <p><strong>  Tendências:  </strong></p>
+            <ul>
+              <li>Arquiteturas serveless; </li>
+              <li> Edge Computing;</li>
+              <li> Arquiteturas multi-cloud;</li>
+              <li>Arquitetura federada; </li>
+            </ul>
+            </br>
           <li><strong>5.2. Arquitetura Orientada a Serviços (SOA)</strong></li>
-          <p>É um estilo de arquitetura de software que organiza e estrutura um sistema em torno de serviços, que são componentes modulares e autônomos que realizam funções especificas. Esses serviços se comunicam entre si através de protocolos de rede para realizar tarefas complexas e fornecer funcionalidades empresariais.</p>
-          <p>Serviços: unidade ou conjunto de funcionalidades de software independente, desenvolvido para concluir uma tarefa especifica, como recuperar determinadas informações ou executar uma operação. Ele contém as integrações de dados e o código necessários para executar uma função de negócio completa. Esses serviços podem ser acessados remotamente é possível interagir com eles e atualizá-los de maneira independente;</p>
-          
-          <p><strong>  Estrutura  </strong></p>
-          <ul>
-            <li>Provedor de serviços; </li>
-            <li>Broker ou registro de serviços (contratos); </li>
-            <li>Solicitante de serviços; </li>
-          </ul>
 
-          <p><strong>  Vantagens:  </strong></p>
-          <ul>
-            <li>Flexibilidade e time to Market; </li>
-            <li>Reutilização de software;</li>
-            <li>Evolução; </li>
-            <li>Manutenção </li>
-            <li>Escalabilidade; </li>
-          </ul>
-
-          <p><strong> Desvantagens:   </strong></p>
-          <ul>
-            <li>Complexidade na implantação/evolução; </li>
-            <li>Latência; </li>
-            <li>Sobrecarga devido a comunicação; </li>
-            <li>Segurança; </li>
-            <li>Dependências de padrão; </li>
-            <li>Gerenciamento; </li>
-          </ul>
-
-
-          <p><strong>Boas práticas:    </strong></p>
-          <ul>
-            <li>Definição clara dos serviços; </li>
-            <li>Monitoramento e gestão do desempenho; </li>
-            <li>Reutilização; </li>
-            <li>Padronize a comunicação (Ex. rest); </li>
-            <li>Evolui integrando arquiteturas modernas (microserviços e apis) </li>
-          </ul>
-          </br>
+            <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software, vamos falar sobre arquiteturas distribuídas e, mais especificamente, sobre arquitetura orientada a serviços, que foi o primeiro grande estilo arquitetural distribuído a se consolidar.</p>
+            <p>Antes de começarmos, imaginamos uma representação clara do que são as arquiteturas distribuídas, vemos um banco de dados central e módulos de serviço que estão </p>
+            <p>Com isso, conseguimos ter serviços com tecnologias diferentes, voltados para usuários diferentes e com regras de negócios distintas. Esse é um grande avanço em relação às arquiteturas monolíticas.</p>
+            <p>Arquitetura Orientada a Serviços (SOA) é um estilo de software que organiza os sistemas em componentes modulares e autônomos, que realizam funções específicas. Esses serviços se comunicam por meio de protocolos de rede para realizar tarefas complexas. O grande diferencial da arquitetura orientada a serviços é que ela permite que os serviços se distribuam geograficamente, sem depender de uma infraestrutura centralizada.</p>
+            <p>No modelo de microserviços, por exemplo, como já discutido, você tem vários serviços independentes, enquanto na arquitetura monolítica, tudo está centralizado em um único corpo. Cada serviço pode ser modificado ou escalado sem impactar os outros.</p>
+            <p>A comunicação entre serviços é feita de forma eficiente por meio de um intermediador, que pode ser um broker de serviços. O intermediador gerencia a comunicação entre os serviços e facilita a integração, garantindo que cada serviço possa se comunicar com os outros de maneira eficiente e sem criar sobrecarga na rede. Isso é semelhante ao conceito de um correio que entrega mensagens entre as partes.</p>
+            <p>Quando a comunicação não é centralizada, pode ser mais eficiente. Imagine uma sala com várias pessoas falando ao mesmo tempo, sem uma regra de comunicação. Isso geraria muito ruído. No contexto dos sistemas, esse intermediador de comunicação facilita a troca de informações de maneira mais organizada.</p>
+            <p> Provedor de Serviços: Esse elemento centraliza a comunicação entre os serviços. Ele funciona como um catálogo, onde os serviços se registram para serem consumidos por outros componentes. Ao registrar um serviço, ele se torna acessível para outros componentes, que podem consultá-lo por meio do provedor e utilizá-lo conforme necessário.</p>
+            <p><strong>  Vantagens: A arquitetura orientada a serviços traz várias vantagens </strong></p>
+            <ul>
+              <li>Velocidade no mercado: soluções podem ser entregues mais rapidamente. </li>
+              <li> Reutilização de código: serviços podem ser reutilizados em diferentes sistemas. </li>
+              <li> Evolução: você pode adicionar ou melhorar serviços de forma incremental, sem afetar o sistema como um todo. </li>
+              <li>Manutenção facilitada: como os serviços são modulares, a manutenção de um serviço específico não afeta os demais.</li>
+              <li>Escalabilidade: é mais fácil escalar um sistema, acrescentando novos serviços ou aumentando a infraestrutura de serviços existentes.</li>
+            </ul>
+            <p><strong>  Tendências:  </strong></p>
+            <ul>
+              <li>Desvantagens: No entanto, há desafios, como: </li>
+              <li> Gestão de muitos serviços: à medida que o número de serviços cresce, gerenciar e coordenar todos eles pode se tornar complexo. </li>
+              <li> Sobrecarga de rede: a comunicação entre os serviços pode gerar sobrecarga na rede, principalmente quando os serviços estão espalhados geograficamente.</li>
+              <li>Segurança: a comunicação entre diferentes serviços pode criar vulnerabilidades. </li>
+              <li>Padrões de comunicação: a definição de padrões (como REST, XML, JSON) pode ser um desafio, pois o tipo de comunicação precisa ser definido de forma precisa para garantir a integração correta.</li>
+            </ul>
+            <p><strong>Boas práticas: Para utilizar a arquitetura orientada a serviços de forma eficiente, é importante: </strong></p>
+            <ul>
+              <li>Monitorar o desempenho dos serviços.</li>
+              <li> Reutilizar software sempre que possível.</li>
+              <li>Definição clara dos serviços; </li>
+              <li>Monitoramento e gestão do desempenho; </li>
+              <li>Reutilização; </li>
+              <li>Padronize a comunicação (Ex. rest); </li>
+              <li>Evolui integrando arquiteturas modernas (microserviços e apis) </li>
+            </ul>
+            <p>Padronizar a comunicação entre os serviços. Por exemplo, você pode usar REST para serviços flexíveis e XML para serviços que lidam com transações complexas, como o envio de notas fiscais.</p>
+            <p>A evolução contínua é uma grande vantagem da SOA, pois você pode facilmente integrar outros serviços e adaptar a arquitetura conforme novas necessidades surgem.</p>
+            <p>A arquitetura orientada a serviços resolve várias questões de disponibilidade e resiliência, pois não depende de um único ponto central. Ela permite que novos serviços sejam facilmente adicionados ou removidos sem impactar a operação do sistema como um todo. No entanto, ela também apresenta desafios, como a gestão de comunicação entre muitos serviços e a sobrecarga de rede.</p>
+            <p>É um estilo de arquitetura de software que organiza e estrutura um sistema em torno de serviços, que são componentes modulares e autônomos que realizam funções especificas. Esses serviços se comunicam entre si através de protocolos de rede para realizar tarefas complexas e fornecer funcionalidades empresariais.</p>
+            <p>Serviços: unidade ou conjunto de funcionalidades de software independente, desenvolvido para concluir uma tarefa especifica, como recuperar determinadas informações ou executar uma operação. Ele contém as integrações de dados e o código necessários para executar uma função de negócio completa. Esses serviços podem ser acessados remotamente é possível interagir com eles e atualizá-los de maneira independente;</p>
+            <p><strong>  Estrutura  </strong></p>
+            <ul>
+              <li>Provedor de serviços; </li>
+              <li>Broker ou registro de serviços (contratos); </li>
+              <li>Solicitante de serviços; </li>
+            </ul>
+            <p><strong>  Vantagens:  </strong></p>
+            <ul>
+              <li>Flexibilidade e time to Market; </li>
+              <li>Reutilização de software;</li>
+              <li>Evolução; </li>
+              <li>Manutenção </li>
+              <li>Escalabilidade; </li>
+              <li>Reutilização de software;</li>
+              <li>Comunicação por API; </li>
+              <li>Resiliência;</li>
+            </ul>
+            <p><strong> Desvantagens:   </strong></p>
+            <ul>
+              <li>Gestão dos microsserviços; </li>
+              <li>Complexidades ACID; </li>
+              <li>Despafronização; </li>
+              <li>Complexidade na implantação/evolução; </li>
+              <li>Latência; </li>
+              <li>Sobrecarga devido a comunicação; </li>
+              <li>Segurança; </li>
+              <li>Dependências de padrão; </li>
+              <li>Gerenciamento; </li>
+            </ul>
+            </br>
 
           <li><strong>5.3. Arquitetura Microserviços</strong></li>
-          <p>Estilo de arquitetura de software em que uma aplicação é estruturada como um conjunto de serviços pequenos e independentes, que se comunicam entre si através de APIs bem definidas. Cada microserviços é responsável por uma funcionalidade especifica do sistema e pode ser desenvolvido, implantando e escalado de forma independente dos outros;</p>
-          <p>API’s application programming interface, interface que permite a comunicação entre microsserviços, serviços ou cliente externos.</p>
-          <p><strong>  Vantagens:  </strong></p>
-          <ul>
-            <li>Flexibilidade e time to Market; </li>
-            <li>Reutilização de software;</li>
-            <li>Evolução; </li>
-            <li>Manutenção; </li>
-            <li>Escalabilidade; </li>
-            <li>Comunicação por API; </li>
-            <li>Resiliência;</li>
-          </ul>
-          <p><strong>  Desvantagens:  </strong></p>
-          <ul>
-            <li>Gestão dos microsserviços; </li>
-            <li>Complexidades ACID; </li>
-            <li>Despafronização; </li>
-          </ul>
-          <p><strong> Boas práticas:   </strong></p>
-          <ul>
-            <li>Descentralização dos dados; </li>
-            <li>Comunicação assíncrona sempre que possível; </li>
-            <li>Versionamento de APIs;</li>
-            <li>Automatização CI/CD;</li>
-            <li>Monitoramento e logging centralizado; </li>
-            <li>Cultura de DevOps;</li>
-          </ul>
 
+            <p>sobre grandes grupos de funcionalidades e como os serviços distribuídos geograficamente continuam a atender a uma base de dados central. Agora, vamos falar sobre uma evolução desse modelo, que é a arquitetura orientada a microserviços.</p>
+            <p>Bom, quando falamos em microserviços, já podemos entender que essa é a última mudança. O microserviço normalmente refere-se a um contexto mais específico, buscando melhorar a eficiência e a importância do serviço. Vamos seguir o mesmo padrão de explicação que usamos anteriormente: conceitos, estruturas, vantagens e desvantagens, fazendo um comparativo entre microserviços e serviços.</p>
+            <p>No microserviço, temos a estrutura organizada como um conjunto de serviços pequenos e independentes, que se comunicam através de APIs bem definidas. Cada serviço é responsável por uma funcionalidade específica e pode ser desenvolvido, implementado e escalado de forma independente, sem afetar os outros serviços. A flexibilidade e a escalabilidade são pontos positivos aqui, já que você pode adicionar novos serviços ou modificá-los sem afetar o sistema como um todo.</p>
+            <p>Uma vantagem do microserviço é que, se um serviço falhar, apenas esse serviço será afetado. Se o banco de dados central cair, todo o sistema para, mas no modelo de microserviços, o impacto é local, ou seja, apenas o serviço com problemas será afetado, os outros continuam funcionando normalmente. Essa é uma grande vantagem em termos de resiliência.</p>
+            <p>Mas, claro, não é perfeito. O aumento de complexidade é uma desvantagem. Agora, você precisa gerenciar várias instâncias de microserviços e garantir que todos funcionem corretamente. A comunicação entre eles precisa ser bem estruturada e otimizada. Além disso, a utilização de protocolos leves, como REST, melhora a eficiência da comunicação, mas ainda assim há a necessidade de um bom gerenciamento para evitar problemas de sobrecarga de dados.</p>
+            <p>Comparando os microserviços com a arquitetura orientada a serviços, vemos que, no microserviço, você tem maior flexibilidade e desempenho, mas também enfrenta novos desafios, como a gestão de dados distribuídos e a complexidade na comunicação entre os serviços.</p>
+            <p>Em termos de vantagens, o microserviço oferece uma evolução, permitindo mais eficiência e flexibilidade. A manutenção e a evolução do sistema tornam-se mais fáceis, pois cada serviço pode ser modificado sem impactar outros, e a escalabilidade pode ser feita de forma mais eficiente. No entanto, o modelo de microserviços exige um controle maior sobre a infraestrutura e a gestão de serviços ao longo do tempo.</p>
+            <p>Em relação à complexidade, ao dividir a base de dados central em várias réplicas, você precisa garantir que os dados estejam consistentes entre os serviços. Isso pode ser desafiador, especialmente quando os dados são compartilhados entre diferentes serviços, como no exemplo de um serviço bancário que precisa consultar o saldo de um usuário.</p>
+            <p>Por fim, a gestão do microserviço envolve garantir que os serviços estejam balanceados adequadamente e que a comunicação entre eles seja eficiente. O aumento de instâncias para suportar a carga de trabalho é necessário, o que exige uma camada intermediária para balanceamento de carga.</p>
+            <p>Então, a arquitetura de microserviços é uma excelente opção para sistemas que precisam de flexibilidade, resiliência e escalabilidade, mas também traz desafios em termos de complexidade operacional.</p>
+            <p>Boas práticas incluem descentralizar a comunicação, preferir comunicação assíncrona quando possível e garantir a padronização das interfaces de serviço. Monitoramento e gerenciamento eficientes também são essenciais para manter o sistema funcionando sem problemas.</p>
+            <p>Estilo de arquitetura de software em que uma aplicação é estruturada como um conjunto de serviços pequenos e independentes, que se comunicam entre si através de APIs bem definidas. Cada microserviços é responsável por uma funcionalidade especifica do sistema e pode ser desenvolvido, implantando e escalado de forma independente dos outros;</p>
+            <p>API’s application programming interface, interface que permite a comunicação entre microsserviços, serviços ou cliente externos.</p>
+            
           <li>5.4. Arquitetura Orientada a Eventos</li>
-          <p>Estilo de arquitetura de software em que os componentes do sistema se comunicam e interagem entre si através da troca de eventos. Um evento é uma notificação de que algo significativo aconteceu dentro do sistema, como uma mudança de estado, uma ação do usuário ou a ocorrência de uma condição especifica;</p>
-          <p>Exemplo: Uma mensagem que descreve algo que aconteceu no sistema. Por exemplo, pedido realizado ou pagamento aprovado ou usuário logado ou rastreio de correio, envio de promoção. Os eventos são geralmente representados como mensagens contendo dados relevantes, como o tipo de eventos e os detalhes associados.</p>
-          <p>Na arquitetura orientada a eventos é necessário um sistema e mensageria, que utiliza algum padrão de comunicação como inscrição e publicação;</p>
-        
-          <p><strong> Vantagens:   </strong></p>
-          <ul>
-            <li> Desacoplamento;</li>
-            <li> Desempenho;</li>
-            <li> Escalabilidade;</li>
-            <li> Comunicação assíncrona;</li>
-          </ul>
-          <p><strong>  Desvantagens:  </strong></p>
-          <ul>
-            <li>Complexidade; </li>
-            <li>Adequação funcional; </li>
-            <li>Gerenciamento de estado/eventual consistency; </li>
-            <li>Depuração e rastreamento; </li>
-          </ul>
-          <p><strong> Boas práticas:   </strong></p>
-          <ul>
-            <li>Definição clara dos eventos;</li>
-            <li>Modelos claro de gerenciamento de eventos; </li>
-            <li>Desacoplamento entre produtores e consumidores; </li>
-            <li>Confirmação de entrega de eventos; </li>
-            <li>Segurança na comunicação;</li>
-          </ul>
-        
-        
+            <p>Vamos dar sequência ao nosso capítulo cinco, sobre arquiteturas distribuídas, com foco em um estilo arquitetural orientado a eventos. Vamos falar especificamente sobre a arquitetura orientada a eventos, vamos seguir o padrão de falar sobre conceitos, estruturas, vantagens, desvantagens e boas práticas, mas agora o foco é em arquiteturas orientadas a eventos. Vale ressaltar que estamos tratando de um tipo de arquitetura que não é aplicável a todos os contextos. Ela é mais adequada a situações específicas, onde você busca reduzir a troca de dados entre componentes e maximizar a eficiência.</p>
+            <p>Na arquitetura orientada a eventos, ao invés de enviar dados completos de um componente para o outro, você envia apenas a mudança de estado, como um evento. Por exemplo, em um sistema de pagamentos, ao invés de enviar todos os dados de uma transação, você envia apenas informações essenciais, como o número do cliente, o valor e o tipo de pagamento. Isso ajuda a otimizar a comunicação, reduzindo a quantidade de dados trocados entre os componentes.</p>
+            <p>Um evento é uma notificação de algo significativo que aconteceu dentro do sistema, como uma mudança de estado, uma ação do usuário ou a ocorrência de uma condição específica. Por exemplo, em um sistema de entrega de pizzas, você poderia notificar os clientes quando o pedido foi enviado ou quando chegou ao local de distribuição, sem precisar enviar todos os detalhes da transação.</p>
+            <p>Pensa no conceito de "mensagem": uma mensagem comunica que algo importante aconteceu, como o pedido de pizza sendo enviado. No entanto, você não quer transmitir uma longa mensagem cheia de informações irrelevantes. O objetivo é otimizar a troca de informações, enviando apenas o necessário, para reduzir a latência e melhorar a eficiência.</p>
+            <p>Na arquitetura orientada a eventos, temos o conceito de "produtor" e "consumidor". O produtor gera o evento e o transmite, enquanto o consumidor se interessa por ele e o consome. Um exemplo é uma loja com 100 clientes. Em vez de enviar um catálogo de produtos para todos os clientes todos os dias, o produtor (loja) publica as informações em um ponto central, como um painel de promoções. Os consumidores, como os clientes interessados, acessam essa informação quando necessário, reduzindo a troca constante de dados.</p>
+            <p>Esse conceito de "publicar e assinar" permite uma comunicação mais eficiente, já que os consumidores só recebem as informações relevantes para eles, sem sobrecarregar o sistema com dados desnecessários. Em vez de enviar uma mensagem a cada vez, você só publica a mudança de estado nos canais de interesse.</p>
+            <p>Uma vantagem disso é o baixo acoplamento entre os componentes. Isso possibilita maior escalabilidade e desempenho, já que os produtores continuam a trabalhar sem precisar esperar pela reação de cada consumidor.</p>
+            <p>Entretanto, nem todos os domínios de negócio são adequados para esse tipo de arquitetura. Ela funciona bem em contextos com muitas consultas e poucas transações de dados, como em sistemas de monitoramento ou consultoria, onde as informações são mais estáticas. Já em sistemas que exigem transações complexas e troca de dados detalhados, a arquitetura orientada a eventos pode não ser a melhor opção.</p>
+            <p>Além disso, a consistência dos dados é um desafio. Em sistemas orientados a eventos, você deve garantir que a informação está atualizada sem sobrecarregar o sistema com transações desnecessárias. Para isso, o conceito de "event sourcing" pode ser útil, onde as mudanças de estado são registradas de forma incremental, sem a necessidade de armazenar todos os dados de cada transação. </p>
+            <p>Por fim, a segurança na comunicação e a confirmação da entrega dos eventos são práticas essenciais para garantir que o sistema funcione corretamente, especialmente em contextos críticos.</p>
+            <p>Estilo de arquitetura de software em que os componentes do sistema se comunicam e interagem entre si através da troca de eventos. Um evento é uma notificação de que algo significativo aconteceu dentro do sistema, como uma mudança de estado, uma ação do usuário ou a ocorrência de uma condição especifica;</p>
+            <p>Exemplo: Uma mensagem que descreve algo que aconteceu no sistema. Por exemplo, pedido realizado ou pagamento aprovado ou usuário logado ou rastreio de correio, envio de promoção. Os eventos são geralmente representados como mensagens contendo dados relevantes, como o tipo de eventos e os detalhes associados.</p>
+            <p>Na arquitetura orientada a eventos é necessário um sistema e mensageria, que utiliza algum padrão de comunicação como inscrição e publicação;</p>
+            <p><strong> Vantagens:   </strong></p>
+            <ul>
+              <li> Desacoplamento;</li>
+              <li> Desempenho;</li>
+              <li> Escalabilidade;</li>
+              <li> Comunicação assíncrona;</li>
+            </ul>
+            <p><strong>  Desvantagens:  </strong></p>
+            <ul>
+              <li>Complexidade; </li>
+              <li>Adequação funcional; </li>
+              <li>Gerenciamento de estado/eventual consistency; </li>
+              <li>Depuração e rastreamento; </li>
+            </ul>
+            <p><strong> Boas práticas:   </strong></p>
+            <ul>
+              <li>Definição clara dos eventos;</li>
+              <li>Modelos claro de gerenciamento de eventos; </li>
+              <li>Desacoplamento entre produtores e consumidores; </li>
+              <li>Confirmação de entrega de eventos; </li>
+              <li>Segurança na comunicação;</li>
+            </ul>
         </ul>
       </div>
       
