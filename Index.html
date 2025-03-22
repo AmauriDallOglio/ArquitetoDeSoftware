@@ -65,8 +65,6 @@
         <li><a href="#modulo-1-capitulo-10">Capítulo 10: Engenharia e Arquitetura de Software</a></li>
         <li><a href="#modulo-1-capitulo-11">Capítulo 11: DEVOPS</a></li>
       </ul>
-  
-
       <li><a href="#modulo-2">Módulo 2: Requisitos Arquiteturais e Modelagem Arquitetural</a></li>
       <ul>
         <li><a href="#modulo-2-capitulo-0">Capítulo 0: Introdução à Engenharia de Requisitos</a></li>
@@ -82,7 +80,6 @@
         <li><a href="#modulo-2-capitulo-10">Capítulo 10: Segunda Aula Interativa – Projeto no Azure DevOps</a></li>
         <li><a href="#modulo-2-material-complementar">Material Complementar</a></li>
       </ul>
-
       <li><a href="#modulo-3">Módulo 3: Design Patterns, Estilos e Padrões Arquiteturais</a></li>
       <ul>
         <li><a href="#modulo-3-capitulo-0">Capítulo 0 - Visão Geral do Módulo</a></li>
@@ -101,7 +98,6 @@
         <li><a href="#modulo-3-capitulo-13">Atividade Modular</a></li>
         <li><a href="#modulo-3-capitulo-14">Segunda aula interativa - Capítulo 12 – Aplicação de Padrões Arquiteturais</a></li>
       </ul>
-
       <li><a href="#modulo-4">Módulo 4: Principais Arquiteturas de Software da Atualidade</a></li>
       <ul>
         <li><a href="#modulo-4-capitulo-0">Capítulo 0: Visão Geral do Módulo</a></li>
@@ -129,21 +125,19 @@
       <h2>Módulo 1: Fundamentos de Arquitetura de Software</h2>
       
       <div id="modulo-1-capitulo-0" class="capitulo">
+
         <h3>Capítulo 0: Visão Geral do Módulo</h3>
         <ul>
           <li>0.1. Apresentação</li>
           <li>0.2. Apresentação do Módulo</li>
         </ul>
       </div>
-      
+
       <div id="modulo-1-capitulo-1" class="capitulo">
+
         <h2>Capítulo 1: Introdução à Arquitetura de Software</h2>
         <ul>
           <li><strong>1.1. Introdução à Arquitetura</strong></li>
-
-
-
-
             <p>Vamos falar um pouco sobre o que é arquitetura de software, proporcionando uma visão geral e um entendimento sobre essa disciplina e o conteúdo que será abordado.</p>
             <p>Mas vejam essa representação simplificada: acho que todo mundo aqui, mesmo sem gostar de futebol, já viu em algum momento uma transmissão em que aparece no início um desenho na tela mostrando o esquema tático do time. Algo como "o time vai jogar em 4-3-3" ou "o time vai jogar em 3-5-2". Esse desenho dentro de um campo de futebol indica a posição dos jogadores. Além disso, essa representação simplificada permite entender o estilo do time: se joga mais ofensivamente ou defensivamente.</p>
             <p>A arquitetura de software é algo semelhante. Criamos um desenho, uma representação simplificada, uma modelagem do que precisa ser feito para que o produto seja entregue no final. Quando olhamos um diagrama arquitetural, podemos visualizar o fluxo de dados, da mesma forma que no futebol vemos a sequência de uma jogada. Assim como um time tem 11 jogadores representados simbolicamente, uma arquitetura apresenta módulos, suas responsabilidades e atribuições.</p>
@@ -160,26 +154,20 @@
             <p>Outro ponto crucial: nem sempre tomamos a melhor decisão geral, mas sim a melhor decisão dentro dos recursos disponíveis. Se uma equipe só tem experiência com microserviços, pode ser mais viável seguir por esse caminho, mesmo que outra abordagem fosse tecnicamente superior.</p>
             <p>Chegamos, então, à reta final. O trabalho do arquiteto é construir um design de sistema. O cliente pode passar horas explicando o que deseja, e o papel do arquiteto é transformar essa informação em um modelo compreensível para os desenvolvedores. Se colocarmos o cliente para conversar diretamente com os programadores, pode haver uma desconexão, pois falam linguagens diferentes. O arquiteto atua como um intermediário técnico, traduzindo requisitos em um desenho que a equipe possa seguir.</p>
             <p>Por fim, arquitetos não reinventam a roda: utilizamos padrões já estabelecidos para tomar decisões mais seguras e eficientes.
-
-       
             <P> O que é arquitetura de software? É uma modelagem do produto deve ser fito no final, o estudo do fluxo dos dados, especificação das atribuições dos módulos, composição de alto nível, um retrato do que deve ser construído, somente é detalhado o que é extremamente importante, não precisa adiantar uma decisão que não será feito hoje, pelo motivo de mudar a arquitetura, conclusão design do sistema, difícil de mudar e apoiada em padrões, baseado em padrões;</P>
             <p>Arquitetura de software, se refere à estrutura fundamental de um software. Cada estrutura compreende elementos do software, a relação entre eles e também suas propriedades. É de extrema importância pensar na arquitetura desde o primeiro dia da criação de um software, pois cada escolha tem um impacto, especialmente no crescimento do projeto. Escolhas erradas podem resultar em custos mais altos, lentidão nos processos e muito retrabalho.</p>
             <p>O termo "arquitetura de software" é relativamente novo. Seus princípios fundamentais começaram a ser aplicados esporadicamente pelos pioneiros da engenharia de software a partir da metade dos anos 80, mas seu uso mais generalizado só ocorreu a partir dos anos 90. No entanto, o conceito de arquitetura de software tem origem em pesquisas de Edsger Dijkstra em 1968 e de David Parnas no início dos anos 1990. Esses dois cientistas já sabiam que a estrutura de um software é fundamental e que implementar essa estrutura corretamente é essencial. Antes disso, era uma verdadeira bagunça—imagina só quanta gambiarra eles já viram por aí!</p>
             <p>Muita gente costuma confundir arquitetura de software com design de software, e isso é comum, sem problema algum. Apesar de haver uma interseção entre ambos, eles têm focos distintos: arquitetura de software trata de como os componentes de um sistema interagem entre si, enquanto design de software se concentra na implementação desses componentes, abordando detalhes como padrões de projeto, uso de algoritmos, estruturas de dados etc.</p>
             <p>A arquitetura de software está relacionada à estruturação de sistemas, incluindo a escolha de componentes tecnológicos e a definição de como eles interagem para formar um sistema coeso. Trata-se de decisões de alto nível que estabelecem a base do sistema, priorizando aspectos como escalabilidade, disponibilidade, confiabilidade, manutenibilidade, portabilidade e segurança.</p>
             <p>O principal objetivo da arquitetura de software é garantir que o sistema seja estruturado de forma a atender tanto os requisitos funcionais quanto os não funcionais. Além disso, ele deve ser fácil de manter e expandir ao longo do tempo.</p>
-            
             <p><strong>Arquitetura de Software x Design de Código x Engenharia de Software</strong></p>
             <p> O design de código é frequentemente considerado parte da arquitetura de software, mas ele se concentra mais nos detalhes de implementação dos módulos e componentes do sistema. O design de código envolve a organização do código-fonte, escolha de padrões de codificação e uso de boas práticas, como design patterns.</p>
             <p> A qualidade do design de código afeta diretamente a legibilidade, reutilização e testabilidade do software. Por isso, a arquitetura e o design estão profundamente interligados. </p>
             <p> Já a engenharia de software é um conceito mais amplo, englobando tanto a arquitetura quanto o design de código. Ela abrange todo o processo de desenvolvimento de software, desde a concepção e definição de requisitos até a manutenção e evolução contínua do sistema. Entre suas práticas estão a gestão de projetos, análise de requisitos, desenvolvimento, testes e suporte. Agora que esclarecemos esses conceitos, vamos entender o que um arquiteto de software faz no dia a dia.</p>
-
             <p><strong>O Papel do Arquiteto de Software na Prática</strong></p>
             <p> Um bom arquiteto de software precisa ser, antes de tudo, um desenvolvedor experiente. Ele deve ter profundo conhecimento do código, mesmo que sua principal função não seja programar diariamente. Suas decisões arquiteturais impactam diretamente a implementação do código, e é comum que um arquiteto revise e refatore trechos para garantir sua conformidade com as diretrizes estabelecidas. </p>
             <p> Se você quer evoluir na carreira de desenvolvimento, estudar arquitetura de software é essencial. Conceitos como SOLID, DRY, YAGNI, orientação a objetos e práticas de DevOps são fundamentais para o crescimento profissional. Grandes projetos exigem uma cultura forte de testes e refatoração constante, e entender arquitetura é imprescindível para atuar com eficiência. </p>
             <p>Em times grandes, pode não haver um arquiteto formalmente designado. Nesses casos, esse papel pode ser assumido por um desenvolvedor sênior ou um tech lead. Ainda assim, todos os membros da equipe devem ter um bom entendimento sobre arquitetura para garantir o sucesso do projeto. </p>
-
-
             <p><strong>Responsabilidades do Arquiteto de Software:</strong></p>
             <ul>
               <li><strong>Definir a arquitetura e os padrões de codificação:</strong> garantindo que a estrutura do sistema atenda às necessidades do negócio e seja escalável.</li>
@@ -192,8 +180,6 @@
               <li><strong>Planejar e documentar o sistema:</strong> criando e atualizando documentações acessíveis, essenciais para a continuidade do projeto e integração de novos membros. </li>
             </ul>
             <p>O arquiteto de software desempenha um papel fundamental na concepção, evolução e manutenção dos sistemas. Suas decisões têm um impacto direto na qualidade do software e na eficiência da equipe, tornando essa posição uma das mais valorizadas e bem remuneradas no mercado de tecnologia.</p>
-  
-            
             <p><strong>Principais componentes da arquitetura:</strong></p>
             <ul>
               <li>Componentes do sistema;</li>
@@ -240,7 +226,6 @@
               <li>Flexibilidade e adaptação;  </li>
               <li>Uso de padrões; </li>
             </ul>
-
             <p><strong> SOLID   </strong></p>
             <ul>
               <li>Responsabilidade única: Garantir que um elemento faça o algo específico, regra com método especifico da classe; </li>
@@ -249,7 +234,6 @@
               <li>Segregação de interface: </li>
               <li>Inversão de dependência: </li>
             </ul>
-      
             <p><strong> Outros   </strong></p>
             <ul>
               <li>Princípio da menor surpresa; </li>
@@ -260,6 +244,7 @@
             <p></p>
 
           <li><strong>1.3. Trade-Offs Arquiteturais</strong></li>
+
             <p>Basicamente, temos uma definição de trade-off: o ato de equilibrar ou fazer concessões entre dois ou mais atributos de qualidade e características do sistema. Mas para entender isso na prática, pensem em uma balança: se aumentamos um lado, o outro tende a cair. Esse equilíbrio é essencial para tomar decisões que envolvem características importantes.
             <p>Por exemplo, quero dirigir com rapidez e segurança. Quanto mais rápido eu dirijo, menos seguro fico, até certo limite. No contexto de sistemas, se quero aumentar muito o desempenho, talvez precise sacrificar um pouco de segurança. Se busco uma resposta extremamente rápida em um sistema, posso comprometer a proteção dos dados.
             <p><strong> Os trade-offs arquiteturais envolvem diversos atributos de qualidade, como:  </strong></p>
@@ -281,114 +266,100 @@
             <p>Interoperabilidade vs. Desempenho: Se um sistema precisa rodar em vários dispositivos e navegadores diferentes, podemos comprometer a eficiência. Uma solução altamente otimizada para um navegador específico pode ter melhor desempenho, mas ser menos compatível com outros ambientes.</p>
             <p>No dia a dia do arquiteto de software, as decisões envolvem balançar trade-offs para atender requisitos do cliente e restrições do projeto. Nem sempre escolheremos a solução tecnologicamente mais avançada, mas sim aquela que melhor equilibra qualidade, custo e prazo.</p>
             <p> Trade-off refere-se ao ato de equilibrar ou fazer concessões entre dois ou mais atributos de qualidade ou características de um sistema, onde a melhoria de um atributo geralmente leva à degradação de outro. Isso ocorre porque os recursos (como tempo, custo, desempenho, etc) são limitados e as decisões arquiteturais impactam múltiplos aspectos do sistema. </p>
- 
         </ul>
       </div>
     
       <div id="modulo-1-capitulo-2" class="capitulo">
+
         <h2>Capítulo 2: O Profissional de Arquitetura de Software</h2>
         <P>Gerindo o processo de arquitetura, neste capitulo o foco está na gestão do processo de arquitetura. Um arquiteto precisa conhecer ferramentas como a matriz de decisão que ajuda a escolher em diferentes soluções e a análise de premissas e restrições, que garante que a arquitetura esteja de acordo com os limites do projeto. Além disso, frameworks como Hackman e o togas fornecem estruturas para desenvolver arquiteturas corporativas que atentam às necessidades de negócios. </P>
-        
         <ul>
-            <li><strong>2.1. Arquitetura de Software x Soluções x Corporativa </strong></li>
-              <p>Nesta seção, exploraremos três pilares essenciais da engenharia de sistemas: arquitetura de software, arquitetura de soluções e arquitetura corporativa. A arquitetura de soluções expande esse conceito ao nível da integração de múltiplos sistemas, abordando como diferentes aplicações e serviços se conectam para resolver problemas específicos de negócios. Por fim, a arquitetura corporativa fornece uma visão holística e estratégica, alinhando a tecnologia com os objetivos empresariais e garantindo que todas as solu ções tecnológicas suportem a visão e as metas de longo prazo da organização. Juntos, esses níveis de arquitetu ra formam uma base sólida para a criação de sistemas eficientes, adaptáveis e alinhados com as necessidades dinâmicas do mercado. </p>
-              
-              <p><strong>  Arquitetura de Software  </strong></p>
-              <p>A arquitetura de software se concentra na estrutura in terna e na organização dos componentes de um siste ma, garantindo que ele seja robusto, escalável e manu tenível. Esta área é a responsável pela organização da solução em um nível mais próximo do código e dos de senvolvedores. Algumas decisões e atividades que são responsabilidade deste profissional, por exemplo:</p>
-              <ul>
-                <li>Participação de revisões de código </li>
-                <li>Direcionar a implantação de paradigmas de de senvolvimento (ex: TDD, BDD...) </li>
-                <li>Desenvolver modelos e design de componen tes (diagrama de classes, componentes...) de arquiteturas para soluções específicas. </li>
-                <li>Apoiar o processo decisório da equipe de de senvolvimento na construção de soluções es pecíficas. Os profissionais que atuam como arquiteto de softwares normalmente têm grande bagagem técnica e experiên cia profissional no contexto do desenvolvimento do sis tema, relativamente habitual termos desenvolvedores experientes que se tornaram arquitetos. Esses profissionais eventualmente atuam como respon sáveis técnicos ou tech lead, apoiando diretamente a equipe de desenvolvimento em dúvidas relacionadas à arquitetura emergente ao longo do projeto de construção da solução. </li>
-              </ul>
-
-              <p><strong> Arquitetura de Soluções   </strong></p>
-              <p> Um arquiteto de soluções se concentra na integração de múltiplos sistemas e aplicações dentro de uma organização. Isso inclui definir como diferentes sistemas (por exemplo, ERP, CRM, e-commerce) se comunicam e trabalham juntos, utilizando middleware, APIs e outras tecnologias de integração para garantir que todas as partes funcionem de maneira coesa e eficiente. </p>
-    
-              <p><strong>Arquitetura Corporativa </strong> </p>
-              <p> Um arquiteto corporativo é responsável por alinhar as estratégias de TI com os objetivos de negócios da organização. Isso envolve a criação de roadmaps tecnológicos, definição de políticas e padrões de arquitetura, e a garantia de que todas as iniciativas de TI suportem a visão e os objetivos de longo prazo da empresa, promovendo a agilidade e a inovação dentro da organização. Esse profissional normalmente tem uma atuação mais estratégica/gerencial e menos técnica</p>
-
-            <li><strong>2.2. Soft e Hard Skills</strong></li>
-              <p>Um arquiteto (a) de software deve ter habilidades (skills) diversas. Durante muito tempo valorizou-se apenas as skills técnicas relacionadas à área de arqui tetura de software, tais como modelagem. Contudo, cada vez mais o mercado demanda de um profissional que também tenha soft skills que vão permitir a este profissional ter habilidades comportamentais para li dar, influenciar, persuadir e conquistar o apoio dos mais diversos públicos relacionados a sua atividade.   </strong></p>
-              <ul>
-                <li>Programação Orientada a Objetos.</li>
-                <li>SOLID </li>
-                <li>Design Patterns </li>
-                <li>DDD, BDD, TDD </li>
-                <li>Clean Code </li>
-                <li> </li>
-              </ul>
-              <p><strong>  Soft Skills  </strong></p>
-              <p> Hard Skills São as habilidades técnicas adquiridas ao longo do tempo, sejam por processos educacionais, leitura de livros e artigos, estudo de novas tecnologias, experiên cia prática... Estas atividades normalmente podem ser medidas e comprovadas (ex: experiência profissional comprovada, certificados, diplomas...). São as habilidades relacionadas aos aspectos compor tamentais, que devem ser desenvolvidas ao longo do tempo e que normalmente não são comprovadas de forma quantitativa ou através de certificados, o que não quer dizer que não devam ser largamente estuda das. Dentre as principais soft skills esperadas de um arquiteto podemos citar: </p>
-        
-              <ul>
-                <li>Inovação </li>
-                <li>Comunicação </li>
-                <li>Capacidade de Persuasão </li>
-                <li>Capacidade de Influência </li>
-                <li>Aprendizado contínuo </li>
-                <li>Liderança </li>
-              </ul>
-              <p></p>
-
-
-
-            <li><strong>2.3. Papel do Arquiteto</strong></li>
+          <li><strong>2.1. Arquitetura de Software x Soluções x Corporativa </strong></li>
+            <p>Nesta seção, exploraremos três pilares essenciais da engenharia de sistemas: arquitetura de software, arquitetura de soluções e arquitetura corporativa. A arquitetura de soluções expande esse conceito ao nível da integração de múltiplos sistemas, abordando como diferentes aplicações e serviços se conectam para resolver problemas específicos de negócios. Por fim, a arquitetura corporativa fornece uma visão holística e estratégica, alinhando a tecnologia com os objetivos empresariais e garantindo que todas as solu ções tecnológicas suportem a visão e as metas de longo prazo da organização. Juntos, esses níveis de arquitetu ra formam uma base sólida para a criação de sistemas eficientes, adaptáveis e alinhados com as necessidades dinâmicas do mercado. </p>
+            <p><strong>  Arquitetura de Software  </strong></p>
+            <p>A arquitetura de software se concentra na estrutura in terna e na organização dos componentes de um siste ma, garantindo que ele seja robusto, escalável e manu tenível. Esta área é a responsável pela organização da solução em um nível mais próximo do código e dos de senvolvedores. Algumas decisões e atividades que são responsabilidade deste profissional, por exemplo:</p>
+            <ul>
+              <li>Participação de revisões de código </li>
+              <li>Direcionar a implantação de paradigmas de de senvolvimento (ex: TDD, BDD...) </li>
+              <li>Desenvolver modelos e design de componen tes (diagrama de classes, componentes...) de arquiteturas para soluções específicas. </li>
+              <li>Apoiar o processo decisório da equipe de de senvolvimento na construção de soluções es pecíficas. Os profissionais que atuam como arquiteto de softwares normalmente têm grande bagagem técnica e experiên cia profissional no contexto do desenvolvimento do sis tema, relativamente habitual termos desenvolvedores experientes que se tornaram arquitetos. Esses profissionais eventualmente atuam como respon sáveis técnicos ou tech lead, apoiando diretamente a equipe de desenvolvimento em dúvidas relacionadas à arquitetura emergente ao longo do projeto de construção da solução. </li>
+            </ul>
+            <p><strong> Arquitetura de Soluções   </strong></p>
+            <p> Um arquiteto de soluções se concentra na integração de múltiplos sistemas e aplicações dentro de uma organização. Isso inclui definir como diferentes sistemas (por exemplo, ERP, CRM, e-commerce) se comunicam e trabalham juntos, utilizando middleware, APIs e outras tecnologias de integração para garantir que todas as partes funcionem de maneira coesa e eficiente. </p>
+            <p><strong>Arquitetura Corporativa </strong> </p>
+            <p> Um arquiteto corporativo é responsável por alinhar as estratégias de TI com os objetivos de negócios da organização. Isso envolve a criação de roadmaps tecnológicos, definição de políticas e padrões de arquitetura, e a garantia de que todas as iniciativas de TI suportem a visão e os objetivos de longo prazo da empresa, promovendo a agilidade e a inovação dentro da organização. Esse profissional normalmente tem uma atuação mais estratégica/gerencial e menos técnica</p>
+          <li><strong>2.2. Soft e Hard Skills</strong></li>
+            <p>Um arquiteto (a) de software deve ter habilidades (skills) diversas. Durante muito tempo valorizou-se apenas as skills técnicas relacionadas à área de arqui tetura de software, tais como modelagem. Contudo, cada vez mais o mercado demanda de um profissional que também tenha soft skills que vão permitir a este profissional ter habilidades comportamentais para li dar, influenciar, persuadir e conquistar o apoio dos mais diversos públicos relacionados a sua atividade.   </strong></p>
+            <ul>
+              <li>Programação Orientada a Objetos.</li>
+              <li>SOLID </li>
+              <li>Design Patterns </li>
+              <li>DDD, BDD, TDD </li>
+              <li>Clean Code </li>
+              <li> </li>
+            </ul>
+            <p><strong>  Soft Skills  </strong></p>
+            <p> Hard Skills São as habilidades técnicas adquiridas ao longo do tempo, sejam por processos educacionais, leitura de livros e artigos, estudo de novas tecnologias, experiên cia prática... Estas atividades normalmente podem ser medidas e comprovadas (ex: experiência profissional comprovada, certificados, diplomas...). São as habilidades relacionadas aos aspectos compor tamentais, que devem ser desenvolvidas ao longo do tempo e que normalmente não são comprovadas de forma quantitativa ou através de certificados, o que não quer dizer que não devam ser largamente estuda das. Dentre as principais soft skills esperadas de um arquiteto podemos citar: </p>
+            <ul>
+              <li>Inovação </li>
+              <li>Comunicação </li>
+              <li>Capacidade de Persuasão </li>
+              <li>Capacidade de Influência </li>
+              <li>Aprendizado contínuo </li>
+              <li>Liderança </li>
+            </ul>
+            <p></p>
+          <li><strong>2.3. Papel do Arquiteto</strong></li>
             <p> Nesta seção iremos estudar sobre diversas atividades e funções que devem ser desempenhadas por um arqui teto de software no dia a dia profissional. O que seria o Papel do Arquiteto? Um arquiteto de software é um profissional essencial no desenvolvimento de sistemas complexos, atuando como o responsável por definir a estrutura e os padrões de uma aplicação. Suas atividades incluem a criação de modelos de arquitetura, que descrevem a estrutura ge ral do sistema e detalham como seus componentes in teragem. Isso envolve escolher tecnologias adequadas, determinar a configuração de servidores e estabelecer padrões de codificação. Além disso, o arquiteto de sof tware deve garantir que a solução seja escalável, sus tentável e de fácil manutenção, considerando aspectos como desempenho, segurança e integração com outros sistemas. Outra função crucial do arquiteto de software é servir como um elo de comunicação entre diferentes equipes de desenvolvimento. Ele trabalha estreitamente com desenvolvedores, gerentes de projeto, analistas de ne gócios e outras partes interessadas para garantir que os requisitos técnicos e funcionais sejam compreendi dos e implementados corretamente. Isso pode envol ver a elaboração de documentação técnica detalhada, a realização de reuniões e workshops para alinhar expec tativas e resolver conflitos, além de orientar e revisar o trabalho das equipes de desenvolvimento para assegu rar a conformidade com os padrões estabelecidos. Além de suas responsabilidades técnicas e de comu nicação, o arquiteto de software também desempenha um papel estratégico dentro da organização. Ele contri bui para a visão de longo prazo da empresa, ajudando a definir a direção tecnológica e garantindo que as so luções arquitetônicas suportem os objetivos de negó cios. Isso inclui a avaliação e a adoção de novas tecno logias e tendências, a realização de análises de risco e a garantia de que a arquitetura proposta possa evoluir conforme as necessidades do mercado e da organiza ção mudem. Assim, o arquiteto de software não só ga rante a robustez e a eficiência dos sistemas atuais, mas também prepara a empresa para desafios futuros </p>
-            
-            <li><strong>2.4. A arquitetura dentro das grandes organizações</strong></li>
-              <p> As principais atividades de um arquiteto de software abrangem uma ampla gama de responsabilidades téc nicas e de gestão. Essas atividades podem ser agrupa das em diversas categorias, citando algumas delas: </p>
-                
-              <p><strong> 1. Definição da Arquitetura do Sistema:   </strong></p>
+          <li><strong>2.4. A arquitetura dentro das grandes organizações</strong></li>
+            <p> As principais atividades de um arquiteto de software abrangem uma ampla gama de responsabilidades téc nicas e de gestão. Essas atividades podem ser agrupa das em diversas categorias, citando algumas delas: </p>
+            <p><strong> 1. Definição da Arquitetura do Sistema:   </strong></p>
+            <ul>
+              <li>Documentação Técnica: Criar e manter documen tação detalhada sobre a arquitetura do sistema, in cluindo diagramas, especificações e manuais de re ferência.</li>
+              <li>Orientação e Mentoria: Fornecer orientação técnica e mentoria para os membros da equipe de desenvol vimento, ajudando a resolver problemas complexos e garantindo a adesão aos padrões arquitetônicos.  </li>
+            </ul>
+            <p><strong> 2. Coordenação e Comunicação:  </strong></p>
+            <ul>
+              <li>Análise e Avaliação de Riscos: Identificar potenciais riscos técnicos e de projeto, propondo soluções para mitigá-los e garantir a robustez do sistema.</li>
+              <li>Adaptação e Evolução da Arquitetura: Monitorar novas tendências tecnológicas e incorporar inova ções relevantes à arquitetura existente para manter a competitividade e a eficiência do sistema.  </li>
+              <li> Adaptação e Evolução da Arquitetura: Monitorar novas tendências tecnológicas e incorporar inova ções relevantes à arquitetura existente para manter a competitividade e a eficiência do sistema.  </li>
+              <li>Revisão e Otimização do Desempenho: Realizar re visões periódicas do desempenho do sistema, identi f icando áreas para otimização e melhorias contínuas.  </li>
+            </ul>    
+            <p><strong> 3. Avaliação e Melhoria Contínua:   </strong></p>
+            <ul>
+              <li>Criação de Modelos Arquitetônicos: Desenvolver diagramas e modelos que representem a estrutura do sistema, detalhando como os componentes interagem entre si. </li>
+              <li>Escolha de Tecnologias e Ferramentas: Selecionar as tecnologias e ferramentas adequadas para a implementação do sistema, considerando aspectos como escalabilidade, desempenho e manutenção. </li>
+              <li>Definição de Padrões e Práticas: Estabelecer padrões de codificação, práticas de desenvolvimento e diretrizes que a equipe deve seguir para garantir a consistência e qualidade do software. </li>
+            </ul>
+            <p><strong>  4. Análise de trade-off e visibilidade:  </strong></p>
+            <ul>
+              <li>Colaboração com as Partes Interessadas: Trabalhar com desenvolvedores, gerentes de projeto, analistas de negócios e outras partes interessadas para entender os requisitos do projeto e garantir que a ar quitetura atenda às necessidades do negócio. </li>
+              <li>Análise de trade-off: Ato de escolher alguma coisa em detrimento de outra e vai consistir em uma análise de pontos positivos e negativos de cada uma das escolhas que faremos. Isto significa ba sicamente que escolhendo uma opção estaremos carregando os pontos negativos e positivos dela e estaremos perdendo os pontos positivos e negati vos da outra opção. Na engenharia de software existe um método que ajuda nesse processo de decisão, o ATAM (Architecture Tradeo f f Analysis Method). Seu objetivo é ajudar a escolher uma arquitetura adequada para um sistema de software, des cobrindo compensações e pontos de sensibilidade. </li>
+              <li>Apresentar ATAM – Apresentar o conceito de ATAM aos stakeholders e esclarecer dúvidas sobre o processo.  </li>
               <ul>
-                <li>Documentação Técnica: Criar e manter documen tação detalhada sobre a arquitetura do sistema, in cluindo diagramas, especificações e manuais de re ferência.</li>
-                <li>Orientação e Mentoria: Fornecer orientação técnica e mentoria para os membros da equipe de desenvol vimento, ajudando a resolver problemas complexos e garantindo a adesão aos padrões arquitetônicos.  </li>
+                <li>Representantes da área de negócio – todos no processo apresentam e avaliam os motivadores de negócios para o sistema em questão. </li>
+                <li>Apresente a arquitetura - o arquiteto apresenta a arquitetura de alto nível para a equipe, com um ‘nível de detalhe apropriado’  </li>
+                <li>Identifique as abordagens arquitetônicas – dife rentes abordagens arquitetônicas do sistema são apresentadas pela equipe e discutidas. </li>
+                <li>Gerar árvore de utilitários de atributos de qua lidade - definir o negócio principal e os requisitos técnicos do sistema e mapeá-los para uma pro priedade arquitetônica apropriada. Apresente um cenário para este determinado requisito. • Análise das abordagens arquitetônicas – anali se cada cenário, classificando-os por prioridade. A arquitetura é então avaliada em relação a cada cenário.  </li>
+                <li>Faça um brainstorming e priorize cenários – en tre o grupo maior de partes interessadas, apresen te os cenários atuais e expanda. </li>
+                <li>Analise as abordagens arquitetônicas – execute a etapa 6 novamente com o conhecimento agre gado da comunidade mais ampla de partes inte ressadas. </li>
+                <li>Apresentar resultados – fornece toda a documen tação às partes interessadas. Durante todo o processo do ATAM, as soluções encon tradas serão sabatinadas e analisada a viabilidade, até que se defina o modelo arquitetural do projeto.  </li>
               </ul>
-
-              <p><strong> 2. Coordenação e Comunicação:  </strong></p>
-              <ul>
-                <li>Análise e Avaliação de Riscos: Identificar potenciais riscos técnicos e de projeto, propondo soluções para mitigá-los e garantir a robustez do sistema.</li>
-                <li>Adaptação e Evolução da Arquitetura: Monitorar novas tendências tecnológicas e incorporar inova ções relevantes à arquitetura existente para manter a competitividade e a eficiência do sistema.  </li>
-                <li> Adaptação e Evolução da Arquitetura: Monitorar novas tendências tecnológicas e incorporar inova ções relevantes à arquitetura existente para manter a competitividade e a eficiência do sistema.  </li>
-                <li>Revisão e Otimização do Desempenho: Realizar re visões periódicas do desempenho do sistema, identi f icando áreas para otimização e melhorias contínuas.  </li>
-              </ul>    
-              
-              <p><strong> 3. Avaliação e Melhoria Contínua:   </strong></p>
-              <ul>
-                <li>Criação de Modelos Arquitetônicos: Desenvolver diagramas e modelos que representem a estrutura do sistema, detalhando como os componentes interagem entre si. </li>
-                <li>Escolha de Tecnologias e Ferramentas: Selecionar as tecnologias e ferramentas adequadas para a implementação do sistema, considerando aspectos como escalabilidade, desempenho e manutenção. </li>
-                <li>Definição de Padrões e Práticas: Estabelecer padrões de codificação, práticas de desenvolvimento e diretrizes que a equipe deve seguir para garantir a consistência e qualidade do software. </li>
-              </ul>
-
-              <p><strong>  4. Análise de trade-off e visibilidade:  </strong></p>
-              <ul>
-                <li>Colaboração com as Partes Interessadas: Trabalhar com desenvolvedores, gerentes de projeto, analistas de negócios e outras partes interessadas para entender os requisitos do projeto e garantir que a ar quitetura atenda às necessidades do negócio. </li>
-                <li>Análise de trade-off: Ato de escolher alguma coisa em detrimento de outra e vai consistir em uma análise de pontos positivos e negativos de cada uma das escolhas que faremos. Isto significa ba sicamente que escolhendo uma opção estaremos carregando os pontos negativos e positivos dela e estaremos perdendo os pontos positivos e negati vos da outra opção. Na engenharia de software existe um método que ajuda nesse processo de decisão, o ATAM (Architecture Tradeo f f Analysis Method). Seu objetivo é ajudar a escolher uma arquitetura adequada para um sistema de software, des cobrindo compensações e pontos de sensibilidade. </li>
-                <li>Apresentar ATAM – Apresentar o conceito de ATAM aos stakeholders e esclarecer dúvidas sobre o processo.  </li>
-                <ul>
-                  <li>Representantes da área de negócio – todos no processo apresentam e avaliam os motivadores de negócios para o sistema em questão. </li>
-                  <li>Apresente a arquitetura - o arquiteto apresenta a arquitetura de alto nível para a equipe, com um ‘nível de detalhe apropriado’  </li>
-                  <li>Identifique as abordagens arquitetônicas – dife rentes abordagens arquitetônicas do sistema são apresentadas pela equipe e discutidas. </li>
-                  <li>Gerar árvore de utilitários de atributos de qua lidade - definir o negócio principal e os requisitos técnicos do sistema e mapeá-los para uma pro priedade arquitetônica apropriada. Apresente um cenário para este determinado requisito. • Análise das abordagens arquitetônicas – anali se cada cenário, classificando-os por prioridade. A arquitetura é então avaliada em relação a cada cenário.  </li>
-                  <li>Faça um brainstorming e priorize cenários – en tre o grupo maior de partes interessadas, apresen te os cenários atuais e expanda. </li>
-                  <li>Analise as abordagens arquitetônicas – execute a etapa 6 novamente com o conhecimento agre gado da comunidade mais ampla de partes inte ressadas. </li>
-                  <li>Apresentar resultados – fornece toda a documen tação às partes interessadas. Durante todo o processo do ATAM, as soluções encon tradas serão sabatinadas e analisada a viabilidade, até que se defina o modelo arquitetural do projeto.  </li>
-                </ul>
-              </ul>
-              <p><strong> 5. Liderança técnica:   </strong></p>
-              <ul>
-                <li> Direcionar as equipes de desenvolvimento na esco lha, especificação e implantação de tecnologias, as sim como a definição e evolução de padrões de de senvolvimento. Poderíamos citar diversas outras atividades (ex: mo nitoração, prototipação....), o grande ponto no mo mento é compreender que as hard e soft skills com binadas ajudam o arquiteto a desempenhar suas funções com excelência </li>
-              </ul>
+            </ul>
+            <p><strong> 5. Liderança técnica:   </strong></p>
+            <ul>
+              <li> Direcionar as equipes de desenvolvimento na esco lha, especificação e implantação de tecnologias, as sim como a definição e evolução de padrões de de senvolvimento. Poderíamos citar diversas outras atividades (ex: mo nitoração, prototipação....), o grande ponto no mo mento é compreender que as hard e soft skills com binadas ajudam o arquiteto a desempenhar suas funções com excelência </li>
+            </ul>
         </ul>
       </div>
     
       <div id="modulo-1-capitulo-3" class="capitulo">
         <h2>Capítulo 3: Arquitetura de Software Moderna</h2>
         <p>Governança da arquitetura, a governança da arquitetura envolve garantir que as soluções arquiteturais estejam sendo implementadas corretamente e que as decisões sigam padrões estabelecidos. O arquiteto deve garantir a conformidade das soluções através de revisões periódicas e assegurar que as decisões sejam documentadas adequadamente, contribuindo para a evolução da arquitetura. </p>
-        
-        
         <ul>
+          
           <li><strong>3.1. Arquitetura Intencional</strong></li>
+          
             <p> Se estamos falando de Arquitetura de Software Moderna, já conseguimos imaginar que essa arquitetura mudou ao longo do tempo, e é justamente sobre isso que vamos abordar neste capítulo, voltada principalmente ao conceito de Arquitetura Intencional.</p>
             <p> Quando vocês vão projetar um sistema, criam um desenho ou um diagrama de componentes para mapear os módulos do sistema. Por exemplo, ao utilizar UML, temos diferentes tipos de modelagem: comportamental, estrutural, diagrama de caso de uso, diagrama de classe, diagrama de componente, entre outros. Esses diagramas são criados antes do desenvolvimento do software. A Arquitetura Intencional trata exatamente dessas decisões e determinações tomadas antes do início do desenvolvimento.</p>
             <p> Ao iniciar um novo sistema, como um sistema de pagamentos online, a primeira coisa a determinar é a forma de distribuição do sistema: será monolítico, microserviços ou serverless? Como serão as conexões? A Arquitetura Intencional envolve essas grandes decisões arquiteturais tomadas antes do desenvolvimento.</p>
@@ -413,7 +384,7 @@
               <li>Satisfação do cliente </li>
             </ul>
             <p></p>
-
+          
           <li><strong>3.2. Engenharia de Software Ágil</strong></li>
 
             <p>É importante lembrar do Manifesto Ágil, criado por volta dos anos 2000 e 2001. Foram cerca de 20 signatários que se reuniram e chegaram a um consenso: desenvolver software não é a mesma coisa que construir um prédio. Sendo assim, projetos de software devem ser conduzidos de maneira diferente de outros tipos de projetos. Eles estabeleceram valores e princípios para guiar esse processo.</p>
@@ -442,7 +413,7 @@
               <li>Impactos na arquitetura de software: Menor intencionalidade, modulação, necessidade de flexibilidade, necessidade de sustentação, interfaces; </li>
             </ul>
             <p></p>
- 
+          
           <li><strong>3.3. Arquitetura Evolutiva</strong></li>
 
             <p>Na disciplina Fundamentos de Arquitetura de Software, agora, vamos falar sobre arquitetura de software evolutiva.</p>
@@ -522,8 +493,9 @@
         <h2>Capítulo 4: Estilos Arquiteturais Monolíticos</h2>
         <p>Evoluções e tendências da arquitetura, neste capitulo o foco é na evolução da arquitetura e nas novas tendências tecnológicas. O arquiteto de software precisa estar atendo às mudanças e inovações para adaptar e melhorar as soluções atuais. Isso inclui a adoção de práticas como DevOps, cloud computing e arquiteturas evolutivas que são essenciais para manter a competividade e atender as demandas dinâmicas do mercado. </p>
         <ul>
-
+          
           <li><strong>4.1. Conceitos Gerais</strong></li>
+
             <p>Dando sequência à nossa disciplina Fundamentos de Arquitetura de Software. Agora, vamos falar sobre os estilos arquiteturais. Neste capítulo, vamos abordar os estilos arquiteturais monolíticos. Na nossa primeira aula, o foco será entender o que são os estilos arquiteturais, para depois detalharmos cada um deles. Vamos começar com uma introdução ao conceito de estilos arquiteturais.</p>
             <p>Para começar, precisamos entender o que são os estilos arquiteturais, suas características e os critérios que usaremos para escolher o mais adequado. Quando falo sobre estilo, antes de pensar no conceito teórico, é importante entender a prática. Por exemplo, pensem que eu sou uma pessoa que tem um estilo de viver a vida de forma positiva. O que isso significa na prática? Normalmente, quando enfrento um problema, tento ver o lado positivo da situação, mas isso não especifica uma estratégia de atuação detalhada sobre como eu vou lidar com cada situação. Isso apenas me dá direções gerais. Da mesma forma, os estilos arquiteturais são diretrizes de alto nível, não são soluções detalhadas, mas sim abordagens gerais que orientam a arquitetura do sistema.</p>
             <p>O primeiro ponto importante é que, ao escolher um estilo, você não necessariamente usará o mesmo estilo para todo o sistema. Às vezes, é necessário combinar estilos para criar uma arquitetura específica. Embora, didaticamente, eu evite misturar estilos na nossa abordagem aqui, na prática, é comum combinar estilos conforme o sistema evolui. Então, um estilo arquitetural é basicamente um padrão de alto nível que define a forma como os componentes do sistema se relacionam, como eles se comunicam entre si e com o mundo externo.</p>
@@ -558,7 +530,7 @@
               <li> 	Skills Equipe;  </li>
             </ul>
             </br>
-
+          
           <li><strong>4.2. Arquitetura em Camadas</strong></li>
 
             <p>Dando sequência à nossa disciplina de Fundamentos de Arquitetura de Software, falando especificamente sobre o capítulo de estilos arquiteturais monolíticos. Vamos falar um pouquinho sobre a Arquitetura em Camadas.</p>
@@ -604,8 +576,9 @@
               <li>Subdivisão de camadas; </li>
             </ul>
             </br>
-
+          
           <li><strong>4.3. Arquitetura Pipeline</strong></li>
+
             <p>Um pouco sobre a Arquitetura Pipeline. Lembrando que ainda estamos no contexto das arquiteturas monolíticas, ou seja, aquelas em que o sistema é entregue ao cliente de uma única vez, de forma completamente integrada.</p>
             <p>Vamos explorar esse conceito e entender como ele se relaciona com as arquiteturas monolíticas. A Arquitetura Pipeline possui uma representação visual muito similar à da Arquitetura em Camadas. Porém, ao contrário das camadas, onde há um empilhamento sequencial, no Pipeline você tem um processo dividido em várias etapas, com dados sendo processados ao longo de cada estágio até chegar ao resultado final.</p>
             <p>O conceito de Pipeline é bem simples: você tem um conjunto de etapas de processamento, onde cada estágio executa uma operação específica, e o resultado de cada etapa é passado para a próxima. A comunicação entre as etapas é sequencial, ou seja, os dados entram em um ponto do processo e saem transformados em outro. Isso é muito parecido com a Arquitetura em Camadas, mas com uma diferença importante: o Pipeline é mais voltado para a interação em processos que envolvem dados, e normalmente as etapas têm um fluxo pré-determinado.</p>
@@ -646,7 +619,7 @@
                 <li>Monitoramento e logs; </li>
               </ul>
             </br>
-
+          
           <li><strong>4.4. Arquitetura Microkernel</strong></li>
 
             <p>Vamos dar sequência à nossa disciplina "Fundamentos de Arquitetura de Software". Hoje, vamos falar sobre mais uma arquitetura monolítica: o conceito de Microkernel.</p>
@@ -662,16 +635,13 @@
             <p>Além disso, os testes de integração podem ser mais complicados, já que o sistema é composto por múltiplos plugins que precisam interagir de forma eficiente. Mesmo com essas dificuldades, a arquitetura Microkernel oferece uma boa solução para sistemas que precisam ser flexíveis e escaláveis, e onde a adição de novas funcionalidades ao longo do tempo é um requisito importante.</p>
             <p>Boas práticas para essa arquitetura incluem um bom dimensionamento do núcleo central e a definição clara de interfaces entre o núcleo e os plugins. Além disso, é essencial fazer testes de integração para garantir que o sistema funcione como esperado, além dos testes unitários de cada plugin. Isso ajuda a garantir a qualidade do sistema como um todo.</p>
             <p>Em resumo, o Microkernel oferece uma arquitetura monolítica flexível, permitindo a adição incremental de funcionalidades. Ele melhora a evolução do sistema e a disponibilidade, mas exige um bom gerenciamento do núcleo e a integração cuidadosa dos plugins para evitar sobrecarga no sistema.</p>
-
             <p> Também conhecida como Plug-in, é um estilo onde o sistema central (Microkernel) fornece funcionalidades mínimas e essenciais, enquanto as funcionalidades adicionais são implementadas como módulos ou plug-in que podem ser acoplados ou desacoplados conforme necessário. </p>
-            
             <p><strong>Estrutura:    </strong></p>
             <ul>
               <li>Core/Kernel; </li>
               <li>Plug-ins; </li>
               <li>Exemplos: Navegadores, IDEs; </li>
             </ul>
-            
             <p><strong>Vantagens    </strong></p>
             <ul>
               <li>Extensibilidade; </li>
@@ -680,7 +650,6 @@
               <li>Simplicidade;  </li>
               <li>Evolução funcional;  </li>
             </ul>
-
             <p><strong> Desvantagens:   </strong></p>
             <ul>
               <li> Dificuldade de integração; </li>
@@ -689,7 +658,6 @@
               <li> Ponto central;</li>
               <li>Teste de integração;  </li>
             </ul>
-
             <p><strong>  Boas práticas:  </strong></p>
             <ul>
               <li>Design do núcleo;  </li>
@@ -698,11 +666,12 @@
             </ul>
         </ul>
       </div>
-      
       <div id="modulo-1-capitulo-5" class="capitulo">
         <h2>Capítulo 5: Estilos Arquiteturais Distribuídos</h2>
         <ul>
+          
           <li><strong>5.1. Conceitos Gerais</strong></li>
+
             <p>Dando sequência à nossa disciplina de Fundamentos de Arquitetura de Software. Neste capítulo, vamos falar sobre os estilos arquiteturais distribuídos.</p>
             <p>No capítulo passado, falamos sobre os estilos arquiteturais monolíticos, que envolvem uma entrega única, onde o sistema é centralizado, e frequentemente os componentes estão localizados no mesmo espaço geográfico (embora não seja uma regra). Agora, vamos explorar as arquiteturas distribuídas, que envolvem componentes que estão geograficamente espalhados. Uma característica importante desses sistemas é que, ao contrário dos monolíticos, as entregas geralmente são feitas de forma incremental.</p>
             <p>As arquiteturas distribuídas são utilizadas para projetar e implementar sistemas onde os componentes estão distribuídos, muitas vezes em locais distintos. Quando você vai utilizar esse tipo de arquitetura? Imagine que você tem um servidor sobrecarregado em uma unidade, mas há outro servidor em uma unidade diferente que está ocioso. Nesse caso, você pode usar recursos distribuídos para melhorar a disponibilidade e a resiliência do sistema. A principal dificuldade aqui é que a comunicação entre os componentes precisa ser eficiente, pois, caso contrário, o desempenho pode ser comprometido.</p>
@@ -763,6 +732,7 @@
               <li>Arquitetura federada; </li>
             </ul>
             </br>
+          
           <li><strong>5.2. Arquitetura Orientada a Serviços (SOA)</strong></li>
 
             <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software, vamos falar sobre arquiteturas distribuídas e, mais especificamente, sobre arquitetura orientada a serviços, que foi o primeiro grande estilo arquitetural distribuído a se consolidar.</p>
@@ -834,7 +804,7 @@
               <li>Gerenciamento; </li>
             </ul>
             </br>
-
+          
           <li><strong>5.3. Arquitetura Microserviços</strong></li>
 
             <p>sobre grandes grupos de funcionalidades e como os serviços distribuídos geograficamente continuam a atender a uma base de dados central. Agora, vamos falar sobre uma evolução desse modelo, que é a arquitetura orientada a microserviços.</p>
@@ -849,9 +819,10 @@
             <p>Então, a arquitetura de microserviços é uma excelente opção para sistemas que precisam de flexibilidade, resiliência e escalabilidade, mas também traz desafios em termos de complexidade operacional.</p>
             <p>Boas práticas incluem descentralizar a comunicação, preferir comunicação assíncrona quando possível e garantir a padronização das interfaces de serviço. Monitoramento e gerenciamento eficientes também são essenciais para manter o sistema funcionando sem problemas.</p>
             <p>Estilo de arquitetura de software em que uma aplicação é estruturada como um conjunto de serviços pequenos e independentes, que se comunicam entre si através de APIs bem definidas. Cada microserviços é responsável por uma funcionalidade especifica do sistema e pode ser desenvolvido, implantando e escalado de forma independente dos outros;</p>
-            <p>API’s application programming interface, interface que permite a comunicação entre microsserviços, serviços ou cliente externos.</p>
-            
+            <p>API's application programming interface, interface que permite a comunicação entre microsserviços, serviços ou cliente externos.</p>
+          
           <li>5.4. Arquitetura Orientada a Eventos</li>
+
             <p>Vamos dar sequência ao nosso capítulo cinco, sobre arquiteturas distribuídas, com foco em um estilo arquitetural orientado a eventos. Vamos falar especificamente sobre a arquitetura orientada a eventos, vamos seguir o padrão de falar sobre conceitos, estruturas, vantagens, desvantagens e boas práticas, mas agora o foco é em arquiteturas orientadas a eventos. Vale ressaltar que estamos tratando de um tipo de arquitetura que não é aplicável a todos os contextos. Ela é mais adequada a situações específicas, onde você busca reduzir a troca de dados entre componentes e maximizar a eficiência.</p>
             <p>Na arquitetura orientada a eventos, ao invés de enviar dados completos de um componente para o outro, você envia apenas a mudança de estado, como um evento. Por exemplo, em um sistema de pagamentos, ao invés de enviar todos os dados de uma transação, você envia apenas informações essenciais, como o número do cliente, o valor e o tipo de pagamento. Isso ajuda a otimizar a comunicação, reduzindo a quantidade de dados trocados entre os componentes.</p>
             <p>Um evento é uma notificação de algo significativo que aconteceu dentro do sistema, como uma mudança de estado, uma ação do usuário ou a ocorrência de uma condição específica. Por exemplo, em um sistema de entrega de pizzas, você poderia notificar os clientes quando o pedido foi enviado ou quando chegou ao local de distribuição, sem precisar enviar todos os detalhes da transação.</p>
@@ -918,54 +889,55 @@
       <div id="modulo-1-capitulo-8" class="capitulo">
         <h2>Capítulo 8: Gerenciando Riscos</h2>
         <ul>
+
           <li>8.1. Conceitos de Riscos</li>
-          <p> É a possibilidade de um evento ou condição que, se ocorrer, pode afetar negativamente o projeto ou o sistema. Ex. Alteração do escopo, não renovação de uma licença, falta de recursos; </p>
-          <p>Oportunidade é a possibilidade de um evento ou condição que, se ocorrer, pode afetar positivamente o projeto ou o sistema; </p>
-          <p><strong> Tipos de riscos:   </strong></p>
-          <ul>
-            <li>Riscos técnicos. Ex. atualização de uma biblioteca; </li>
-            <li>Riscos de projeto: Ex. mudança de requisitos; </li>
-            <li>Riscos organizacionais. Ex. mudança na estratégia;</li>
-          </ul>
-          <p><strong>Gerenciar riscos:   </strong></p>
-          <ul>
-            <li>Identificação de riscos; </li>
-            <li>Avaliação de análise de riscos; </li>
-            <li>Mitigação e resposta e riscos; </li>
-            <li>Monitoramento e revisão de riscos; </li>
-          </ul>
-          <p> Prever o desenho de uma arquitetura prover, uma estrutura para o sistema que garanta a entrega dos requisitos não funcionais, se eu tenho um risco que pode impactar de forma que o meu requisito não funcional não seja atendido, eu sou o guardião tenho que atual de forma proativa para evitar isso. </p>
-          
+
+            <p> É a possibilidade de um evento ou condição que, se ocorrer, pode afetar negativamente o projeto ou o sistema. Ex. Alteração do escopo, não renovação de uma licença, falta de recursos; </p>
+            <p>Oportunidade é a possibilidade de um evento ou condição que, se ocorrer, pode afetar positivamente o projeto ou o sistema; </p>
+            <p><strong> Tipos de riscos:   </strong></p>
+            <ul>
+              <li>Riscos técnicos. Ex. atualização de uma biblioteca; </li>
+              <li>Riscos de projeto: Ex. mudança de requisitos; </li>
+              <li>Riscos organizacionais. Ex. mudança na estratégia;</li>
+            </ul>
+            <p><strong>Gerenciar riscos:   </strong></p>
+            <ul>
+              <li>Identificação de riscos; </li>
+              <li>Avaliação de análise de riscos; </li>
+              <li>Mitigação e resposta e riscos; </li>
+              <li>Monitoramento e revisão de riscos; </li>
+            </ul>
+            <p> Prever o desenho de uma arquitetura prover, uma estrutura para o sistema que garanta a entrega dos requisitos não funcionais, se eu tenho um risco que pode impactar de forma que o meu requisito não funcional não seja atendido, eu sou o guardião tenho que atual de forma proativa para evitar isso. </p>
+            
           <li>8.2. Como identificar Riscos</li>
 
-          <ul>
-            <li>Brainstorming e análise de causas; </li>
-            <li>Entrevistas e questionários com stakeholders; </li>
-            <li> Análise de documentação e requisitos;</li>
-            <li>Ferramenta de identificação SWOT </li>
-            <li>Garantir transações ACID; </li>
-            <li> Ferramenta de identificação:</li>
             <ul>
-              <li> Diagrama de fluxo e casos de uso;</li>
-              <li>Threat modeling; </li>
+              <li>Brainstorming e análise de causas; </li>
+              <li>Entrevistas e questionários com stakeholders; </li>
+              <li> Análise de documentação e requisitos;</li>
+              <li>Ferramenta de identificação SWOT </li>
+              <li>Garantir transações ACID; </li>
+              <li> Ferramenta de identificação:</li>
+              <ul>
+                <li> Diagrama de fluxo e casos de uso;</li>
+                <li>Threat modeling; </li>
+              </ul>
             </ul>
-          </ul>
-
-
 
           <li>8.3. Como classificar Riscos</li>
-          <p>Classificando riscos: Fatores a se considerar</p>
-          <ul>
-            <li>Probabilidade de ocorrência; </li>
-            <li>Impacto ou consequência;</li>
-            <li>Urgência e necessidade de resposta; </li>
-          </ul>
-          <p>Matriz de risco </p>
-          <p>ROAM</p>
-          <p>5W2H (Plano de ação)</p>
 
-          <li>8.4. Prática Riscos</li>
-          <p>Fluxo de Ishikawa (Diagrama de peixe)</p>
+            <p>Classificando riscos: Fatores a se considerar</p>
+            <ul>
+              <li>Probabilidade de ocorrência; </li>
+              <li>Impacto ou consequência;</li>
+              <li>Urgência e necessidade de resposta; </li>
+            </ul>
+            <p>Matriz de risco </p>
+            <p>ROAM</p>
+            <p>5W2H (Plano de ação)</p>
+
+            <li>8.4. Prática Riscos</li>
+            <p>Fluxo de Ishikawa (Diagrama de peixe)</p>
 
 
         </ul>
@@ -975,7 +947,9 @@
         <h2>Capítulo 9: Frameworks Arquiteturais</h2>
         <p> Frameworks arquiteturais são estruturas de referência que oferecem uma base organizada para o desenvolvimento e a implementação de sistemas de software complexos. Eles proporcionam um conjunto de ferramentas, padrões e práticas que facilitam a criação de arquiteturas robustas, escaláveis e eficientes. Entre os exemplos mais conhecidos estão o TOGAF (The Open Group Architecture Framework), que foca na metodologia de desenvolvimento e governança de arquiteturas empresariais, e o Zachman Framework, que fornece uma visão multidimensional da arquitetura organizacional, abordando diferentes perspectivas e preocupações dos stakeholders. Esses frameworks ajudam a garantir que os sistemas atendam às necessidades do negócio, sejam consistentes e alinhados com os objetivos estratégicos da organização.</p>
         <ul>
+
           <li><strong>9.1. ZACHMAN </strong></li>
+
           <p> O Zachman Framework é uma estrutura conceitual desenvolvida por John Zachman na década de 1980, oferecem uma abordagem sistemática para compreender, documentar e gerenciar a arquitetura de uma organização. Esta estrutura é composta por seis dimensões fundamentais: “O quê”, “Como”, “Onde”, “Quem”, “Quando” e “Por quê”, cada uma representando uma perspectiva única sobre a organização. Em sua forma atual, o framework de Zachman consiste em uma matriz de 6 colunas por 6 linhas. As colunas correspondem às clássicas perguntas 5W1H (What/ Who/Where/When/Why/How) aplicadas à organização. As colunas, portanto, referem-se aos diferentes aspectos sobre a organização que precisam ser conhecidos: </p>
           <ul>
             <li> What: sobre o que a organização precisa de infor mação? De que ela trata? Normalmente, essa coluna representa dados mantidos pela organização; </li>
@@ -985,8 +959,10 @@
             <li> When: Quando as coisas acontecem? Questões relativas ao tempo aparecem aqui.  </li>
             <li> Why: Por que as coisas acontecem? Aqui vão as in formações relativas às motivações da organização, incluindo seus planos estratégicos de negócio. As linhas da matriz referem-se aos diferentes pontos de vista e níveis de detalhe relativos à informação que descreve a organização: A primeira linha contém o escopo e o contexto, e representa o ponto de vista do estrategista como teorizador sobre a organização. Normalmente, contém in formação relevante para o planejamento estratégico de alto nível e, é claro, o próprio conteúdo da Estratégia da organização. A segunda linha contém os conceitos de negócio, representando a visão da liderança executiva (vistos como proprietários dos processos de negócio e informações relacionadas). Contém tipicamente descrição detalhada da organização no nível de processos de negócio. A terceira linha contém informações sobre os sistemas de informação (nível lógico), com a visão dos arquitetos de sistemas (designers). A quarta linha contém informações sobre a infraestrutura tecnológica (nível físico) da organização, sendo o ponto de vista dos engenheiros enquanto construtores. A quinta linha refere-se à descrição dos componentes que a organização utiliza para operar, sendo a visão dos técnicos-implementadores. A sexta e última linha representa as operações propriamente ditas da organização, instanciadas pelos seus colaboradores participantes. O framework Zachman é uma excelente referência literária sobre o assunto, apesar de ter sua aplicabilidade limitada devido a não ser tão prático e dinâmico, assim como o fato de ser um framework mais geral e que não aborda de forma específica o contexto de arquitetura de software </li>
           </ul>
-        </br>
+          </br>
+
           <li><strong> 9.2. TOGAF </strong></li>
+
           <p> O The Open Group Architecture Framework (TOGAF) é uma estrutura de arquitetura corporativa amplamente adotada, desenvolvida pelo The Open Group, que fornece uma abordagem abrangente e estruturada para planejar, projetar, implementar e gerenciar a arquitetura de uma organização. Esta estrutura é baseada em um conjunto de melhores práticas e padrões de arquitetura, destinados a promover a consistência, a eficiência e o alinhamento estratégico em toda a empresa. O TOGAF é amplamente reconhecido por sua flexibilidade e adaptabilidade, podendo ser personalizado e ajustado de acordo com as necessidades específicas de cada organização. Ele fornece uma estrutura sólida para a gestão e evolução da arquitetura empresarial, ajudando as empresas a alinhar seus sistemas de informação com seus objetivos estratégicos, reduzir a complexidade e promover a inovação. O TOGAF divide a arquitetura corporativa em quatro pilares básicos:  </p>
           <ul>
             <li> Business Architecture (Arquitetura de Negócio): define a estratégia de negócio, governança, organização e os processos chaves do negócio. </li>
@@ -994,18 +970,17 @@
             <li> Application Architecture (Arquitetura de Aplicação): provisiona um blueprint para que as aplicações individuais sejam publicadas, as interações e o relacionamento delas com os principais processos de negócio da organização. </li>
             <li> Technology Archiitecture (Arquitetura Técnica): descreve todo o hardware, software e infraestrutu ra de TI necessários para desenvolver e implantar aplicativos de negócios </li>
             <li> Fase Preliminar: é aquela na qual “colocamos em pé” o esforço de arquitetura, estabelecendo a equipe de arquitetura e definindo o método e metamodelo customizados a serem usados em nosso esforço de arquitetura. É aqui também que escolhemos ferramentas de repositório, definimos os processos de Governança da Arquitetura e obtemos o Patrocínio necessário para forço de arquitetura. </li>
-            <li> Fase A – Visão Arquitetural: Trata-se de estabelecer uma visão de como deve ser nossa arquitetura futura para atender às metas estratégicas de negócio, que são a principal entrada para esta fase. O resultado desta fase é um Documento de Visão da Arquitetura, que documenta onde a organização quer chegar com sua arquitetura para viabilizar o cumprimento das metas estratégicas, e um Plano de Projeto para a execução desta “rodada” do ADM s </li>
-            <li> Fase B – Arquitetura de Negócio: Desenvolver e documentar a Arquitetura de Negócio desejada (alvo), que irá descrever o que a organização necessita para operacionalizar os objetivos de negócio e responder aos direcionamentos definidos na Visão Arquitetural. O resultado da fase é o detalhamento das necessidades em termos de processos de negócio para atender às metas estratégicas, bem como um gap analysis que nos diz qual é a distância entre nossa situação atual (AS-IS) e a arquitetura em que queremos chegar (TO-BE).  </li>
-            <li> Fase C – Arquiteturas de Sistemas de Informação: Nesta fase, identificamos os sistemas e dados necessários para atender à situação futura de processos de negócio desenhada na fase anterior, bem como nossa situação atual e a distância a ser percorrida (gap analysis). </li>
-            <li> Fase D – Arquitetura de Tecnologia: Esta fase se ocupa de documentar as necessidades futuras em termos de infraestrutura tecnológica para atender às necessidades de sistemas e dados identificados na fase anterior. Mais uma vez, identificamos também nossa situação atual e a distância a ser percorrida.  </li>
-            <li> Fase E – Oportunidades e Soluções: Nesta fase será gerado a versão inicial completa do Roadmap de Ar quitetura, baseado nos gaps identificados nas fases B, C e D. Identificaremos também projetos e ativida des que deverão ser realizados para atingir os obje tivos definidos no Roadmap. O resultado é um por tfólio de projetos para atingir a arquitetura desejada.  </li>
-            <li> Fase F – Migration Planning: Aborda o planejamento detalhado da migração, ou seja, como passar do estado atual para a Arquitetura Alvo, certificando que o valor do negócio e o custo dos pacotes de trabalho e arquiteturas de transição são entendidos pelos stakeholders.  </li>
-            <li> Fase G – Governança de Implementação: Nesta etapa o principal é a realização de revisões de conformidade com o objetivo de garantir que as ativida des definidas no portfólio estão sendo executadas de acordo com a arquitetura proposta.  </li>
-            <li> Fase H – Gestão de Mudanças na Arquitetura: Trata-se de acompanhar no dia a dia a continuidade da relevância da arquitetura implantada na Fase G às necessidades estratégicas da organização. Mudanças no Ambiente de Negócios e na Estratégia exi girão mudanças na arquitetura, e o processo usado nesta fase deve ser capaz de separar pequenas de grandes mudanças. As grandes mudanças, tipicamente, exigirão a reentrada no ciclo do ADM, ou seja, o estabelecimento de um novo projeto, a ser iniciado novamente na Fase A.    </li>
-            <li> Gestão dos Requisitos: Esta atividade encontra-se – literalmente – no “centro” do ADM, significando que cada uma das demais fases do ADM ao mesmo tempo gera novos requisitos de arquitetura e utiliza como entrada os requisitos de arquitetura previa mente identificados.  </li>
+            <li> Fase A - Visão Arquitetural: Trata-se de estabelecer uma visão de como deve ser nossa arquitetura futura para atender às metas estratégicas de negócio, que são a principal entrada para esta fase. O resultado desta fase é um Documento de Visão da Arquitetura, que documenta onde a organização quer chegar com sua arquitetura para viabilizar o cumprimento das metas estratégicas, e um Plano de Projeto para a execução desta “rodada” do ADM s </li>
+            <li> Fase B - Arquitetura de Negócio: Desenvolver e documentar a Arquitetura de Negócio desejada (alvo), que irá descrever o que a organização necessita para operacionalizar os objetivos de negócio e responder aos direcionamentos definidos na Visão Arquitetural. O resultado da fase é o detalhamento das necessidades em termos de processos de negócio para atender às metas estratégicas, bem como um gap analysis que nos diz qual é a distância entre nossa situação atual (AS-IS) e a arquitetura em que queremos chegar (TO-BE).  </li>
+            <li> Fase C - Arquiteturas de Sistemas de Informação: Nesta fase, identificamos os sistemas e dados necessários para atender à situação futura de processos de negócio desenhada na fase anterior, bem como nossa situação atual e a distância a ser percorrida (gap analysis). </li>
+            <li> Fase D - Arquitetura de Tecnologia: Esta fase se ocupa de documentar as necessidades futuras em termos de infraestrutura tecnológica para atender às necessidades de sistemas e dados identificados na fase anterior. Mais uma vez, identificamos também nossa situação atual e a distância a ser percorrida.  </li>
+            <li> Fase E - Oportunidades e Soluções: Nesta fase será gerado a versão inicial completa do Roadmap de Ar quitetura, baseado nos gaps identificados nas fases B, C e D. Identificaremos também projetos e ativida des que deverão ser realizados para atingir os obje tivos definidos no Roadmap. O resultado é um por tfólio de projetos para atingir a arquitetura desejada.  </li>
+            <li> Fase F - Migration Planning: Aborda o planejamento detalhado da migração, ou seja, como passar do estado atual para a Arquitetura Alvo, certificando que o valor do negócio e o custo dos pacotes de trabalho e arquiteturas de transição são entendidos pelos stakeholders.  </li>
+            <li> Fase G - Governança de Implementação: Nesta etapa o principal é a realização de revisões de conformidade com o objetivo de garantir que as ativida des definidas no portfólio estão sendo executadas de acordo com a arquitetura proposta.  </li>
+            <li> Fase H - Gestão de Mudanças na Arquitetura: Trata-se de acompanhar no dia a dia a continuidade da relevância da arquitetura implantada na Fase G às necessidades estratégicas da organização. Mudanças no Ambiente de Negócios e na Estratégia exi girão mudanças na arquitetura, e o processo usado nesta fase deve ser capaz de separar pequenas de grandes mudanças. As grandes mudanças, tipicamente, exigirão a reentrada no ciclo do ADM, ou seja, o estabelecimento de um novo projeto, a ser iniciado novamente na Fase A.    </li>
+            <li> Gestão dos Requisitos: Esta atividade encontra-se literalmente no “centro” do ADM, significando que cada uma das demais fases do ADM ao mesmo tempo gera novos requisitos de arquitetura e utiliza como entrada os requisitos de arquitetura previa mente identificados.  </li>
           </ul>
           <p>Entre os atrativos de utilização do TOGAF podemos citar sua flexibilidade, visto que as fases não devem ser seguidas como uma receita fixa, sendo assim cada organização pode adotar um processo adaptado conforme suas necessidades. Sendo este framework mais usual tanto pela sua flexibilidade, quanto pelo fato de ser um framework derivado de open groups - o que facilita sua utilização e proporciona uma maior rede de apoio durante o processo de uso.</p>
-
         </ul>
       </div>
       
@@ -1013,116 +988,142 @@
         <h2>Capítulo 10: Engenharia e Arquitetura de Software</h2>
         <ul>
           <li>10.1. Ciclo de Vida de Software</li>
-          <p>São fases que um sistema passa desde a sua concepção até o seu desligamento;</p>
-          <p><strong> Modelo Cascata   </strong></p>
-          <ul>
-            <li>Comunicação: Iniciação do projeto, levantmento de requisitos </li>
-            <li>Planejmento: Estimativas, cronogramas e monitoração; </li>
-            <li>Modelagem: Análise e projeto; </li>
-            <li>Construção: Codificação e teste; </li>
-            <li>Implantação: Entrega, manutenção e feedback; </li>
-          </ul>
-          <p><strong> Modelo interativo:   </strong></p>
-          <p><strong> Modelo incremental:   </strong></p>
-          <p><strong> Modelo de ciclo de vida ágil:   </strong></p>
-
+            <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software. Estamos iniciando o capítulo 10, que fala sobre a relação forte entre Engenharia e Arquitetura de Software. Vamos abordar especificamente o ciclo de vida de software, que é extremamente importante.</p>
+            <p>Só para contextualizar, qual é a importância deste capítulo? Quando falamos sobre Engenharia e Arquitetura de Software, vocês vão perceber que esses dois profissionais, em empresas menores ou em equipes pequenas, podem desempenhar funções sobrepostas. As atividades dessas duas áreas estão completamente relacionadas. Enquanto a Engenharia foca no processo, a Arquitetura se volta mais ao produto. Se você tem um bom processo, a probabilidade de entregar um bom produto é alta. Se estou desenvolvendo um produto, preciso de um processo adequado para construí-lo, e é isso que vamos explorar nessa aula.</p>
+            <p>O conceito de ciclo de vida é importante para entender as fases que envolvem a criação de um sistema, desde a concepção da ideia até a entrega do software. Quando você consulta a literatura, verá que a definição do ciclo de vida pode variar. Alguns falam em até sete fases, mas na prática, podemos dividi-las da seguinte forma: começa-se com a definição dos requisitos, passa-se para a modelagem e design, depois vem a fase de desenvolvimento, seguida pela de testes e validação, até finalmente a entrega. O ciclo de vida inclui diversas etapas, como: levantamento de requisitos, modelagem, design, desenvolvimento, testes e entrega.</p>
+            <p>Existem diferentes modelos de ciclo de vida. Alguns modelos entregam o produto completo de uma vez, enquanto outros fazem entregas incrementais ou parciais ao longo do tempo. O modelo ágil, por exemplo, envolve entregas incrementais e interativas, onde a cada ciclo o cliente valida a entrega, apontando melhorias e novas necessidades. Essa abordagem permite uma flexibilidade maior no processo de desenvolvimento e ajustes conforme o feedback do cliente.</p>
+            <p>No modelo ágil, o arquiteto de software tem uma atuação diferente em comparação com modelos mais tradicionais, como o Waterfall. Em projetos Waterfall, o arquiteto atua de forma mais intencional, com decisões definidas no início, enquanto no modelo ágil, a arquitetura vai emergindo conforme o desenvolvimento avança. Isso exige que o arquiteto seja capaz de lidar com mudanças e adaptações durante o processo, sem comprometer a qualidade ou integridade do sistema.</p>
+            <p>O arquiteto, portanto, em um ambiente ágil, precisa ser mais flexível, trabalhando em colaboração com a equipe ao longo do tempo, em vez de apenas definir tudo no início do projeto. O modelo ágil promove uma arquitetura emergente, onde as decisões arquiteturais podem ser tomadas à medida que o sistema é desenvolvido, adaptando-se conforme as necessidades do cliente e a evolução do produto.</p>
+            <p>Para entender essa mudança, é importante observar como a documentação também muda entre os modelos. Em modelos mais tradicionais, a documentação é mais rígida e detalhada, definindo claramente todos os aspectos antes de iniciar o desenvolvimento. Já em modelos ágeis, a documentação é mais flexível, com entregas graduais e decisões que podem ser feitas ao longo do caminho, baseadas no feedback contínuo do cliente.</p>
+            <p>Portanto, a principal diferença entre o trabalho do arquiteto nos dois modelos é a abordagem. No modelo tradicional, o arquiteto faz um planejamento mais intenso no início, enquanto no modelo ágil, ele assume um papel mais dinâmico e contínuo, guiando as decisões da equipe ao longo do projeto, com entregas e ajustes frequentes.</p>
+            <p>São fases que um sistema passa desde a sua concepção até o seu desligamento;</p>
+            <p><strong> Modelo Cascata   </strong></p>
+            <ul>
+              <li>Comunicação: Iniciação do projeto, levantmento de requisitos </li>
+              <li>Planejmento: Estimativas, cronogramas e monitoração; </li>
+              <li>Modelagem: Análise e projeto; </li>
+              <li>Construção: Codificação e teste; </li>
+              <li>Implantação: Entrega, manutenção e feedback; </li>
+            </ul>
+            <p><strong> Modelo interativo:   </strong></p>
+            <p><strong> Modelo incremental:   </strong></p>
+            <p><strong> Modelo de ciclo de vida ágil:   </strong></p>
 
           <li>10.2. Arquiteturas Monolíticas, Deploy Único e Desenvolvimento Cascata</li>
-          <p><strong>    </strong></p>
-              <ul>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-              </ul>
-          
-          
+
+            <p>Vamos dar sequência à nossa disciplina "Fundamentos de Arquitetura de Software". Hoje, vamos falar sobre um tema que tem uma relação muito forte com Engenharia e Arquitetura de Software, abordando um conceito bastante típico. Vamos discutir a arquitetura monolítica, que é um conceito tradicional, juntamente com o desenvolvimento em cascata e o conceito de entrega única.</p>
+            <p>Vamos explorar um pouco sobre essas combinações e ver como elas se relacionam. O conceito de arquitetura monolítica está diretamente ligado à ideia de uma única entrega ao final do projeto. Esse modelo de arquitetura se refere a um único processo de implantação ou implementação, o que significa que o sistema é entregue de uma vez, no final do ciclo de desenvolvimento.</p>
+            <p>No modelo em cascata, temos um processo linear e sequencial: começa com levantamento de requisitos, passa por uma etapa de projeto, segue para modelagem do sistema, depois para o desenvolvimento e, por fim, para a implantação. A ideia é seguir essa sequência sem voltar atrás, o que é uma característica do modelo em cascata.</p>
+            <p>Um ponto importante aqui é que, no modelo monolítico, todo o sistema é projetado de uma vez, com o objetivo de ser entregue como um único pacote. Isso é muito comum em projetos com requisitos claros e previsíveis, onde você sabe exatamente o que vai entregar desde o início. Esse modelo é útil, por exemplo, em sistemas críticos de alta segurança, onde é importante garantir o controle total sobre todo o processo de desenvolvimento e entrega.</p>
+            <p>Uma das vantagens desse modelo é a previsibilidade: como tudo é planejado e projetado com antecedência, você sabe exatamente o que está sendo entregue. Isso é especialmente útil em contextos onde mudanças ao longo do desenvolvimento não são bem-vindas. No entanto, essa abordagem pode não ser ideal para todos os tipos de projeto. Por exemplo, se você está desenvolvendo um produto novo e precisa incorporar novas funcionalidades ao longo do tempo, a arquitetura monolítica pode não ser a melhor opção.</p>
+            <p>Outro ponto a ser considerado é o tempo. Como você está entregando tudo de uma vez, o tempo de desenvolvimento tende a ser maior. Além disso, se houver falhas ou a necessidade de alterações, corrigir esses problemas pode ser mais difícil e caro, já que tudo está integrado em um único pacote.</p>
+            <p>Em resumo, a combinação de desenvolvimento em cascata e arquitetura monolítica pode ser útil em contextos onde a previsibilidade e o controle centralizado são necessários, como em sistemas críticos. No entanto, se você precisar de flexibilidade ou entregar incrementos ao longo do tempo, esse modelo pode não ser o mais adequado.</p>
+            <p>Por fim, é importante entender que esses conceitos não são mutuamente exclusivos. Nem todo desenvolvimento em cascata exige uma arquitetura monolítica, e nem toda arquitetura monolítica precisa ser entregue de uma vez. A escolha entre esses modelos depende do contexto e dos requisitos específicos do projeto.</p>
+
           <li>10.3. Arquiteturas Evolucionárias, Deploy e Desenvolvimento Incremental</li>
-          <p><strong>    </strong></p>
-              <ul>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-              </ul>
+            <p>Vamos dar sequência ao nosso capítulo 10, onde reforçamos o vínculo muito forte entre Engenharia de Software e Arquitetura de Software. No módulo 10.3, vamos falar sobre uma combinação mais dinâmica que envolve a utilização de arquiteturas evolucionárias com deployments incrementais e o desenvolvimento incremental de software.</p>
+            <p>Nessa aula, vamos abordar cada um desses conceitos e entender o vínculo entre eles, além das vantagens de sua combinação. Começando pelo desenvolvimento incremental: nesse modelo, o desenvolvimento ocorre em pequenos ciclos, como se em cada ciclo eu entregasse uma parte do sistema. Vamos imaginar que o sistema é composto por quatro partes. No primeiro ciclo, desenvolvo, modelo, testo e entrego a parte A. No segundo ciclo, repito o processo, mas agora para a parte B, e assim por diante até o final do projeto. A cada ciclo, o sistema vai sendo entregue incrementando partes do todo.</p>
+            <p>O desenvolvimento incremental tem essa característica: ele divide o grande ciclo do desenvolvimento em ciclos menores, que se repetem e evoluem. Agora, se pensarmos em arquitetura, o conceito de arquitetura evolucionária se aplica diretamente aqui. Cada módulo do sistema pode ser desenvolvido separadamente, com baixo acoplamento e alta coesão, permitindo alterações locais sem impactar o sistema como um todo. Isso facilita a evolução do sistema de forma adaptativa e escalável.</p>
+            <p>Quando falamos em arquitetura evolucionária e deploy incremental, podemos ver que eles se complementam. O modelo de desenvolvimento incremental, com sua abordagem de pequenas entregas ao longo do tempo, tem tudo a ver com o deploy incremental, pois permite a entrega de partes do sistema de forma contínua. Isso maximiza os resultados, tanto no produto quanto no processo de desenvolvimento.</p>
+            <p>Além disso, o desenvolvimento incremental reduz os riscos, pois permite a adaptação constante às mudanças de requisitos. A cobertura de testes é bem eficaz, pois a integração é realizada ao longo do processo. A automação de testes também ajuda, garantindo maior agilidade e menos erros. O tempo de deploy é reduzido, já que cada parte do sistema é entregue gradualmente. Caso algo não funcione bem, é possível voltar para uma versão anterior sem grandes impactos no restante do sistema, oferecendo um feedback contínuo ao cliente.</p>
+            <p>No entanto, como toda abordagem, o desenvolvimento incremental tem desafios. O gerenciamento de versões pode ser mais complexo, já que é preciso controlar várias versões do sistema. Além disso, a integração contínua exige testes constantes, o que demanda automação para ser eficaz. Embora seja um processo trabalhoso, a automação ajuda a agilizar as entregas.</p>
+            <p>Esse modelo é altamente eficaz quando se busca flexibilidade e adaptação. Porém, é importante avaliar o contexto do projeto. Nem todo sistema precisa de tanta flexibilidade. Em projetos mais simples, o custo de implementar uma infraestrutura de integração contínua pode não ser justificável.</p>
+            <p>Em resumo, esses três conceitos — desenvolvimento incremental, deploy incremental e arquitetura evolucionária — são fortemente vinculados e funcionam muito bem juntos. Quando combinados, eles oferecem flexibilidade, adaptabilidade e um processo de desenvolvimento que garante a entrega de valor contínuo para o cliente, além de um alto nível de qualidade no produto final.</p>
+            <p>Portanto, essa combinação é extremamente eficaz, mas é preciso avaliar o contexto de cada projeto para entender se esse modelo é o mais adequado. Quando bem implementado, garante a entrega contínua de valor ao cliente, melhorando as chances de sucesso do produto.</p>
+            <p>Por fim, é importante reforçar a importância da colaboração entre os profissionais de Engenharia e Arquitetura de Software para aplicar essas estratégias de maneira eficaz.</p>
+            <p>É isso, pessoal! Vamos concluir este assunto destacando a importância de entender como esses conceitos se interrelacionam e o impacto positivo que têm no desenvolvimento de software. </p>
           
           <li>10.4. Engenharia e Arquiteturas Software Considerações</li>
-          <p><strong>    </strong></p>
-          <ul>
-            <li> </li>
-            <li> </li>
-            <li> </li>
-            <li> </li>
-            <li> </li>
-            <li> </li>
-          </ul>
-        
-        
+            <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software, finalizando o capítulo 10 sobre Engenharia e Arquitetura de Software. Neste capítulo, vamos abordar a importância da atuação conjunta desses dois profissionais.</p>
+            <p>Passamos por alguns conceitos importantes, como os modelos de colaboração, o ciclo de vida do software e suas diferentes abordagens. Temos os modelos tradicionais, com uma sequência de etapas, onde tudo é entregue ao final do processo. Por outro lado, existem os modelos incrementais, onde as entregas são feitas de forma gradual até que o sistema esteja completo. Podemos relacionar esses modelos com as arquiteturas de software: se utilizarmos o modelo Cascata, fica mais fácil associá-lo a uma arquitetura monolítica. Já um modelo incremental se adapta melhor a uma arquitetura evolucionária, que é mais dinâmica e flexível.</p>
+            <p>Não se trata de uma relação obrigatória, mas, historicamente, as arquiteturas monolíticas surgiram com o modelo Cascata. Com a evolução do desenvolvimento de software e a necessidade de entregas mais ágeis, surgiram as arquiteturas evolucionárias, que são mais adequadas a processos incrementais.</p>
+            <p>Ao concluir, destacamos a importância da colaboração entre os profissionais de Arquitetura e Engenharia de Software. Arquitetura de software foca no design do produto, enquanto Engenharia de Software se ocupa da construção do sistema. Quando esses profissionais trabalham juntos, o processo de desenvolvimento se torna mais eficiente e o produto final é mais robusto, escalável e resiliente.</p>
+            <p>Agora, falando sobre os principais desafios enfrentados: às vezes, a empresa tem uma estrutura tradicional, mas surge a necessidade de desenvolver um produto que seria melhor com uma arquitetura revolucionária. Isso gera um conflito, pois a estrutura atual não está preparada para esse tipo de arquitetura. Esse tipo de situação exige uma comunicação eficaz entre as equipes de engenharia e arquitetura, pois a colaboração entre elas é fundamental para o sucesso do projeto.</p>
+            <p>Em equipes menores, pode ocorrer um acúmulo de funções, onde uma pessoa exerce tanto o papel de arquiteto quanto de engenheiro. Essa "dobradinha" deve ser bem-feita, pois quando a colaboração entre arquitetura e engenharia é saudável, o processo tende a ser mais eficaz, resultando em produtos mais fáceis de manter, escalar e evoluir ao longo do tempo.</p>
+            <p>A colaboração entre esses profissionais deve ser bem estruturada, principalmente quando falamos de requisitos não funcionais, como escalabilidade e resiliência, que são impactados diretamente pela engenharia e arquitetura. Arquitetos de software precisam fornecer as diretrizes para esses requisitos, garantindo que a arquitetura seja adequada para o longo prazo.</p>
+            <p>Ao longo do tempo, as formas de colaboração entre os profissionais mudaram. Antigamente, o arquiteto participava do projeto desde o início, definindo a arquitetura. Hoje, os engenheiros muitas vezes trabalham juntos com o arquiteto desde o começo do projeto, discutindo a melhor forma de implementar a arquitetura, levando em conta as necessidades do time e as ferramentas disponíveis.</p>
+            <p>Ferramentas de integração contínua, automação de testes e provisionamento de infraestrutura como código são essenciais para que a equipe consiga implementar uma arquitetura incremental de forma eficiente. Ferramentas modernas, como o DevOps, desempenham um papel importante nesse contexto, proporcionando uma infraestrutura ágil e adaptável.</p>
+            <p>Em resumo, a colaboração eficaz entre os profissionais de Arquitetura e Engenharia de Software é essencial para criar ambientes de desenvolvimento que produzam produtos de alta qualidade, flexíveis e adaptáveis às mudanças.</p>
+            <p>Com isso, finalizamos este capítulo. No próximo, vamos falar sobre como entender as necessidades de negócio e como isso se relaciona com a arquitetura e engenharia de software. Acompanhem a próxima aula, pois discutiremos como o novo contexto de desenvolvimento exige uma atuação profissional de arquitetura diferente, com novas abordagens tecnológicas.</p>
         </ul>
       </div>
       
       <div id="modulo-1-capitulo-11" class="capitulo">
         <h2>Capítulo 11: DEVOPS</h2>
         <ul>
-
           <li><strong>11.1. Princípios DevOps</strong></li>
-          <p>Devops é uma abordagem que integra práticas de desenvolvimento de software (Dev) e operações (Ops) para melhorar a colaboração, aumentar a eficiência e acelerar a entrega de software;</p>
-          <p><strong>  Princípio fundamentais:  </strong></p>
-          <ul>
-            <li> Colaboração; </li>
-            <li> Automação; </li>
-            <li> Entrega e integração contínua (CI/CD) </li>
-            <li> Feedback rápido e iteração;</li>
-            <li> Melhoria contínua; </li>
-          </ul>
-          <p><strong> Benefícios:    </strong></p>
-          <ul>
-            <li>Qualidade e confiabilidade das entregas; </li>
-            <li>Aumento da colaboração entre equipes; </li>
-            <li>Viabilidade fluxo contínuo de entrega de valor; </li>
-            <li>Velocidade de entrega;</li>
-            <li>Redução de custo e riscos;</li>
-          </ul>
-          <p><strong>CALMS: dimensões fundamentais:   </strong></p>
-          <ul>
-            <li>Cultura </li>
-            <li>Automação</li>
-            <li>Lean (processos enxutos) </li>
-            <li>Medição </li>
-            <li>Sharing (compartilhamento)</li>
-          </ul>
+            <p>Agora estamos iniciando o nosso capítulo sobre DevOps, dentro da disciplina de Fundamentos de Arquitetura de Software. Vamos falar sobre os princípios fundamentais desse conceito. Vamos entender os princípios que norteiam o DevOps e abordar tópicos como os benefícios, pilares, conceitos importantes, além dos desafios e barreiras que podem surgir.</p>
+            <p>Antes de falarmos sobre os princípios, é essencial entender o que é o DevOps, qual o seu conceito. Antigamente, o processo de desenvolvimento de software funcionava de maneira bem separada: uma empresa desenvolvia o software, entregava e ia embora, enquanto outra ficava responsável pela manutenção. A equipe de desenvolvimento entregava o sistema pronto, mas depois de um tempo, surgiam problemas como baixo desempenho ou aumento do consumo de memória, por exemplo. Nesse cenário, surgiam conflitos entre as equipes de desenvolvimento e operação, pois cada uma culpava a outra pela falha.</p>
+            <p>O que precisamos entender é que as equipes de desenvolvimento e operações devem trabalhar juntas desde o início do processo, garantindo que o desenvolvimento e a operação do sistema estejam alinhados. Essa colaboração entre as equipes é um princípio fundamental do DevOps, e isso ajuda a criar um processo de desenvolvimento mais eficiente e eficaz.</p>
+            <p>O conceito de responsabilidade compartilhada é central aqui. Por exemplo, a equipe de desenvolvimento precisa se preocupar com a operação do sistema, e a equipe de qualidade deve estar envolvida desde o início, definindo padrões de código e evitando problemas como variáveis globais. Em vez de seguir um processo sequencial, como no modelo Cascata, a ideia é automatizar tudo o que for possível para evitar erros humanos, como a automação de testes, que facilita a integração contínua.</p>
+            <p>A integração contínua permite que as equipes integrem o código diariamente, o que facilita a identificação de problemas rapidamente. Dessa forma, conseguimos entregar versões atualizadas do sistema constantemente, garantindo que o cliente receba entregas de valor de forma contínua, sem ficar meses esperando pela próxima versão.</p>
+            <p>Agora, falando dos benefícios do DevOps: ele melhora a qualidade e a confiabilidade das entregas, aumenta a colaboração entre as equipes e viabiliza o fluxo contínuo de entrega de valor. Com a integração contínua, o sistema está sempre evoluindo, e o cliente não fica sem atualizações por longos períodos.</p>
+            <p>DevOps, na verdade, é uma mudança cultural que envolve automatização, processos enxutos e uma melhoria contínua. Não é apenas uma ferramenta ou técnica; é uma filosofia que deve ser aplicada na cultura da empresa. Quando aplicada corretamente, o DevOps transforma a forma como as equipes trabalham, garantindo entregas mais rápidas e eficientes.</p>
+            <p>Porém, como qualquer mudança cultural, a adoção do DevOps pode enfrentar resistência, principalmente porque envolve alterar processos profundamente enraizados na organização. Isso pode ser difícil, principalmente em empresas com muitas equipes e processos estabelecidos. A visibilidade do fluxo de trabalho e a integração entre as equipes são essenciais para que os benefícios sejam visíveis no contexto global da empresa. Não adianta ter um processo que é bom em uma parte, mas falha nas outras. A ideia é que todos os processos estejam alinhados e otimizados para gerar um benefício geral.</p>
+            <p>Outro ponto importante é que, por envolver muita automação, o DevOps exige profissionais com conhecimentos técnicos atualizados, já que as tecnologias usadas estão sempre em evolução. Isso exige que as equipes tenham um perfil de atualização contínua.</p>
+            <p>Concluindo, o DevOps não é apenas uma técnica ou uma ferramenta, mas sim uma mudança cultural significativa que envolve toda a organização. A colaboração contínua entre desenvolvimento e operações é fundamental, e a entrega contínua de valor é o objetivo. Na próxima aula, vamos aprofundar um pouco mais nos pilares do DevOps e continuar com esse entendimento sobre essa cultura e as suas aplicações práticas.</p>
+            <p>Devops é uma abordagem que integra práticas de desenvolvimento de software (Dev) e operações (Ops) para melhorar a colaboração, aumentar a eficiência e acelerar a entrega de software;</p>
+            <p><strong>  Princípio fundamentais:  </strong></p>
+            <ul>
+              <li> Colaboração; </li>
+              <li> Automação; </li>
+              <li> Entrega e integração contínua (CI/CD) </li>
+              <li> Feedback rápido e iteração;</li>
+              <li> Melhoria contínua; </li>
+            </ul>
+            <p><strong> Benefícios:    </strong></p>
+            <ul>
+              <li>Qualidade e confiabilidade das entregas; </li>
+              <li>Aumento da colaboração entre equipes; </li>
+              <li>Viabilidade fluxo contínuo de entrega de valor; </li>
+              <li>Velocidade de entrega;</li>
+              <li>Redução de custo e riscos;</li>
+            </ul>
+            <p><strong>CALMS: dimensões fundamentais:   </strong></p>
+            <ul>
+              <li>Cultura </li>
+              <li>Automação</li>
+              <li>Lean (processos enxutos) </li>
+              <li>Medição </li>
+              <li>Sharing (compartilhamento)</li>
+            </ul>
 
           <li><strong>11.2. Pilares DevOps</strong></li>
-          <p><strong> Pilares da mudança cultural:   </strong></p>
-          <ul>
-            <li>Automação: Uso de ferramentas e scripts para automatizar tarefas repetitivas, como builds, testes e deploy. Ferramentas comuns: Selenium, Junit, Gitlab, Ansible; </li>
-            <li>Integração contínua (CI): Prática de manter o código pronto para deploy a qualquer momento.  </li>
-            <li>Entrega contínua (CD) </li>
-            <li>Monitoramento e feedback: Monitoramento contínuo do sistema para garantir os requisitos não funcionais ao longo do tempo. Ferramentas: Phrometeus, Grafana, Elasticsearch; </li>
-            <li>Segurança: DevSecOps: é a prática de integrar a segurança no processo de devops desde o início do ciclo de vida;</li>
-          </ul>
+
+            <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software, falando um pouquinho sobre DevOps. Nesse capítulo, vamos abordar os pilares principais desse conteúdo, que é um assunto extremamente importante. A aula de hoje vai passar um pouco sobre esses pilares, com a intenção de entender melhor o processo, a ferramenta e a importância desse tema. Vamos também falar de alguns exemplos para ilustrar melhor.</p>
+            <p>Então, quais são os principais pilares? A figura está mostrando e, quando falamos em pilares, estamos nos referindo a algo que sustenta. Se você retirar um pilar, tudo cai. Isso significa que, para trabalhar com DevOps, é necessário entender e trabalhar sobre alguns pilares fundamentais, que são: automação, integração contínua, entrega contínua (CD), monitoramento e segurança. Para que essa mudança cultural se perpetue ao longo do tempo, devemos trabalhar nesses pilares. Somente assim será possível implementar a cultura de entrega contínua de valor, garantindo que produtos digitais sejam entregues rapidamente, com testes automatizados e entregas positivas.</p>
+            <p>Vamos falar um pouco sobre cada um desses pilares:</p>
+            <p>Automação: Quando pensamos em DevOps, a automação é um dos pilares mais importantes. Imagine uma grande empresa, como um banco com 100 mil funcionários, que está constantemente desenvolvendo soluções digitais. Para entregar essas soluções rapidamente, a automação é essencial. Ela entra principalmente nos processos de teste e entrega. Por exemplo, ao invés de realizar testes manuais repetitivos, podemos automatizá-los, economizando tempo e recursos, além de melhorar a qualidade. Ao automatizar tarefas repetitivas, evitamos erros humanos e ganhamos eficiência.</p>
+            <p>Integração Contínua (CI): Em grandes empresas, como o banco citado, existem centenas de soluções ativas sendo constantemente desenvolvidas. Para lidar com essa complexidade, a integração contínua permite que as equipes integrem o código de maneira constante e organizada. Ao adotar práticas como commits diários e integração automática de código, podemos testar o software de forma contínua e garantir que tudo esteja funcionando corretamente. Isso acelera o processo e facilita a correção de erros, permitindo que o produto final seja entregue de maneira mais eficiente.</p>
+            <p>Entrega Contínua (CD): A entrega contínua vai além da integração. Após integrar e testar, o próximo passo é garantir que a entrega para o cliente aconteça de forma contínua. Isso significa que, assim que o código é validado, ele está pronto para ser liberado, sem a necessidade de esperar por um cronograma fixo. A entrega contínua permite uma resposta rápida ao cliente, mantendo o produto atualizado sempre que necessário, de forma ágil e com menor tempo de implantação.</p>
+            <p>Monitoramento: O monitoramento é crucial para garantir que as soluções entregues estejam funcionando corretamente ao longo do tempo. Após a entrega, é necessário monitorar o desempenho do sistema, como o uso de memória e o tempo de resposta, para garantir que os requisitos não funcionais sejam atendidos. Isso permite detectar problemas antes que eles afetem o cliente, possibilitando ajustes contínuos.</p>
+            <p>Segurança: No modelo DevOps, a segurança não é uma etapa isolada, mas parte integrante do processo. Em vez de ter uma equipe dedicada à segurança, as práticas de segurança são incorporadas diretamente no desenvolvimento, desde o início do processo. Isso inclui garantir que o código esteja livre de vulnerabilidades e que a infraestrutura seja protegida contra ameaças. Além disso, o conceito de "champions" em segurança pode ser aplicado, onde um profissional especializado em segurança dentro de cada equipe garante que as melhores práticas sejam seguidas.</p>
+            <p>Cada um desses pilares é fundamental para garantir o sucesso do DevOps. A aplicação de DevOps vai variar dependendo do tipo de produto ou serviço que sua empresa oferece. Para empresas que desenvolvem soluções mais críticas, o foco será maior na segurança e na integração contínua, enquanto em empresas que produzem soluções mais simples, a automação e a entrega contínua terão maior destaque.</p>
+            <p>Concluindo, vimos que a integração desses pilares permite uma evolução gradual dos processos dentro das empresas, proporcionando uma melhoria constante na entrega de produtos digitais. </p>
+            <p><strong> Pilares da mudança cultural:   </strong></p>
+            <ul>
+              <li>Automação: Uso de ferramentas e scripts para automatizar tarefas repetitivas, como builds, testes e deploy. Ferramentas comuns: Selenium, Junit, Gitlab, Ansible; </li>
+              <li>Integração contínua (CI): Prática de manter o código pronto para deploy a qualquer momento.  </li>
+              <li>Entrega contínua (CD) </li>
+              <li>Monitoramento e feedback: Monitoramento contínuo do sistema para garantir os requisitos não funcionais ao longo do tempo. Ferramentas: Phrometeus, Grafana, Elasticsearch; </li>
+              <li>Segurança: DevSecOps: é a prática de integrar a segurança no processo de devops desde o início do ciclo de vida;</li>
+            </ul>
 
           <li>11.3. Ferramentas e Práticas Comuns em DevOps</li>
           
-          <li>11.4. Integrando DevOps e Arquitetura de Software</li>
-          <p>Arquitetura evolutiva e devops, arquitetura evolutiva é a prática de construção sistemas que podem evoluir ao longo do tempo em resposta a mudanças nos requisitos e tecnologias;  </p>
-          <p>Como devops pode contribuir para isto? Princípios de arquitetura evolutiva: Desacoplamento, feedback contínua, governança mínima, Exemplo: Mocrisserviços; </p>
-          <p>Design para DevOps: Envolver práticas de design de software que facilitam a automação continua, entrega contínua e monitoramento. Elementos chave: Automação e Observabilidade; </p>
-          <ul>
-            <li>Imutabilidade de infraestrutura; </li>
-            <li>Descentralização das decisões arquiteturais;</li>
-            <li>Resiliência; </li>
-            <li>Exemplo: Circuit Breakers e IaC; </li>
-          </ul>
-
+            <li>11.4. Integrando DevOps e Arquitetura de Software</li>
+            <p>Arquitetura evolutiva e devops, arquitetura evolutiva é a prática de construção sistemas que podem evoluir ao longo do tempo em resposta a mudanças nos requisitos e tecnologias;  </p>
+            <p>Como devops pode contribuir para isto? Princípios de arquitetura evolutiva: Desacoplamento, feedback contínua, governança mínima, Exemplo: Mocrisserviços; </p>
+            <p>Design para DevOps: Envolver práticas de design de software que facilitam a automação continua, entrega contínua e monitoramento. Elementos chave: Automação e Observabilidade; </p>
+            <ul>
+              <li>Imutabilidade de infraestrutura; </li>
+              <li>Descentralização das decisões arquiteturais;</li>
+              <li>Resiliência; </li>
+              <li>Exemplo: Circuit Breakers e IaC; </li>
+            </ul>
 
         </ul>
       </div>
-      
     </div>
 
    <!-- Conteúdo do módulo 2 -->
