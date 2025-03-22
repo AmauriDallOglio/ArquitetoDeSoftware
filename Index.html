@@ -36,15 +36,21 @@
       text-decoration: underline;
     }
     .capitulo {
-      margin-top: 40px;
+ 
       border-top: 2px solid #ccc;
       padding-top: 20px;
- 
       text-align: justify;
+
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
     }
   </style>
 </head>
  
+
 <body>
   <div class="sumario">
     <h1>Arquitetura de software</h1>
@@ -112,7 +118,17 @@
         <li><a href="#modulo-4-capitulo-9">Capítulo 9: Introdução às FaaS (AWS Lambda e Azure Functions)</a></li>
         <li><a href="#modulo-4-capitulo-10">Capítulo 10: Demonstração Prática da Arquitetura FaaS</a></li>
       </ul>
-       
+    </ul>
+
+    <h1>Arquitetura de soluções</h1>
+    <h2>Sumário</h2>
+    <ul>
+      <li><a href="#modulo-1">Módulo 1: Fundamentos de Arquitetura de soluções</a></li>
+      <ul>
+        <li><a href="#modulo-1-capitulo-0-sol">Capítulo 0 - Apresentação</a></li>
+        <li><a href="#modulo-1-capitulo-1-sol">Capítulo 1 - Introdução à computação em nuvem  </a></li>
+        <li><a href="#modulo-1-capitulo-2-sol">Capítulo 2: Introdução à Arquitetura de Software</a></li>
+      </ul>
     </ul>
   </div>
 
@@ -125,23 +141,45 @@
       <h2>Módulo 1: Fundamentos de Arquitetura de Software</h2>
       
       <div id="modulo-1-capitulo-0" class="capitulo">
-
-        <h3>Capítulo 0: Visão Geral do Módulo</h3>
-        <ul>
-          <li>0.1. Apresentação</li>
-          <li>0.2. Apresentação do Módulo</li>
-        </ul>
+        <h2>Capítulo 0: Visão Geral do Módulo</h2>
+        <p>A arquitetura de software é fundamental para o desenvolvimento de sistemas robustos e escaláveis, neste capítulo exploramos três níveis principais. A arquitetura de software que foca na estrutura interna dos sistemas e na organização dos componentes, para garantir desempenho e manutenibilidade. A Arquitetura de soluções que trata da integração de múltiplos sistemas e aplicações dentro de uma organização para resolver problemas específicos. A arquitetura corporativa que alinha a tecnologia, aos objetivos estratégicos de longo prazo da empresa. </p>
+        <p>O arquiteto de softwares deve ter uma combinação de hard skills, como design patterns e clean cold e soft skills, como comunicação e liderança. Além disso, atua como um elo de comunicação entre diferentes equipes garantindo que as soluções atendam tanto as necessidades técnicas quanto empresariais. </p>
+        <p>Capitulo 2, gerindo o processo de arquitetura, neste capitulo o foco está na gestão do processo de arquitetura. Um arquiteto precisa conhecer ferramentas como a matriz de decisão que ajuda a escolher em diferentes soluções e a análise de premissas e restrições, que garante que a arquitetura esteja de acordo com os limites do projeto. Além disso, frameworks como Hackman e o togas fornecem estruturas para desenvolver arquiteturas corporativas que atentam às necessidades de negócios.  </p>
+        <p>Capitulo 3, governança da arquitetura, a governança da arquitetura envolve garantir que as soluções arquiteturais estejam sendo implementadas corretamente e que as decisões sigam padrões estabelecidos. O arquiteto deve garantir a conformidade das soluções através de revisões periódicas e assegurar que as decisões sejam documentadas adequadamente, contribuindo para a evolução da arquitetura.  </p>
+        <p>Capitulo 4, evoluções e tendências da arquitetura, neste capitulo o foco é na evolução da arquitetura e nas novas tendências tecnológicas. O arquiteto de software precisa estar atendo às mudanças e inovações para adaptar e melhorar as soluções atuais. Isso inclui a adoção de práticas como DevOps, cloud computing e arquiteturas evolutivas que são essenciais para manter a competividade e atender as demandas dinâmicas do mercado.  </p>
       </div>
 
       <div id="modulo-1-capitulo-1" class="capitulo">
-
         <h2>Capítulo 1: Introdução à Arquitetura de Software</h2>
         <ul>
           <li><strong>1.1. Introdução à Arquitetura</strong></li>
-            <p>Vamos falar um pouco sobre o que é arquitetura de software, proporcionando uma visão geral e um entendimento sobre essa disciplina e o conteúdo que será abordado.</p>
+            <p> Para início de conversa, o que faz um arquiteto de software? Resumidamente, ele é o profissional responsável por projetar a estrutura de todo o sistema. Ele pensa em escalabilidade, performance, disponibilidade e até na experiência do time que vai trabalhar no código depois. Além disso, o arquiteto define os padrões arquiteturais, escolhe as tecnologias e negocia com a equipe de produto. </p>
+            <P> O que é arquitetura de software? É uma modelagem do produto deve ser fito no final, o estudo do fluxo dos dados, especificação das atribuições dos módulos, composição de alto nível, um retrato do que deve ser construído, somente é detalhado o que é extremamente importante, não precisa adiantar uma decisão que não será feito hoje, pelo motivo de mudar a arquitetura, conclusão design do sistema, difícil de mudar e apoiada em padrões, baseado em padrões;</P>
+            <p>Arquitetura de software, se refere à estrutura fundamental de um software. Cada estrutura compreende elementos do software, a relação entre eles e também suas propriedades. É de extrema importância pensar na arquitetura desde o primeiro dia da criação de um software, pois cada escolha tem um impacto, especialmente no crescimento do projeto. Escolhas erradas podem resultar em custos mais altos, lentidão nos processos e muito retrabalho.</p>
+            <p>O termo "arquitetura de software" é relativamente novo. Seus princípios fundamentais começaram a ser aplicados esporadicamente pelos pioneiros da engenharia de software a partir da metade dos anos 80, mas seu uso mais generalizado só ocorreu a partir dos anos 90. No entanto, o conceito de arquitetura de software tem origem em pesquisas de Edsger Dijkstra em 1968 e de David Parnas no início dos anos 1990. Esses dois cientistas já sabiam que a estrutura de um software é fundamental e que implementar essa estrutura corretamente é essencial. Antes disso, era uma verdadeira bagunça—imagina só quanta gambiarra eles já viram por aí!</p>
+            <p>Muita gente costuma confundir arquitetura de software com design de software, e isso é comum, sem problema algum. Apesar de haver uma interseção entre ambos, eles têm focos distintos: arquitetura de software trata de como os componentes de um sistema interagem entre si, enquanto design de software se concentra na implementação desses componentes, abordando detalhes como padrões de projeto, uso de algoritmos, estruturas de dados etc.</p>
+            <p>A arquitetura de software está relacionada à estruturação de sistemas, incluindo a escolha de componentes tecnológicos e a definição de como eles interagem para formar um sistema coeso. Trata-se de decisões de alto nível que estabelecem a base do sistema, priorizando aspectos como escalabilidade, disponibilidade, confiabilidade, manutenibilidade, portabilidade e segurança.</p>
+            <p>O principal objetivo da arquitetura de software é garantir que o sistema seja estruturado de forma a atender tanto os requisitos funcionais quanto os não funcionais. Além disso, ele deve ser fácil de manter e expandir ao longo do tempo.</p>
             <p>Mas vejam essa representação simplificada: acho que todo mundo aqui, mesmo sem gostar de futebol, já viu em algum momento uma transmissão em que aparece no início um desenho na tela mostrando o esquema tático do time. Algo como "o time vai jogar em 4-3-3" ou "o time vai jogar em 3-5-2". Esse desenho dentro de um campo de futebol indica a posição dos jogadores. Além disso, essa representação simplificada permite entender o estilo do time: se joga mais ofensivamente ou defensivamente.</p>
             <p>A arquitetura de software é algo semelhante. Criamos um desenho, uma representação simplificada, uma modelagem do que precisa ser feito para que o produto seja entregue no final. Quando olhamos um diagrama arquitetural, podemos visualizar o fluxo de dados, da mesma forma que no futebol vemos a sequência de uma jogada. Assim como um time tem 11 jogadores representados simbolicamente, uma arquitetura apresenta módulos, suas responsabilidades e atribuições.</p>
             <p>Arquitetura, então, é isso: a construção de uma representação simplificada, uma decomposição de alto nível, como um retrato falado do que precisa ser feito. Se um cliente chega e diz: "Quero um sistema que faça isso, isso e aquilo", o que você faz? Você representa, cria um modelo, uma referência, um desenho de alto nível para entregar esse produto.</p>
+            <p> Enquanto a maioria dos programadores está focada em resolver problemas pontuais e implementar funcionalidades específicas, o arquiteto precisa ter uma visão global. Em resumo, ele faz tudo aquilo que você tem vontade de fazer, mas não pode. Muitos programadores estudam conceitos como design patterns, microserviços e arquitetura orientada a eventos, mas nunca têm a oportunidade de aplicar esses conhecimentos. Isso pode ser extremamente frustrante, gerando uma espécie de "obesidade mental", onde há muito aprendizado, mas pouca prática. </p>
+            <p> As Vantagens de se Tornar um Arquiteto, Ser arquiteto de software significa crescer na carreira, guiar equipes e transformar ideias em realidade. Essa é uma das formas mais gratificantes de trabalhar com tecnologia, pois você não está apenas resolvendo bugs ou entregando funcionalidades isoladas – você está construindo algo muito maior, que pode impactar milhares ou até milhões de pessoas. Além disso, você será reconhecido como especialista e referência técnica, sendo consultado para decisões estratégicas que influenciam diretamente no sucesso dos projetos. Isso traz propósito, orgulho e a sensação constante de estar trabalhando em algo realmente grandioso. Agora que você entendeu o papel do arquiteto e suas vantagens, vamos aos cinco passos para fazer essa transição de carreira.</p>
+            <p>Domine os fundamentos, antes de tomar decisões estratégicas complexas, você precisa entender os princípios básicos do desenvolvimento de software. Estude os fundamentos da programação orientada a objetos, princípios de desenvolvimento de sistemas e boas práticas de código, isso garantirá que você saiba produzir software de qualidade, além disso, aprofunde-se em padrões de projeto e compreenda quando e como aplicá-los. Estude arquitetura em camadas e se familiarize com os principais paradigmas da engenharia de software. Lembre-se: um arquiteto de software não pode ficar preso a uma única linguagem de programação ou tecnologia específica. Seu objetivo é entender conceitos gerais para escolher as melhores ferramentas conforme as necessidades do projeto. </p>
+            <p>Entenda os Modelos Arquiteturais, Com uma base sólida, é hora de sair do código e estudar o que realmente sustenta os sistemas modernos. Já parou para pensar em como aplicações suportam milhões de usuários simultaneamente? É aqui que entram as arquiteturas de software. </p>
+            <p><strong>Estude sobre:</strong></p>
+            <ul>
+              <li>Arquitetura de microserviços;</li>
+              <li>Arquitetura orientada a eventos;</li>
+              <li>Vantagens e desvantagens das arquiteturas monolíticas;</li>
+              <li>Filas de mensagens para sistemas distribuídos;</li>
+              <li>Técnicas de consultas em bancos de dados;</li>
+              <li>Algoritmos de balanceamento de carga</li>
+            </ul>
+            <p>Além disso, aprofunde-se nos diferentes tipos de banco de dados (relacionais e não relacionais) e nos protocolos de comunicação, como HTTP, REST e GraphQL. Você não precisa ser especialista em tudo isso, mas deve entender os conceitos gerais e como eles se interligam.</p>
+            <p>Domine a nuvem, Agora que você estudou as arquiteturas, o próximo passo é aprender como mantê-las operando na nuvem, prepare-se para investir tempo tirando certificações em provedores de nuvem como AWS, Azure e Google Cloud. Isso te ajudará a entender conceitos como: Escalabilidade (vertical e horizontal) / Elasticidade / Alta disponibilidade e resiliência / Provisionamento de recursos de forma otimizada. Os provedores de nuvem oferecem todos os recursos necessários para hospedar aplicações modernas de forma eficiente, e o melhor: você paga apenas pelo que utiliza. A nuvem também força o desenvolvimento de sistemas distribuídos, algo essencial para arquitetos de software nos dias de hoje.</p>
+            <p>Aprenda a Criar Diagramas, ser arquiteto de software significa transformar ideias complexas em representações visuais claras e organizadas. Os diagramas são essenciais para comunicar a visão do sistema não apenas para desenvolvedores, mas também para gerentes, equipes de produto e outros stakeholders. Ferramentas como Diagrams.net (Draw.io), Lucidchart e PlantUML ajudam na criação desses diagramas, tornando-os uma verdadeira documentação do sistema. Pense nos diagramas como um "mapa do tesouro": sem eles, você pode até chegar ao objetivo, mas levará mais tempo e encontrará mais dificuldades pelo caminho. </p>
+            <p>Desenvolva suas Habilidades de Comunicação, Este é o passo mais importante de todos. Sem isso, sua carreira como arquiteto de software pode ser comprometida. O foco aqui é desenvolver habilidades interpessoais, especialmente comunicação e liderança. Como arquiteto, você precisará: Negociar com a equipe de produto / Explicar conceitos técnicos de forma clara para diferentes públicos / Liderar e orientar outros desenvolvedores. O Dale Carnegie Institute realizou uma pesquisa que revelou que 85% do sucesso profissional e financeiro está ligado à capacidade de lidar com pessoas, enquanto apenas 15% depende do conhecimento técnico. Provavelmente, você já trabalhou com alguém que se destacou mais pelo jeito "desenrolado" do que pela habilidade técnica, certo? Isso não é puxar saco – é saber se comunicar de forma eficiente. O próprio John D. Rockefeller afirmou que a capacidade de lidar com pessoas é um dos bens mais valiosos que existem. Portanto, invista tempo no aprendizado de: Comunicação assertiva / Oratória / Persuasão. Como arquiteto, você precisará persuadir lideranças a investir em tecnologia e infraestrutura. Sem essa habilidade, será difícil garantir que suas decisões estratégicas sejam implementadas.</p>
             <p>Um ponto importante: a representação inicial da arquitetura de software normalmente é de alto nível, ou seja, você não detalha tudo, apenas o essencial para aquele momento. Existe um princípio no Lean que diz que devemos postergar decisões sempre que possível. Em outras palavras, se não for necessário decidir algo agora, adie a decisão. Afinal, de hoje até a próxima semana, pode acontecer algo que mude a representação ideal.</p>
             <p>No início da arquitetura, algumas decisões precisam ser tomadas: será um sistema de entrega única ou incremental? Qual será a linguagem utilizada? Em certos momentos, pode ser necessário definir desde cedo se será usado Java e quais bibliotecas matemáticas farão parte do projeto.</p>
             <p>Resumindo, a arquitetura é uma representação de alto nível do sistema, incluindo decisões que, uma vez tomadas, não podem ser alteradas facilmente. Por exemplo, se você define a linguagem de programação no início do projeto, mudar depois de seis meses de desenvolvimento não será algo trivial e pode ser extremamente custoso.</p>
@@ -154,13 +192,7 @@
             <p>Outro ponto crucial: nem sempre tomamos a melhor decisão geral, mas sim a melhor decisão dentro dos recursos disponíveis. Se uma equipe só tem experiência com microserviços, pode ser mais viável seguir por esse caminho, mesmo que outra abordagem fosse tecnicamente superior.</p>
             <p>Chegamos, então, à reta final. O trabalho do arquiteto é construir um design de sistema. O cliente pode passar horas explicando o que deseja, e o papel do arquiteto é transformar essa informação em um modelo compreensível para os desenvolvedores. Se colocarmos o cliente para conversar diretamente com os programadores, pode haver uma desconexão, pois falam linguagens diferentes. O arquiteto atua como um intermediário técnico, traduzindo requisitos em um desenho que a equipe possa seguir.</p>
             <p>Por fim, arquitetos não reinventam a roda: utilizamos padrões já estabelecidos para tomar decisões mais seguras e eficientes.
-            <P> O que é arquitetura de software? É uma modelagem do produto deve ser fito no final, o estudo do fluxo dos dados, especificação das atribuições dos módulos, composição de alto nível, um retrato do que deve ser construído, somente é detalhado o que é extremamente importante, não precisa adiantar uma decisão que não será feito hoje, pelo motivo de mudar a arquitetura, conclusão design do sistema, difícil de mudar e apoiada em padrões, baseado em padrões;</P>
-            <p>Arquitetura de software, se refere à estrutura fundamental de um software. Cada estrutura compreende elementos do software, a relação entre eles e também suas propriedades. É de extrema importância pensar na arquitetura desde o primeiro dia da criação de um software, pois cada escolha tem um impacto, especialmente no crescimento do projeto. Escolhas erradas podem resultar em custos mais altos, lentidão nos processos e muito retrabalho.</p>
-            <p>O termo "arquitetura de software" é relativamente novo. Seus princípios fundamentais começaram a ser aplicados esporadicamente pelos pioneiros da engenharia de software a partir da metade dos anos 80, mas seu uso mais generalizado só ocorreu a partir dos anos 90. No entanto, o conceito de arquitetura de software tem origem em pesquisas de Edsger Dijkstra em 1968 e de David Parnas no início dos anos 1990. Esses dois cientistas já sabiam que a estrutura de um software é fundamental e que implementar essa estrutura corretamente é essencial. Antes disso, era uma verdadeira bagunça—imagina só quanta gambiarra eles já viram por aí!</p>
-            <p>Muita gente costuma confundir arquitetura de software com design de software, e isso é comum, sem problema algum. Apesar de haver uma interseção entre ambos, eles têm focos distintos: arquitetura de software trata de como os componentes de um sistema interagem entre si, enquanto design de software se concentra na implementação desses componentes, abordando detalhes como padrões de projeto, uso de algoritmos, estruturas de dados etc.</p>
-            <p>A arquitetura de software está relacionada à estruturação de sistemas, incluindo a escolha de componentes tecnológicos e a definição de como eles interagem para formar um sistema coeso. Trata-se de decisões de alto nível que estabelecem a base do sistema, priorizando aspectos como escalabilidade, disponibilidade, confiabilidade, manutenibilidade, portabilidade e segurança.</p>
-            <p>O principal objetivo da arquitetura de software é garantir que o sistema seja estruturado de forma a atender tanto os requisitos funcionais quanto os não funcionais. Além disso, ele deve ser fácil de manter e expandir ao longo do tempo.</p>
-            <p><strong>Arquitetura de Software x Design de Código x Engenharia de Software</strong></p>
+            s<p><strong>Arquitetura de Software x Design de Código x Engenharia de Software</strong></p>
             <p> O design de código é frequentemente considerado parte da arquitetura de software, mas ele se concentra mais nos detalhes de implementação dos módulos e componentes do sistema. O design de código envolve a organização do código-fonte, escolha de padrões de codificação e uso de boas práticas, como design patterns.</p>
             <p> A qualidade do design de código afeta diretamente a legibilidade, reutilização e testabilidade do software. Por isso, a arquitetura e o design estão profundamente interligados. </p>
             <p> Já a engenharia de software é um conceito mais amplo, englobando tanto a arquitetura quanto o design de código. Ela abrange todo o processo de desenvolvimento de software, desde a concepção e definição de requisitos até a manutenção e evolução contínua do sistema. Entre suas práticas estão a gestão de projetos, análise de requisitos, desenvolvimento, testes e suporte. Agora que esclarecemos esses conceitos, vamos entender o que um arquiteto de software faz no dia a dia.</p>
@@ -2978,9 +3010,59 @@
 
     </div>
     
+  </div>
 
 
+  <div class="content">
+    <h1>Arquitetura de soluções</h1>
+
+    <!-- Conteúdo do módulo 1 -->
+    <div id="modulo-1-sol">
+      <h2>Módulo 1: haaaaaaaaaaaa</h2>
+
+      <div id="modulo-1-capitulo-0-sol" class="capitulo">
+        <p><strong>Capítulo 0 - Apresentação </strong></p>
+        <p>A arquitetura de soluções normalmente fica entre a área de negócios e a área de software. Então, sim, é uma área totalmente técnica, pois precisa entender o que está acontecendo na área de negócios para transformar isso na área de software, representando essas informações no formato adequado.</p>
+        <p>Vamos imaginar a área de arquitetura de solução como um departamento ou função específica. O arquiteto normalmente consegue captar os requisitos de negócio e gerar, de forma geral, uma solução no formato de software. É como se ele pegasse tudo que o cliente está falando, compreendesse e dissesse: "Deixa eu rabiscar essa ideia aqui, e o software será mais ou menos assim." É isso que a arquitetura de solução faz.</p>
+        <p>De forma geral, um arquiteto ou arquiteta de solução precisa saber desenhar arquiteturas. Ou seja, precisa representar graficamente como o software vai funcionar. Para isso, cria desenhos e diagramas, permitindo visualizar de forma clara tudo o que o cliente solicitou. Esses desenhos, geralmente, são diagramas como o modelo C4, UML ou mapeamento de processos. Assim, a arquitetura de solução consegue responder perguntas de negócio no formato de desenhos de software. </p>
+        <p>Além disso, a arquitetura de soluções analisa os impactos comerciais em relação às escolhas tecnológicas. Por exemplo: "Vamos usar Oracle? Ou mais SQL? Vamos trabalhar com Java ou PHP? Qual provedor de nuvem utilizar?" Todas essas decisões impactam comercialmente a solução escolhida. </p>
+        <p>Não é incomum encontrar profissionais de arquitetura de soluções em reuniões comerciais de pré-venda ou venda. Como possuem um perfil mais técnico, conseguem fazer a interface com o cliente final e oferecer suporte técnico à equipe comercial. </p>
+        <p>Outra atribuição do arquiteto de solução é analisar os custos e impactos que determinada solução terá para o negócio. Assim, fica claro que a arquitetura de soluções está posicionada entre a área técnica e a área comercial, lidando diariamente com desenhos e modelagens de sistemas. </p>
+        <p>Quando pensamos em arquitetura de software, precisamos entender que se trata de uma disciplina dentro da engenharia de software. Engenharia de software envolve processos que vão desde a criação até a entrega do software. A arquitetura de software faz parte desse processo. </p>
+        <p>A arquitetura de software está diretamente ligada ao desenvolvimento do software. Diferente da arquitetura de soluções, que tem um papel mais amplo, o arquiteto de software se preocupa mais com o código, com o desenvolvimento e com a visão macro do software. Ele define como os componentes se integrarão e como a estrutura do software será organizada. </p>
+        <p>É interessante notar que a arquitetura de software pode impactar diretamente a estrutura organizacional de uma empresa. Isso acontece porque times de desenvolvimento precisam se estruturar para criar e integrar componentes de software. Em muitas situações, diferentes especialidades são necessárias para compor o software conforme sua arquitetura. </p>
+        <p>Existe um conceito famoso chamado Lei de Conway, que diz que organizações que desenvolvem sistemas de software tendem a produzir sistemas que refletem suas estruturas de comunicação. Isso significa que a forma como os times estão organizados influencia diretamente na arquitetura do software. </p>
+        <p>Por exemplo, se uma empresa possui equipes distintas para backend e frontend, provavelmente seu software será segmentado claramente entre essas áreas. Já em empresas onde há maior interação entre designers, UX, UI e desenvolvimento, o software será estruturado de forma mais integrada com essas áreas. </p>
+        <p>A arquitetura de software também envolve a relação entre os objetivos de negócio, suas restrições e os componentes a serem criados, visando sua evolução ao longo do tempo. O software precisa gerar valor continuamente, e sua arquitetura deve garantir essa longevidade. </p>
+        <p>A ISO possui uma definição clara sobre arquitetura de software, relacionando-a com os princípios que guiam seu design e evolução. Ou seja, a arquitetura de software estabelece o que está sendo desenvolvido como parte de um conjunto maior, garantindo a integração entre componentes para alcançar um resultado final coeso. </p>
+        <p>O arquiteto de software tem um papel fundamental: transformar requisitos de negócio em padrões arquiteturais. Ele define como o software será desenvolvido e quais serão seus componentes. Normalmente, orquestra desenvolvedores e especialistas de domínio, garantindo que as boas práticas sejam seguidas e que o software seja sustentável a longo prazo. </p>
+        <p>Outro ponto importante é que o arquiteto de software precisa conhecer profundamente os principais conceitos e modelos arquiteturais. Cada solução pode exigir um modelo diferente, e o arquiteto precisa saber escolher a melhor abordagem para cada situação. </p>
+        <p>Quando surgem crises técnicas – como desacordos entre desenvolvedores sobre padrões a serem usados, organização de camadas ou problemas de qualidade do software –, o arquiteto assume o papel de mediador, garantindo que o projeto siga boas práticas e mantenha sua integridade técnica. </p>
+        <p>Além disso, o arquiteto de software reforça boas práticas de desenvolvimento. Normalmente, são profissionais sêniores que adquiriram experiência ao longo dos anos e já enfrentaram muitos desafios. Utilizam esse conhecimento para orientar equipes e evitar erros comuns. </p>
+        <p>Mesmo em empresas que não possuem um cargo formal de arquiteto de software, é comum que desenvolvedores sêniores assumam essa responsabilidade de forma indireta, pois já conhecem o que funciona e o que não funciona na prática. </p>
+        <p>Em resumo, a arquitetura de software é essencial para garantir que o software seja bem estruturado, sustentável e alinhado aos objetivos do negócio. O arquiteto, seja de soluções ou de software, atua como um facilitador, garantindo que as decisões técnicas estejam alinhadas às necessidades da empresa. </p>
+ 
+      </div>
+ 
+      <div id="modulo-1-capitulo-1-sol" class="capitulo">
+        <p><strong>Capítulo 1 - Introdução à computação em nuvem </strong></p>
+        <ul>
+          <li>1.1. Introdução à computação em nuvem  </li>
+          <li>1.2. Princípios da computação em nuvem </li>
+        </ul>
+      </div>
+
+      <div id="modulo-1-capitulo-2-sol" class="capitulo">
+        <p><strong>Capítulo 2 - Visão Geral do Módulo</strong></p>
+        <ul>
+          <li>2.1. Apresentação</li>
+          <li>2.2. Apresentação do Módulo</li>
+        </ul>
+      </div>
+
+    </div>
 
   </div>
+  
 </body>
 </html>
