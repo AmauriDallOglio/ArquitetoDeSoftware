@@ -164,14 +164,17 @@
               <li>1. Dominar os fundamentos: Antes de tomar decisões complexas, é essencial entender os princípios do desenvolvimento de software: programação orientada a objetos, boas práticas de código, padrões de projeto e arquitetura em camadas. </li>
               <li>2. Entender modelos arquiteturais: Compreender como sistemas modernos suportam milhões de usuários, isso inclui: </li>
                 <ul>
-                  <li>Microserviços </li>
-                  <li>Arquitetura orientada a eventos </li>
-                  <li>Arquiteturas monolíticas </li>
-                  <li>Filas de mensagens </li>
-                  <li>Consultas em bancos de dados </li>
-                  <li>Algoritmos de balanceamento de carga </li>
-                  <li>Bancos de dados relacionais e não relacionais </li>
-                  <li>Protocolos como HTTP, REST e GraphQL </li>
+                  <li><strong>Microserviços: </strong>Arquitetura onde uma aplicação é dividida em vários serviços independentes, que se comunicam entre si geralmente via APIs. Cada serviço tem sua própria lógica de negócio e pode ser desenvolvido, implantado e escalado de forma independente. </li>
+                  <li><strong>Arquitetura orientada a eventos:</strong> Modelo onde os componentes do sistema se comunicam por meio de eventos em vez de chamadas diretas. Um serviço emite eventos quando algo acontece, e outros serviços podem reagir a esses eventos. Isso ajuda a criar sistemas desacoplados, escaláveis e assíncronos. </li>
+                  <li><strong>Arquiteturas monolíticas: </strong>Estrutura tradicional onde toda a aplicação é construída como um único bloco coeso. Embora seja mais simples de desenvolver no início, pode se tornar difícil de escalar e manter à medida que cresce. </li>
+                  <li><strong>Filas de mensagens Sistemas de mensageria: </strong> permitem comunicação assíncrona entre serviços, garantindo que mensagens sejam entregues mesmo se o sistema receptor estiver temporariamente indisponível.</li>
+                  <li><strong>Consultas em bancos de dados: </strong>  Refere-se às instruções SQL (para bancos relacionais) ou consultas específicas para bancos NoSQL, usadas para recuperar, inserir, atualizar ou excluir dados de um banco de dados. </li>
+                  <li><strong>Algoritmos de balanceamento de carga: </strong> Métodos usados para distribuir o tráfego de usuários entre vários servidores, garantindo que nenhum deles fique sobrecarregado. Exemplos incluem Round Robin, Least Connections e Hashing Consistente. </li>
+                  <li><strong>Bancos de dados relacionais (SQL):</strong> Organizam dados em tabelas com relações estruturadas e utilizam SQL para consultas (ex.: MySQL, PostgreSQL, SQL Server). </li>
+                  <li><strong>Bancos de dados não relacionais: </strong> Armazenam dados de maneira mais flexível, podendo ser em formato de documentos (MongoDB), chave-valor (Redis), colunar (Cassandra) ou grafos (Neo4j). </li>
+                  <li><strong>HTTP (Hypertext Transfer Protocol): </strong> Protocolo de comunicação usado na web para troca de dados entre clientes e servidores. </li>
+                  <li><strong>REST (Representational State Transfer): </strong>Padrão de arquitetura para APIs que utiliza requisições HTTP (GET, POST, PUT, DELETE) para comunicação entre serviços. </li>
+                  <li><strong>GraphQL: </strong>Alternativa ao REST, permitindo que clientes consultem exatamente os dados que precisam, reduzindo a sobrecarga de múltiplas requisições e retornos desnecessários.</li>
                 </ul>
               <li>3. Dominar a nuvem: Agora que você estudou as arquiteturas, o próximo passo é aprender como mantê-las operando na nuvem, prepare-se para investir tempo tirando certificações em provedores de nuvem como AWS, Azure e Google Cloud. Isso te ajudará a entender conceitos como: Escalabilidade (vertical e horizontal) / Elasticidade / Alta disponibilidade e resiliência / Provisionamento de recursos de forma otimizada. Os provedores de nuvem oferecem todos os recursos necessários para hospedar aplicações modernas de forma eficiente, e o melhor: você paga apenas pelo que utiliza. A nuvem também força o desenvolvimento de sistemas distribuídos, algo essencial para arquitetos de software nos dias de hoje. Aprender sobre AWS, Azure e Google Cloud, incluindo escalabilidade, resiliência e provisionamento otimizado.</li>
               <li>4. Criar diagramas: Aprenda a Criar Diagramas, ser arquiteto de software significa transformar ideias complexas em representações visuais claras e organizadas. Os diagramas são essenciais para comunicar a visão do sistema não apenas para desenvolvedores, mas também para gerentes, equipes de produto e outros stakeholders. Ferramentas como Diagrams.net (Draw.io), Lucidchart e PlantUML ajudam na criação desses diagramas, tornando-os uma verdadeira documentação do sistema. Pense nos diagramas como um "mapa do tesouro": sem eles, você pode até chegar ao objetivo, mas levará mais tempo e encontrará mais dificuldades pelo caminho.</li>
@@ -200,20 +203,20 @@
             <p>O arquiteto de software desempenha um papel fundamental na concepção, evolução e manutenção dos sistemas. Suas decisões têm um impacto direto na qualidade do software e na eficiência da equipe, tornando essa posição uma das mais valorizadas e bem remuneradas no mercado de tecnologia.</p>
             <p><strong>Principais componentes da arquitetura:</strong></p>
             <ul>
-              <li>Componentes do sistema;</li>
-              <li>Camadas;</li>
-              <li>Comunicação;</li>
-              <li>Tecnologias;</li>
-              <li>Práticas de desenvolvimento;</li>
+              <li><strong>Componentes do sistema: </strong> São as partes que compõem um sistema de software, como módulos, serviços, bibliotecas, bancos de dados e APIs. Eles definem as responsabilidades individuais dentro do sistema e como essas partes interagem. Exemplo: Em uma aplicação e-commerce, componentes podem incluir o serviço de pagamento, o catálogo de produtos e o sistema de recomendação. </li>
+              <li><strong>Camadas: </strong> Estruturam o sistema separando responsabilidades em diferentes níveis, melhorando a organização e a manutenção do código. Arquiteturas comuns incluem: Camada de Apresentação (Frontend): Interface do usuário, Camada de Aplicação (Backend): Regras de negócio. Camada de Persistência (Banco de Dados): Gerenciamento dos dados. Exemplo: Em um sistema MVC (Model-View-Controller), cada camada tem um papel bem definido para separar dados, lógica e exibição. </li>
+              <li><strong>Comunicação: </strong> Define como os componentes do sistema interagem entre si e com sistemas externos. Pode ocorrer de diferentes formas, como: APIs REST ou GraphQL para comunicação entre serviços. Mensageria assíncrona (RabbitMQ, Kafka) para troca de mensagens entre componentes. Protocolos de rede (HTTP, WebSockets, gRPC) para conectar diferentes partes do sistema. Exemplo: Em um sistema de pedidos, o serviço de pagamentos pode se comunicar com o serviço de faturamento via uma fila de mensagens. </li>
+              <li><strong>Tecnologias: </strong> São as ferramentas e plataformas utilizadas para construir e executar o sistema. Inclui linguagens de programação (C#, Java, JavaScript), frameworks (ASP.NET Core, Spring Boot, React), bancos de dados (SQL Server, MongoDB), infraestrutura na nuvem (AWS, Azure) e sistemas de controle de versão (Git). Exemplo: Um sistema pode usar React para frontend, ASP.NET Core para backend e SQL Server como banco de dados. </li>
+              <li><strong>Práticas de desenvolvimento: </strong> São metodologias e padrões utilizados para garantir qualidade, eficiência e segurança no desenvolvimento de software. Algumas práticas incluem: Clean Code e SOLID para código bem estruturado. CI/CD (Integração e Entrega Contínua) para automação de deploys. Testes automatizados (Unitários, Integração, End-to-End) para evitar falhas. Monitoramento e observabilidade para identificar problemas em tempo real. Exemplo: Utilizar TDD (Test-Driven Development) para garantir que todas as funcionalidades sejam testadas antes da implementação final. </li>
             </ul>
             <p><strong>Decisões arquiteturais:</strong> </p>
               <ul>
-                <li>Decisões estratégicas;</li>
-                <li>Monólito</li>
-                <li>Micro serviços</li>
-                <li>Decisões de longo prazo; </li>
-                <li>Mostram quais características estarão presentes ou ausentes na solução</li>
-                <li>Impactada pela disponibilidade de recursos;</li>
+                <li><strong>Decisões estratégicas: </strong> São escolhas de alto nível que determinam a direção geral do sistema e como ele será estruturado. Definem padrões, tecnologias e práticas que guiarão o desenvolvimento. Exemplo: Escolher entre uma arquitetura monolítica ou baseada em microserviços afeta a escalabilidade e manutenção do sistema. </li>
+                <li><strong>Monólito: </strong> Modelo onde toda a aplicação é desenvolvida e implantada como um único bloco de código. Vantagens: Simplicidade na implementação e deploy. Menor complexidade inicial. Desvantagens: Dificuldade de escalar partes específicas do sistema. Manutenção complexa à medida que o projeto cresce. Exemplo: Um sistema ERP onde todas as funcionalidades (estoque, vendas, financeiro) estão integradas no mesmo código e banco de dados.  </li>
+                <li><strong>Microserviços: </strong> Arquitetura onde o sistema é dividido em pequenos serviços independentes, cada um responsável por uma parte específica da aplicação. Vantagens: Escalabilidade granular (cada serviço pode ser escalado separadamente). Maior flexibilidade na escolha de tecnologias. Desvantagens: Aumento da complexidade operacional. Necessidade de comunicação eficiente entre serviços. Exemplo: Um e-commerce com serviços separados para autenticação, catálogo de produtos e pagamentos, cada um rodando de forma independente.                 </li>
+                <li><strong>Decisões de longo prazo: </strong> São escolhas que terão impacto duradouro no sistema, influenciando sua evolução, manutenção e custos futuros. Exemplo: Optar por um banco de dados relacional (SQL Server) em vez de um NoSQL (MongoDB) pode afetar desempenho e flexibilidade à medida que o sistema cresce.   </li>
+                <li><strong>Mostram quais características estarão presentes ou ausentes na solução: </strong>Cada decisão arquitetural define o que o sistema será capaz de fazer e suas limitações. Exemplo: Se a arquitetura escolhida não suporta alta disponibilidade, pode haver períodos de inatividade em caso de falha.  </li>
+                <li><strong>Impactada pela disponibilidade de recursos: </strong> As decisões arquiteturais são influenciadas pelos recursos disponíveis, como orçamento, equipe, infraestrutura e tempo. Exemplo: Se a empresa não tem um time especializado em Kubernetes, pode ser mais viável iniciar com um monólito do que com microserviços.  </li>
               </ul>
           </p>
           <p>A arquitetura de software é fundamental para o desenvolvimento de sistemas robustos e escaláveis, neste capítulo exploramos três níveis principais.   A arquitetura de software que foca na estrutura interna dos sistemas e na organização dos componentes, para garantir desempenho e manutenibilidade. </p>
@@ -221,7 +224,8 @@
           <p>O arquiteto de softwares deve ter uma combinação de hard skills, como design patterns e clean cold e soft skills, como comunicação e liderança. Além disso, atua como um elo de comunicação entre diferentes equipes garantindo que as soluções atendam tanto as necessidades técnicas quanto empresariais.</p>
 
           <li><strong>1.2. Princípios Gerais de uma boa Arquitetura </strong></li>
-            <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software. Nesta aula, falaremos sobre os princípios gerais aplicados para construir boas arquiteturas, garantindo sistemas e produtos de qualidade.</p>
+
+            <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software. Nesta  , falaremos sobre os princípios gerais aplicados para construir boas arquiteturas, garantindo sistemas e produtos de qualidade.</p>
             <p>Quais serão nossos tópicos? Vamos abordar alguns princípios fundamentais que devem ser utilizados. Embora essa seja uma teórica, talvez seja uma das mais importantes do curso. Esses conceitos básicos, quando bem aplicados, resultam em um produto de qualidade. Não significa que apenas isso seja suficiente, mas é o essencial.</p>
             <p>Falando sobre princípios, naturalmente, não trataremos de outra coisa senão princípios. Ao estabelecer uma arquitetura, alguns princípios gerais devem estar presentes. Por exemplo, modularizar os componentes é essencial. Quando falamos em modularização, significa que não construímos um sistema inteiro como um grande bloco, mas sim dividimos em pequenas partes que trabalham integradas. Cada módulo deve ter uma função específica. Se estamos desenvolvendo um sistema de compras online, teremos um módulo para pagamentos, outro para controle de pedidos e assim por diante. Esse conceito de "dividir para conquistar" é fundamental.</p>
             <p>Além de definir esses componentes, é essencial estabelecer as interfaces entre eles. Se um sistema possui cinco módulos, é necessário determinar claramente quais deles interagem entre si e como essa interação ocorre. Um módulo de pagamento, por exemplo, precisa se comunicar com o de pedidos, mas talvez não precise interagir diretamente com o de estoque. Essa interface deve ser bem definida, especificando métodos disponíveis, tipos de parâmetros e retornos esperados.</p>
@@ -234,52 +238,27 @@
             <p>Atrasos também devem ser considerados na priorização de entregas. Se uma nova legislação entrará em vigor no próximo ano e um módulo precisa estar em conformidade, ele deve ser priorizado para evitar problemas futuros.</p>
             <p>A ideia aqui não é decorar todos os princípios, mas compreender sua importância e aplicação. Devemos modularizar bem os sistemas, dividir componentes de forma lógica e definir interfaces claras para comunicação eficiente. O uso de princípios nos ajuda a manter o sistema escalável, flexível e de fácil manutenção.</p>
             <p>O desenvolvimento arquitetural deve sempre considerar padrões e soluções validadas, evitando a necessidade de criar tudo do zero. O uso de soluções recorrentes traz confiabilidade ao processo de desenvolvimento.</p>
-            <p>Encerramos nossa sobre princípios, que são fundamentais para garantir qualidade na arquitetura de software. Na próxima aula, falaremos sobre o conceito de trade-offs e como eles impactam as decisões arquiteturais.</p>
-            <p><strong> Princípios fundamentais </strong></p>
-            <ul>
-              <li>Modularidade:	É utilização de separação por módulos a divisão das suas responsabilidades;</li>
-              <li>Separação de preocupações;</li>
-              <li>Interfaces bem definidas: Validação da necessidade de um modulo de pagamento precisa ter comunicação com o módulo de estoque, é saber a necessidade dos processos;</li>
-              <li>Escalabilidade; </li>
-              <li>Flexibilidade e adaptação;  </li>
-              <li>Uso de padrões; </li>
-            </ul>
-            <p><strong> SOLID   </strong></p>
-            <ul>
-              <li>Responsabilidade única: Garantir que um elemento faça o algo específico, regra com método especifico da classe; </li>
-              <li>Open/Closed: Derivação das classes, quando posso criar novos métodos ou alterar; </li>
-              <li>Liskov:  </li>
-              <li>Segregação de interface: </li>
-              <li>Inversão de dependência: </li>
-            </ul>
-            <p><strong> Outros   </strong></p>
-            <ul>
-              <li>Princípio da menor surpresa; </li>
-              <li>Princípio do menos estorço (Lei de Zipf) </li>
-              <li>Princípio do custo de oportunidade; </li>
-              <li>Princípio do custo do atraso; </li>
-            </ul>
-            <p></p>
+ 
 
           <li><strong>1.3. Trade-Offs Arquiteturais</strong></li>
 
-            <p>Basicamente, temos uma definição de trade-off: o ato de equilibrar ou fazer concessões entre dois ou mais atributos de qualidade e características do sistema. Mas para entender isso na prática, pensem em uma balança: se aumentamos um lado, o outro tende a cair. Esse equilíbrio é essencial para tomar decisões que envolvem características importantes.
+            <p>O ato de equilibrar ou fazer concessões entre dois ou mais atributos de qualidade e características do sistema, para entender isso na prática, pensem em uma balança: se aumentamos um lado, o outro tende a cair. Esse equilíbrio é essencial para tomar decisões que envolvem características importantes.
             <p>Por exemplo, quero dirigir com rapidez e segurança. Quanto mais rápido eu dirijo, menos seguro fico, até certo limite. No contexto de sistemas, se quero aumentar muito o desempenho, talvez precise sacrificar um pouco de segurança. Se busco uma resposta extremamente rápida em um sistema, posso comprometer a proteção dos dados.
             <p><strong> Os trade-offs arquiteturais envolvem diversos atributos de qualidade, como:  </strong></p>
             <ul>
-              <li> Confiabilidade</li>
-              <li>Desempenho </li>
-              <li>Segurança </li>
-              <li>Estabilidade </li>
-              <li>Elasticidade </li>
-              <li>Agilidade </li>
-              <li>Escalabilidade </li>
-              <li>Disponibilidade </li>
+              <li><strong>Confiabilidade:</strong> Mede a capacidade do sistema de operar corretamente sem falhas por um período prolongado. Um sistema confiável lida bem com erros, possui mecanismos de recuperação e garante a integridade dos dados. Trade-off: Aumentar a confiabilidade pode exigir redundância e validações extras, impactando desempenho e custo. </li>
+              <li><strong>Desempenho: </strong> Representa a rapidez com que o sistema responde às solicitações, influenciado por fatores como tempo de resposta, latência e throughput. Trade-off: Melhorar o desempenho pode exigir mais recursos computacionais, o que pode reduzir a escalabilidade ou aumentar os custos. </li>
+              <li><strong>Segurança: </strong> Envolve a proteção contra acessos não autorizados, vazamento de dados e ataques cibernéticos, garantindo confidencialidade, integridade e disponibilidade da informação. Trade-off: Medidas de segurança mais rígidas (como criptografia forte ou autenticação multifator) podem aumentar a latência e reduzir a agilidade do sistema. </li>
+              <li><strong>Estabilidade: </strong> Refere-se à capacidade do sistema de manter um comportamento previsível, mesmo sob alta carga ou condições adversas. Trade-off: Melhorar a estabilidade pode exigir menos atualizações ou mudanças incrementais, reduzindo a agilidade.              </li>
+              <li><strong>Elasticidade: </strong>A capacidade do sistema de ajustar dinamicamente seus recursos conforme a demanda aumenta ou diminui. Trade-off: Implementar elasticidade pode exigir arquiteturas distribuídas e automação, aumentando a complexidade da infraestrutura. </li>
+              <li><strong>Agilidade: </strong> A facilidade com que o sistema pode ser modificado, atualizado e expandido para atender a novas necessidades. Trade-off: Sistemas mais ágeis podem sacrificar estabilidade e segurança se mudanças forem feitas rapidamente sem testes robustos. </li>
+              <li><strong>Escalabilidade: </strong>A capacidade de um sistema crescer para atender a um número maior de usuários ou operações, seja aumentando recursos (escalabilidade vertical) ou distribuindo carga (escalabilidade horizontal). Trade-off: Escalar pode exigir arquitetura distribuída e aumento de custos operacionais.  </li>
+              <li><strong>Disponibilidade: </strong> Mede o tempo que o sistema está operacional e acessível aos usuários. Sistemas altamente disponíveis evitam períodos de inatividade (downtime). Trade-off: Alta disponibilidade pode exigir redundância, balanceamento de carga e replicação de dados, aumentando a complexidade e o custo da infraestrutura. </li>
             </ul>
             <p>Além disso, fatores como habilidades da equipe também afetam decisões. Por exemplo, se minha equipe só trabalha com determinada linguagem de programação, pode ser necessário equilibrar essa escolha com outras questões de segurança e eficiência.</p>
             <p> Exemplos de Trade-Offs Arquiteturais</p>
             <p> Monolito vs. Microserviços: Se optamos por microserviços, temos um software dividido em várias partes, muitas vezes distribuídas geograficamente. Isso pode afetar o desempenho, pois a comunicação não é local, mas ocorre através da rede. Se desempenho for um fator crítico, talvez um monolito seja mais adequado.</p>
-            <p>Banco de Dados Relacional vs. NoSQ: Se escolhemos um banco de dados NoSQL, ganhamos flexibilidade para lidar com grandes volumes de dados diversos, mas sacrificamos estrutura e consistência transacional. Já um banco de dados relacional oferece maior consistência, mas pode não ser tão eficiente para consultas distribuídas e dados não estruturados.</p>
+            <p>Banco de Dados Relacional vs. NoSQL: Se escolhemos um banco de dados NoSQL, ganhamos flexibilidade para lidar com grandes volumes de dados diversos, mas sacrificamos estrutura e consistência transacional. Já um banco de dados relacional oferece maior consistência, mas pode não ser tão eficiente para consultas distribuídas e dados não estruturados.</p>
             <p> Sistema de Pagamento Online: Um cliente solicita um sistema de pagamento online, e precisamos equilibrar desempenho, segurança e interoperabilidade. Podemos armazenar dados de cartões em memória para acesso rápido, melhorando o desempenho, mas isso pode comprometer a segurança. Por outro lado, criptografar e adicionar autenticação multifator melhora a segurança, mas pode tornar o sistema mais lento.</p>
             <p>Interoperabilidade vs. Desempenho: Se um sistema precisa rodar em vários dispositivos e navegadores diferentes, podemos comprometer a eficiência. Uma solução altamente otimizada para um navegador específico pode ter melhor desempenho, mas ser menos compatível com outros ambientes.</p>
             <p>No dia a dia do arquiteto de software, as decisões envolvem balançar trade-offs para atender requisitos do cliente e restrições do projeto. Nem sempre escolheremos a solução tecnologicamente mais avançada, mas sim aquela que melhor equilibra qualidade, custo e prazo.</p>
@@ -295,7 +274,7 @@
           <li><strong>2.1. Arquitetura de Software x Soluções x Corporativa </strong></li>
             <p>Nesta seção, exploraremos três pilares essenciais da engenharia de sistemas: arquitetura de software, arquitetura de soluções e arquitetura corporativa. A arquitetura de soluções expande esse conceito ao nível da integração de múltiplos sistemas, abordando como diferentes aplicações e serviços se conectam para resolver problemas específicos de negócios. Por fim, a arquitetura corporativa fornece uma visão holística e estratégica, alinhando a tecnologia com os objetivos empresariais e garantindo que todas as solu ções tecnológicas suportem a visão e as metas de longo prazo da organização. Juntos, esses níveis de arquitetu ra formam uma base sólida para a criação de sistemas eficientes, adaptáveis e alinhados com as necessidades dinâmicas do mercado. </p>
             <p><strong>  Arquitetura de Software  </strong></p>
-            <p>A arquitetura de software se concentra na estrutura in terna e na organização dos componentes de um siste ma, garantindo que ele seja robusto, escalável e manu tenível. Esta área é a responsável pela organização da solução em um nível mais próximo do código e dos de senvolvedores. Algumas decisões e atividades que são responsabilidade deste profissional, por exemplo:</p>
+            <p>A arquitetura de software se concentra na estrutura e na organização dos componentes de um siste ma, garantindo que ele seja robusto, escalável e manu tenível. Esta área é a responsável pela organização da solução em um nível mais próximo do código e dos de senvolvedores. Algumas decisões e atividades que são responsabilidade deste profissional, por exemplo:</p>
             <ul>
               <li>Participação de revisões de código </li>
               <li>Direcionar a implantação de paradigmas de de senvolvimento (ex: TDD, BDD...) </li>
@@ -435,7 +414,7 @@
           <li><strong>3.3. Arquitetura Evolutiva</strong></li>
 
             <p>Na disciplina Fundamentos de Arquitetura de Software, agora, vamos falar sobre arquitetura de software evolutiva.</p>
-            <p>Primeiro ponto: acho que vale a pena a gente destacar um conceito muito presente na literatura, o conceito de arquitetura evolutiva. Para nós, aqui, ele será simbolicamente o mesmo conceito do que estamos chamando de arquitetura evolutiva. Podemos entender que ambas se referem a uma arquitetura que, inicialmente, é representada, mas, com o tempo, ela vai evoluindo, se adaptando. Vamos explorar alguns conceitos dessa aula, como o conceito de "big design upfront" (BDUF), especificar o que é arquitetura evolutiva e falar um pouco sobre as características inerentes à arquitetura evolutiva.</p>
+            <p>Primeiro ponto: acho que vale a pena a gente destacar um conceito muito presente na literatura, o conceito de arquitetura evolutiva. Para nós, aqui, ele será simbolicamente o mesmo conceito do que estamos chamando de arquitetura evolutiva. Podemos entender que ambas se referem a uma arquitetura que, inicialmente, é representada, mas, com o tempo, ela vai evoluindo, se adaptando. Vamos explorar alguns conceitos, como o conceito de "big design upfront" (BDUF), especificar o que é arquitetura evolutiva e falar um pouco sobre as características inerentes à arquitetura evolutiva.</p>
             <p>O que acontece é o seguinte: basicamente, temos dois tipos de arquitetura. A primeira é a arquitetura que é planejada antes do projeto, e a segunda é a arquitetura que se desenvolve ao longo de todo o processo de desenvolvimento. A arquitetura planejada no início é chamada de arquitetura intencional, enquanto a arquitetura que se desenvolve ao longo do projeto é chamada de arquitetura emergente. Quando falamos de BDUF, não estamos trabalhando com arquitetura emergente, mas sim com uma arquitetura intensamente intencional, ou seja, definindo tudo desde o início do projeto. O problema disso é que, como vimos, não conseguimos prever tudo no começo. Assim, você vai fazer um trabalho inicial pesado, com muitas decisões tomadas logo de cara, mas depois terá um alto custo de mudança ao longo do tempo para garantir que o que você entrega ao cliente esteja alinhado com o que ele espera. Esse trabalho inicial, que depois vai gerar custos de mudança, é um problema. No contexto de sistemas críticos, como por exemplo, sistemas embarcados ou de controle de voo, pode até fazer sentido definir tudo desde o início. No entanto, para produtos como um aplicativo de banco digital, que evolui ao longo do tempo, o melhor é adotar uma arquitetura evolutiva.</p>
             <p>, como garantir que uma arquitetura intencional aceite a evolução ao longo do tempo? A resposta está em construir uma arquitetura geral do sistema, que seja composta por decisões arquiteturais intencionais e emergentes. A ideia é permitir que a arquitetura evolua, mas de forma controlada. Nesse sentido, utilizamos o conceito de arquitetura evolutiva: um projeto de arquitetura de software que é flexível e acomoda mudanças de forma contínua e incremental.</p>
             <p>Quando trabalhamos com arquitetura evolutiva, devemos adotar algumas práticas, como o design incremental e modular, especificando quais módulos serão trabalhados e minimizando a comunicação entre eles. O objetivo é reduzir ao máximo o impacto da complexidade e do débito técnico, entregando o sistema de forma iterativa, em ciclos. A cada entrega, podemos refinar o código e corrigir problemas técnicos, mantendo o foco em entregas satisfatórias para o cliente, e não perfeitas de início. Isso implica que o débito técnico será algo a ser gerido ao longo do tempo, mas que também pode ser uma oportunidade de aprimorar a qualidade.</p>
@@ -464,8 +443,8 @@
           
           <li><strong>3.4. Arquitetura Emergente</strong></li>
 
-            <p>Dando sequência à nossa disciplina Fundamentos de Arquitetura de Software, abordando arquitetura de software moderna. A ênfase aqui não é só na arquitetura intencional, que vimos anteriormente, mas também na arquitetura que vamos desenvolver ao longo do processo de desenvolvimento. É sobre essa arquitetura que quero falar com vocês nesta aula: arquitetura de software emergente.</p>
-            <p>Vamos entender um pouco esse conceito de arquitetura de software emergente. Nesta aula, falaremos sobre como ela funciona, os princípios dessa arquitetura, algumas práticas, desafios e, ao final, vamos concluir a respeito desse tema.</p>
+            <p>Dando sequência à disciplina Fundamentos de Arquitetura de Software, abordando arquitetura de software moderna. A ênfase aqui não é só na arquitetura intencional, que vimos anteriormente, mas também na arquitetura que vamos desenvolver ao longo do processo de desenvolvimento, arquitetura de software emergente.</p>
+            <p>Vamos entender um pouco esse conceito de arquitetura de software emergente. Os princípios dessa arquitetura, algumas práticas, desafios e, ao final, vamos concluir a respeito desse tema.</p>
             <p>Se pegarmos a definição literária, a arquitetura emergente é a estrutura de um sistema que evolui de forma orgânica, a partir das decisões de design que são tomadas ao longo do desenvolvimento, baseadas em feedbacks e aprendizado constante.</p>
             <p>Agora, vamos conversar sobre isso. A arquitetura emergente é o oposto da arquitetura intencional, onde o arquiteto toma decisões centralizadas antes de começar o desenvolvimento. Na arquitetura emergente, as decisões são tomadas pela equipe de desenvolvimento ao longo do processo. Ou seja, ao invés de planejar tudo de uma vez, as decisões vão surgindo conforme os problemas vão sendo encontrados. Por exemplo, na arquitetura intencional, você poderia decidir usar uma linguagem como Java desde o início, mas no processo de desenvolvimento, ao identificar problemas, pode ser necessário mudar para uma biblioteca diferente. Esse tipo de decisão também faz parte da arquitetura. O arquiteto ainda participa, mas o processo é mais colaborativo, com a equipe tomando decisões conforme o desenvolvimento avança.</p>
             <p>, quais são as características dessa arquitetura que vai surgindo ao longo do caminho? Como estamos entregando software de forma interativa e incremental, o planejamento deve ser constante e evolutivo. Em vez de grandes decisões arquiteturais, buscamos soluções menores e mais simples, de forma contínua. A equipe de desenvolvimento participa ativamente da tomada dessas decisões.</p>
@@ -514,7 +493,7 @@
           
           <li><strong>4.1. Conceitos Gerais</strong></li>
 
-            <p>Dando sequência à nossa disciplina Fundamentos de Arquitetura de Software. Agora, vamos falar sobre os estilos arquiteturais. Neste capítulo, vamos abordar os estilos arquiteturais monolíticos. Na nossa primeira aula, o foco será entender o que são os estilos arquiteturais, para depois detalharmos cada um deles. Vamos começar com uma introdução ao conceito de estilos arquiteturais.</p>
+            <p>Dando sequência à nossa disciplina Fundamentos de Arquitetura de Software. Agora, vamos falar sobre os estilos arquiteturais. Vamos abordar os estilos arquiteturais monolíticos, o foco será entender o que são os estilos arquiteturais, para depois detalharmos cada um deles. Vamos começar com uma introdução ao conceito de estilos arquiteturais.</p>
             <p>Para começar, precisamos entender o que são os estilos arquiteturais, suas características e os critérios que usaremos para escolher o mais adequado. Quando falo sobre estilo, antes de pensar no conceito teórico, é importante entender a prática. Por exemplo, pensem que eu sou uma pessoa que tem um estilo de viver a vida de forma positiva. O que isso significa na prática? Normalmente, quando enfrento um problema, tento ver o lado positivo da situação, mas isso não especifica uma estratégia de atuação detalhada sobre como eu vou lidar com cada situação. Isso apenas me dá direções gerais. Da mesma forma, os estilos arquiteturais são diretrizes de alto nível, não são soluções detalhadas, mas sim abordagens gerais que orientam a arquitetura do sistema.</p>
             <p>O primeiro ponto importante é que, ao escolher um estilo, você não necessariamente usará o mesmo estilo para todo o sistema. Às vezes, é necessário combinar estilos para criar uma arquitetura específica. Embora, didaticamente, eu evite misturar estilos na nossa abordagem aqui, na prática, é comum combinar estilos conforme o sistema evolui. , um estilo arquitetural é basicamente um padrão de alto nível que define a forma como os componentes do sistema se relacionam, como eles se comunicam entre si e com o mundo externo.</p>
             <p>Ao escolher um estilo, como o monolítico ou o distribuído, é importante entender as vantagens e desvantagens de cada um. Vamos discutir essas vantagens e desvantagens ao longo do capítulo, mas antes de prosseguir, é fundamental compreender as características dos estilos arquiteturais. Todo estilo é composto por componentes e conectores que especificam como esses componentes interagem. A topologia descreve a disposição desses componentes, e a arquitetura pode ter uma hierarquia ou uma segregação de responsabilidades, com princípios que são aplicados de maneira diferente em cada estilo.</p>
@@ -522,7 +501,7 @@
             <p>Uma analogia interessante seria escolher uma mochila: você precisa avaliar qual tipo de mochila atenderá melhor às suas necessidades, dependendo de como você usará ela. Da mesma forma, na arquitetura de software, você precisa entender como o sistema será utilizado: será um sistema monolítico ou distribuído? O sistema será entregue de uma vez ou em partes, incrementalmente? Essas são decisões arquiteturais importantes que precisam ser tomadas no início.</p>
             <p>Escolher o estilo arquitetural é uma das primeiras grandes decisões que você toma, e isso não é uma escolha binária. Na prática, você pode começar com um estilo monolítico e, ao longo do tempo, ir distribuindo o sistema, conectando-o com serviços externos. A escolha do estilo arquitetural impacta diretamente a capacidade de atender aos requisitos do sistema. Por exemplo, se você precisa de alta disponibilidade, a melhor forma de alcançá-la sem gastar excessivamente é usando uma arquitetura distribuída. Embora seja possível alcançar alta disponibilidade em um sistema monolítico, isso exigirá muito mais esforço com escala vertical de recursos.</p>
             <p>Além disso, a escolha do estilo arquitetural deve levar em consideração os requisitos específicos do sistema e o contexto em que ele será usado. Por exemplo, em sistemas bancários, é comum a utilização de orientação a eventos e microserviços. Em sistemas militares, frequentemente se utiliza linguagens de alto desempenho e de cálculo matemático.</p>
-            <p>Portanto, a escolha do estilo arquitetural é uma das primeiras e mais importantes decisões que você tomará. Ela influencia diretamente a forma como o sistema será desenvolvido e mantido ao longo do tempo. Na próxima aula, vamos falar sobre a arquitetura em camadas, que é um dos estilos arquiteturais que discutiremos.</p>
+            <p>Portanto, a escolha do estilo arquitetural é uma das primeiras e mais importantes decisões que você tomará. Ela influencia diretamente a forma como o sistema será desenvolvido e mantido ao longo do tempo. </p>
             <p><strong>Estilos arquiteturais:</strong></p>
             <ul>
               <li>Design patterns de alto nível; </li>
@@ -1009,7 +988,7 @@
         <ul>
           <li>10.1. Ciclo de Vida de Software</li>
             <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software. Estamos iniciando o capítulo 10, que fala sobre a relação forte entre Engenharia e Arquitetura de Software. Vamos abordar especificamente o ciclo de vida de software, que é extremamente importante.</p>
-            <p>Só para contextualizar, qual é a importância deste capítulo? Quando falamos sobre Engenharia e Arquitetura de Software, vocês vão perceber que esses dois profissionais, em empresas menores ou em equipes pequenas, podem desempenhar funções sobrepostas. As atividades dessas duas áreas estão completamente relacionadas. Enquanto a Engenharia foca no processo, a Arquitetura se volta mais ao produto. Se você tem um bom processo, a probabilidade de entregar um bom produto é alta. Se estou desenvolvendo um produto, preciso de um processo adequado para construí-lo, e é isso que vamos explorar nessa aula.</p>
+            <p>Só para contextualizar, qual é a importância deste capítulo? Quando falamos sobre Engenharia e Arquitetura de Software, vocês vão perceber que esses dois profissionais, em empresas menores ou em equipes pequenas, podem desempenhar funções sobrepostas. As atividades dessas duas áreas estão completamente relacionadas. Enquanto a Engenharia foca no processo, a Arquitetura se volta mais ao produto. Se você tem um bom processo, a probabilidade de entregar um bom produto é alta. Se estou desenvolvendo um produto, preciso de um processo adequado para construí-lo.</p>
             <p>O conceito de ciclo de vida é importante para entender as fases que envolvem a criação de um sistema, desde a concepção da ideia até a entrega do software. Quando você consulta a literatura, verá que a definição do ciclo de vida pode variar. Alguns falam em até sete fases, mas na prática, podemos dividi-las da seguinte forma: começa-se com a definição dos requisitos, passa-se para a modelagem e design, depois vem a fase de desenvolvimento, seguida pela de testes e validação, até finalmente a entrega. O ciclo de vida inclui diversas etapas, como: levantamento de requisitos, modelagem, design, desenvolvimento, testes e entrega.</p>
             <p>Existem diferentes modelos de ciclo de vida. Alguns modelos entregam o produto completo de uma vez, enquanto outros fazem entregas incrementais ou parciais ao longo do tempo. O modelo ágil, por exemplo, envolve entregas incrementais e interativas, onde a cada ciclo o cliente valida a entrega, apontando melhorias e novas necessidades. Essa abordagem permite uma flexibilidade maior no processo de desenvolvimento e ajustes conforme o feedback do cliente.</p>
             <p>No modelo ágil, o arquiteto de software tem uma atuação diferente em comparação com modelos mais tradicionais, como o Waterfall. Em projetos Waterfall, o arquiteto atua de forma mais intencional, com decisões definidas no início, enquanto no modelo ágil, a arquitetura vai emergindo conforme o desenvolvimento avança. Isso exige que o arquiteto seja capaz de lidar com mudanças e adaptações durante o processo, sem comprometer a qualidade ou integridade do sistema.</p>
@@ -1042,7 +1021,7 @@
 
           <li>10.3. Arquiteturas Evolucionárias, Deploy e Desenvolvimento Incremental</li>
             <p>Vamos dar sequência ao nosso capítulo 10, onde reforçamos o vínculo muito forte entre Engenharia de Software e Arquitetura de Software. No módulo 10.3, vamos falar sobre uma combinação mais dinâmica que envolve a utilização de arquiteturas evolucionárias com deployments incrementais e o desenvolvimento incremental de software.</p>
-            <p>Nessa aula, vamos abordar cada um desses conceitos e entender o vínculo entre eles, além das vantagens de sua combinação. Começando pelo desenvolvimento incremental: nesse modelo, o desenvolvimento ocorre em pequenos ciclos, como se em cada ciclo eu entregasse uma parte do sistema. Vamos imaginar que o sistema é composto por quatro partes. No primeiro ciclo, desenvolvo, modelo, testo e entrego a parte A. No segundo ciclo, repito o processo, mas agora para a parte B, e assim por diante até o final do projeto. A cada ciclo, o sistema vai sendo entregue incrementando partes do todo.</p>
+            <p>Vamos abordar cada um desses conceitos e entender o vínculo entre eles, além das vantagens de sua combinação. Começando pelo desenvolvimento incremental: nesse modelo, o desenvolvimento ocorre em pequenos ciclos, como se em cada ciclo eu entregasse uma parte do sistema. Vamos imaginar que o sistema é composto por quatro partes. No primeiro ciclo, desenvolvo, modelo, testo e entrego a parte A. No segundo ciclo, repito o processo, mas agora para a parte B, e assim por diante até o final do projeto. A cada ciclo, o sistema vai sendo entregue incrementando partes do todo.</p>
             <p>O desenvolvimento incremental tem essa característica: ele divide o grande ciclo do desenvolvimento em ciclos menores, que se repetem e evoluem. Agora, se pensarmos em arquitetura, o conceito de arquitetura evolucionária se aplica diretamente aqui. Cada módulo do sistema pode ser desenvolvido separadamente, com baixo acoplamento e alta coesão, permitindo alterações locais sem impactar o sistema como um todo. Isso facilita a evolução do sistema de forma adaptativa e escalável.</p>
             <p>Quando falamos em arquitetura evolucionária e deploy incremental, podemos ver que eles se complementam. O modelo de desenvolvimento incremental, com sua abordagem de pequenas entregas ao longo do tempo, tem tudo a ver com o deploy incremental, pois permite a entrega de partes do sistema de forma contínua. Isso maximiza os resultados, tanto no produto quanto no processo de desenvolvimento.</p>
             <p>Além disso, o desenvolvimento incremental reduz os riscos, pois permite a adaptação constante às mudanças de requisitos. A cobertura de testes é bem eficaz, pois a integração é realizada ao longo do processo. A automação de testes também ajuda, garantindo maior agilidade e menos erros. O tempo de deploy é reduzido, já que cada parte do sistema é entregue gradualmente. Caso algo não funcione bem, é possível voltar para uma versão anterior sem grandes impactos no restante do sistema, oferecendo um feedback contínuo ao cliente.</p>
@@ -1064,7 +1043,7 @@
             <p>Ao longo do tempo, as formas de colaboração entre os profissionais mudaram. Antigamente, o arquiteto participava do projeto desde o início, definindo a arquitetura. Hoje, os engenheiros muitas vezes trabalham juntos com o arquiteto desde o começo do projeto, discutindo a melhor forma de implementar a arquitetura, levando em conta as necessidades do time e as ferramentas disponíveis.</p>
             <p>Ferramentas de integração contínua, automação de testes e provisionamento de infraestrutura como código são essenciais para que a equipe consiga implementar uma arquitetura incremental de forma eficiente. Ferramentas modernas, como o DevOps, desempenham um papel importante nesse contexto, proporcionando uma infraestrutura ágil e adaptável.</p>
             <p>Em resumo, a colaboração eficaz entre os profissionais de Arquitetura e Engenharia de Software é essencial para criar ambientes de desenvolvimento que produzam produtos de alta qualidade, flexíveis e adaptáveis às mudanças.</p>
-            <p>Com isso, finalizamos este capítulo. No próximo, vamos falar sobre como entender as necessidades de negócio e como isso se relaciona com a arquitetura e engenharia de software. Acompanhem a próxima aula, pois discutiremos como o novo contexto de desenvolvimento exige uma atuação profissional de arquitetura diferente, com novas abordagens tecnológicas.</p>
+            <p>Com isso, finalizamos este capítulo. No próximo, vamos falar sobre como entender as necessidades de negócio e como isso se relaciona com a arquitetura e engenharia de software.</p>
         </ul>
       </div>
       
@@ -1081,7 +1060,7 @@
             <p>DevOps, na verdade, é uma mudança cultural que envolve automatização, processos enxutos e uma melhoria contínua. Não é apenas uma ferramenta ou técnica; é uma filosofia que deve ser aplicada na cultura da empresa. Quando aplicada corretamente, o DevOps transforma a forma como as equipes trabalham, garantindo entregas mais rápidas e eficientes.</p>
             <p>Porém, como qualquer mudança cultural, a adoção do DevOps pode enfrentar resistência, principalmente porque envolve alterar processos profundamente enraizados na organização. Isso pode ser difícil, principalmente em empresas com muitas equipes e processos estabelecidos. A visibilidade do fluxo de trabalho e a integração entre as equipes são essenciais para que os benefícios sejam visíveis no contexto global da empresa. Não adianta ter um processo que é bom em uma parte, mas falha nas outras. A ideia é que todos os processos estejam alinhados e otimizados para gerar um benefício geral.</p>
             <p>Outro ponto importante é que, por envolver muita automação, o DevOps exige profissionais com conhecimentos técnicos atualizados, já que as tecnologias usadas estão sempre em evolução. Isso exige que as equipes tenham um perfil de atualização contínua.</p>
-            <p>Concluindo, o DevOps não é apenas uma técnica ou uma ferramenta, mas sim uma mudança cultural significativa que envolve toda a organização. A colaboração contínua entre desenvolvimento e operações é fundamental, e a entrega contínua de valor é o objetivo. Na próxima aula, vamos aprofundar um pouco mais nos pilares do DevOps e continuar com esse entendimento sobre essa cultura e as suas aplicações práticas.</p>
+            <p>Concluindo, o DevOps não é apenas uma técnica ou uma ferramenta, mas sim uma mudança cultural significativa que envolve toda a organização. A colaboração contínua entre desenvolvimento e operações é fundamental, e a entrega contínua de valor é o objetivo.</p>
             <p>Devops é uma abordagem que integra práticas de desenvolvimento de software (Dev) e operações (Ops) para melhorar a colaboração, aumentar a eficiência e acelerar a entrega de software;</p>
             <p><strong>  Princípio fundamentais:  </strong></p>
             <ul>
@@ -1107,7 +1086,7 @@
               <li>Medição </li>
               <li>Sharing (compartilhamento)</li>
             </ul>
-
+            <br>
           <li><strong>11.2. Pilares DevOps</strong></li>
 
             <p>Vamos dar sequência à nossa disciplina de Fundamentos de Arquitetura de Software, falando um pouquinho sobre DevOps. Nesse capítulo, vamos abordar os pilares principais desse conteúdo, que é um assunto extremamente importante. A de hoje vai passar um pouco sobre esses pilares, com a intenção de entender melhor o processo, a ferramenta e a importância desse tema. Vamos também falar de alguns exemplos para ilustrar melhor.</p>
@@ -1290,7 +1269,7 @@
           <p> Conclusão: A modernização de sistemas legados exige um planejamento estratégico, considerando custos, riscos e impactos para o negócio. Escolher entre evolução gradual ou reestruturação completa depende da complexidade do sistema, tempo disponível e recursos da empresa. </p>
           
           
-          <li>1.6. Responsabilidades de Times</li>
+          <li><strong>1.6. Responsabilidades de Times </strong></li>
           <p> A organização dos times dentro de uma empresa varia conforme o porte da empresa e a quantidade de colaboradores disponíveis.</p>
           <p> Empresas de grande porte possuem equipes especializadas, com divisão clara de responsabilidades, processos bem definidos e maior burocracia, exigindo metodologias ágeis para alinhamento e colaboração eficiente.</p>
           <p> Empresas menores contam com equipes multifuncionais, onde os profissionais assumem diversas responsabilidades. Esse modelo proporciona maior flexibilidade e agilidade, mas exige um alto grau de maturidade e capacitação para evitar sobrecarga.</p>
@@ -1391,7 +1370,7 @@
 
 
 
-          <li>2.4. Desafios da Elicitação de Requisitos</li>
+          <li><strong>  2.4. Desafios da Elicitação de Requisitos </strong></li>
           <p>A elicitação de requisitos é um processo fundamental para o desenvolvimento de um sistema, pois define o que precisa ser construído e quais são as necessidades reais dos usuários e da empresa. No entanto, esse processo apresenta diversos desafios que podem comprometer o sucesso do projeto se não forem bem gerenciados.</p>
           <p><strong> Critérios de Sucesso do Projeto  </strong></p>
           <p>O sucesso de um projeto depende de três fatores principais:</p>
@@ -1654,7 +1633,7 @@
       <div id="modulo-3-capitulo-1" class="capitulo">
         <p><strong>Capítulo 1 – Arquitetura de Software e Qualidade de Código</strong></p>
         <ul>
-          <li>1.1. Introdução</li>
+          <li><strong> 1.1. Introdução </strong> </li>
           <p>Qualidade de software, boas práticas de engenharia de software, principio desenvolvimento e projeto de software e técnicas e ferramentas para melhoria da qualidade. Catálogo de padrões de projeto, padrões para aplicações corporativas. Estilos e padrões arquiteturais, reconhecimento de características chaves de sistema, padrões arquiteturais e arquiteturas concentradas em domínios.</p>
           <p>A arquitetura de software, conceitos e propriedades fundamentais de um sistema considerando seu ambiente, seus elementos, seus relacionamentos e seus princípios de projeto e evolução. Como arquiteto de se preocupar com as características do sistema no vai ser construído, considerando as três partes muito importante que compõe a arquitetura de um sistema, a primeira delas define quais são as partes ou as estruturas, depois o papel dessas partes e também o relacionamento entre essas partes, e ao ambiente ao qual o software vai ser inserido</p>
           <p>As responsabilidades do arquiteto de softwares, vão muito além das decisões de alto nível do projeto. É muito importante que o arquiteto, apoie a equipe na empresa das melhores práticas de programação, zele pela qualidade e padronização do código fonte.</p>
@@ -1721,7 +1700,7 @@
           <p>Essas categorias de Code Smells são sinais de que o código pode ser melhorado. Identificar e corrigir essas falhas pode levar a um código mais modular, flexível e fácil de manter. Ao seguir as boas práticas de design, como aplicar os princípios SOLID e refatorar o código regularmente, esses code smells podem ser minimizados, resultando em um software de maior qualidade e longevidade.</p>
           
           <ul>
-            <li>1.2.1. Code Smells – Bloaters</li>
+            <li><strong> 1.2.1. Code Smells – Bloaters </strong></li>
             <p>Os code smells do tipo bloaters referem-se a problemas causados pelo crescimento desordenado da estrutura do código, como métodos e classes, o que compromete a manipulação e manutenção do código. Esses problemas geralmente surgem ao longo do tempo, especialmente quando débitos técnicos não são sanados. Os principais exemplos dessa categoria incluem:</p>
             <ul>
               <li> <strong> Long method:  </strong>Métodos com muitas linhas de código.      </li>
@@ -1731,7 +1710,7 @@
               <li> <strong> Data clumps:  </strong> Agrupamento repetido de variáveis ou atributos em diferentes partes do código.      </li>
             </ul>
             <p>Esses code smells estão relacionados ao crescimento descontrolado do código e tendem a surgir à medida que o sistema evolui, frequentemente como resultado de falta de boas práticas de desenvolvimento ou conhecimento inadequado sobre o software.</p>
-            <li>1.2.2. Code Smells – Couplers</li>
+            <li><strong>1.2.2. Code Smells – Couplers </strong></li>
             <p>As causas dos code smells desta categoria são: Acoplamento excessivo entre classes e uso excessivo de delegação;</p>
             <ul>
               <li> <strong> Feature envy:  </strong> um método acessa mais dados de outro objeto do que seus próprios dados.     </li>
@@ -1742,7 +1721,7 @@
             <p>Conclusão, os code smells do tipo couplers estão relacionados a violação dos princípios de coesão e acoplamento da O.O. Eles podem acontecer tanto por uso acessivo do acoplamento, quanto por excesso de delegação das responsabilidades para outras classes.</p>
           
           </ul>
-          <li>1.3. Análise Estática de Código</li>
+          <li><strong> 1.3. Análise Estática de Código </strong></li>
           <p>Avaliação do código, durante a análise, é possível aplicar diferentes regras para identificar, por exemplo: </p>
           <ul>
             <li>Presença de erros comuns de programação; </li>
@@ -1767,7 +1746,7 @@
       <div id="modulo-3-capitulo-2" class="capitulo">
         <p><strong>Capítulo 2 – Catálogos de Padrões</strong></p>
         <ul>
-          <li>2.1. Introdução aos Catálogos de Padrões</li>
+          <li><strong> 2.1. Introdução aos Catálogos de Padrões </strong></li>
           <p>Arquitetura é uma das principais disciplinas da Engenharia de Software. Os produtos resultantes de seus processos contribuem de forma substancial para a garantia dos atributos de qualidade de um software. Além disso, a arquitetura envolve definições das partes elementares de um sistema e, portanto, espera se que todas sejam fundamentadas em práticas de engenharia. </p> 
           <p>Um arquiteto deve ser capaz de identificar características relevantes dos principais problemas que ocorrem durante o ciclo de vida de um software e propor soluções efetivas. Para auxiliar esse processo existem diversas propostas de padrões. Christopher Alexander define padrões como uma entidade que descreve um problema que ocorre repetidas vezes em um ambiente e apresenta uma essência de solução para esse problema, de tal forma que a solução possa ser replicada milhões de vezes sem nunca produzir resultados idênticos. Padrões são utilizados como templates para solucionar problemas recorrentes que se manifestam ao longo do ciclo de vida de um software. Por se tratarem de propostas amplamente testadas e bem documentadas, os padrões contribuem para garantir a qualidade do produto. Além disso, os padrões colaboram para a redução dos riscos dos projetos e para o estabelecimento de um vocabulário comum entre os profissionais, sejam desenvolvedores, testers, arquitetos, etc. Padrões na Arquitetura de Software têm sido estudados por décadas. Dado o grande número de propostas, eles são frequentemente organizados e divulgados em catálogos. Os catálogos concentram padrões com algum uso em comum, seja pelo tipo de problema ao qual se propõem a resolver ou por características das aplicações ao qual podem ser aplicados. </p>
           <p><strong> A documentação dos padrões frequentemente possui os seguintes elementos:    </strong></p>
@@ -1789,7 +1768,7 @@
             <li> DDD Patterns: discute padrões relevantes para equipes que utilizam a metodologia Domain Dri ven Design. Os detalhes de alguns padrões de DDD podem ser consultados no livro Patterns, Principles, and Practices of Domain-Driven Design de Scott Millett e Nick Tune. </li>
             <li> SOA Patterns: o livro Patterns: Service-Oriented Architecture and Web Services de Endrei et al. apresenta um catálogo com diversos padrões para solução de problemas frequentes na implementação de arquiteturas orientadas a serviços (SOA). Os padrões envolvem questões de projeto de arquitetura SOA, implementação de barramento de comunicação, descoberta de serviços, dentre outros. </li>
           </ul>
-          <li>2.2. Patterns of Enterprise Application Architecture</li>
+          <li><strong>  2.2. Patterns of Enterprise Application Architecture </strong></li>
           <p>Padrões de Acesso a Dados e Sistemas Distribuídos - Martin Fowler</p>
           <p><strong>  Padrões de Acesso a Dados:  </strong></p>
           <p>Na arquitetura de software, requisitos como persistência de dados têm impacto significativo na qualidade do sistema. Martin Fowler, em seu livro Patterns of Enterprise Application Architecture, descreve vários padrões de acesso a dados que podem ser utilizados para resolver problemas comuns encontrados em diferentes fontes de armazenamento de dados, como bancos de dados relacionais, NoSQL, arquivos, entre outros.</p>
@@ -1829,13 +1808,13 @@
           <li><strong>3.3. Factory Method </strong></li>
           <P>O padrão de criação é alguns conceitos de muitos sistemas possuem diferentes variações E além disso algumas etapas de criação da inicialização desses conceitos são comuns então nós temos uma árvore de heranças com diferentes níveis a criação aqui é a criação desses diferentes produtos conceitos dessa árvore de herança e dentro delas nós temos etapas comuns de criação de todos os tipos de produtos porém dentro do processo de criação ainda existem algumas etapas que são específicas de acordo com o produto que está sendo criado padrão nessa estrutura ele permite representar esse tipo de problema criando uma solução para ele e qualquer proposta imagine nós temos a necessidade de criar uma fábrica de sorvetes então quando uma classe do nosso sistema tem um papel de consumidor de clientes precisa produzir um sorvete dentro do padrão a inicialização do sorvete para uma fábrica porém o consumidor não vai chegar para fábrica de cria um sorvete de morango ou cria um sorvete de chocolate ou cria um sorvete de baunilha o cliente ele vai acionar a fábrica informar o tipo do sorvete que ele deseja e a fábrica tem um papel de construir o objeto real porém algumas etapas são comuns a todos os tipos de produtos nós temos um produto com diferentes tipos ou seja existem variações a materialização desses produtos Como obter o copinho ou a casquinha e decorar ele com a casinha Em contrapartida o sorvete sim produzido ele é específico de cada tipo de produto Então essa alergia ilustra a proposta do padrão a fábrica ela vai permitir que sejam criados diferentes tipos de produtos nós somos reutilizar as etapas comuns no caso porém conseguindo cumprir as etapas específicas de pegar um sorvete de morango ou chocolate. </P>
           <p>Ele viabiliza a construção de diferentes tipos de objetos em uma estrutura de herança onde cada classe filha pode determinar o comportamento de algumas etapas do processo de inicialização.</p>
-          <li>3.4. Abstract Factory</li>
+          <li><strong> 3.4. Abstract Factory </strong></li>
           <p>o padrão de criação abstratica alguns software são classificados como linhas do produtos de software que que significa isso eles demandam combinações diferentes de tipos de produtos e cada contexto de execução pode dominar uma combinação diferente as linhas de produtos de software são aqueles sistemas onde nós temos diferentes requisitos muitas vezes não funcionais como uma certa bancada um mecanismo de autenticação login e para cada um desses requisitos nós temos diferentes implementações eu posso ter o mecanismo de persistência como implementação posso ter um log com diferentes bibliotecas de lá alguém passa ter autenticação com diferentes algoritmos de autenticação e um software que é uma língua de produto eu posso na hora empacotar ele com persistência e autenticação com isso por exemplo e esse mesmo software por um outro contexto eu posso empacotar ele ou executá-lo com persistência no ciclo o log semi-log e autenticação e além do texto essas variações nós precisamos ter na linha de produtos software essa capacidade de combinar todos os tipos de produtos gerando a expectativa do cliente com mais em cada contexto Então esse padrão ele é diferente muitas vezes as pessoas acaba confundindo mas o papel dele é atuar em linha de produtos uma vez nós temos essa necessidade ele pode viabilizar a criação dessas famílias de produtos relacionados de forma que não há necessidades concretas dos objetos ou seja quando eu preciso de um determinado tipo de produto para usá-lo eu vou me basear em Abstrações desse produto sem me preocupar que na hora de execução eu vou ter uma persistência transparente os meus objetos consumidores. Compatibilidade entre objetos criados para cada Factor e ele remove o acoplamento entre os objetos Concretos e os seus consumidores uma vez que ele se baseiam em Abstrações Em contrapartida ele apresenta um nível maior de complexidade porém considerando que nós temos a demanda a necessidade de uma linha de produtos de software é a sua complexidade adicional pode se fazer valer. O padrão abstract Factor flexibiliza a criação de família de objetos garante a compatibilidade entre objeto criados e remove o acoplamento entre cliente e o produto concreto.</p>
         </ul>
       </div>
 
       <div id="modulo-3-capitulo-4" class="capitulo">
-        <p><strong>Capítulo 4 – GoF – Padrões Estruturais</strong></p>
+        <p><strong>Capítulo 4 - GoF (Padrões Estruturais)</strong></p>
         <ul>
           <li><strong>4.1. Adapter</strong></li>
           <p>A definição de um padrões estruturais do catálogo falando do padrão a tendência que nós temos atualmente é reutilizar cada vez mais aplicação delegadas componentes e outras estruturas que se sentem porém muitas vezes nós nos deparamos com situações onde uma classe legada do sistema que já existe já é utilizada por diferentes pontos do sistema e por algum motivo não pode ser evoluída porque não é Nossa ou porque usa uma tecnologia mais antiga ou porque ainda nós não temos tempo hábil para poder fatorar essa classe e nós precisamos criar um novo código do cliente e vai utilizar porém o código do cliente ele espera um contrato que é distinta do que legal parece o problema é rápido</p>
@@ -1847,7 +1826,7 @@
           <p>Às vezes o Mero o fato de eu conseguir reutilizar confiança com a delegação ou qualquer outro recurso da orientação do projeto resolvem esse problema de duplicidade porém eu posso encontrar limitações onde essas classes não possuem uma representação comum e como nós já sabemos não é interessante eu ter essa regra tem implementada em diferentes pontos principalmente sendo classes do sistema com conhecimento ele fazia de outra classe que pode nem ser do nosso sistema e amanhã eu troco essa classe Porque troquei o fornecedor por exemplo eu vou ter inúmeros pontos do sistema sendo alterados Esses são exemplos de problemas onde o padrão com ele nós vamos criar uma interface de comunicação com essa classe complexa as classes consumidores do nosso sistema sempre que precisarem acessar a classe complexa bom se basear na fachada e a fachada ela vai simplificar o uso da numerações necessárias para cumprir uma única responsabilidade Então ela absorve para ela a necessidade de conhecer essa classe complexa E além disso ela simplifica esse acesso gerando uma representação interna do sistema Ou seja eu consigo representar o negócio com base na Ótica do nosso sistema e não com base na Ótica de fornecedor com essa classe eu preciso apenas escrever a fachada se outra classe do sistema passa a necessidade daquela operação eram três chamadas de métodos todas elas Agora acessar a facada vamos dizer uma demonstração prática de como esse padrão pode ser implementado e as características particularidades. Como nós vimos o padrão permite isolar sistemas de artefatos de terceiros e artefatos complexos ele permite simplificar o uso de objetos complexos ou com problemas de desenho.</p>
           <li><strong>4.3. Flyweight</strong></li>
           <p>o padrão Flyweight não tem execução de sistema uma classe pode dar origem a diversos objetos porém em alguns casos parte do estado ou seja os atributos desses objetos pode ser igual pode ser compartilhada pelas várias instâncias que existem naquele objeto se esses dados não forem compartilhados entre essas instâncias vai haver um consumo desnecessário de memória que pode comprometer a performance do sistema Então esse padrão tem como objetivo atacar o consumo excessivo de memória ele é duplicação de estados de atributos de objetos que tem valores em comuns são iguais porém muitas vezes acabamos gerando referências de memórias duplicadas para guardar o mesmo dado Otimizar o uso de memória por meio do compartilhamento desses estados comuns entre as diferenças distâncias de objetos de uma classe vamos ver como esse padrão pode ser implementado tem como ideia Central reduzir o consumo de memória eliminando a duplicidade de estados de objetos que são comuns as diferentes instâncias que existem durante a execução do sistema a proposta de solução desse padrão contempla a criação de um contexto uma Factor e os n objetos que vão existir que são representados como esses objetos. Essa é a essência na solução do padrão como nós vemos padrão Flyweight torna possível reduzir consideravelmente o consumo de memória quando existe uma quantidade grande de objetos similares que são compartilhados entre diferentes classes de um sistema.</p>
-          <li>4.4. Composite</li>
+          <li><strong>4.4. Composite </strong></li>
           <p>O padrão serviços e manipulados como uma composição, ou seja, como um todo e uma vez que nós desempenhamos uma ação sobre esse objeto sobre isso conceito todas as partes que formam esse elemento único podem sofrer a relação </p>
           <p>O padrão comparsa ele propõe por árvores de objetos de formas complexas com quantos níveis forem necessários E além disso nós vamos ter a possibilidade de consumir essa estrutura como um único objeto e durante o uso todas as objetos dessa estrutura podem ser acessados individualmente e quando eu desempenhar uma ação com aquele objeto que representa a estrutura todas as partes vão ser acionadas e podem Executar a sua responsabilidade dentro da estrutura. Permite manipular composições complexas e objetos como unidade ele utiliza o conceito polimorfismo para permitir objetos de tipos concretos distintos sejam utilizados e o uso da recursividade viabiliza estruturas de diferentes topologias sendo processadas sendo utilizadas como uma unidade.</p>
           <li><strong>4.5. Decorator</strong></li>
@@ -1857,19 +1836,19 @@
       </div>
 
       <div id="modulo-3-capitulo-5" class="capitulo">
-        <p><strong>Capítulo 5 – GoF – Padrões Comportamentais</strong></p>
+        <p><strong>Capítulo 5 – GoF (Padrões Comportamentais) </strong></p>
         <ul>
-          <li>5.1. Command</li>
+          <li><strong>5.1. Command </strong></li>
           <p> O padrão Command na teoria da orientação do projeto é definido que as classes representam os conceitos do domínio do problema todas as entidades todos os agentes que estão envolvidos na simulação Viva do problema são candidatos a se tornarem classes dentro do sistema e as ações desempenhadas por esses agentes por essas entidades devem ser encapsuladas e implementadas em métodos dessas classes porém alguns cenários nós precisamos representar ações que vão ser desempenhadas num sistema ou seja os Command que são executados Porém Aqui essas ações elas não são métodos elas são as classes do sistema e o padrão Calma que propõe encapsular as informações necessárias para a execução de um objeto ou seja tratar todas as informações necessárias encapsuladas em um objeto aquelas ações sejam executadas não somente executá-las mas também criar uma interface comum de execução para essas ações na demonstração dessa nós vamos ver como nós podemos representar ações nos sistemas encapsulas dentro de uma classe e permitir com que em determinado agente do sistema Execute diferentes ações uma vez que nós vamos ter essa representação padrão para requisições de Command.</p>
           <p> Flexibilizar a execução de ações nos sistemas por diferentes mecanismos ele permite a implementação de mecanismos de fazer e desfazer e agrega muitas funcionalidades interessantes quando nós precisamos criar um consumidor que tem o papel de disparar ações dentro do sistema além de permitir reusar essas ações para serem executadas em diferentes canais. </p>
-          <li>5.2. Template Method</li>
+          <li><strong> 5.2. Template Method</strong></li>
           <p> O padrão Template Method algumas vezes nós nos deparamos com situações onde uma funcionalidade precisa ser implementada mas existem variações desse comportamento a classe que implementa essa funcionalidade pode não ser capaz de determinar como implementar todas as etapas desse algoritmo porém algumas das etapas ela consegue definir e implementar e as outras ela sabe apenas que elas existem o padrão não tem método ele vive a criar uma estrutura por um esqueleto dessa funcionalidade Ou seja a classe o pai a classe que concentra o ponto de acesso a essa funcionalidade vai determinar todos os passos daquela funcionalidade as etapas que ele consegue implementar ele já vai implementadas e aquelas que ele não é capaz de implementar ele vai delegar para as classes filhas com isso a diferentes variações que são as classes filhas vão poder definir como aquelas etapas de um pai não foi capaz de implementar devem ser construídas e como o esqueleto da funcionalidade foi definido na classe ai todas as variações automaticamente vão herdar as implementações que já foram definidas na classe esse padrão se assemelha muito a oferta e método mas aqui o foco é o comportamento e para nós vermos a diferença entre um e outro e as particularidades.</p>
           <p> Nós vimos que o padrão permite reduzir a implementação de algoritmos extensos reduz a possibilidade de duplicação de código e simplifica a manutenção e a evolução de Especialidades de variações presentes no algoritmo uma vez que nós conseguimos concentrar as regras comuns nas classes pais e delegar para as filhas as etapas que são de suas responsabilidades </p>
-          <li>5.3. State</li>
+          <li><strong>5.3 State </strong></li>
           <p>Ele atua em cenários onde nós temos uma classe com diferentes comportamentos porém a implementação desses comportamentos depende diretamente do estado dos atributos da classe um grande exemplo de implementação desse padrão é quando nós temos algum jogo eletrônico como por exemplo Mário se nós representarmos o personagem em uma classe ele vai ter um estado que determina Qual a situação do personagem no jogo tem diversas ações podem ser desempenhadas na medida que o usuário interage é um jogo estou com meu personagem sendo a fase inicial do Mário.</p>
           <p>Ele vai pular como intensidade ele pode correr como uma determinada intensidade um botão que é o personagem pode não fazer nada porém se eu pego uma flor de Fogo o meu personagem vai se transformar eu vou mudar o estado do personagem não faz mais por exemplo aqui eu continuo tendo personagem Mário porém dependendo do como eu for implementar esse personagem eu vou ter que fazer dentro do método correr dentro do método saltar ações que correspondem a situação do pai Mário Além disso se eu era o Mário as mesmas ações mudam de acordo com o estado do personagem nesse momento só pega uma pena das ações mudam de novo se todas essas situações por representadas todos os métodos de ações do personagem vão ter uma série de uma série de uma séries quando ele ficar qual é a situação do personagem ele Visa atuar sobre esse tipo de situação ele vai permitir que o objeto Mude o seu comportamento e cada estado vai ter uma classe separada com a implementação das ações que refletem aquele Estado então eu tiro da classe a implementação das ações e gera uma classe com os métodos com as responsabilidades para cada situação do objeto e as transições de estados vão fazer com que vem na classe por exemplo e coloca dentro do estado dele a classe que desempenha essas ações de acordo com a situação do personagem. </p>
           <p>Contribui para reduzir a complexidade de implementação de objeto com múltiplos estados ele permite criar representações que encapsulam a situação atual de um determinado objeto com ele é possível melhorar a responsabilidade única das classes remover estruturas indesejadas de Infiel e substituir isso por exemplo.</p>
-          <li>5.4. Strategy</li>
+          <li><strong> 5.4. Strategy </strong></li>
           <p>Sobre um Strategy a manutenção de um software pode se tornar uma grande dor de cabeça quando existem códigos que possuem muitas ramificações os famosos e emaranhados de fiel e suíte Case essas estruturas se tornam suscetíveis à evolução e constantes que acabam gerando novas ramificações problemas indesejados e muitas vezes nós não somos capazes de identificar e entender o que aquela estrutura realmente faz por meio do padrão estratos nós encapsulamos cada uma dessas derivações do algoritmo alvo em classes específicas essa ideia é muito parecida com que nós estudamos o padrão state mas lá nós separamos as ações com base no estado do objeto aqui nós vamos pegar um determinado algoritmo independente deles Independente de um estado ou não mas ele é uma ramificação de um algoritmo maior e encapsular em uma classe A classe principal que antes da implementação de padrão tem todas as ramificações passa armazenar uma referência para a estratégia ou seja por objeto que tem aquela ramificação.</p>
           <p>Tem como ponto positivo o fato de tornar possível alternar a forma de execução de um determinado algorífico em tempo de execução ele permite contornar algumas limitações do uso de herança usando por exemplo composição e contribui para que nós não tenhamos uma quantidade grande de fiel Sweet Case tempo de nosso sistema Em contrapartida aí eficácia de implementação desse padrão depende do índice de ocorrências das variações quanto maior a quantidade de variações mais fácil fundamentar a adoção desse padrão o consumidor principal passa a ser responsável por definir essa estratégia Então quem vai usar o objeto principal que contém a estratégia acaba sendo responsável por materializar a estratégia que ele quer utilizar mudando a ótica de dependências dentro da situação do sistema e em algumas linguagens ele pode Hoje ser substituído por recursos nativos da própria linguagem então é muito importante que vocês conhecerem a ferramenta que você usam porque pode ser que você já tem um recurso nativos, por meio do padrão é possível isolar implementações de algoritmo e alternar o seu uso mantendo a coesão de cada implementação  </p>
         </ul>
@@ -1883,20 +1862,20 @@
         <p><strong>Primeira Aula Interativa - Capítulo 6 – Princípios SOLID</strong></p>
         <p>Os princípios SOLID são diretrizes fundamentais para o design de software orientado a objetos, promovendo código mais modular, flexível e fácil de manter. Eles foram definidos por Robert C. Martin (Uncle Bob) e são amplamente utilizados no desenvolvimento de sistemas.        </p>
         <ul>
-          <li>6.1. Simple Responsibility Principle: Single Responsibility Principle (SRP) – Cada classe ou módulo deve ter uma única responsabilidade, ou seja, deve existir apenas uma razão para modificar a classe. Isso melhora a coesão e facilita a manutenção do código.          </li>
-          <li>6.2. Open Closed Principle: O código deve ser aberto para extensão, mas fechado para modificação. Isso significa que novas funcionalidades devem ser adicionadas sem alterar o código existente, geralmente utilizando abstração e herança.</li>
-          <li>6.3. Liskov Substitution Principle: Objetos de uma classe derivada devem poder substituir objetos da classe base sem alterar o comportamento do sistema. Esse princípio garante a correta utilização da herança e evita dependências frágeis.</li>
-          <li>6.4. Interface Segregation Principle:  Interfaces devem ser específicas para cada contexto, evitando interfaces muito grandes e genéricas. Isso impede que classes sejam forçadas a implementar métodos desnecessários, tornando o sistema mais modular.</li>
-          <li>6.5. Dependency Inversion Principle: Módulos de alto nível não devem depender de módulos de baixo nível, ambos devem depender de abstrações. Isso reduz o acoplamento e melhora a flexibilidade do sistema ao utilizar injeção de dependência.</li>
+          <li><strong>6.1. Simple Responsibility Principle: </strong> Cada classe ou módulo deve ter uma única responsabilidade, ou seja, deve existir apenas uma razão para modificar a classe. Isso melhora a coesão e facilita a manutenção do código.          </li>
+          <li><strong>6.2. Open Closed Principle: </strong>  O código deve ser aberto para extensão, mas fechado para modificação. Isso significa que novas funcionalidades devem ser adicionadas sem alterar o código existente, geralmente utilizando abstração e herança.</li>
+          <li><strong>6.3. Liskov Substitution Principle: </strong> Objetos de uma classe derivada devem poder substituir objetos da classe base sem alterar o comportamento do sistema. Esse princípio garante a correta utilização da herança e evita dependências frágeis.</li>
+          <li><strong>6.4. Interface Segregation Principle: </strong>  Interfaces devem ser específicas para cada contexto, evitando interfaces muito grandes e genéricas. Isso impede que classes sejam forçadas a implementar métodos desnecessários, tornando o sistema mais modular.</li>
+          <li><strong>6.5. Dependency Inversion Principle: </strong>  Módulos de alto nível não devem depender de módulos de baixo nível, ambos devem depender de abstrações. Isso reduz o acoplamento e melhora a flexibilidade do sistema ao utilizar injeção de dependência.</li>
         </ul>
       </div>
 
       <div id="modulo-3-capitulo-8" class="capitulo">
         <p><strong>Capítulo 7 – Estilos Arquiteturais</strong></p>
         <ul>
-          <li>7.1. Estilos Arquiteturais</li>
+          <li><strong> 7.1. Estilos Arquiteturais </strong></li>
           <p>A concepção da arquitetura de um software é uma equação complexa que envolve inúmeras variáveis, oriundas, principalmente, dos requisitos esperados para o sistema. Esse processo demanda a análise e ponderação dos trade offs de cada possível abordagem candidata e o arquiteto deve ser capaz de avaliá–las em um alto nível de abstração, uma vez que o sistema ou componente está em fase preliminar de concepção. Se o arquiteto tiver em mãos diretrizes que permitem organizar as abordagens candidatas de forma a reconhecer suas características e permitir determinar se o sistema alvo é semelhante a outros no qual cada abordagem já foi aplicada ele será capaz de avaliar os benefícios e os pontos negativos e, assim, fundamentar suas decisões. Porém, as soluções precisam ser abstratas o suficiente de forma a viabilizar a comparação independente de tecnologias e ramo de atuação de negócio. Tudo isso torna fundamental o conhecimento dos estilos arquiteturais. Estilos arquiteturais descrevem soluções para resolução de problemas na arquitetura de software, porém, atuam em alto nível, permitindo caracterizar uma família de sistemas do ponto de vista da sua organização estrutural. Isso significa que eles produzem uma terminologia que caracteriza componentes de software com base no aspecto identificável da sua organização, sempre a partir de uma visão do nível mais alto de abstração e independente de tecnologia. O estilo arquitetural de um software permite descrever como as camadas, os componentes e os módulos irão se comunicar, identificando e isolando suas responsabilidades. Não existe um estilo arquitetural universal capaz de resolver todos os problemas, uma vez que cada tipo de sistema possui uma característica marcante. Por isso, cada estilo arquitetural é capaz de resolver uma classe de problemas. Existem sistemas que demandam requisitos elevados de segurança, enquanto outros podem ter como característica fundamental o desempenho, a replicação global de dados ou um elevado índice de disponibilidade. Desta forma, os sistemas que seguirem um determinado estilo arquitetural se beneficiarão de determinados atributos em favor de outros. É importante salientar que estilos arquiteturais não são sinônimos de padrões arquiteturais. Um padrão arquitetural apresenta uma solução amplamente testada, documentada e replicável para problemas recorrentes de arquitetura dentro de um estilo arquitetural. Esses termos são frequentemente confundidos, porém, atuam em níveis distintos da solução. Estilos arquiteturais fornecem uma visão periférica em torno do problema enquanto padrões arquiteturais descrevem o processo de como a solução deve ser construída, focado em uma solução concreta. As seções a seguir detalham os principais tipos de estilos arquiteturais.</p>
-          <li>7.2. Estilos Arquiteturais – Structure</li>
+          <li><strong>7.2. Estilos Arquiteturais – Structure</strong></li>
           <p>Os estilos arquiteturais do tipo Structure têm por objetivo suportar o planejamento da arquitetura do sistema fornecendo diretrizes para a decomposição e organização dos componentes e comportamentos do sistema. Também são conhecidos pelo jargão “From mud to structure”. </p>
           <p><strong> Os principais são:    </strong></p>
           <ul>
@@ -1915,7 +1894,7 @@
           </ul>
           <p>Já o estilo arquitetural Pipe and Filters, ilustrado em Figura 8, visa decompor um processo complexo de forma que cada tarefa é encapsulada em elementos distintos e reutilizados e, a execução do processo como um todo ocorre através do encadeamento de tais componentes. Além de permitir o reuso das atividades, esse modelo arquitetural contribui para a melhoria do desempenho dos processos e simplifica o processo evolutivo, permitindo que novas etapas sejam facilmente inseridas ou removidas do fluxo de processamento.</p>
           <p>Padrão Registry - As premissas do estilo Pipe and Filters são utilizadas na organização de componentes autônomos de sis temas distribuídos, no processamento de requisições HTTP de servidores web e também na organização de camadas em alguns padrões arquiteturais que estuda remos nos capítulos posteriores, como Hexagonal Ar chitecture.</p>
-          <li>7.3. Estilos Arquiteturais – Message Styles</li>
+          <li><strong>7.3. Estilos Arquiteturais – Message Styles</strong></li>
           <p>O processamento assíncrono entre sistemas distribuídos pode ser utilizado para garantir a conformidade com diferentes requisitos de qualidade de um sistema que, via integração síncrona, podem não ser tecnicamente viáveis. Os estilos arquiteturais deste tipo classificam as diferentes abordagens frequentemente adotadas no uso de processamento de mensagens, sendo os principais: </p>
           <p><strong>    </strong></p>
           <ul>
@@ -1924,14 +1903,14 @@
             <li>Publish-subscribe  </li>
           </ul>
           <p>Esses três estilos arquiteturais formam a base das principais arquiteturas modernas, em que a presença de middlewares orientados a mensagens nas integrações entre aplicações e componentes da própria aplicação e o uso de eventos para processamento assíncrono estão cada vez mais presentes.</p>
-          <li>7.4. Estilos Arquiteturais – Adaptive Systems</li>
+          <li><strong>7.4. Estilos Arquiteturais – Adaptive Systems</strong>></li>
           <p> Existem cenários que imputam aos sistemas a necessidade de serem flexíveis e customizáveis, permitindo que mudanças nos requisitos funcionais e não funcionais sejam aplicadas diretamente pelos consumidores do sistema. Os estilos arquiteturais deste tipo categorizam as principais soluções adotadas para satisfazer essa necessidade. Os principais estilos arquiteturais catalogados nesta categoria são: </p>
           <ul>
             <li> Microkernel </li>
             <li> Reflection </li>
             <li>Domain-specific language </li>
           </ul>
-          <li>7.5. Estilos Arquiteturais – Distributed Systems</li>
+          <li><strong>7.5. Estilos Arquiteturais – Distributed Systems</strong></li>
           <p>Um arquiteto deve dominar as boas práticas de projeto e desenvolvimento de sistemas distribuídos e os estilos arquiteturais desta categoria permitem identificar as características chaves das principais abordagens para composição de sistemas distribuídos e integração entre aplicações. Os principais estilos arquiteturais desta categoria são: </p>
           <ul>
             <li>Service-oriented  </li>
@@ -1939,7 +1918,7 @@
             <li>Object request broker  </li>
             <li>Cloud native. </li>
           </ul>
-          <li>7.6. Estilos Arquiteturais – Deployment</li>
+          <li><strong>7.6. Estilos Arquiteturais – Deployment</strong></li>
           <p>A arquitetura é uma disciplina holística e envolve as diversas fases do ciclo de vida de um software e suas diferentes necessidades. Saber classificar e analisar o trade offs dos principais modelos de implantação dos sistemas é fundamental para o sucesso de um software, uma vez que a escolha do modelo de implantação incorreto pode anular todos os pontos positivos do projeto de um software. Os estilos arquiteturais mais conhecidos deste tipo são:</p>
           <ul>
             <li>Client-Server  </li>
@@ -1954,9 +1933,9 @@
       <div id="modulo-3-capitulo-9" class="capitulo">
         <p><strong>Capítulo 8 – Padrões Arquiteturais</strong></p>
         <ul>
-          <li>8.1. Padrões Arquiteturais</li>
-          <p>Vamos dar início ao estudo dos padrões arquiteturais nós vamos estudar nessa os conceitos do padrões arquiteturais com base naquilo que nós vimos nos estilos arquiteturais é a primeira do módulo Eu comentei que existem diferentes definições de arquitetura mas todas elas têm um lucro em comum como nós podemos ver a definição do prêmio do gato definir arquitetura como a estrutura dos componentes suas inter-relações e os princípios e diretrizes que regem o seu design e a evolução ao longo do tempo por mais que a estrutura do português dessa definição seja um pouco diferente da outra ela tem a mesma estrutura em comum que é definir as partes o papel dessas partes as regras de relacionamento entre elas e também outros elementos como as regras e evolução ao longo do tempo as características do ambiente ao qual o software se inclui mas a definição de arquitetura ele tem sempre esses três pilares fundamentais e quando nós falamos padrões nós estamos falando de essências de soluções que visam resolver problemas recorrentes que são amplamente testados e podem ser replicados e adaptadas em inúmeros contextos diferentes isso é válido padrões de projeto de análise e também será válido para padrões eleitorais então quando nós falamos de padrões arquiteturais nós estamos falando de essência de soluções que descrevem abordagens para a organização da estrutura de um sistema aqui nós não estamos mais preocupados com a estrutura de um código fonte específico ou como implementar uma solução por um problema de projeto do código fonte nós olhamos para uma ótica maior que é a organização do sistema quer pegar um determinado que define as características de um sistema as características Chaves de um sistema e propor soluções para problemas que acontecem dentro desses universo o foco passa a ser então separação de interesses culturais também são capazes de imprimir características desejadas a um sistema dependendo do padrão adotado no sistema pode ter um comportamento uma capacidade ele não terá por isso é muito importante conhecer as características a proposta de cada padrão para que quando nós Recebemos o que é esperado no sistema nós conseguimos fundamentar todas as decisões que nós vamos tomar e escolher os padrões adequados a escolha do padrão deve levar em consideração Além disso ele simplificam a definição da arquitetura de preferência é aquela que foi Projetada pelo sistema uma vez que eu adoro padrões eu consigo comunicar de uma forma mais simples uma forma padronizada O que é esperado de referência tenha eles também contribui para minimizar o esforço necessário para o desenvolvimento e a manutenção do sistema principalmente testados quando nós paramos tecnologias eles não focam resolver problemas concretos eles focam em caracterizar o sistema melhor dizendo eles focam em caracterizar famílias pegar diversos sistemas que possuem características que distinguem essa família para isso nós precisamos basear nas características que discriminam essas famílias componentes os padrões eles vão se basear e existem padrões para resolver esse problema se o meu problema é a organização estrutural eu posso dar por exemplo se eu estou trabalhando em eventos no meu sistema então Além disso eu posso ainda combinar os padrões porque eles têm propósito diferente existem inúmeros outros tipos naturais o caso do sistema interativos são muito conhecidos como MVC, MVP ou MVVM, desejáveis para um determinados  vimos que os padrões arquiteturais propõem soluções para problemas recorrentes na elaboração de uma arquitetura de um software eles permitem aplicar características desejáveis para um determinado sistema e devem ser utilizados em conjunto com os estilos arquiteturais.</p>
-          <li>8.2. Model View Controller (MVC)</li>
+          <li><strong> 8.1. Padrões Arquiteturais </strong></li>
+          <p>Os padrões arquiteturais com base naquilo que nós vimos nos estilos arquiteturais é a primeira do módulo Eu comentei que existem diferentes definições de arquitetura mas todas elas têm um lucro em comum como nós podemos ver a definição do prêmio do gato definir arquitetura como a estrutura dos componentes suas inter-relações e os princípios e diretrizes que regem o seu design e a evolução ao longo do tempo por mais que a estrutura do português dessa definição seja um pouco diferente da outra ela tem a mesma estrutura em comum que é definir as partes o papel dessas partes as regras de relacionamento entre elas e também outros elementos como as regras e evolução ao longo do tempo as características do ambiente ao qual o software se inclui mas a definição de arquitetura ele tem sempre esses três pilares fundamentais e quando nós falamos padrões nós estamos falando de essências de soluções que visam resolver problemas recorrentes que são amplamente testados e podem ser replicados e adaptadas em inúmeros contextos diferentes isso é válido padrões de projeto de análise e também será válido para padrões eleitorais então quando nós falamos de padrões arquiteturais nós estamos falando de essência de soluções que descrevem abordagens para a organização da estrutura de um sistema aqui nós não estamos mais preocupados com a estrutura de um código fonte específico ou como implementar uma solução por um problema de projeto do código fonte nós olhamos para uma ótica maior que é a organização do sistema quer pegar um determinado que define as características de um sistema as características Chaves de um sistema e propor soluções para problemas que acontecem dentro desses universo o foco passa a ser então separação de interesses culturais também são capazes de imprimir características desejadas a um sistema dependendo do padrão adotado no sistema pode ter um comportamento uma capacidade ele não terá por isso é muito importante conhecer as características a proposta de cada padrão para que quando nós Recebemos o que é esperado no sistema nós conseguimos fundamentar todas as decisões que nós vamos tomar e escolher os padrões adequados a escolha do padrão deve levar em consideração Além disso ele simplificam a definição da arquitetura de preferência é aquela que foi Projetada pelo sistema uma vez que eu adoro padrões eu consigo comunicar de uma forma mais simples uma forma padronizada O que é esperado de referência tenha eles também contribui para minimizar o esforço necessário para o desenvolvimento e a manutenção do sistema principalmente testados quando nós paramos tecnologias eles não focam resolver problemas concretos eles focam em caracterizar o sistema melhor dizendo eles focam em caracterizar famílias pegar diversos sistemas que possuem características que distinguem essa família para isso nós precisamos basear nas características que discriminam essas famílias componentes os padrões eles vão se basear e existem padrões para resolver esse problema se o meu problema é a organização estrutural eu posso dar por exemplo se eu estou trabalhando em eventos no meu sistema então Além disso eu posso ainda combinar os padrões porque eles têm propósito diferente existem inúmeros outros tipos naturais o caso do sistema interativos são muito conhecidos como MVC, MVP ou MVVM, desejáveis para um determinados  vimos que os padrões arquiteturais propõem soluções para problemas recorrentes na elaboração de uma arquitetura de um software eles permitem aplicar características desejáveis para um determinado sistema e devem ser utilizados em conjunto com os estilos arquiteturais.</p>
+          <li><strong> 8.2. Model View Controller (MVC) </strong></li>
           <p>O padrão arquitetural MVC, um dos mais conhecidos na literatura de desenvolvimento de sistemas. Formalizado em 1979 a partir de um estudo sobre a linguagem, o padrão MVC tem sido amplamente utilizado em sistemas orientados a objetos. A proposta desse padrão visa organizar a estrutura de um sistema, separando os interesses do sistema e, principalmente, em sistemas interativos, ou seja, aqueles que envolvem interação Homem-Máquina. </p>
           <p>Como um padrão arquitetural, o MVC possui um problema-alvo, uma proposta de solução e os elementos que fazem parte dessa proposta, como vimos nos padrões de projeto. Ele pode ser de alta complexidade, exigindo um esforço considerável no projeto, manutenção e desenvolvimento dos componentes. No entanto, equipes que buscam uma abordagem para maximizar recursos e a portabilidade dos componentes podem se beneficiar significativamente desse padrão. Sua proposta está diretamente relacionada ao conceito de arquitetura que discutimos anteriormente. </p>
           <p>O primeiro pilar do MVC é a definição das partes e suas responsabilidades, além do relacionamento entre elas. O MVC é composto por três camadas: </p>
@@ -1984,7 +1963,7 @@
             <li>Existem várias variações do padrão MVC, como o MVP e o MVVM, que mantêm a essência do MVC, mas com algumas diferenças nas responsabilidades e nos fluxos de comunicação entre as camadas. Essas variações têm alvos diferentes, mas continuam utilizando a estrutura básica do MVC para separar as responsabilidades e facilitar o desenvolvimento. </li>
           </ul>
           <p>Conclusão:O padrão MVC contribui significativamente para a melhoria do desenvolvimento e manutenção de sistemas, oferecendo uma abordagem sistemática para modelagem, separação de interesses, e maximizando o reuso e a portabilidade dos componentes. Ele é uma solução robusta e testada que continua a ser amplamente adotada em diversos tipos de sistemas. </p>
-          <li>8.3. Model View Presenter (MVP)</li>
+          <li><strong> 8.3. Model View Presenter (MVP) </strong></li>
           <p> O MVP é uma variação do padrão MVC (Model-View-Controller) e foi proposto nos anos 90 pela Talent, uma empresa formada por Apple, IBM e HP. Esse padrão introduz algumas diferenças em relação ao MVC, principalmente na separação de responsabilidades entre a interface do usuário e as regras de negócios. </p>
           <p>No MVC, embora exista uma separação de preocupações, as regras de navegação e de apresentação do dado ficam delegadas à view (a interface gráfica). Isso pode ser um problema porque muitas vezes as regras de navegação envolvem validações, transformação de dados para apresentação e controle do fluxo dentro da interface. No MVP, essa responsabilidade é retirada da view e delegada ao presenter.</p>
           <p>Ao separarmos as regras de navegação, o MVP permite que o código relacionado à interface gráfica seja mais testável, já que muitas vezes, em outros padrões, as interfaces gráficas dependem de componentes antigos ou não concebidos com foco em estabilidade. Isso dificulta a realização de testes, especialmente quando se trata de regras de navegação complexas. Com o MVP, conseguimos testar essas regras de forma isolada, já que estão encapsuladas no presenter, e não diretamente na view.</p>
@@ -2013,7 +1992,7 @@
             <li>Testabilidade: O código de navegação e lógica de apresentação pode ser testado de forma mais eficaz, pois não depende diretamente da interface gráfica, que é mais difícil de testar. </li>
           </ul>
           <p>Conclusão: O MVP promove uma separação clara de responsabilidades, com um foco maior no isolamento das regras de negócio da interface do usuário. O presenter tem um relacionamento de um para um com a view, diferente do que temos no MVC. Isso torna o sistema mais modular, estável e testável, além de facilitar a manutenção e portabilidade. </p>
-          <li>8.4. Model View ViewModel (MVVM)</li>
+          <li><strong> 8.4. Model View ViewModel (MVVM) </strong></li>
           <p>O padrão MVVM. Criado em 2005 por Jangosman, o MVVM é uma variação do padrão MVP e, por sua vez, do MVC. O foco principal do MVVM é a separação lógica entre a interface do usuário e as regras de negócio, proporcionando uma maior flexibilidade e organização do código.</p>
           <p>Para entendermos melhor o MVVM, é importante relembrar os três pilares que definem a arquitetura de sistemas:</p>
           <p><strong>Definição das Partes (Camadas):     </strong></p>
@@ -2087,26 +2066,26 @@
             <li>Camada de Domínio: Localizada no núcleo, é composta por regras de negócio puras, sem dependências externas. </li>
             <li>Quanto mais próximo do núcleo, mais tratamos do negócio. Quanto mais periférico, mais lidamos com a tecnologia. </li>
           </ul>
-          <p><strong>  Principais Diretrizes  </strong></p>
+          <p><strong>  Principais Diretrizes: </strong></p>
           <ul>
             <li>Isolamento da Tecnologia: As camadas internas (regra de negócio e domínio) não devem depender diretamente da tecnologia. ara isso, utilizam-se abstrações que as camadas externas devem implementar.  </li>
             <li>Modelagem do Domínio: O núcleo contém as regras e modelos do domínio. Ele pode ser extensível e permitir subdivisões conforme a complexidade do negócio. </li>
             <li>Implementação das Abstrações: As camadas externas implementam as abstrações definidas internamente e realizam a composição da aplicação. </li>
           </ul>
-          <p> Benefícios </p>
+          <p><strong>Benefícios:</strong> </p>
           <ul>
             <li> Maior Manutenibilidade: Separação clara de responsabilidades.</li>
             <li> Estabilidade: Redução do impacto de mudanças tecnológicas no domínio.</li>
             <li> Aceitação de Mudanças: Adaptação mais simples a novos requisitos de negócio.</li>
           </ul>
-          <p><strong>  Limitações  </strong></p>
+          <p><strong>  Limitações: </strong></p>
           <ul>
             <li> Complexidade Inicial: Requer maior esforço de implementação e maior curva de aprendizado.</li>
             <li> Não Ideal para Sistemas Simples: É mais adequado para sistemas complexos e de longa duração.</li>
           </ul>
           <p>Considerações Finais: A Onion Architecture organiza camadas de forma concêntrica, colocando o domínio no núcleo. Essa abordagem promove o isolamento da tecnologia e ajuda a manter o foco no negócio. Embora possa exigir maior esforço inicial, o retorno em estabilidade e manutenibilidade justifica sua adoção, especialmente em projetos de grande escala e longo prazo.  </p>
           
-          <li>9.3. Clean Architecture</li>
+          <li><strong>9.3. Clean Architecture </strong></li>
           <p>O Clean Architecture é um modelo arquitetural centrado no domínio, estruturado em camadas concêntricas para separar regras de negócio de detalhes tecnológicos. Diferente de outras abordagens, como a Hexagonal Architecture, ele enfatiza a organização clara das camadas e suas responsabilidades.</p>
           <p><strong> Estrutura   </strong></p>
           <ul>
@@ -2136,11 +2115,6 @@
         <p>Bem-vindo ao décimo capítulo do módulo Design Patterns! Hoje, vamos iniciar o estudo dos padrões voltados para sistemas distribuídos, explorando seus desafios, modelos arquiteturais e boas práticas. </p>
         <p><strong> Revisão dos Capítulos Anteriores   </strong></p>
         <ul>
-          <li> </li>
-          <li> </li>
-          <li> </li>
-          <li> </li>
-          <li> </li>
           <li> <strong> Padrões de projeto: </strong> Conceitos fundamentais para organização do código.     </li>
           <li> <strong> Padrões de sistemas interativos: </strong>  Como MVC e MVP.    </li>
           <li> <strong> Padrões focados em domínio: </strong>  Separação de responsabilidades no software.    </li>
@@ -2151,11 +2125,6 @@
           <p>A Importância dos Sistemas Distribuídos, atualmente, é raro encontrar aplicações que funcionem isoladamente. A integração com outras aplicações e o reaproveitamento de sistemas legados são tendências cada vez mais comuns. No entanto, essa comunicação introduz desafios que tornam essencial o uso de padrões arquiteturais. </p>
           <p><strong> Principais Desafios   </strong></p>
           <ul>
-            <li> </li>
-            <li> </li>
-            <li> </li>
-            <li> </li>
-            <li> </li>
             <li> <strong>  Heterogeneidade </strong>      </li>
             <ul>
               <li>Sistemas executando em diferentes plataformas. </li>
@@ -2230,7 +2199,7 @@
             <li> O sistema seja escalável, distribuindo mensagens entre múltiplos receptores sem que uma mesma mensagem seja processada mais de uma vez.</li>
           </ul>
           <p>Conclusão: O Point-to-Point Channel é um padrão essencial para garantir comunicação confiável em sistemas distribuídos. Ele permite processamento exclusivo de mensagens, essencial para cenários onde a duplicação de processamento pode gerar inconsistências ou prejuízos. </p>
-          <li>10.3. Enterprise Application Patterns – Publish Subscribe Channel</li>
+          <li><strong>10.3. Enterprise Application Patterns – Publish Subscribe Channel</strong></li>
           <p>O padrão Publish Subscribe Channel é uma abordagem essencial para sistemas distribuídos orientados a eventos, permitindo que múltiplos receptores sejam notificados de um evento de forma assíncrona.</p>
           <p><strong> Funcionamento do Publish Subscribe Channel   </strong></p>
           <ul>
@@ -2251,7 +2220,7 @@
             <li>Escalabilidade: Permite que um evento seja enviado para múltiplos receptores ao mesmo tempo. </li>
           </ul>
           <p>Conclusão:O Publish Subscribe Channel é um padrão eficiente para integração de sistemas distribuídos, garantindo comunicação assíncrona confiável e possibilitando notificações em larga escala. </p>
-          <li>10.4. Enterprise Application Patterns – Concurrency</li>
+          <li><strong>10.4. Enterprise Application Patterns – Concurrency</strong>></li>
           <p>A concorrência em sistemas distribuídos é um dos desafios mais complexos do desenvolvimento, pois envolve múltiplas transações acessando os mesmos dados simultaneamente, o que pode levar a problemas difíceis de prever e testar. </p>
           <p><strong> Problemas Clássicos de Concorrência   </strong></p>
           <ul>
@@ -2277,7 +2246,7 @@
       <div id="modulo-3-capitulo-12" class="capitulo">
         <p><strong>Capítulo 11 – Arquiteturas de Sistemas Distribuídos</strong></p>
         <ul>
-          <li>11.1. Enterprise Application Integration (EAI)</li>
+          <li><strong>11.1. Enterprise Application Integration (EAI)</strong></li>
           <p>A Enterprise Application Integration (EAI) é uma abordagem arquitetural que busca integrar aplicações empresariais de forma eficiente e escalável, eliminando a complexidade da comunicação ponto a ponto.</p>
           <p><strong>  Problemas da Integração Direta (Ad Hoc)  </strong></p>
           <ul>
@@ -2303,7 +2272,7 @@
           </ul>
           <p>O EAI é uma solução robusta para a integração corporativa, combinando processos, software e hardware com um backbone central para garantir escalabilidade e eficiência.</p>
           
-          <li>11.2. Service Oriented Architecture (SOA)</li>
+          <li><strong>11.2. Service Oriented Architecture (SOA)</strong></li>
           <p>A Service Oriented Architecture (SOA) é um padrão arquitetural que visa integrar aplicações por meio de serviços reutilizáveis, garantindo flexibilidade, governança e redução de custos.</p>
           <p><strong>  Motivações para Adotar o SOA  </strong></p>
           <ul>
@@ -2357,7 +2326,7 @@
             <li>Implementar uma arquitetura governável e escalável. </li>
           </ul>
           <p>O SOA é uma evolução da integração corporativa, estruturando processos e dados em serviços reutilizáveis e governados, proporcionando maior eficiência e flexibilidade para as empresas.</p>
-          <li>11.3. Enterprise Service BUS (ESB)</li>
+          <li><strong>11.3. Enterprise Service BUS (ESB)</strong></li>
           <p>O Enterprise Service Bus (ESB) é um componente essencial em arquiteturas SOA (Service-Oriented Architecture), funcionando como um barramento que centraliza a comunicação entre serviços. Ele roteia mensagens, facilita a descoberta de serviços, converte formatos de dados (HTML, XML, JSON, binário) e possibilita a integração de diversas tecnologias.</p>
           <p><strong>Entre suas principais funcionalidades estão:    </strong></p>
           <ul>
@@ -2396,7 +2365,7 @@
       <p>Iniciando a nossa jornada para aprender um pouco mais sobre os princípios de arquitetura de software da atualidade, ao longo deste conteúdo trabalharemos juntos para explorar tendências relacionadas às arquiteturas modernas. Vamos analisar as atualidades e observar aquilo que tem evoluído.</p>
       <p>Nosso foco será examinar as principais arquiteturas e tecnologias do momento, incluindo frameworks mais proeminentes que merecem maior destaque e atenção. Ao mesmo tempo, discutiremos alguns princípios básicos que devem ser considerados em contextos gerais.</p>
       <p>O objetivo deste módulo é, de forma simples, olhar para o mercado, entender o que é mais importante e relevante e tentar trazer uma visão geral das tendências atuais. Naturalmente, um único conteúdo não é suficiente para cobrir todos os aspectos, mas daremos um panorama geral sobre o que mais se destaca. Em momentos futuros, podemos aprofundar esses conceitos de forma mais detalhada.</p>
-      <p>Espero que esta jornada seja produtiva! Ao longo das próximas aulas, abordaremos mais sobre as tendências e os princípios de arquitetura de software da atualidade. Quando falamos em atualidade, é essencial considerar aspectos como interatividade, escalabilidade, disponibilidade e outras características fundamentais, que exploraremos em maior profundidade neste módulo.</p>
+      <p>Abordaremos mais sobre as tendências e os princípios de arquitetura de software da atualidade. Quando falamos em atualidade, é essencial considerar aspectos como interatividade, escalabilidade, disponibilidade e outras características fundamentais, que exploraremos em maior profundidade neste módulo.</p>
 
       <div id="modulo-4-capitulo-1" class="capitulo">
         <p><strong>Capítulo 1 – Introdução a Arquiteturas de Sistemas Web</strong></p>
@@ -2440,7 +2409,8 @@
           <ul>
             <li>Entregas básicas e refatoração contínua para ajustar e aprimorar o sistema ao longo do tempo. </li>
           </ul>
-          <li>1.3. Principais Arquiteturas</li>
+          <br>
+          <li><strong>1.3. Principais Arquiteturas</strong></li>
           <p>Arquitetura de software é o esqueleto de um sistema que define como ele será construído para atender aos requisitos funcionais e não funcionais, garantindo características de qualidade. Ela abrange o design, o planejamento e a estruturação das soluções para resolver problemas específicos de um sistema.</p>
           <p>Uma boa arquitetura é essencial para alinhar a solução às necessidades do sistema. Por exemplo, projetar uma arquitetura que dependa de comunicação via web para um sistema em tempo real com alta latência seria uma escolha inadequada. Assim, compreender os requisitos e características do sistema é crucial para prover uma arquitetura eficiente e funcional. </p>
           <p>Cada tipo de arquitetura tem suas vantagens e desvantagens e deve ser escolhido conforme as necessidades específicas do sistema. A arquitetura ideal equilibra escalabilidade, desempenho, manutenção e flexibilidade, garantindo a entrega de uma solução eficiente para o problema identificado. </p>
@@ -2566,7 +2536,7 @@
       <div id="modulo-4-capitulo-3" class="capitulo">
         <p><strong>Capítulo 3 – Introdução às APIs e Arquiteturas REST e GraphQL</strong></p>
         <ul>
-          <li>3.1. Introdução às APIs REST</li>
+          <li><strong>3.1. Introdução às APIs REST</strong></li>
           <p>Uma API (Interface de Programação de Aplicações) é uma ponte que permite a comunicação entre sistemas distintos. Em outras palavras, se um programa utiliza a tecnologia "X" e outro a tecnologia "Y", a API define um padrão de comunicação que possibilita a troca de informações entre esses dois programas, mesmo que estejam em locais diferentes.</p>
           <p>Além de definir o protocolo de comunicação, uma API também implementa toda a infraestrutura necessária para essa interação. Ela estabelece regras sobre como mensagens devem ser enviadas e recebidas, incluindo detalhes como formato e conteúdo das solicitações e respostas.</p>
           <p>REST e o Conceito de Comunicação Web:Uma das formas mais conhecidas de construir APIs é o REST (Representational State Transfer), que surgiu nos anos 2000 para resolver problemas relacionados à comunicação no contexto web. O REST é baseado no protocolo HTTP, amplamente utilizado na internet. Sua principal característica é ser stateless, ou seja, não mantém informações do estado do cliente entre requisições.  </p>
@@ -2607,7 +2577,9 @@
             <li> 500 (Internal Server Error): Erro no servidor. </li>
           </ul>
           <p>A utilização de APIs REST apresenta uma solução eficiente para a comunicação entre sistemas distintos, especialmente em contextos web. Sua simplicidade e flexibilidade o tornaram amplamente adotado. No entanto, é fundamental estar atento às suas limitações, como questões de segurança e gerenciamento de versões, para garantir que as APIs atendam aos requisitos de sistemas modernos e escaláveis.</p>
-          <li>3.2. Introdução ao GraphQL</li>
+          
+          <li><strong>3.2. Introdução ao GraphQL</strong></li>
+          
           <p>A solução que vamos apresentar é robusta, ideal para cenários complexos, mas com um custo mais elevado. Para problemas simples, ela pode não ser a melhor escolha, pois não substitui totalmente o REST, mas sim complementa, dependendo do caso de uso.</p>
           <p>Essa tecnologia foi desenvolvida pelo Facebook em 2012 para atender às suas necessidades específicas. Na rede social, o tipo de consulta dos usuários não era simples como buscar apenas uma linha em um banco de dados. Um perfil de usuário, por exemplo, inclui foto, vídeos, postagens, curtidas e outros dados armazenados em diferentes locais. O REST tradicional, nesse cenário, muitas vezes retornava dados desnecessários, resultando em ineficiência. Para resolver isso, o Facebook desenvolveu essa nova abordagem e, em 2015, disponibilizou-a para a comunidade.</p>
           <p>A grande vantagem dessa solução é a possibilidade de delimitar exatamente quais dados serão retornados ou manipulados em cada requisição. Por exemplo, se há 50 informações disponíveis, você pode solicitar apenas as 4 ou 5 necessárias, evitando sobrecarga de dados. Além disso, ela permite integrar dados de múltiplas fontes em uma única solicitação, otimizando a comunicação entre cliente e servidor.</p>
@@ -2646,7 +2618,9 @@
       <div id="modulo-4-capitulo-4" class="capitulo">
         <p><strong>Capítulo 4 – Documentação de APIs com SWAGGER</strong></p>
         <ul>
-          <li>4.1. Documentação de APIs com SWAGGER</li>
+
+          <li><strong> 4.1. Documentação de APIs com SWAGGER </strong></li>
+
           <p> O Swagger é uma ferramenta que permite documentar APIs REST de forma prática e visual. Antes de entender como ele funciona, é importante compreender o conceito de APIs REST. </p>
           <p><strong> Conceito de REST   </strong></p>
           <ul>
@@ -2699,8 +2673,6 @@
             <li>Curva de aprendizado: Requer um bom entendimento sobre REST e a especificação OpenAPI. </li>
           </ul>
           <p>O Swagger é amplamente utilizado devido à sua capacidade de simplificar o processo de documentação e integração de APIs. Embora REST nem sempre seja o método mais rápido ou eficiente, a necessidade crescente de comunicação entre serviços distribuídos torna ferramentas como o Swagger cada vez mais relevantes.</p>
-
-          <li>4.2. Demonstração do uso do SWAGGER em aplicação real</li>
         </ul>
       </div>
       
@@ -2711,7 +2683,7 @@
       <div id="modulo-4-capitulo-6" class="capitulo">
         <p><strong>Capítulo 6 – Arquiteturas Orientadas a Eventos</strong></p>
         <ul>
-          <li>6.1. Introdução às Arquiteturas Orientadas a Eventos</li>
+          <li><strong>  6.1. Introdução às Arquiteturas Orientadas a Eventos</strong></li>
           <p>A arquitetura orientada a eventos baseia-se na comunicação de eventos, ou seja, mudanças significativas de estado, como "pedido solicitado", "pedido processado", etc. Essa abordagem otimiza a troca de informações entre sistemas, tornando a comunicação mais eficiente, leve e rápida, ideal para contextos de alto desempenho e sistemas distribuídos.</p>
           <p>Por exemplo, em vez de uma loja notificar individualmente cada cliente sobre mudanças de preços, ela atualiza um painel central (repositório) acessado pelos clientes interessados. Assim, reduz-se o volume de transações e a troca de dados, tornando o sistema mais ágil e menos dependente de interações constantes.</p>
           <p><strong>  Os principais componentes dessa arquitetura incluem:  </strong></p>
@@ -2724,7 +2696,7 @@
           <p>Por fim, é crucial garantir rastreamento e consistência na comunicação, especialmente em sistemas críticos, como bancos, onde histórico e verificações são essenciais.</p>
           <p>Resumo: A aborda arquiteturas orientadas a eventos, que otimizam a comunicação em sistemas distribuídos, baseando-se na troca de eventos significativos (mudanças de estado). Os principais componentes incluem produtores, consumidores e um Event Bus para transporte. Essa abordagem reduz a troca de dados, facilita a escalabilidade e melhora a resiliência do sistema. Exemplos práticos incluem sistemas de notificações centralizadas, como atualizações de preços em lojas. Modelos como "publish-subscribe" e "event streaming" são usados conforme a necessidade dos consumidores. A arquitetura promove flexibilidade, modularidade e eficiência, sendo especialmente útil em contextos de serviços distribuídos e alta demanda.</p>
 
-          <li>6.2. Demonstração de uma Aplicação Orientada a Eventos</li>
+          <li><strong>6.2. Demonstração de uma Aplicação Orientada a Eventos</strong></li>
           <p> A arquitetura orientada a eventos tem como base o conceito de evento, que é uma mudança de estado que pode representar uma atualização ou algo significativo que precisa ser comunicado. Por exemplo, a criação de um novo pedido ou o registro de um novo usuário. Esses eventos indicam alterações relevantes no sistema.          </p>
           <p> Vimos que, nessa arquitetura, existem alguns elementos principais. Um deles é o conceito de publicação e assinatura (Pub/Sub), onde temos um elemento responsável por publicar eventos e outros que consomem ou "assinam" esse conteúdo. Além disso, existem diferentes formas de implementação, como o fluxo contínuo de eventos, que podem ser gerados de maneira esporádica, com base em mudanças de estado, ou de forma contínua.          </p>
           <p> Na 6.2, vamos explorar mais profundamente a aplicação prática da arquitetura orientada a eventos, com foco no conceito de publisher (publicador). Implementaremos, de forma prática, um publicador e alguns elementos consumidores para demonstrar o funcionamento desse modelo. Esse tipo de arquitetura nos permite criar sistemas desacoplados, facilmente escaláveis, resilientes e com grande flexibilidade para incorporar novos elementos.          </p>
@@ -2734,7 +2706,9 @@
       <div id="modulo-4-capitulo-7" class="capitulo">
         <p><strong>Capítulo 7 – Introdução às Arquiteturas de Sistemas Mobile</strong></p>
         <ul>
-          <li>7.1. Desenvolvimento Móvel Nativo</li>
+
+          <li><strong>7.1. Desenvolvimento Móvel Nativo</strong></li>
+          
           <p> Vamos dar sequência à nossa disciplina Princípios de Arquiteturas de Software da Atualidade. Neste capítulo, abordaremos o desenvolvimento mobile e a arquitetura desses sistemas.</p>
           <p> Esse capítulo está estruturado em três formas principais de desenvolvimento: nativo, cross-platform e híbrido. Na de hoje, focaremos no desenvolvimento nativo, explorando seus conceitos e características. Vamos falar sobre o que é o desenvolvimento nativo no contexto mobile, com exemplos específicos de Android e iOS, além de discutir as tendências e vantagens desse modelo. </p>
           <p> O que é o desenvolvimento nativo? Imagine que você tem dois sistemas operacionais principais no mercado: Android e iOS. Desenvolver algo de forma nativa significa criar um software especificamente para cada um desses sistemas operacionais, utilizando suas linguagens e ferramentas dedicadas.         </p>
@@ -2768,9 +2742,10 @@
             <li> Kotlin está ganhando protagonismo no desenvolvimento Android. </li>
             <li>Swift continua como a principal escolha para iOS, com ferramentas como SwiftUI, que facilitam a criação de interfaces gráficas.  </li>
           </ul>
-          <P> Conclusão: O desenvolvimento nativo é uma excelente escolha quando se deseja criar aplicativos otimizados e robustos, aproveitando ao máximo os recursos do sistema operacional. Contudo, deve ser utilizado com cuidado, considerando seu custo elevado e a necessidade de gerenciamento de múltiplas bases de código. Na próxima aula, vamos explorar o desenvolvimento mobile híbrido, comparando suas vantagens e desvantagens com o desenvolvimento nativo.          </P>
+          <P> Conclusão: O desenvolvimento nativo é uma excelente escolha quando se deseja criar aplicativos otimizados e robustos, aproveitando ao máximo os recursos do sistema operacional. Contudo, deve ser utilizado com cuidado, considerando seu custo elevado e a necessidade de gerenciamento de múltiplas bases de código. </P>
 
-          <li>7.2. Desenvolvimento Móvel Crossplataform</li>
+          <li><strong>7.2. Desenvolvimento Móvel Crossplataform</strong></li>
+
           <p> Agora, vamos explorar o desenvolvimento cross-plataform, ou seja, o desenvolvimento multiplataforma. Esse modelo permite criar um único código que pode ser utilizado em mais de uma plataforma, como iOS e Android.          </p>
           <p> O que é o Desenvolvimento Cross-Plataform? O desenvolvimento cross-plataform refere-se a criar uma base única de código que será utilizada em diferentes sistemas operacionais. Isso contrasta com o desenvolvimento nativo, onde cada plataforma (iOS e Android) exige um código específico. A principal vantagem desse modelo é a economia de tempo e custos, uma vez que você desenvolve apenas uma vez e o código é adaptado para rodar nas diferentes plataformas. </p>
           <p>Por outro lado, como é uma solução genérica que visa atender a múltiplos sistemas, ela pode apresentar limitações em desempenho e acesso a recursos específicos de cada plataforma. Algumas características técnicas podem estar disponíveis apenas no iOS ou no Android, e as ferramentas cross-plataform buscam equilibrar essas diferenças. Assim, o desempenho pode ser bom, mas dificilmente será igual ao de uma aplicação nativa.          </p>
@@ -2805,12 +2780,13 @@
           <p>Ambas as ferramentas oferecem desempenho próximo ao nativo, mas não chegam a superar o desenvolvimento nativo em termos de performance e acesso completo aos recursos da plataforma. A escolha entre elas dependerá do contexto do projeto, das necessidades específicas e da experiência da equipe de desenvolvimento.           </p>
 
 
-          <li>7.3. Desenvolvimento Móvel Híbrido</li>
+          <li><strong>7.3. Desenvolvimento Móvel Híbrido</strong></li>
+
           <p>Vamos dar sequência à nossa disciplina Princípios de Arquitetura de Software da Atualidade. Estamos no Capítulo 7, falando sobre as diferentes formas de desenvolvimento móvel, também conhecido como desenvolvimento mobile. </p>
           <p>Já abordamos o desenvolvimento nativo e o desenvolvimento cross-platform, e nesta entraremos no conceito de desenvolvimento híbrido.</p>
           <p>O que é o Desenvolvimento Híbrido? De forma geral, o desenvolvimento híbrido utiliza conceitos de desenvolvimento web para criar aplicações que podem ser executadas em diversas plataformas. Enquanto os aplicativos nativos são desenvolvidos com bibliotecas específicas para cada sistema operacional, e o cross-platform permite o desenvolvimento de um único código para ser adaptado a diferentes plataformas, o desenvolvimento híbrido vai além. Ele utiliza tecnologias web para criar aplicativos que podem rodar em Android, iOS, e até mesmo em navegadores e desktops.          </p>
           <p>Por exemplo, no modelo híbrido, você cria uma aplicação web que é exibida como se fosse um aplicativo nativo no dispositivo móvel. Isso reduz custos de desenvolvimento, pois é um processo mais rápido e simples, mas tem limitações quando se trata de aplicativos que exigem alta performance, interfaces gráficas complexas, ou acesso intenso a recursos nativos dos dispositivos.           </p>
-          <p>Ferramentas de Desenvolvimento Híbrido: Flutter e React Native, Nesta aula, exploraremos duas ferramentas amplamente utilizadas no desenvolvimento híbrido: o Flutter e o React Native. Vamos falar sobre suas características, vantagens e quando optar por cada uma.  </p>
+          <p>Ferramentas de Desenvolvimento Híbrido: Flutter e React Native, exploraremos duas ferramentas amplamente utilizadas no desenvolvimento híbrido: o Flutter e o React Native. Vamos falar sobre suas características, vantagens e quando optar por cada uma.  </p>
           <p><strong>  Flutter  </strong></p>
           <p> O Flutter é um framework desenvolvido pelo Google e utiliza a linguagem Dart. Algumas características e vantagens: </p>
           <ul>
@@ -2850,7 +2826,7 @@
       <div id="modulo-4-capitulo-8" class="capitulo">
         <p><strong>Capítulo 8 – Arquiteturas Cloud Native e Serverless</strong></p>
         <ul>
-          <li>8.1. Introdução às Arquiteturas Cloud Native</li>
+          <li><strong>8.1. Introdução às Arquiteturas Cloud Native</strong></li>
           <p>Arquiteturas cloud-native são aquelas projetadas, desde o início, para operar em ambientes de nuvem. Diferentemente de aplicações que foram criadas para rodar em servidores locais e posteriormente migradas para a nuvem, as aplicações cloud-native já são concebidas com componentes preparados para aproveitar ao máximo os recursos oferecidos por provedores de nuvem. Isso inclui escalabilidade, resiliência, agilidade no desenvolvimento e facilidade de provisionamento.          </p>
           <p>As principais características desse tipo de arquitetura são a escalabilidade dinâmica e a flexibilidade. Por exemplo, em momentos de alta demanda, como na Black Friday, a infraestrutura pode ser automaticamente ajustada para atender ao aumento no número de solicitações. Quando a demanda diminui, os recursos são desprovisionados, otimizando custos.          </p>
  
@@ -2888,8 +2864,10 @@
             <li>Gerenciamento de Dispositivos IoT: Escalabilidade para lidar com o aumento de dispositivos conectados. </li>
           </ul>
           <p>Conclusão: As arquiteturas cloud-native são projetadas para maximizar as vantagens oferecidas pela nuvem, como flexibilidade, escalabilidade e resiliência. No entanto, exigem planejamento cuidadoso para otimizar custos, gerenciar a segurança e acompanhar a evolução das demandas ao longo do tempo.  </p>
-          <li>8.2. Introdução às Arquiteturas Serverless</li>
-          <p>Vamos falar um pouco mais sobre arquiteturas serverless, um tema muito importante quando discutimos arquiteturas atuais e tendências futuras. Nesta aula, abordaremos os conceitos de arquiteturas serverless, os componentes necessários, as vantagens de utilizá-las e os casos típicos de aplicação. </p>
+          
+          <li><strong>8.2. Introdução às Arquiteturas Serverless</strong></li>
+          
+          <p>Vamos falar um pouco mais sobre arquiteturas serverless, um tema muito importante quando discutimos arquiteturas atuais e tendências futuras. Abordaremos os conceitos de arquiteturas serverless, os componentes necessários, as vantagens de utilizá-las e os casos típicos de aplicação. </p>
           <p>Primeiramente, é importante entender o conceito. Quando falamos em "serverless", na prática, isso não significa "sem servidor". O servidor existe, mas não é de responsabilidade do dono da aplicação. Ele é gerenciado por um terceiro, e o desenvolvedor não precisa se preocupar com essa infraestrutura.</p>
           <p><strong>   Evolução das Arquiteturas </strong></p>
           <p>Ao longo do tempo, as arquiteturas de software passaram por várias transformações:</p>
@@ -2949,7 +2927,7 @@
         <p><strong>Capítulo 9 – Introdução às FaaS (AWS Lambda e Azure Functions)</strong></p>
         <p>Neste capítulo 9, vamos nos aprofundar no conceito de funções FaaS (Function as a Service), trazendo um pouco da realidade da Amazon, da Microsoft e da ESA sobre como trabalhar com esses conceitos. Antes de entrar especificamente nas plataformas dos grandes provedores, faremos uma breve introdução ao conceito de funções FaaS.</p>
         <ul>
-          <li>9.1. Funções como Serviço</li>
+          <li><strong>9.1. Funções como Serviço</strong></li>
           <p>Quando falamos em FaaS, estamos basicamente nos referindo ao uso da computação em nuvem para executar partes do código sem a necessidade de gerenciar toda a infraestrutura por trás. Nesse modelo, você deixa o código hospedado em um provedor de serviço. Sempre que precisar que esse código seja executado, você paga apenas pelo uso. Trata-se de um conceito que visa fragmentar ainda mais o código e distribuí-lo ao longo da rede de forma eficiente.          </p>
           <p> Objetivo do Modelo: O principal objetivo desse modelo é permitir que o código esteja hospedado em um servidor de terceiros, sem a necessidade de provisionar um container ou uma máquina dedicada. O provedor de serviço gerencia toda a infraestrutura. Esse ambiente pode abrigar códigos de diversos clientes, sendo ativados apenas quando ocorre uma solicitação específica. </p>
           <p>A ideia central é criar uma estrutura na qual um evento dispara a execução de uma função. Assim, você consegue executar o código em resposta a um evento sem se preocupar com o provisionamento ou a manutenção da infraestrutura.           </p>
@@ -2986,8 +2964,8 @@
           </ul>
           </br>
 
-          <li>9.2. Princípios gerais de FaaS na Azure</li>
-          <li>9.3. Princípios gerais de FaaS na AWS</li>
+          <li><strong>9.2. Princípios gerais de FaaS na Azure</strong></li>
+          <li><strong>9.3. Princípios gerais de FaaS na AWS</strong></li>
         </ul>
       </div>
       
