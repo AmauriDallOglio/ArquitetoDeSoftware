@@ -778,7 +778,7 @@
           
           <li><strong>5.3. Arquitetura Microserviços</strong></li>
 
-            <p>sobre grandes grupos de funcionalidades e como os serviços distribuídos geograficamente continuam a atender a uma base de dados central. Agora, vamos falar sobre uma evolução desse modelo, que é a arquitetura orientada a microserviços.</p>
+            <p>Sobre grandes grupos de funcionalidades e como os serviços distribuídos geograficamente continuam a atender a uma base de dados central. Agora, vamos falar sobre uma evolução desse modelo, que é a arquitetura orientada a microserviços.</p>
             <p>Bom, quando falamos em microserviços, já podemos entender que essa é a última mudança. O microserviço normalmente refere-se a um contexto mais específico, buscando melhorar a eficiência e a importância do serviço. Vamos seguir o mesmo padrão de explicação que usamos anteriormente: conceitos, estruturas, vantagens e desvantagens, fazendo um comparativo entre microserviços e serviços.</p>
             <p>No microserviço, temos a estrutura organizada como um conjunto de serviços pequenos e independentes, que se comunicam através de APIs bem definidas. Cada serviço é responsável por uma funcionalidade específica e pode ser desenvolvido, implementado e escalado de forma independente, sem afetar os outros serviços. A flexibilidade e a escalabilidade são pontos positivos aqui, já que você pode adicionar novos serviços ou modificá-los sem afetar o sistema como um todo.</p>
             <p>Uma vantagem do microserviço é que, se um serviço falhar, apenas esse serviço será afetado. Se o banco de dados central cair, todo o sistema para, mas no modelo de microserviços, o impacto é local, ou seja, apenas o serviço com problemas será afetado, os outros continuam funcionando normalmente. Essa é uma grande vantagem em termos de resiliência.</p>
@@ -787,7 +787,7 @@
             <p>Em termos de vantagens, o microserviço oferece uma evolução, permitindo mais eficiência e flexibilidade. A manutenção e a evolução do sistema tornam-se mais fáceis, pois cada serviço pode ser modificado sem impactar outros, e a escalabilidade pode ser feita de forma mais eficiente. No entanto, o modelo de microserviços exige um controle maior sobre a infraestrutura e a gestão de serviços ao longo do tempo.</p>
             <p>Em relação à complexidade, ao dividir a base de dados central em várias réplicas, você precisa garantir que os dados estejam consistentes entre os serviços. Isso pode ser desafiador, especialmente quando os dados são compartilhados entre diferentes serviços, como no exemplo de um serviço bancário que precisa consultar o saldo de um usuário.</p>
             <p>Por fim, a gestão do microserviço envolve garantir que os serviços estejam balanceados adequadamente e que a comunicação entre eles seja eficiente. O aumento de instâncias para suportar a carga de trabalho é necessário, o que exige uma camada intermediária para balanceamento de carga.</p>
-            <p>, a arquitetura de microserviços é uma excelente opção para sistemas que precisam de flexibilidade, resiliência e escalabilidade, mas também traz desafios em termos de complexidade operacional.</p>
+            <p>A arquitetura de microserviços é uma excelente opção para sistemas que precisam de flexibilidade, resiliência e escalabilidade, mas também traz desafios em termos de complexidade operacional.</p>
             <p>Boas práticas incluem descentralizar a comunicação, preferir comunicação assíncrona quando possível e garantir a padronização das interfaces de serviço. Monitoramento e gerenciamento eficientes também são essenciais para manter o sistema funcionando sem problemas.</p>
             <p>Estilo de arquitetura de software em que uma aplicação é estruturada como um conjunto de serviços pequenos e independentes, que se comunicam entre si através de APIs bem definidas. Cada microserviços é responsável por uma funcionalidade especifica do sistema e pode ser desenvolvido, implantando e escalado de forma independente dos outros;</p>
             <p>API's application programming interface, interface que permite a comunicação entre microsserviços, serviços ou cliente externos.</p>
@@ -833,7 +833,7 @@
       </div>
       
       <div id="modulo-1-exercicios-fixacao" class="capitulo">
-        <h2>Exercícios de Fixação</h2>
+        <h2>Capítulo 6: Exercícios de Fixação</h2>
         <ul>
           <li>Primeira Aula Interativa - Trabalhando Estilos Arquiteturais</li>
         </ul>
@@ -3226,10 +3226,547 @@
             <p> 6. Retain (Revisit / Keep): Essa estratégia envolve manter determinadas aplicações no ambiente on-premises, seja porque a migração não faz sentido financeiro ou técnico, seja porque há restrições regulatórias ou operacionais. Por exemplo, uma aplicação desenvolvida em Delphi nos anos 2000, que funciona bem internamente e tem poucos usuários, pode não justificar os custos de adaptação para a nuvem. Nesse caso, a empresa pode optar por mantê-la rodando no ambiente atual. </p>
             <p> 7. Reevaluate / Optimize: O sétimo R diz respeito a avaliar continuamente a infraestrutura e otimizar custos e recursos. Às vezes, pode ser necessário revisar as decisões tomadas anteriormente e realocar cargas de trabalho, ajustar configurações e melhorar a eficiência operacional. </p>
             <p> Falamos sobre os modelos de migração e como cada estratégia pode ser aplicada. O conceito dos 6 R’s da AWS (e agora dos 7 R’s) oferece um guia valioso para decidir qual abordagem adotar em cada caso. Desde uma migração rápida com Rehost até uma transformação completa com Refactor, cada estratégia tem seu lugar e deve ser escolhida com base nas necessidades e objetivos da empresa. </p>
+          
+          <li><strong> 4.4 Migração de um ambiente On-premise para nuvem  </strong>  </li>
+            <p> a ideia é mostrar para vocês como estaria o ambiente "on-premises" — esse aqui — e depois como eu faria a migração dessa mesma solução indo para a nuvem, tá bem? Bom, para a migração, vamos para a nossa demonstração. </p>
+            <p> nesse nosso processo de migração de um ambiente on-premises para um ambiente de cloud. Vamos entender: não tenho muita experiência, eu queria fazer a primeira etapa possível de migração, que seria o lift and shift, ou seja, pegar exatamente o que nós temos aqui no ambiente on-premises e levar para a nuvem. </p>
+            <p> Nós temos várias maneiras diferentes de fazer isso. Entre elas, por exemplo, seria se o nosso ambiente estivesse containerizado — como é o meu caso aqui. Podemos simplesmente pegar essas imagens de container, registrar na Cloud e subir os containers na Cloud, mudando as perspectivas, as ligações entre os servidores. Isso iria funcionar. </p>
+            <p> Por isso que ela está numa etapa bem anterior ainda. Estamos conhecendo o processo de Cloud, vamos fazer tudo no processo de IaaS — ou seja, infraestrutura como serviço. Já provisionei os dois ambientes que eu tenho aqui na mão, e a gente vai subir isso, entre aspas, "na mão", tá? </p>
+            <p> Então, o que eu tenho aqui, só para você entender: eu tenho um servidor, supostamente, que tem o Apache instalado, e tem a versão 8.1 do PHP instalada. E dentro dessa parte PHP, eu tenho aqui dentro do meu container, alguns arquivos — em especial na pasta /var, onde eu tenho a pasta www, e tenho a pasta html, que é a pasta padrão onde você coloca suas aplicações do Apache.  </p>
+            <p> E eu tenho esse arquivo público, que é o index.php. Se a gente abrir no Fire Editor, você já vai ver que é um arquivo muito simples, tá? Sem nenhum tipo de padrão ou arte cultural de desenvolvimento — não tem nada disso. Totalmente para a gente brincar, ele se conecta num banco de dados que supostamente está no servidor, né? </p>
+            <p> Então, basicamente, ele vai fazer uma consulta numa tabela específica do banco de dados, que é a tabela chamada “frase do dia”. Vai gerar um número atômico, vai fazer a consulta, e buscar a frase do dia com base nesse número. Se ele encontrar a frase, ele mostra a frase do dia; caso contrário, ele avisa que não encontrou nenhuma frase. </p>
+            <p>Vendo isso aqui rodando, seria basicamente isso. Vamos olhar aqui, vamos pensar que a nossa aplicaçãozinha, né, "Frase do Dia", a cada refresh que eu dou, ela gera um número atômico, vai na base de dados e busca a frase do dia. </p>
+            <p> A gente vai olhar a parte de dados. Deixa eu abrir aqui o nosso PostgreSQL. A gente vai ver que a parte de dados, que supostamente está no outro servidor, é uma base de dados bastante simples mesmo. A princípio, tem uma tabela... quer dizer, tem uma database que tem uma tabela — essa tabela é a "Frase do Dia".</p>
+            <p> Se a gente olhar todos os dados, vamos identificar que temos aqui 30 frases com seus respectivos IDs. Bem simples, tá? A tabela da última "Frase do Dia".</p>
+            <p>Então, na nossa ideia de migração, a gente tem que migrar dois servidores: um servidor que tem a nossa parte PHP, e um servidor que tem o nosso banco de dados — no caso, um PostgreSQL, inclusive com Docker. </p>
+            <p> Então a gente vai fazer tudo na mão. Tudo bem? À medida que a gente vai avançando nosso conhecimento de cloud, eu vou transformar esse banco de dados em platform as a service (PaaS), ou seja, vamos ver como migrar isso para o RDS.</p>
+            <p> No caso, é um banco de plataforma. E quando a gente analisar lá no Capítulo 6, o nosso módulo de containers, a gente vai falar um pouquinho sobre containers. Aí eu vou gerar os containers do jeito certo, exportar esses containers do jeito que eles estão aqui, e importar diretamente na cloud, para a gente ver como é fácil levar tudo de uma vez, empacotado. </p>
+            <p>Mas aqui a gente não vai fazer empacotado. Pelo contrário: a gente vai levar na mão. Vamos ter que subir tudo na mão.  </p>
+            <p> A gente vai vir para a nossa AWS e pensar na nossa estrutura. Vamos abrir aqui um scratchpad, só para desenhar um pouco do que a gente poderia estar pensando.</p>
+            <p> Vamos pensar o seguinte: temos o seguinte contexto aqui. Temos a seguinte ideia: eu poderia ter aqui um ambiente, que seria a nossa rede — nossa rede VPC, que precisa ser uma rede privada, né? Nossa VPC... </p>
+            <p>Deixa eu colocar aqui um pouquinho maior o texto. E essa VPC poderia ter duas subnets: a primeira subnet seria a subnet acessível para o público, ou seja, aquela que expõe a porta 80, por exemplo. Aquela que expõe a porta 80, que seria a porta acessível para o nosso ambiente.  </p>
+            <p> E aqui uma segunda subnet, que seria supostamente privada, onde podemos ter o nosso servidor de banco de dados.</p>
+            <p> Então aqui teríamos o nosso ambiente web — vamos colocar aqui o nosso aplicativo — e aqui, em outra parte, teríamos nosso banco de dados, que estaria em uma subnet privada, tá? </p>
+            <p> Então, basicamente, seria isso aqui. Esse acesso do servidor para o banco de dados é exclusivo do servidor da rede pública. Ou seja, essa subnet pública só vai permitir acesso de fora. E essa subnet privada só vai permitir acesso vindo da subnet pública, tá? </p>
+            <p>Então aqui seria uma subnet pública, e aqui uma subnet privada. Vamos aumentar o tamanho para ficar mais visível para todo mundo. </p>
+            <p>Basicamente, essa é a ideia da nossa solução: bem simples. Aqui vamos responder pela porta 80 (HTTP), e a comunicação com o banco de dados, no caso do PostgreSQL, será pela porta 5432 — mas dentro da subnet privada. </p>
+            <p> O que a gente vai fazer: vamos criar esse ambiente com uma máquina virtual onde vamos colocar a parte PHP. Vamos gerar essa aplicação, e essa aplicação vai acessar a subnet privada onde estará o nosso PostgreSQL. </p>
+            <p> Tudo isso no formato IaaS — infraestrutura como serviço. A gente não vai usar nenhuma plataforma. Vamos fazer tudo na mão: vamos provisionar tudo, construir tudo na mão. </p>
+            <p>Certo? A gente vai construir as nossas próprias máquinas virtuais, fazer as nossas próprias instalações. Toda a responsabilidade estará nas nossas mãos.  </p>
+            <p>Então, para fazer tudo isso, vamos criar uma VPC. Essa VPC vai ter uma subnet pública e uma privada. A máquina que vai estar na subnet pública, a gente vai publicar primeiro, depois preparar a privada para ficar acessível na sequência. Vamos fazer as modificações necessárias para que a gente chegue nesse resultado. </p>
+            <p> Nosso objetivo final, tá? Ou seja, a rede privada vai para a internet, e a pública fica restrita aqui, numa rede privada. Tá aqui dentro, vai estar sob nosso cuidado, e aqui vai estar o nosso servidor. Ué, oi, tudo bem? Beleza.v</p>
+            <p>Mas, por enquanto, eu vou voltar essa rota para que ela enxergue a internet, porque vamos precisar disso. Então, vou vir aqui, através do roteamento, pela rede privada, vou clicar e adicionar uma nova rota, e vamos voltar a ter internet. </p>
+            <p> Aqui eu vou colocar o acesso à nossa internet, por enquanto. Depois a gente muda, tudo bem? A primeira parte do desenho de arquitetura está pronta, né? Então, a gente desenhou a VPC, ela está pronta. A subnet pública está criada, a subnet privada está criada, a associação entre todos os componentes está feita. Os roteamentos estão criados. </p>
+            <p> Só no final é que a gente tem que excluir o roteamento para a internet, mas a princípio está tudo certo. </p>
+            <p> Com isso tudo pronto, é hora de a gente criar as nossas duas máquinas virtuais: a máquina A e a máquina B. Uma vai ter o Apache, e a outra vai ter o PostgreSQL, tá? </p>
+            <p> Vamos aqui no serviço de computação EC2. Vamos clicar em EC2, e a gente vai criar duas máquinas. Vamos começar com a primeira máquina. A primeira máquina vai se chamar “ServerApp” (Application Server 01). Tudo bem?  </p>
+            <p> Ao invés de usar uma AMI padrão, eu vou usar uma que já tenho com o PHP e o Apache instalados, tudo bem? Isso não vai afetar em nada o nosso trabalho neste momento. Estou apenas pulando a etapa de instalação do PHP e do Apache. </p>
+            <p> Vai ser uma t2.micro por enquanto. Não vou me preocupar com o key pair — vou usar um key pair que já tenho pronto. Mas, no capítulo 6, a gente vai trabalhar todos esses detalhes. Eu vou mostrar como criar tudo isso para vocês, então não se preocupem. </p>
+            <p> Agora, networking (rede). Por padrão, ele pega uma VPC qualquer. A gente não quer isso. A gente quer que a nossa máquina use a VPC nova, que é a VPC01, e a subnet tem que ser a subnet pública, certo? </p>
+            <p>Por que tem que ser a subnet pública? Porque esse é o servidor de aplicação, né? Esse servidor vai dar a interface para a web, então ele precisa estar público, precisa receber acesso externo.  </p>
+            <p> Se a gente olhar o desenho, é esse cara aqui — ele tem que estar na subnet pública. Ele tem que ter um IP elástico. Vamos atribuir um IP a ele. </p>
+            <p> Vamos criar um security group que vai se chamar "SG-Public", que por enquanto terá apenas a conectividade SSH habilitada para o meu IP. Depois vamos ajustar esse security group, mas por agora, só eu posso me conectar via SSH com meu IP local. </p>
+            <p> Se a gente quiser, já podemos liberar a porta 80, HTTP. A gente pode deixar a porta 80 aberta para todo mundo, tudo bem? Porque nosso servidor vai responder pela porta 80. </p>
+            <p> Então vamos adicionar mais uma regra: porta 80 aberta para todo mundo. O resto fica fechado, exceto a porta 22 para SSH com minha chave PEM. </p>
+            <p> Feito isso, vamos criar a instância com 8 GB. Pronto, vamos lançá-la. </p>
+            <p> Ah, deu erro, né? Porque eu não posso usar um nome com traço desse jeito — esse formato com traço é exclusivo da AWS. Então vou editar a configuração e dar um nome válido, como "ServerApp01". </p>
+            <p> Agora sim, a instância está funcionando. Já tem Apache rodando. Se eu pegar esse IP e acessar pela porta 80, ele já vai exibir a página do Apache. </p>
+            <p> Agora, vamos modificar esse PHP para exibir a estrutura com aquele código que vimos anteriormente. </p>
+            <p> Vou abrir o terminal, limpar a tela, editar o arquivo index.php com nano. Ele tem um conteúdo padrão. Vou apagar tudo com Ctrl+K e colar o conteúdo do nosso container local — exatamente o mesmo código que vimos no index.php. </p>
+            <p>Copiei e colei. Teoricamente está tudo certo, mas ainda não vai funcionar. Primeiro, porque o banco de dados ainda não foi instalado, e segundo, porque o host ainda está errado — depois vamos trocar pelo IP interno.  </p>
+            <p> Vou salvar com Ctrl+O e sair com Ctrl+X. Se acessarmos o servidor de novo, ele vai mostrar a frase do dia e um erro de conexão com o banco de dados, porque ainda não existe. </p>
+            <p> Agora que já falamos do Apache e da aplicação, é hora de instalar o PostgreSQL, para validar esse acesso. </p>
+            <p> Vamos criar essa parte agora. </p>
+            <p>Vou voltar nas instâncias, criar uma nova chamada "ServerDB" (Database Server). Essa instância vai usar uma imagem padrão da Amazon, porque vamos instalar tudo manualmente. </p>
+            <p> Ela vai usar a mesma key pair e a VPC que criamos. Mas, desta vez, vai estar na subnet privada, pois é um banco de dados e não deve ter acesso público. Temporariamente, vamos associar um IP público só para fins de configuração. Depois, vamos remover. </p>
+            <p>Vamos criar um security group chamado "SG-Private", com acesso SSH liberado apenas para meu IP. Nada mais. </p>
+            <p> Pronto, instância lançada. </p>
+            <p> Agora temos a segunda instância. No desenho, ela está correta: subnet privada, sem portas abertas. Vamos configurar o PostgreSQL. </p>
+            <p> Vou acessar a nova instância. Antes disso, vou sair da instância da aplicação (ServerApp). Agora vamos conectar na ServerDB. </p>
+            <p> Tudo certo, estou logado na máquina Linux limpa. Vamos tornar o usuário sudo para facilitar. </p>
+            <p>A instalação do PostgreSQL pode ser chata, então preparei um passo a passo no GitHub para facilitar — vou disponibilizar para vocês. Vamos seguir juntos. </p>
+            <p> Passo 1: já estamos logados na máquina.</p>
+            <p> Passo 2: tornamos o usuário administrador.</p>
+            <p> Passo 3: atualizar a máquina com apt update e apt upgrade.</p>
+            <p> Deixa atualizar. Tudo certo. Agora vamos instalar o PostgreSQL (cliente e servidor) com o comando que preparei. </p>
+            <p> Instalado. Agora vamos inicializar o banco de dados com postgresql-setup initdb (ou equivalente na distribuição usada).</p>
+            <p>Depois, vamos rodar os três comandos para iniciar, habilitar e verificar o status do serviço. Pronto. </p>
+            <p> Agora vamos mudar a senha do usuário postgres. Para isso, precisamos acessar como o usuário postgres.</p>
+            <p> Vamos definir a senha como "postgres" (você pode escolher outra). Ele reclamou que a senha é fraca, mas tudo bem para testes. </p>
+            <p> Agora, logado como postgres, vamos acessar o psql e alterar a senha dentro do banco, por segurança. </p>
+            <p> Comando feito, saímos do psql com \q e voltamos para o usuário root. </p>
+            <p> Quase terminando. Agora precisamos alterar o arquivo de configuração postgresql.conf. Antes disso, vamos fazer um backup dele com cp. </p>
+       
         </ul>
       </div><!-- "modulo-1-capitulo-4-sol" -->  
 
-      
+
+      <div id="modulo-1-capitulo-5-sol" class="capitulo">
+        <p><strong>Capítulo 5 – Introdução à Elasticidade e Escalabilidade (prática AWS)  </strong></p>
+        <ul>
+          <li><strong> Entrega da Atividade de Fixação </strong> </li>
+            <p>o que é migração p </p>
+        </ul>
+      </div><!-- "modulo-1-capitulo-5-sol" -->      
+  
+
+      <div id="modulo-1-capitulo-6-sol" class="capitulo">
+        <p><strong>Capítulo 6 - Serviços de Infraestrutura básica  </strong></p>
+        <ul>
+          <li><strong> 6.1. Introdução à Criação de uma virtual machine e containers </strong> </li>
+            <p> conhecer um pouquinho mais sobre como funciona a criação e a manipulação de máquinas virtuais e contêineres na cloud, tá? Ponto bem importante para compartilhar — praticamente o ponto fundamental da parte de Infraestrutura na cloud, que a gente já conhecia, mas agora com mais detalhes, tá bem? Então vamos lá, vem comigo. </p>
+            <p>Bom, esse capítulo vai ser dividido em quatro aulas, né? Na primeira aula, a gente vai falar um pouquinho sobre a introdução à criação de máquinas virtuais e contêineres. Na segunda aula, a gente vai ver um pouco a respeito do IAM, contrato de acesso e permissionamento. Na nossa terceira aula, a gente vai falar um pouco sobre a criação de alguns elementos importantes na hora de criar uma máquina virtual, como, por exemplo, a chave de segurança — que é o par de chaves usado para conectividade na máquina por meio de SSH. Já coloco aqui um pouco sobre o conceito de Security Groups, que seriam como um firewall embutido em cada uma das máquinas. Vamos falar um pouco sobre os próprios detalhes da criação da máquina virtual. E, claro, no final, no último capítulo, vamos fazer a criação detalhada de uma máquina virtual e de um contêiner na cloud, tá bem? Vamos lá, tamo junto.  </p>
+            <p> Bom, então, na nossa primeira aula de hoje, a gente vai falar especificamente sobre o que são as máquinas virtuais, o que são os contêineres, vamos tratar um pouquinho da diferença entre os dois e falar um pouco a respeito de quando usar um e quando usar o outro, tá bem? Vamos lá. </p>
+            <p> Máquinas virtuais e contêineres são duas tecnologias, pensem em tecnologias similares, tecnologias irmãs — uma, na verdade, é uma evolução da outra, né? As máquinas virtuais nasceram ali no começo dos anos 2000, mais ou menos. Eu lembro de estar trabalhando com máquinas virtuais ali pelo ano de 2001, quando elas começaram a surgir. Elas têm uma tecnologia bastante interessante por trás, que permite que uma máquina física crie, sobre si mesma, uma ou mais máquinas virtuais. </p>
+            <p> Talvez no passado vocês já tenham, em algum momento da vida, ouvido falar sobre emuladores. Emuladores são quando você recria, dentro de um determinado hardware, um hardware normalmente mais antigo ou de outro tipo, por meio de código. Então você simula aquela condição, aquela lógica criada por meio de transistores, resistores, capacitores... Você cria toda aquela lógica por meio de código. </p>
+            <p>Isso fez e ainda faz muito sucesso. Nos anos 90, principalmente, quando alguns programadores muito talentosos começaram a criar emuladores de videogames para computador, como Super Nintendo, Mega Drive, etc. Então permitia que você jogasse esses jogos no seu computador.  </p>
+            <p> As máquinas virtuais evoluíram desse conceito de emuladores e pensaram: “E se a gente emular um hardware do presente?”. Então, em vez de emular uma máquina antiga, você começa a emular uma máquina atual. Quem já mexeu com DOSBox, por exemplo, sabe que é como ter um MS-DOS rodando dentro do Windows — é uma máquina virtual, basicamente. </p>
+            <p> Os contêineres, por sua vez, são uma evolução das máquinas virtuais. Mas vamos chegar neles com calma. </p>
+            <p> As pessoas começaram a pensar como fazer para isolar melhor os recursos da máquina — como memória, processador — de modo que o sistema operacional hospedeiro não interferisse em outra máquina virtual, e vice-versa. E sim, isso foi possível! Criaram-se “ambientes” completamente isolados, que podiam ser criados, destruídos e duplicados com muita facilidade. Você podia criar uma imagem da máquina virtual e depois distribuir em outras máquinas — assim, várias pessoas podiam ter o mesmo ambiente, mesmo que a máquina física fosse diferente. </p>
+            <p> Pensa comigo: você tem uma máquina poderosa com 20 núcleos de CPU e 64 GB de RAM. Mas, para o desenvolvimento, você só precisa de uma máquina com 4 GB de RAM. Você pode usar a máquina poderosa para criar várias máquinas menores, cada uma isolada — rede isolada, disco isolado, memória isolada — e testar seus ambientes produtivos separadamente. Muito útil! </p>
+            <p> A máquina virtual, na prática, é um software. Esse software emula tanto o hardware quanto o software necessário para hospedar o sistema operacional destino. Para você ter uma máquina virtual, obviamente, você precisa de uma máquina física. Pense nela como um prédio grande que é dividido em vários apartamentos: cada apartamento é uma máquina virtual. </p>
+            <p>Mas, para que a máquina virtual não precise emular todo o hardware do zero a cada vez, existe uma camada chamada hipervisor. Esse hipervisor é responsável por emular o hardware de forma mais otimizada.  </p>
+            <p>Dependendo da tecnologia que você usar (VMware, Hyper-V, VirtualBox etc.), o hipervisor será diferente. Ele vai estar entre o sistema operacional hospedeiro e as máquinas virtuais.  </p>
+            <p>Hoje em dia, já existe suporte de virtualização nativo na maioria dos processadores, até em notebooks. Talvez você só precise habilitar isso na BIOS/UEFI da sua máquina. No passado, as máquinas virtuais eram muito lentas, e aí os fabricantes criaram otimizações como o Intel VT-x, que permite que a máquina virtual se comunique diretamente com o hardware, sem precisar passar pelo sistema operacional hospedeiro.  </p>
+            <p> Com isso, a performance das máquinas virtuais melhorou muito! Quase igual à de uma máquina física, dependendo da configuração. </p>
+            <p> Essas máquinas virtuais rodam múltiplos sistemas operacionais ao mesmo tempo (Windows, Linux, Ubuntu, Debian, etc.), mas consomem bastante recurso. É comum uma VM ocupar 2, 3 GB de RAM fácil. E isso sem contar o processador e o espaço em disco. </p>
+            <p> Então, se você tiver um PC comum, não dá para rodar muitas máquinas virtuais ao mesmo tempo. Vai pesar bastante. </p>
+            <p> E aí entram os contêineres! </p>
+            <p> Os contêineres são uma evolução das máquinas virtuais — mas de forma mais leve e otimizada. Eles não precisam emular todo o sistema operacional. Usam apenas o mínimo necessário para rodar o que precisam. O Docker, por exemplo, é um dos gerenciadores de contêiner mais populares. </p>
+            <p>O contêiner é, então, uma "quase máquina virtual", só que mais enxuta. Ele compartilha o mesmo kernel do sistema operacional hospedeiro, mas com processos isolados, rede isolada, sistema de arquivos isolado.  </p>
+          
+          <li><strong> 6.2. Controle de Acessos e Permissionamento com IAM  </strong> </li>
+            <p> o que é IAM, né? Aí tem gente que pensa: “O que é isso?” Vamos falar um pouco dos componentes do IAM, da política de Zero Trust e farei uma comparação entre as diferentes políticas e metodologias de IAM nas três principais nuvens, tá bem? Vamos lá.  </p>
+            <p> IAM, no final das contas, é um conjunto de políticas e tecnologias que permite controlar o acesso e a autorização na ida para a nuvem. Você pode controlar exatamente o que a pessoa pode fazer, quais recursos ela pode acessar e quais limites ela tem para realizar cada ação em cada recurso. Por exemplo: ela pode apenas ver o status, pode apenas ler, escrever, executar... IAM é essencial para controlarmos a política de acesso e segurança na nossa própria cloud, tá bom?  </p>
+            <p>  Por que devemos usar o IAM? Devemos utilizá-lo para garantir que o usuário que estamos propondo, o usuário que estamos criando e dando acesso, possa realizar seu trabalho de maneira controlada — para que ninguém, acidentalmente, cause um estrago na nossa conta (ou no nosso cartão de crédito!). Temos que ter muito cuidado com quem damos acesso e com os recursos e poderes concedidos. Assim, conseguimos reduzir o risco de violação de segurança ou ações acidentais que causem impacto.  </p>
+            <p> Logicamente, quando temos esse controle bem implementado, melhoramos a governança e a conformidade. Afinal, esse controle de acesso faz parte da nossa responsabilidade — não é responsabilidade da nuvem. Por exemplo: você cria uma conta, cria um usuário superpoderoso, dá todos os acessos para alguém e essa pessoa causa um impacto. A nuvem não será responsabilizada — a responsabilidade é nossa. Chamamos isso de responsabilidade compartilhada na nuvem. Vamos falar mais sobre isso depois. Mas, o fato é: tome cuidado! O IAM precisa ser bem utilizado para que possamos criar usuários com o grau de privilégio adequado, nem mais, nem menos, tá bom?  </p>
+            <p> Alguns componentes compõem o IAM. Primeiramente, as identidades: usuários, grupos, funções, e identidades de máquina (roles para serviços). Essa é a primeira composição. A segunda é o nível de autenticação e autorização: a autenticação, como a identidade do usuário, sua senha, autenticação multifator... e a autorização — o que ele pode fazer. Isso envolve as permissões e políticas associadas ao usuário.  </p>
+            <p>  A terceira parte são justamente as políticas. Tenho o usuário, tenho suas características, e aplico políticas a ele. A política é o que define quais permissões o usuário terá. Ou seja: usuário com login, senha, controle multifator; depois, definimos o que ele pode acessar; e, por fim, as políticas determinam o nível de privilégio — se pode ler, escrever, executar. Os recursos são importantes, e as políticas são aplicadas conforme os grupos ou papéis que criarmos.  </p>
+            <p> Por exemplo: crio um grupo “desenvolvedores” e, ao colocar o usuário nele, ele já herda as permissões daquele grupo. Pode criar, mas não pode destruir, ou pode ajudar, dependendo do que for configurado. Ou seja, os grupos definem os limites, e o usuário fica dentro desse cercado, tá bem?  </p>
+            <p> Existe uma técnica chamada política de Zero Trust, ou seja, o princípio de não confiar em ninguém nem em nada. Sempre haverá verificação, e o privilégio concedido será o menor possível. Diferente de, por exemplo, quando compramos uma máquina física: ela chega com a placa de rede com todas as portas abertas. Já uma máquina virtual vem com todas as portas fechadas. Por quê? Porque você irá liberar os acessos conforme a necessidade.  </p>
+            <p> Você libera a porta 443, depois a 3306, 1521, 21, 22... e assim vai. Tudo isso dentro da política de acesso. Ou seja, sempre o menor privilégio possível. A ideia é: nunca confie em ninguém nem em nada. Então, tudo fechado. Ao criar um usuário, ele não tem poder nenhum. Você define o que ele poderá fazer.  </p>
+            <p> Todo acesso precisa ser indicado, autorizado e monitorado. Isso é essencial, tá bom? Essa abordagem é invisível para alguns, mas se baseia em pilares de segurança.  </p>
+            <p>  O primeiro pilar é o mínimo privilégio: o usuário só terá acesso ao que você permitir, nada mais. </p>
+            <p> O segundo pilar é a autenticação. É importante que a senha seja forte, que tenha obrigatoriedade de troca periódica, e — idealmente — autenticação multifator (como receber um código por telefone ou e-mail).  </p>
+            <p> O terceiro pilar é o acesso condicional: você pode definir diferentes condições para o usuário acessar, como o local, o dispositivo ou o horário. Isso é importante para evitar movimentos laterais dentro da infraestrutura — ou seja, evitar que alguém com acesso limitado consiga atingir áreas que não deveria.  </p>
+            <p> Você pode, por exemplo, criar perímetros virtuais, onde o usuário só acessa determinados recursos. Assim, ele não se move para outras camadas da arquitetura da nuvem. Isso ajuda a limitar e proteger o ambiente.  </p>
+            <p> Outro pilar importante: nunca confie. Não é paranoia, é segurança. Tudo que for feito precisa ser monitorado. Usamos logs para registrar tudo: máquina criada, memória alterada, arquivo adicionado — tudo pode e deve ser auditado. Isso ajuda no princípio do não repúdio, ou seja, sabemos quem fez o quê.  </p>
+            <p>  IAM é fundamental. Nunca devemos confiar cegamente, nem permitir acessos sem necessidade. Tudo deve ser controlado plenamente. </p>
+            <p>  Hoje temos arquiteturas híbridas, e tudo isso faz parte do pilar da segurança na nuvem. Afinal, estamos lidando com tecnologia poderosa. Temos que saber quem está fazendo o quê, e controlar isso. </p>
+            <p>  Imagine dar a um usuário a permissão de desligar um datacenter. Não faz sentido! No físico, não damos essa liberdade — na nuvem, também não devemos. Damos acessos restritos, controlamos as portas, segmentamos os acessos, e aplicamos monitoramento constante. </p>
+            <p> Seja em ambientes de teste, desenvolvimento, homologação ou produção — não importa: os princípios de IAM se aplicam igualmente, tá bem?  </p>
+            <p> Por fim, uma comparação rápida entre as plataformas. Se trabalharmos com AWS, veremos que ela possui usuários, grupos, policies, roles... A navegação é tranquila. No caso do Azure, temos o Azure AD (ou Entra ID), com RBAC, PIM etc. São funcionalidades parecidas, mas com nomenclaturas diferentes. O GCP também possui IAM, com seus próprios recursos e hierarquias.  </p>
+            <p>  Vamos trabalhar mais com AWS, que é onde temos maior adoção. Vamos detalhar isso na próxima aula prática. Criaremos nossa primeira máquina virtual e explicaremos tudo com calma. Talvez até role uma mistura entre AWS e Azure para mostrar as diferenças, tá bom? </p>
+            
+          <li><strong>6.3. [DEMO]: Criação de uma virtual machine, Key Pair, Security Group   </strong> </li>
+            <p> vamos criar PES; se for necessário, também vamos configurar essa equipe de Groups. Para não ficarmos 100% focados somente na AWS, vamos tentar ter uma visão um pouco maior, mais ampla de outras clouds. Vamos começar agora pela Azure, e em seguida eu faço também pela AWS, para que a gente possa ter uma visão mais abrangente de como isso é feito, tá?  </p>
+            <p> Essa é uma infraestrutura básica como serviço — a criação de máquinas virtuais — e é um serviço que a gente vai usar muito no dia a dia, entendeu? Um serviço que a gente vai realmente utilizar com bastante frequência. Então, é importante que a gente conheça em mais detalhes como podemos provisionar e operar essas máquinas virtuais. Tudo bem?  </p>
+            <p> Então, vamos lá. Eu vou mudar aqui para o portal da Azure e a gente começa. Peraí, peraí… muito bem! Já estou de volta. Estou aqui logado no portal da Azure. Você se lembra, né? É só ir no portal.azure.com. Depois ele vai pedir seu login e você vai se autenticar com a sua conta Microsoft que já foi criada. A gente já fez isso, né?  </p>
+            <p> Agora vamos entender um pouquinho como funciona o serviço de máquinas virtuais na Azure. Tem esse botão aqui de "Criar um recurso", que é um atalho rápido para os recursos mais provisionados — ou seja, os mais populares. Aqui você tem armazenamento, aplicação web, rede virtual, Key Vault e máquina virtual, que é o que nos interessa.  </p>
+            <p> Se quiser avaliar todos os elementos disponíveis, pode clicar em "Computação". Aqui, obviamente, há várias categorias, dentre as quais você pode criar máquinas virtuais ou utilizar máquinas do tipo containers (que veremos na próxima aula, usando Kubernetes). Tem várias opções aqui, mas vamos focar efetivamente na máquina virtual.  </p>
+            <p>  A gente vai clicar no botão "Criar" e ser levado ao painel de criação da máquina virtual pela Azure. Ele já te ajuda, olha que legal! Se quiser, ele cria uma VM de baixo custo, otimizada para comunidade, alta performance etc. Você pode pedir isso, e ele cria para você. Mas a gente não vai fazer isso agora. </p>
+            <p> Vamos escolher aqui nossa assinatura, né? Nossa assinatura padrão. E nosso grupo de recursos, que por enquanto não tem nenhum. Vou criar um novo com o nome "recursosTruckRG01". Está disponível, ok! Criei esse grupo.  </p>
+            <p> Vou dar o nome da nossa máquina virtual. Vou colocar "Instancia01". Você pode dar o nome que quiser. A região, eu vou escolher West US 2 (que é barata). Há várias zonas de disponibilidade. Você pode escolher até 3 zonas diferentes. Pode deixar que a Azure escolha automaticamente ou selecionar uma manualmente. Vou deixar como "Zona 1".  </p>
+            <p>  Tipo de segurança: vamos colocar o básico. A VM será configurada para iniciar com segurança básica. Poderia ter inicialização confiável com vTPM (Virtual Trusted Platform Module), mas não vamos usar isso agora. Vamos deixar na versão padrão. </p>
+            <p> A imagem significa o sistema operacional que você vai instalar na máquina virtual. Podemos deixar um Ubuntu aqui. Legal, né? Acho interessante. Há também Windows, Debian, Oracle, CentOS, Alpine e muitas outras imagens diferentes. Vou deixar o Ubuntu, que está qualificado para os serviços gratuitos.  </p>
+            <p> A arquitetura pode ser x86 ou ARM64. Tudo certo. Aqui tem a opção de executar com desconto do tipo spot instance (que usa sobras de computação e é muito barato). Pode ser usado para economizar custos, mas por enquanto vamos deixar desmarcado.  </p>
+            <p> O tamanho da VM: vamos usar a SKU mais simples, com até 1 GB de memória, que custa US$ 7,59 por mês. Está dentro dos nossos serviços gratuitos e do limite provisionado de créditos.  </p>
+            <p> Hibernação é mais para Windows. Autenticação: você pode usar senha ou uma chave SSH. Acho que a chave SSH é muito mais segura. Vamos pedir para ele gerar um novo par de chaves. Pode escolher o formato (tanto faz). Vamos dar o nome “azure-brasa01”. O arquivo será baixado automaticamente.  </p>
+            <p> As regras de portas de entrada funcionam como um grupo de segurança, uma espécie de firewall. Por enquanto, ele vai permitir acesso na porta 22 (SSH) de qualquer IP — o que é muito aberto, mas suficiente para este primeiro momento. Depois, vamos mudar isso.  </p>
+            <p>  Vamos para a seção de discos. Podemos escolher o tamanho — 30 ou 32 GB — o que não muda o preço. Se quiser economizar, pode trocar o SSD Premium por SSD Standard. Isso reduz um pouco o custo. A criptografia é obrigatória, gerenciada pela plataforma da Azure, o que é bem legal. </p>
+            <p> Você pode configurar se quer excluir o disco junto com a VM. Se desmarcar, o disco continuará armazenado mesmo que a máquina seja excluída. Isso é útil. Também dá para anexar discos existentes, mas não faremos isso agora.  </p>
+            <p> Na parte de rede, vamos deixar que ele crie automaticamente uma rede virtual, sub-rede e atribua um IP público. Vai aplicar um grupo de segurança permitindo acesso SSH (porta 22). Isso será ajustado depois.  </p>
+            <p> Excluir IP público e NIC junto com a VM: pode marcar, é legal para evitar deixar recursos esquecidos.  </p>
+            <p>  Rede acelerada não está disponível para essa VM barata, então tudo bem. Nada de load balancer ou backend pool por enquanto. </p>
+            <p> Gerenciamento: plano básico gratuito ativado. Você pode habilitar login com Azure AD, configurar RBAC, desligamento automático (por exemplo, à meia-noite), e habilitar backup. Tudo isso é opcional.  </p>
+            <p>  Atualizações do sistema operacional: você pode agendar ou deixar desabilitado (vamos atualizar manualmente). </p>
+            <p>Monitoramento: tudo aqui gera custo, então vamos desabilitar. Pode-se configurar alertas, mas isso também será visto depois. Alertas são úteis se, por exemplo, a CPU passar de 80%.   </p>
+            <p> Avançado: você pode inserir dados ou scripts personalizados. Não faremos isso agora.  </p>
+            <p> Grupos de posicionamento por proximidade são úteis se quiser que várias VMs fiquem próximas, mas vamos ignorar por enquanto.  </p>
+            <p> Tags: pode usar para organizar recursos.  </p>
+            <p>Na revisão final, ele mostra o custo total estimado. Neste caso, está estimado em um centavo por hora — bem barato para uma VM simples. E como temos crédito, será descontado daí.            </p>
+           
+          <li><strong>6.4. [DEMO]: Criação de container e infraestrutura  </strong> </li>
+
+        </ul>
+      </div><!-- "modulo-1-capitulo-6-sol" -->    
+
+
+
+      <div id="modulo-1-capitulo-7-sol" class="capitulo">
+        <p><strong>Capítulo 7 - Backups  </strong></p>
+        <ul>
+          <li><strong> 7.1. Introdução a Backups na nuvem. </strong> </li>
+            <p>  É um papel muito complexo. Backup é algo que serve pra gente em caso de perda, né? Quando a gente tem um determinado volume de dados e não quer perdê-los, a gente precisa guardar esses dados em um local seguro — uma segunda cópia, uma terceira cópia, uma quarta cópia...   </p>
+            <p>  Essa cópia sempre vem acompanhada de algumas tarefas que são, normalmente, bastante minuciosas e muito complexas. Por exemplo, pra quem já trabalhou com backup, sabe que normalmente quem armazena backups usa fita DAT, fita DDS... são fitas magnéticas — algo bem antigo, mas que consegue guardar uma grande quantidade de dados e tem uma durabilidade muito longa.  </p>
+            <p> Só que, quando a gente fala em requisitar uma fita DAT, a gente precisa de tempo, precisa de investimento e precisa de esforço — o que nem sempre é fácil. A gente tá lidando hoje com uma complexidade enorme de dados e com a velocidade com que a gente gera esses dados.   </p>
+            <p> Então, pra quem já trabalhou com backup, por exemplo, sabe que você tem que ter um espaço específico pra armazenar essas fitas. Tem que ter um robô que vai gravar, você tem que tirar tempo pra fazer testes naquela fita, pra ver se ela funciona ou não. Você tem que tomar muito cuidado com a forma de armazenamento, com o horário, com o risco de criar fungos. Tem que ter cuidado pra elas não serem comidas por pequenas traças ou insetos que furam as fitas e corrompem os dados.   </p>
+            <p> Então o processo depende de temperatura, de umidade, de higiene, de automação de troca — ou seja, trocar a fita, manter o robô antigo, manter o robô novo... porque o robô novo, às vezes, não lê a fita antiga. Então, é um processo complexo. É um processo dolorido, muito doloroso, pra qualquer empresa que precisa fazer backup. Sempre é algo muito completo e difícil.   </p>
+            <p> Durante muito tempo tivemos empresas que só faziam backup — você entregava seus dados e pedia pra essa empresa guardar pra você. Ela ficava responsável por armazenar, limpar, higienizar, verificar, validar... Enfim, é complexo.   </p>
+            <p> Na nuvem, a gente faz isso de uma maneira muito mais fácil. Muito mais fácil! Porque o provedor de nuvem pode armazenar nossos dados e pode armazenar isso em réplicas, em múltiplos data centers. É diferente do backup físico, que normalmente é feito em discos rígidos, SSDs, HDs... No caso da nuvem, são cópias feitas em várias regiões e localidades diferentes, fazendo com que a gente tenha um nível de garantia altíssimo.   </p>
+            <p> Serve pra quê? Pra nos proteger contra falhas, perdas, falhas elétricas, apagões, problemas de distribuição, etc.   </p>
+            <p> Tem vários tipos de backup: completo, incremental, diferencial... O incremental grava apenas as mudanças desde o último backup; o diferencial, desde o último backup completo. Vou comparar isso contigo com mais calma, certo?   </p>
+            <p>  E por que a gente usaria o backup na nuvem? Primeiramente, pra acabar com esse pesadelo físico — acabar com toda essa infraestrutura que depende de temperatura, umidade, robôs, pessoas testando se as fitas estão funcionando... Não há mais necessidade de servidores locais para armazenar os dados. O ponto é a automação — que traz facilidade.  </p>
+            <p> Em vez de termos tudo isso feito de forma manual, temos um local (a nuvem) que faz tudo isso pra gente. É uma infraestrutura bem montada, barata e que permite ter cópias que nos protegem contra falhas. E o melhor: essas cópias podem ser reaplicadas com muita facilidade. Imagina uma cópia única que protege dezenas ou centenas de servidores ao redor do mundo!   </p>
+            <p> Além disso, o custo é flexível. Você pode escolher diferentes camadas de armazenamento — que variam de acordo com o tipo de mídia (fita, disco físico, SSD) — e essas camadas têm tempos de resposta e preços diferentes. Então você escolhe a que mais faz sentido para você.   </p>
+            <p> Vamos falar disso mais adiante, tá bom?   </p>
+            <p>  As vantagens? A primeira é a alta disponibilidade. Muitas provedoras de nuvem oferecem 99,99%, 99,999%, até 99,999999999% de garantia — ou seja, confiabilidade altíssima! Algo que em casa a gente não tem, né?  </p>
+            <p>Num ambiente de armazenamento local, você tem várias fitas. Se houver uma enchente, um incêndio, ou algo que derrube o prédio, pode ser que você perca tudo. E é difícil garantir 100% que isso não vai acontecer. Tem a questão da unidade, da temperatura, da umidade... Brasil é quente! Então é complicado.    </p>
+            <p> Na nuvem, temos outra oportunidade: redundância. A cópia é replicada em vários servidores. Também temos resiliência — alguns provedores, por exemplo, têm servidores dentro de containers que são enterrados no solo, com segurança física e digital altíssima. E a segurança na nuvem, normalmente, é ainda maior do que local — porque tudo é criptografado, tanto em trânsito quanto em repouso.   </p>
+            <p> É muito comum, inclusive, que esses dados sejam criptografados automaticamente — algo que muitas empresas nem fazem quando armazenam localmente.   </p>
+            <p> Outro ponto muito importante: muitas vezes, a gente tem uma quantidade de dados tão grande que seria impraticável fazer o envio pela internet. Em alguns casos, estamos falando de petabytes de dados! Fazer upload disso pode levar semanas.   </p>
+            <p>  Por isso, a AWS (e outros provedores de nuvem) oferecem soluções físicas — hardware que vem até nós. Pode ser, por exemplo, um dispositivo portátil da AWS, como o Snowball. Ou, se for uma quantidade ainda maior de dados, a AWS envia um caminhão. Sim, um caminhão de verdade, chamado Snowmobile, que vem buscar os dados.  </p>
+            <p>  Esse caminhão realmente existe, e pode transportar vários petabytes de uma vez só. Ele é escoltado, tem segurança policial, e garante que os seus dados vão chegar com segurança na AWS. Claro que esse serviço não é gratuito — ele tem um custo — mas se a sua empresa precisa de um caminhão pra transportar dados, é porque ela lida com uma quantidade absurda de informação. Então faz sentido.  </p>
+          
+          <li><strong>7.2. Monitoração e automação de backups.  </strong> </li>
+            <p> Vou falar um pouco a respeito da monitoração e da automação, das ferramentas e estratégias de automação, por que devemos monitorar e o que devemos monitorar, além de algumas práticas interessantes para conseguirmos recuperar os dados de maneira automatizada no nosso dia a dia, com o uso de backups. Tá bom?  </p>
+            <p>  Por que é que a gente deve monitorar os nossos backups? Normalmente, quando a gente copia alguma coisa, essa cópia está sujeita a falhas. Se o arquivo for muito grande, por exemplo, pode ser que um byte não seja copiado, e aí o arquivo fica corrompido. Então, sempre temos que estar atentos ao fazer o backup: monitorar esse backup para verificar, primeiro, se está sendo executado corretamente, e depois, se houve alguma falha na execução. </p>
+            <p> Monitorar ajuda a evitar falhas ou, pelo menos, a minimizar riscos, ou seja, diminuir a chance de qualquer incidente. Afinal, tudo o que a gente não quer é precisar do backup e ele não estar disponível. Isso já aconteceu comigo. Lembro de uma vez em que fiz um backup em um DVD, que tinha muitos arquivos importantes. Quando fui recuperar, porque precisei, o backup não estava lá. Acabei perdendo tudo: muitos anos de material e dados da minha própria vida. Imagina isso em uma empresa! Se uma pessoa já se sente triste ao ver que seu backup não funcionou, imagine uma empresa perdendo anos e anos de dados.  </p>
+            <p>É por isso que é importante monitorar. E também porque existem ferramentas que fazem esse tipo de monitoramento e automação, justamente para evitar que a gente precise fazer tudo manualmente. Automatizar facilita, inclusive, o cumprimento de conformidades. Se a sua empresa busca algum selo de segurança, ela vai precisar monitorar e automatizar seus processos de backup.   </p>
+            <p> Backups confiáveis são aqueles que a gente automatiza. Um backup que depende de lembrança não é confiável. Então, a primeira ferramenta é o agendamento: eu não vou mais realizar o backup manualmente, não vou precisar me lembrar de fazer isso todos os dias. Em vez disso, vou configurar um agente para verificar de tempos em tempos e realizar o backup conforme a especificação feita.  </p>
+            <p> Outra ferramenta importante são os chamados snapshots, que são fotos rápidas do backup, capturando o estado dos dados naquele momento. Isso permite salvar uma versão de forma rápida. Mais importante ainda é replicar esses snapshots, ou seja, ter cópias desses estados de forma rápida, para garantir segurança.  </p>
+            <p> Outro ponto é definir regras de retenção. Armazenar dados tem custo: de armazenamento, de recuperação, de equipe técnica... E esses dados vão perdendo relevância com o tempo. Hoje, com a LGPD, as empresas precisam manter certos dados por um período mínimo, dependendo do tipo de dado. Passado esse período, o que fazemos? Excluímos. Então, é essencial ter regras de retenção: quanto tempo vou manter o dado? Quando passo de uma camada quente (dados usados frequentemente) para uma camada fria (dados acessados raramente)? Quando excluo ou apenas arquivamos?  </p>
+            <p>  Outro ponto essencial é o gerenciamento do ciclo de vida do backup. Muitas vezes, com o tempo, os backups vão sendo menos úteis. Por exemplo, um backup de um ano atrás pode ser importante, mas um de dois anos talvez nem tanto, e um de cinco anos menos ainda. Os dados vão perdendo relevância conforme envelhecem. Um dado de 10 anos atrás pode servir para consulta histórica, mas não para o uso cotidiano. </p>
+            <p> Por isso, podemos usar o gerenciamento automatizado do ciclo de vida na nuvem. Por exemplo: dados com mais de cinco anos podem ser colocados em uma camada muito fria, ou seja, uma área de armazenamento mais barata, mas com tempo de recuperação maior — como fitas DAT, por exemplo. Isso tudo é feito automaticamente pela nuvem, de forma transparente. Mas, se eu precisar daquele dado, pode demorar um, dois ou até três dias para recuperá-lo, dependendo da camada. Isso afeta a disponibilidade imediata e também o custo: quanto mais frio o dado, mais barato é armazená-lo — e mais lento o acesso.  </p>
+            <p><strong>  Cada nuvem tem suas próprias ferramentas para isso. Temos, por exemplo:  </strong></p>
+            <ul>
+              <li> AWS Backup na Amazon Web Services; </li>
+              <li> Azure Backup na Microsoft; </li>
+              <li> Google Cloud Backup no Google; </li>
+            </ul>
+            <p><strong> Também podemos orquestrar esses backups com funções de automação: </strong></p>
+            <ul>
+              <li> No Azure, temos o Azure Automation; </li>
+              <li>Na AWS, o Lambda;</li>
+              <li>No Google Cloud, o Cloud Functions ou Cloud Fusion.</li>
+            </ul>
+            <p>Essas funções são disparadas por eventos, como início ou término de um backup, e podem alimentar dashboards, enviar notificações, gerar imagens ou executar tarefas complementares. Por exemplo, enquanto o backup está sendo feito, uma função pode gerar miniaturas das imagens armazenadas e exibir em outro painel.   </p>
+            <p> Agora, o que devemos monitorar?  </p>
+            <p><strong> Quatro pontos principais: </strong></p>
+            <ul>
+              <li>Status do backup: foi concluído com sucesso ou não? Teve falhas? A própria aplicação pode indicar: "na primeira tentativa falhou, na segunda deu certo". Isso já é um alerta. </li>
+              <li>Tempo de execução: se um backup que normalmente leva 2 horas está levando 20, algo está errado. </li>
+              <li>NIntegridade: talvez o mais importante. Temos que confirmar que os backups são restauráveis. Por isso, testes de restauração devem ser feitos periodicamente.</li>
+              <li>Alertas e notificações: é importante receber avisos automáticos se algo der errado. </li>
+            </ul>
+            <p><strong> Boas práticas: </strong></p>
+            <ul>
+              <li>Separar tempo para verificar os backups. Não adianta só confiar que ele está na nuvem. Se foi replicado com erro, o erro também foi replicado. </li>
+              <li>Definir SLAs (acordos de nível de serviço): qual o tempo de resposta para restaurar um backup? Se sua empresa sofrer um ataque (como ransomware), quanto tempo levaria para voltar ao estado anterior ao ataque? Quanta informação estaria perdida? </li>
+              <li>Políticas de segurança: controle de acesso aos dados, criptografia... Hoje, a criptografia está no centro da segurança, mas sabemos que, com a computação quântica, os desafios aumentarão. Enquanto isso, é importante usar os melhores métodos disponíveis para dificultar a vida de invasores. </li>
+              <li>Análises contínuas: monitoramento, testes, revisões periódicas das estratégias de backup. Não basta configurar uma vez e esquecer. </li>
+            </ul>
+          
+          <li><strong>7.3. Camadas de Armazenamento.   </strong> </li>
+            <p> O que são, afinal, as diferentes camadas de armazenamento? São níveis de armazenamento distintos, otimizados em relação ao eixo de custo, desempenho ou frequência de acesso, tá? </p>
+            <p> Vamos pensar: existem camadas que oferecem desempenho muito rápido, quase instantâneo, como se você estivesse no seu Google Drive, onde você clica e aquele arquivo é recuperado de forma quase imediata. Essa camada mais quente, mais instantânea, é rápida, mas também mais cara, né? </p>
+            <p> Está disponível para você 100% do tempo. Isso olhando no nosso eixo de disponibilidade. </p>
+            <p> Ou seja, pode haver um tempo de espera para arquivos que estão “congelados” — entre aspas — armazenados em métodos diferentes, que podem ser fitas ou dispositivos com desempenho bem mais lento que um disco tradicional, e o custo para isso é muito menor. </p>
+            <p> Então, como eu tenho uma escala de escolha, posso optar pelo que mais me atende. Vamos pensar num exemplo bem simples: </p>
+            <p> O backup de ontem, eu preciso dele imediatamente. Se houver qualquer problema, eu tenho que restaurar esse backup de forma instantânea. Mas será que o backup de três anos atrás eu preciso de forma tão detalhada assim? </p>
+            <p> Qual é a chance de precisar restaurar um backup de três anos atrás? É muito mais provável que seja para buscar um arquivo, verificar uma informação ou um histórico de sistema, e não para restaurar de fato. </p>
+            <p> Ou seja, aquele backup de três anos atrás não vai substituir o que eu tinha ontem, então ele é menos importante do que aquele backup que eu fiz hoje. </p>
+            <p>E é por isso que você pode optar por um armazenamento mais barato para arquivos menos importantes.  </p>
+            <p><strong> Pense num gráfico com eixo X e Y. Temos:  </strong></p>
+            <ul>
+              <li>Armazenamento quente: também chamado de Hot Storage, com acesso muito frequente e latência muito baixa. Você clica e ele já responde.</li>
+              <li> Armazenamento morno (Warm Storage): intermediário, para acessos ocasionais, com latência média e custo reduzido.</li>
+              <li> Armazenamento frio (Cold Storage): com latência muito alta, usado para dados antigos, arquivamento de longo prazo e custo bem menor. </li>
+              <li>Armazenamento arquivado (Archive): ainda mais frio, pensado para retenções de muitos anos e com acesso quase nulo. </li>
+            </ul>
+            <p><strong> Vamos a uma rápida comparação:  </strong></p>
+            <ul>
+              <li> Hot: latência muito baixa, custo mais alto. Recomendado para dados críticos, recentes e ativos. </li>
+              <li> Warm: latência média, custo médio. Bom para backups recentes que ainda podem ser restaurados sem grandes perdas. </li>
+              <li> Cold: latência alta, custo baixo. Ideal para arquivos antigos, mais focado em consulta eventual.</li>
+              <li> Archive: latência muito alta, custo muito baixo. Armazenamento a longo prazo, quase nunca acessado. </li>
+            </ul>
+            <p>Se você tem um sistema de compras (como o GPD, que exige o armazenamento dos históricos de compra dos clientes dos últimos cinco anos), é muito raro alguém consultar esses dados. Porém, eles precisam estar armazenados, então você pode usar uma camada fria ou arquivada.  </p>
+            <p> Lembra quando você solicita os dados da sua rede social? Ela diz: “Vou preparar o arquivo e depois envio”. Por quê? </p>
+            <p> Porque provavelmente parte dos seus dados está em camadas frias ou arquivadas, que exigem tempo maior de restauração. </p>
+            <p> Alguns exemplos de ferramentas atuais: </p>
+            <p><strong>AWS S3: </strong></p>
+            <ul>
+              <li>Standard = Hot </li>
+              <li>Infrequent Access (IA) = Warm </li>
+              <li>Glacier = Cold </li>
+              <li> Glacier Deep Archive = Archive</li>
+            </ul>
+            <p><strong>Azure: </strong></p>
+            <ul>
+              <li>Hot, Cool, Archive</li>
+            </ul>
+            <p><strong>Google Cloud: </strong></p>
+            <ul>
+              <li>Standard, Nearline, Coldline, Archive </li>
+            </ul>
+            <p> Cada provedor tem seus nomes, mas o conceito é o mesmo. </p>
+            <p> Como escolher a camada certa? </p>
+            <p> Frequência de acesso: Quanto mais frequente o acesso, mais quente deve ser a camada. </p>
+            <p> Tempo de retenção: Quanto mais longa a retenção, mais fria pode ser a camada.  </p>
+            <p>Tempo de recuperação (RTO):  Se o tempo de recuperação for crítico, como em um e-commerce que não pode perder vendas, o backup precisa ser frequente e em camada quente.           </p>
+            <p> Custo-benefício: Não adianta pagar por uma camada quente se a recuperação quase nunca é necessária. Avalie se o custo vale a pena para o benefício que você espera.  </p>
+            <p><strong>Exemplos de uso: </strong></p>
+            <ul>
+              <li>Backups recentes (7 a 30 dias): camada quente (hot)</li>
+              <li>Backups intermediários (30 dias a 6 meses): camada morna (warm) </li>
+              <li>GBackups antigos (acima de 6 meses): camada fria ou arquivada</li>
+            </ul>
+            <p>Você pode também usar automação e políticas de movimentação de camadas.  </p>
+            <p> Por exemplo, na AWS, o Intelligent Tiering move os dados automaticamente entre camadas, com base no uso recente. </p>
+            <p> Se um backup foi acessado nos últimos 3 dias, ele permanece na camada quente. </p>
+            <p>  Se passar 10 dias sem uso, ele vai para a camada morna.</p>
+            <p> Se passar 60 dias, vai para a fria. </p>
+          
+          <li><strong>7.4. [DEMO]: Configurando o backup na nuvem    </strong> </li>
+            
+
+        </ul>
+      </div><!-- "modulo-1-capitulo-7-sol" -->    
+  
+
+      <div id="modulo-1-capitulo-8-sol" class="capitulo">
+        <p><strong>Capítulo 8 – Responsabilidade na Cloud  </strong></p>
+        <ul>
+          <li><strong> 8.1. Introdução ao modelo de responsabilidade compartilhada  </strong> </li>
+            <p> Bom, quando você vai para a nuvem, você está deixando uma parte do seu trabalho para ser feita por um terceiro. E esse terceiro está sendo pago por isso, né? Consequentemente, ele vai se responsabilizar por uma parte importante daquilo que ele está te prestando como serviço, certo?   </p>
+            <p> Os provedores de nuvem normalmente definem uma parte da responsabilidade que é deles e outra parte que é nossa, como cliente, que a gente vai ter que cuidar. Certo?   </p>
+            <p> Essa divisão de tarefas vai envolver desde a infraestrutura fundamental — como cabeamento, cartões de energia, refrigeração — até limpeza, aplicação de determinadas ações automatizadas para nós, e também a parte de conformidade, segurança, alterações... tudo que diz respeito à manutenção do uso da cloud.   </p>
+            <p>  É importante que a gente garanta que essa limitação esteja bem definida, para que a gente saiba exatamente do que somos responsáveis e do que eles são responsáveis. Isso vai evitar qualquer falha nesses limites e permitir uma gestão de infraestrutura muito mais precisa e correta.  </p>
+            <p> Vamos lá. Como é que funciona esse modelo?   </p>
+            <p>  Aqui está um gráfico da AWS, mas ele serve para todas as clouds.  </p>
+            <p> A cloud vai se responsabilizar, primeiramente, pela região que ela administra. Região é um conjunto de data centers. Tudo dentro da região é responsabilidade da cloud. Então, a localização onde o data center será instalado, a contratação de energia elétrica, água, construção dos prédios, segurança... enfim, tudo relacionado à estrutura física.   </p>
+            <p> Além disso, a região é composta por zonas de disponibilidade — ou seja, data centers físicos. Então, por exemplo, a região Norte da Virgínia tem seis zonas. Essa é uma responsabilidade não só da região como um todo, mas também de cada um dos seus data centers. Isso faz parte da responsabilidade da nuvem.   </p>
+            <p> Eles respondem por isso.   </p>
+            <p>  Como falei para vocês, muitas vezes, apesar de haver poucas regiões — 30, 40 no total — elas operam globalmente, mesmo que pequenas em termos de capacidade de processamento. Mas operam.  </p>
+            <p> Todos os cabos, fibra ótica, energia elétrica, segurança, prédios, máquinas, racks... tudo é responsabilidade deles. Tudo que é hardware, tudo que está fisicamente ali, é da cloud.   </p>
+            <p> Então estou falando desde os servidores até os discos, memórias, placas, placas-mãe — tudo, tudo mesmo. Inclui também hubs, firewalls físicos, cabeamento de rede, etc. Toda essa parte é 100% responsabilidade da cloud.   </p>
+            <p>Em um nível mais específico — a partir da camada computacional, ou seja, os servidores que executam os dados, bases de dados, plataformas — tudo isso também é de responsabilidade deles. Cuidado aqui com atenção: as bases de dados conhecidas e oferecidas pela cloud, assim como a parte de rede, também são 100% responsabilidade do provedor de nuvem.    </p>
+            <p>  Já no software — esse software entendido como middleware, ou seja, aquele que faz a comunicação entre as máquinas virtuais e a infraestrutura física — normalmente, estamos falando do virtualizador. Muito provavelmente, também entram aqui outros componentes de software, mas especialmente o virtualizador e o sistema operacional hospedeiro. Esses são sempre responsabilidade da AWS, ou da cloud que você estiver usando.  </p>
+            <p> Quando você coloca uma máquina virtual, você está usando um virtualizador. E esse virtualizador está em cima de uma máquina física, com um sistema operacional próprio, que você não vê. Esse sistema operacional faz parte da camada de software e da responsabilidade da cloud.   </p>
+            <p> Agora, nossa responsabilidade também é grande — e vai depender um pouco do nível de serviço contratado. Pensando no sentido mais amplo, ou seja, o maior número possível de responsabilidades que possamos ter:   </p>
+            <p>  Primeiro, todos os dados do nosso lado — cliente. A integração de dados, autenticação, tudo o que colocarmos na nuvem: nossos sistemas, bancos de dados, arquivos, código... tudo é nossa responsabilidade.  </p>
+            <p> Arquivos criptografados ou não, fotos, vídeos, imagens... tudo que enviarmos para a cloud é nossa responsabilidade.   </p>
+            <p>  Tráfego de rede também. Não somos nós que roteamos fisicamente, mas escolhemos o que criptografar ou não, quem pode acessar, quem não pode. Isso é nossa responsabilidade.  </p>
+            <p> Além disso, o sistema operacional cliente, aquele que rodará na máquina virtual, também é nossa responsabilidade. Se eu colocar uma versão antiga do Linux com vulnerabilidades, a responsabilidade é minha.   </p>
+            <p> A configuração da rede — as sub-redes, por exemplo — é feita por nós. A configuração de firewall, regras de entrada e saída, também.   </p>
+            <p> A camada operacional — qualquer tipo de aplicação web, banco de dados, sistema distribuído — é responsabilidade nossa. Somos nós que criamos usuários, damos permissões, criamos grupos. Se algo for feito errado, a responsabilidade é nossa.   </p>
+            <p>  E os dados dos nossos clientes?  </p>
+            <p>  Sempre que criarmos um sistema onde um cliente vá usar a infraestrutura na cloud para enviar dados, a responsabilidade também é nossa. Como prestadores de serviço, devemos garantir que os dados do cliente estejam seguros e bem tratados.  </p>
+            <p> Por exemplo: imagine que eu sou o iFood, e estou usando a AWS. Criei lá vários servidores, sistemas e tudo está rodando na AWS. Os dados que o cliente final insere no meu sistema são de responsabilidade do iFood — não do cliente final e não da AWS diretamente. A não ser que se comprove que a falha foi da AWS, aí sim, a responsabilidade é deles.   </p>
+            <p> Exemplo: se o cliente do iFood perdeu dados porque um storage não tinha réplica e a AWS perdeu tudo, aí a responsabilidade é da cloud. A AWS deve ressarcir o iFood, e o iFood, seu cliente. Esse é o modelo de responsabilidade compartilhada.   </p>
+            <p>  Esse modelo permite que a gente tenha mais confiança. Se eu estou indo para a nuvem, quero saber que o provedor é confiável, que ele garante aquilo que está sob sua responsabilidade. Se ele falhar, ele vai me ressarcir. E eu, como prestador, vou ter mais segurança ao oferecer serviços na cloud.  </p>
+            <p>  Essa é a divisão macro da responsabilidade, de maneira geral. O gráfico pode variar, mas a ideia serve para qualquer cloud.  </p>
+            <p>  O provedor de rede cuida da infraestrutura, do hardware, da segurança física — ou seja, parte policial, contrato de acesso. O cliente cuida dos dados, das configurações e dos acessos.  </p>
+            <p>  Tem uma tabelinha de responsabilidade que ajuda: se está na nuvem e está sem internet, o provedor cuida da segurança física. O cliente não tem responsabilidade por isso. Mas a configuração da VM é nossa. O gerenciamento de IAM (identidade e acesso) também. A configuração e proteção dos dados pode ser compartilhada, dependendo do tipo de problema.  </p>
+            <p>  Se for um problema de hardware da cloud, ela tem parte da responsabilidade. Se eu deixei meus dados expostos por erro de configuração, aí a responsabilidade é minha. </p>
+            <p> Vamos pensar agora nos tipos de serviço. </p>
+            <p>  Conforme o tipo de serviço que escolho, muda a minha responsabilidade. No modelo IaaS, eu tenho que instalar o sistema operacional, fazer a segurança, o código... tudo é minha responsabilidade. A cloud cuida só do básico: infraestrutura física, rede, segurança física.  </p>
+            
+          <li><strong> 8.2. Responsabilidade na nuvem.  </strong> </li>
+            <p> É a responsabilidade da nuvem, ou seja, aquilo que o provedor da nuvem precisa cuidar.   </p>
+            <p><strong>Cuidado com esse termo, porque ele costuma ser cobrado em provas de certificação: </strong></p>
+            <ul>
+              <li>Quando é responsabilidade "da" nuvem</li>
+              <li>Quando é responsabilidade "na" nuvem</li>
+            </ul>
+            <p>Estamos falando do guarda, do terreno, do prédio, das portas, dos cadeados, dos servidores, das câmeras de segurança, do cabeamento, da energia elétrica… tudo o que diz respeito à estrutura física do data center e da sua região.    </p>
+            <p> As regiões, normalmente, são data centers distantes entre si, mas interconectados – tudo isso para garantir resiliência e continuidade.   </p>
+            <p> Além disso, a proteção dos hipervisores e a atualização de patches de segurança do sistema operacional hospedeiro também são responsabilidade da nuvem.   </p>
+            <p> Pensa assim: embaixo das VMs (máquinas virtuais), tem um sistema operacional base. Esse sistema também recebe patches de segurança. E mantê-lo atualizado é responsabilidade da nuvem.   </p>
+            <p>Alguns exemplos?  Se houver um firewall global, é responsabilidade do provedor. Se há controle de acesso físico, também é responsabilidade dele.   </p>
+            <p> Quando pensamos em segurança, o provedor precisa garantir que os servidores físicos tenham vários níveis de proteção.   </p>
+            <p> Costumamos chamar isso de segurança em camadas, como uma cebola.  Essas empresas investem pesado, não só em infraestrutura segura, mas também em engenheiros de segurança que constroem ambientes cada vez mais resilientes. </p>
+            <p> Elas conquistam certificações internacionais, que comprovam que têm condições de serem provedores confiáveis. Essas certificações atendem exigências legais de cada país.  </p>
+            <p> Além disso, a Cloud cuida do monitoramento contínuo e da resposta a incidentes. Pensa: quando um ataque acontece, ele não pode passar despercebido.  </p>
+            <p>  Não pode acontecer de estar rolando um ataque no ambiente da nuvem e ninguém perceber.  Por isso, é essencial que haja monitoramento contínuo e respostas rápidas.  </p>
+            <p>  Hoje, no mundo conectado, é comum que países tentem atacar serviços de outros países – por espionagem, sabotagem ou disputa econômica. Os provedores sofrem ataques constantes, com robôs tentando invadir o tempo todo.  </p>
+            <p> Se esse monitoramento falhar, e não houver uma resposta ao incidente, o provedor não é confiável.   </p>
+            <p>  Alguns exemplos de ferramentas: AWS tem o Shield, Google Cloud e Azure têm seus próprios recursos e centros de resposta a incidentes </p>
+            <p>  Outro ponto importante: a Cloud não garante alta disponibilidade por padrão.  </p>
+            <p>  Quando falamos de alta disponibilidade, estamos falando de réplica, ou seja: “Eu replico o dado em várias regiões” – para que, se um servidor falhar, o serviço continue no ar. Assim, os dados ficam distribuídos pelo mundo:  Brasil, EUA, Europa, Japão… tudo replicado, redundante, seguro.   </p>
+            <p><strong>Além disso, temos:</strong></p>
+            <ul>
+              <li>QBalanceamento de carga </li>
+              <li>Failovers automáticos </li>
+              <li>Logs analisados em tempo real </li>
+              <li>Redirecionamento automático para servidores saudáveis </li>
+            </ul>
+            <p> O SLA (acordo de nível de serviço) normalmente é de 99,9% ou mais.  Quanto mais “noves” você quiser (99,99%, 99,999%), mais caro fica. Mas é possível contratar, sim.  </p>
+ 
+          <li><strong> 8.3. Responsabilidade da nuvem.  </strong> </li>
+            <p> A nossa responsabilidade como cliente é grande também, né? Apesar de estarmos pagando por aquele serviço, temos que tomar cuidado. Afinal, estamos operando ali com uma infraestrutura de ponta que está associada ao nosso cartão de crédito. Então, necessariamente, temos que ter muita atenção na hora de provisionar qualquer tipo de serviço. Pensar antes de fazer, planejar antes de executar, e tentar evitar ao máximo possíveis falhas, né?  </p>
+            <p> Ou seja, tentar ao máximo, claro, aprender — como você está fazendo —, melhorar o seu conhecimento, mas, principalmente, ficar atento na hora de provisionar. Olhar a calculadora de preços, verificar como aquele recurso é configurado, ver se posso levar aquilo para minha própria VPC... Enfim, pensar bem antes de fazer qualquer tipo de configuração, certo?  </p>
+            <p> Mas o que a gente tem que gerenciar? Primeiramente, a configuração do serviço. No serviço, há muitas opções. Para cada serviço, há páginas e páginas de opções que você pode configurar. Então, atente-se a tudo, né? Evite ao máximo clicar em "Criar" imediatamente sem passar por todas as páginas. Leia cada recurso. Verifique o que vai te custar, o que não vai te custar, o que se aplica à segurança, o que criptografa, onde você vai armazenar — se vai estar nos "blobs"... Enfim, leia todos os detalhes antes de fazer qualquer tipo de provisão.  </p>
+            <p> Sempre aquele princípio: não confie em ninguém, não confie em nada. E vá concedendo acessos conforme a necessidade. “Ah, preciso de um acesso de leitura” — ok, conceda acesso de leitura. “Agora preciso escrever” — então, conceda acesso de escrita. Jamais dê acesso de administração, a não ser que seja extremamente necessário. Evite esse tipo de situação.  </p>
+            <p> Outro ponto importante: sempre criptografe suas cargas de trabalho, ou seja, tanto em trânsito quanto em repouso. Porque quanto mais dificuldade colocarmos para o ladrão, mais seguros estaremos. Quanto mais obstáculos criarmos para quem tem má intenção, mais fácil será a nossa vida.  </p>
+            <p>  E outro ponto, claro: vamos fazer backup. O backup vai depender do nosso futuro. Ele traz benefícios dependendo de quando a gente precisa. Ele é um custo, sim, mas se não tivermos nenhum backup, podemos estar colocando nosso negócio em risco. </p>
+            <p> Vou contar uma história para você. Alguns anos atrás, uma das grandes empresas de varejo brasileiras entrou em processo de falência. Você já ouviu falar dela com certeza — aquela “vermelhinha” que fez uma campanha de marketing em um dos Big Brothers. Ela apostou alto na campanha de marketing, fez todo tipo de propaganda, o tempo todo. E, na metade do Big Brother, sofreu um ataque de DDoS e depois de ransomware. Ficou dez dias sem operar. Dez dias apenas com a página inicial no ar, sem realizar vendas.  </p>
+            <p> A perda dessa empresa — que entrou em falência recentemente — foi de 1 bilhão de reais. É claro que essa empresa já tinha dívidas, mas depois se descobriu que as vulnerabilidades eram muito maiores. 1 bilhão de reais é o fim da linha para 99,9999% das empresas brasileiras. Quem é que tem 1 bilhão sobrando? Isso aconteceu porque descuidaram, porque não protegeram seus dados, porque não configuraram corretamente os serviços, porque deixaram de fazer os backups adequados... e tiveram um tempo de restauração de dados de 10 dias, o que é crítico para uma empresa apostando em uma campanha gigante.  </p>
+            <p>  Esse é um exemplo muito claro da nossa responsabilidade. Se você deixar um bucket público, por exemplo, todas as informações podem ficar públicas para qualquer um. E a gente não quer isso, certo? </p>
+            <p>Com relação à segurança, o que o cliente deve fazer? Primeiramente, definir bem suas políticas de gravidade e permissão, ou seja, aquilo que vou permitir ou não. (RBAC, se você estiver falando de Azure.)   </p>
+            <p> Segundo ponto importante: configurar o log de auditoria e ficar sempre atento a anomalias. Há ferramentas que fazem isso por nós. "Opa, IP estranho", "tentativa de login estranha", "acesso feito por um local não habitual", "houve elevação de privilégio" — antes era só leitura, agora virou administrador. Isso não é uma anomalia?  </p>
+            <p> Outro ponto: criptografia. Embora no futuro talvez a criptografia como conhecemos seja menos relevante, ainda assim, é uma camada extra de proteção. Devemos criptografar tanto em trânsito quanto em repouso. Pode custar um pouco mais? Pode. O dado criptografado normalmente é maior, o que encarece. Mas, na minha visão, é melhor pagar um pouco mais do que perder tudo.  </p>
+            <p><strong>Checklist para aumentar a segurança na nuvem: </strong></p>
+            <ul>
+              <li>Habilite um usuário IAM. Não use o usuário root. Jamais entregue sua conta com acesso root. Guarde essa senha num lugar seguro, só você deve saber.  </li>
+              <li>Use MFA (autenticação multifator). Assim que você cria o IAM, ative o MFA no dispositivo. </li>
+              <li>Mantenha tudo atualizado. Aplicações, sistemas operacionais, bancos de dados — tudo deve estar com as últimas atualizações e patches de segurança.  </li>
+              <li>Use ferramentas de detecção de ameaças. Existem ferramentas que fazem isso, como o Security Hub na AWS. Elas detectam anomalias, analisam logs, fazem análises comportamentais e disparam alertas. </li>
+              <li>Tenha um bom plano de recuperação de desastres. E isso a gente vai ver no Capítulo 9. Se você for atacado por ransomware, por exemplo, precisa saber: o que fazer? Como restaurar? Quanto vai perder? Como estar pronto para agir?</li>
+            </ul>
+            <p> Não dá para ficar 10 dias parado como aquela grande empresa “vermelhinha” que perdeu 1 bilhão de reais.  </p>
+        </ul>
+      </div><!-- "modulo-1-capitulo-8-sol" -->    
+  
+
+
+      <div id="modulo-1-capitulo-7-sol" class="capitulo">
+        <p><strong>Capítulo 9 - Recuperação de Desastres   </strong></p>
+        <ul>
+          <li><strong> 9.1. Introdução à Recuperação de Desastres. </strong> </li>
+            <p>  Veremos um pouco sobre o que é a recuperação de desastres, os modelos de recuperação, o que é RTO e RPO na recuperação de desastres, e também sobre ferramentas de recuperação de desastres na nuvem.  </p>
+            <p> Afinal, quando falamos em recuperação de desastres (Disaster Recovery, DR), do que estamos falando? Estamos nos referindo a um conjunto de estratégias e processos que possibilitam a recuperação rápida de um ambiente após um desastre. Ou seja, o que posso fazer para me recuperar depois de um problema sério. Exatamente, turma, desastres são eventos graves. Não estamos falando de uma simples queda de energia ou de uma falha pontual. Um desastre é algo muito mais amplo: incêndios, enchentes, tempestades que destruam prédios — ou seja, algo realmente relevante.   </p>
+            <p> Esse conjunto de estratégias e esse plano nos permitem agir previamente para que possamos recuperar nosso ambiente caso ocorram esses incidentes. Isso pode ser o diferencial entre um negócio continuar vivo ou não. Um bom plano de recuperação de desastres minimizará o tempo de inatividade. Se houver um plano eficaz, certamente o impacto será reduzido, pois estaremos preparados para reagir ao desastre e minimizar os danos.    </p>
+            <p>  Esse plano é importante por dois motivos principais: conformidade — já que algumas certificações exigem um plano de recuperação — e continuidade do negócio. Imagine uma empresa 100% online, como tantas hoje em dia, sem qualquer plano de recuperação. Se algo acontecer, pode perder tudo. A ideia do plano é justamente essa: conseguir recuperar e manter o negócio de pé. Sem ele, talvez nem tenhamos mais um negócio para contar a história. Desastres podem ter diversas causas: incêndios, falhas humanas (como alguém esquecer o ar-condicionado ligado ou mal gerenciar o fluxo de energia elétrica), falhas de hardware ou até mesmo desastres naturais, cada vez mais comuns com as mudanças climáticas. Recentemente, por exemplo, tivemos cidades inteiras embaixo d’água por quase quatro meses, o que resultou na perda de muitos data centers alagados. E não há muito o que fazer em situações assim.   </p>
+            <p><strong> Abordagens de Recuperação </strong></p>
+            <ul>
+              <li>Backup simples – A mais barata. Basta ter backup de tudo. A recuperação, neste caso, é manual e pode levar horas ou dias, dependendo da quantidade de dados a restaurar. </li>
+              <li> Pilot Light – Um segundo data center com recursos mínimos ativos, escalando conforme a demanda. Ele mantém o backup do ambiente, e caso o ambiente principal caia, esse entra em ação com recursos reduzidos, mas prontos para ativação. </li>
+              <li>Warm Standby – Uma infraestrutura maior, parcialmente ativa, com tempo de recuperação em minutos. Custa mais, mas está quase pronta para uso imediato.  </li>
+              <li>Multi-site Active/Active – A opção mais cara. Tudo está replicado em tempo real entre dois ambientes completamente ativos. O tempo de resposta é de segundos. É como ter duas churrasqueiras idênticas prontas: se uma falhar, a outra assume instantaneamente. </li>
+            </ul>
+            <p><strong>RTO e RPO</strong></p>
+            <ul>
+              <li>RTO (Recovery Time Objective): tempo máximo aceitável para restaurar um serviço. Por exemplo, para um hospital ou empresa de energia elétrica, o RTO pode ser de segundos. Quanto menor o RTO, maior o investimento necessário.</li>
+              <li>RPO (Recovery Point Objective): quanto tempo de dados é aceitável perder. Em um pequeno e-commerce, perder três horas pode significar 150 acessos e talvez uma ou duas vendas. Já para grandes plataformas com milhões de acessos, perder uma hora significa perder muitas vendas. Portanto, o RPO varia conforme o negócio.  </li>
+            </ul>
+            <p>  Bancos ou operadoras de cartão de crédito, por exemplo, trabalham com RPO próximo de zero. Nenhuma perda é aceitável.  </p>
+            <p>  Quanto mais agressivos forem os objetivos de RTO e RPO (ou seja, quanto menores forem), mais alto será o custo da solução. Isso exige infraestrutura duplicada e redundância constante.  </p>
+            <p><strong>Ferramentas de DR, na AWS, por exemplo, há desde os recursos mais simples até os mais sofisticados: </strong></p>
+            <ul>
+              <li>Backup  </li>
+              <li>Disaster Recovery </li>
+              <li>Ferramentas como Route 53 (para gestão de DNS em failover) </li>
+              <li>Site Recovery </li>
+              <li>Backup com replicação entre regiões </li>
+            </ul>
+            <p><strong>Na Google Cloud Platform (GCP), temos opções semelhantes: </strong></p>
+            <ul>
+              <li>Backup </li>
+              <li>Disaster Recovery</li>
+            </ul>
+            <p> Esses serviços são equivalentes em termos de funcionalidade e permitem estratégias de recuperação baseadas em failover, replicação e redundância.   </p>
+          
+          <li><strong> 9.2.  Continuidade de negócios (PCN / PCS)  </strong> </li>
+            <p> vou falar um pouco sobre o que é a continuidade de negócios, o que é um plano de continuidade de negócios e também sobre estratégias para continuidade na nuvem, além de alguns testes e simulações de continuidade.    </p>
+            <p> Afinal de contas, o que é um plano de continuidade de negócios? É um plano — normalmente no papel — que garante que as empresas continuem funcionando mesmo após incidentes. Ele vai incluir três fatores, três pilares principais: estratégias de TI, pessoas e processos.  </p>
+            <p>  Notem que não é algo super simples. Você precisa preparar, treinar, dirigir e testar. É um plano que vai garantir que seu negócio continue funcionando. Qual é a diferença entre disaster recovery e continuidade de negócios? O disaster recovery vai focar na recuperação da infraestrutura, enquanto o plano de continuidade de negócios abrange algo muito maior, envolvendo a empresa como um todo — plano de operação, comunicação e pessoas. Como faremos para recuperar o nosso negócio?  </p>
+            <p>  O plano de continuidade de negócios é muito mais abrangente que o próprio disaster recovery. Disaster recovery é simplesmente voltar ao ambiente anterior. Já o plano de continuidade trata de como a empresa, a organização e os processos devem agir para que tudo volte à normalidade e o negócio continue operando. Tá certo? </p>
+            <p>  Então, no disaster recovery, eu recupero o que foi destruído. E no plano de continuidade de negócios, eu defino como isso será feito — quais ações todos vão tomar para que isso aconteça efetivamente.  </p>
+            <p> Alguns componentes desse plano: cada plano de continuidade de negócios vai depender muito do seu próprio negócio, dos seus processos, dos seus squads, das pessoas envolvidas. Mas, de maneira geral, podemos dizer que um plano de continuidade de negócios precisa, ao menos, de um plano de continuidade de serviços.  </p>
+            <p> Ou seja, como posso garantir a continuidade dos meus serviços mais valiosos? O que é crítico para mim? Porque existem muitas coisas que fazem parte do negócio, mas são secundárias, meros “penduricalhos”. Por exemplo: um cadastro de telefones ou endereços pode não ser essencial. Já o catálogo de produtos, o processo de venda e o de pagamento — isso sim é o core do negócio.  </p>
+            <p> Então, quando você pensa em continuidade de negócios num ambiente de microsserviços, você precisa identificar quais serviços atacar primeiro — os que geram mais valor. O plano precisa focar nos serviços críticos, nos essenciais para o negócio.  </p>
+            <p>  Outro ponto importante é ter um plano de comunicação: aconteceu um desastre, quem deve ser contatado? Quais squads? Quais empresas? Quais contatos internos e externos? Muitas vezes será necessário acionar agentes externos que darão suporte. O plano de comunicação deve prever isso: o que aconteceu, quem deve ser chamado, quem tratará da segurança, quem fará as restaurações, quem será responsável por cada ação. </p>
+            <p> Também é essencial ter um mapa de riscos — uma visualização clara de onde estão as maiores ameaças. Por exemplo, se o meu data center tem um risco elevado, como mitigar isso? Se um processo específico apresenta vulnerabilidade, o que será feito? Se tenho risco com fornecedores ou colaboradores, como tratar isso?  </p>
+            <p>  Outro ponto muito importante: testar e simular. Fazer ensaios para garantir que o plano, que está no papel, realmente funcione. De nada adianta escrever um plano lindo que não funciona na prática.  </p>
+            <p> Um exemplo legal é o da Netflix, que realiza testes constantes no ambiente com os chamados "Monkeys" — agentes que causam falhas intencionais no sistema para validar se o plano de recuperação realmente funciona. A Netflix é uma das gigantes da tecnologia mundial, então faz sentido aprender com eles.  </p>
+            <p><strong>Algumas estratégias para garantir a continuidade do negócio: </strong></p>
+            <ul>
+              <li>Replicação geográfica rápida: por exemplo, ter um ambiente no Brasil e uma cópia em outro país. Isso porque um país pode sofrer ataques, desastres naturais, mudanças políticas... Se não for possível ter em outro país, pelo menos em outra região do Brasil, como Sul e Norte.  </li>
+              <li>Failover automático: se um ambiente “cair”, outro entra em operação automaticamente. Isso garante um tempo de resposta rápido. </li>
+              <li>Autoescalonamento (auto-scale): vimos esse tema anteriormente. Quando há necessidade de mais recursos, o ambiente se adapta automaticamente. Isso permite deixar o ambiente de backup com o mínimo possível e, quando necessário, ele se expande sozinho.  </li>
+            </ul>
+            <p> Mas nada disso vai funcionar se não for testado. Copiar o plano de alguém ou apenas escrever algo não garante que funcione no seu contexto. Cada empresa tem suas particularidades. Então, é fundamental simular — incêndio, ataque, desligamento, etc. — e ver como o ambiente de recuperação vai reagir.  </p>
+            <p>Essas simulações validam a eficácia do plano. Um exemplo interessante é o Chaos Engineering, usado pela Netflix, que simula falhas reais no ambiente para testar a resiliência dos sistemas.   </p>
+            <p>Outra coisa importante: não pense que um plano de continuidade é definitivo. Ele precisa estar vivo, ser atualizado constantemente. Seu negócio cresce, muda, se adapta. Um plano criado para uma empresa com 10 usuários não servirá quando você tiver 1 milhão.   </p>
+            <p> É necessário revisar, reavaliar e testar frequentemente. Lembre-se também da análise de custo-benefício. Talvez o seu negócio seja pequeno a ponto de não justificar um plano de recuperação completo. Mas ainda assim, um plano de contingência pode ser necessário.  </p>
+            <p>Se o seu negócio não pode ficar 0 minuto fora do ar, então sim: você precisa de testes, análises, revisões e simulações para garantir a continuidade.   </p>
+          
+          <li><strong> 9.1. Introdução à Recuperação de Desastres. </strong> </li>
+            <p>  vamos entender um pouco mais sobre isso: como é que funciona, né? O que é TCO? O que é ROI na recuperação de desastres? Como você faz para calcular o seu TCO na recuperação de desastres? Como se calcula um ROI no seu plano? E, finalmente, quais ferramentas te ajudam a estimar o TCO e o ROI na cloud, tá?  </p>
+            <p>    o que é o TCO? É o Total Cost of Ownership, ou seja, o custo total de propriedade de uma solução ao longo do tempo. O que isso quer dizer? Pensa bem: quando vou implementar um negócio, não é só o custo da operação. Ele tem um custo de implementação, um custo de marketing, um custo de pessoal, um custo de processo... Todo negócio tem um custo completo. O título de TCO é essa soma, essa avaliação: quanto custa o meu negócio?  </p>
+            <p> E o que é ROI? O ROI nada mais é do que o retorno sobre o investimento. Então, você terá um custo, precisará aplicar dinheiro. Eu vou fazer a apresentação de alguns serviços com base naquele empreendimento que estou implementando. Esse empreendimento deve me retornar algum lucro, né? O retorno sobre o investimento é exatamente isso: o benefício financeiro obtido a partir do momento em que implemento essa operação de negócio.   </p>
+            <p> Então, calcular o TCO e o ROI ajuda na decisão de quando e o que implementar. Exatamente para quê? Para justificar. Como vou justificar um investimento gigante em disaster recovery se meu lucro é mínimo? Ou se meu custo é pequeno, mesmo com um lucro pequeno? Ou se meu custo é pequeno e meu lucro é alto? Como observar e justificar? Sabendo exatamente como funciona o seu TCO.   </p>
+            <p> Então, você tem o seu custo total, o lucro que você tem e, aqui, o valor — nesse círculo — que diz respeito à decisão de implementar ou não uma estratégia de recuperação de desastres.   </p>
+            <p> Como calculo, então, o meu TCO na recuperação de desastres? Primeiramente, devo considerar qual é o custo da minha infraestrutura. Pensa que estou operando com nuvem — esse custo de infraestrutura talvez seja bem pequeno, quase nada. Ou seja, profissionais e servidores que aloquei exclusivamente para mim por longo prazo. A maioria será custo de operação, ou seja, vou estar alugando, pagando conforme uso.   </p>
+            <p> Além disso, tenho que conhecer toda a minha infraestrutura. E, claro, junto com ela, vem o custo de pessoal para manter o ambiente funcionando. Outro ponto importante: saber quanto custa a replicação e a transferência de dados. Quando se trabalha com diferentes regiões, normalmente se fazem réplicas.   </p>
+            <p>  Digamos que eu tenha três nodes de dados: um no Norte da Virgínia, outro em São Paulo e outro em Sidney. E eu replico dados entre eles. Essa transferência tem um custo, porque, primeiro, os dados são replicados em três ambientes; segundo, são tratados pela rede da AWS, da Azure ou do GCP. E essa distribuição pela rede custa — tem custo de transferência de dados. Afinal, qualquer empresa tem custo para transferir dados.  </p>
+            <p> Outro ponto importante: se eu tenho outro servidor em outro local, é provável que tenha ferramentas instaladas complicadas, com tratamento que normalmente exige licenciamento. Se há licenciamento, há serviços pagos. Logo, tenho que considerar o custo de licenciamento das ferramentas.   </p>
+            <p>Tudo isso entra no custo total. E claro, um ponto superimportante: para ter um bom plano de recuperação de desastres, é preciso treinar as pessoas, realizar testes... Tudo isso entra no cálculo de custo.     </p>
+            <p> Então vou lá calcular: quanto custa minha infraestrutura, quanto custa a réplica, quanto custa a transferência de dados, quanto custam os licenciamentos, ferramentas e minha equipe. Aí, sim, terei uma ideia do custo da minha operação.   </p>
+            <p> Aqui temos uma fórmula bem básica que nos ajuda. O retorno sobre investimento (ROI): benefícios totais menos custos, dividido pelos próprios custos e multiplicado por 100. Parece complicado, mas não é.   </p>
+            <p>Suponha que meu custo seja de mil, e o benefício seja de dois mil. Dois mil menos mil dá mil. Mil dividido por mil dá um. Um vezes 100: meu ROI é 100%.    </p>
+            <p> Agora, vamos pensar em um caso mais específico. Imagine uma empresa que, se ficar seis horas fora do ar, perde R$ 500 mil. Mas ela tem um plano de disaster recovery. O investimento que farei para infraestrutura de recuperação seria de R$ 100 mil, reduzindo a falha de seis horas para 30 minutos. Ou seja, ganhei 5h30 de funcionamento.   </p>
+            <p> Se dividirmos seis horas por 30 minutos, teremos 12 pedaços de 30 minutos. Quer dizer que eu ganhei 11 pedaços — ou seja, evitei perder 11/12 de R$ 500 mil, sobrando aproximadamente R$ 450 mil que evitei perder.   </p>
+            <p>  Logo, para calcular o ROI: retorno (R$ 450 mil) menos o investimento (R$ 100 mil), dividido por R$ 100 mil, vezes 100. Isso dá 350% de retorno sobre o investimento.  </p>
+            <p>  Sem o ROI, eu teria perdido tudo. Com ele, tive 350% de ganho. Isso mostra que, mesmo parecendo caro, um plano de disaster recovery pode ser muito vantajoso, se considerarmos os riscos de perda.  </p>
+            <p> Vamos lembrar daquele exemplo de uma empresa gigante que perdeu R$ 1 bilhão em 10 dias. Se ela tivesse um bom plano de recuperação, talvez perdesse só R$ 100 milhões. Teria economizado R$ 900 milhões. Uma diferença brutal.   </p>
+            <p> Então precisamos sempre colocar na balança: qual será o retorno sobre investimento ao aplicar um plano de disaster recovery? Neste caso específico, 350%. Gastei R$ 100 mil e tive R$ 350 mil de retorno, evitando perder R$ 500 mil.   </p>
+            <p> O disaster recovery, a princípio, pode parecer caro, mas quando pensamos no custo de uma falha, percebemos que não é tão caro assim. Algumas empresas arriscam na sorte — não aplicam plano de recuperação e esperam que nada dê errado. Mas, quando dá, o prejuízo pode ser devastador. Imagine uma empresa perdendo R$ 1 bilhão hoje no Brasil — seria falência instantânea.   </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+          
+        </ul>
+      </div><!-- "modulo-1-capitulo-9-sol" -->    
+
+      <div id="modulo-1-capitulo-7-sol" class="capitulo">
+        <p><strong>Capítulo 9 - Backups  </strong></p>
+        <ul>
+          <li><strong> 9.1. Introdução a Backups na nuvem. </strong> </li>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+          
+        </ul>
+      </div><!-- "modulo-1-capitulo-9-sol" -->    
+
+
+
+
+      <div id="modulo-1-capitulo-7-sol" class="capitulo">
+        <p><strong>Capítulo 9 - Backups  </strong></p>
+        <ul>
+          <li><strong> 9.1. Introdução a Backups na nuvem. </strong> </li>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+            <p>    </p>
+          
+        </ul>
+      </div><!-- "modulo-1-capitulo-9-sol" -->    
+
+
 
     </div>  <!-- Conteúdo do módulo 1 -->
 
@@ -3260,7 +3797,32 @@
       </div><!-- "modulo-2-capitulo-2-sol" -->  
     </div> <!-- Conteúdo do módulo 2 -->
 
-
+    <!-- Conteúdo do módulo 2 -->
+    <div id="modulo-2-sol">
+      <p><strong>Capítulo 2 - Overview da Azure, AWS e GCP </strong></p>
+      <div id="modulo-2-capitulo-0-sol" class="capitulo"> 
+        <ul>
+          <li>3.1. O que são soluções Multicloud  </li>
+            <p> 3.1.1 nfhsdkhjsfsjk</p>
+          <li> </li>
+          <li> </li>
+        </ul>
+      </div><!-- "modulo-2-capitulo-0-sol" -->  
+      <div id="modulo-2-capitulo-1-sol" class="capitulo"> 
+        <ul>
+          <li>3.1. O que são soluções Multicloud  </li>
+          <li> </li>
+          <li> </li>
+        </ul>
+      </div><!-- "modulo-2-capitulo-1-sol" -->  
+      <div id="modulo-2-capitulo-2-sol" class="capitulo"> 
+        <ul>
+          <li>3.1. O que são soluções Multicloud  </li>
+          <li> </li>
+          <li> </li>
+        </ul>
+      </div><!-- "modulo-2-capitulo-2-sol" -->  
+    </div> <!-- Conteúdo do módulo 2 -->
 
 
     
