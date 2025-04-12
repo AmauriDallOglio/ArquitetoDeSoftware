@@ -130,6 +130,13 @@
         <li><a href="#modulo-1-capitulo-2-sol">Capítulo 2 - Overview da Azure, AWS e GCP </a></li>
         <li><a href="#modulo-1-capitulo-3-sol">Capítulo 3 - Soluções Multicloud  </a></li>
         <li><a href="#modulo-1-capitulo-4-sol">Capítulo 4 - Migração para a nuvem </a></li>
+        <li><a href="#modulo-1-capitulo-5-sol">Capítulo 5 - Introdução à Elasticidade e Escalabilidade </a></li>
+        <li><a href="#modulo-1-capitulo-6-sol">Capítulo 6 - Serviços de Infraestrutura básica  </a></li>
+        <li><a href="#modulo-1-capitulo-7-sol">Capítulo 7 - Backups  </a></li>
+        <li><a href="#modulo-1-capitulo-8-sol">Capítulo 8 - Responsabilidade na Cloud  </a></li>
+        <li><a href="#modulo-1-capitulo-9-sol">Capítulo 9 - Recuperação de Desastres  </a></li>
+        <li><a href="#modulo-1-capitulo-10-sol">Capítulo 10 - Aspectos Econômicos da Nuvem   </a></li>
+        <li><a href="#modulo-1-capitulo-11-sol">Capítulo 11 – Introdução ao Armazenamento de Arquivos e Objetos na Nuvem    </a></li>
       </ul>
     </ul>
   </div>
@@ -3300,7 +3307,6 @@
         </ul>
       </div><!-- "modulo-1-capitulo-4-sol" -->  
 
-
       <div id="modulo-1-capitulo-5-sol" class="capitulo">
         <p><strong>Capítulo 5 – Introdução à Elasticidade e Escalabilidade (prática AWS)  </strong></p>
         <ul>
@@ -3309,7 +3315,6 @@
         </ul>
       </div><!-- "modulo-1-capitulo-5-sol" -->      
   
-
       <div id="modulo-1-capitulo-6-sol" class="capitulo">
         <p><strong>Capítulo 6 - Serviços de Infraestrutura básica  </strong></p>
         <ul>
@@ -3390,8 +3395,6 @@
 
         </ul>
       </div><!-- "modulo-1-capitulo-6-sol" -->    
-
-
 
       <div id="modulo-1-capitulo-7-sol" class="capitulo">
         <p><strong>Capítulo 7 - Backups  </strong></p>
@@ -3524,7 +3527,6 @@
         </ul>
       </div><!-- "modulo-1-capitulo-7-sol" -->    
   
-
       <div id="modulo-1-capitulo-8-sol" class="capitulo">
         <p><strong>Capítulo 8 – Responsabilidade na Cloud  </strong></p>
         <ul>
@@ -3619,9 +3621,7 @@
         </ul>
       </div><!-- "modulo-1-capitulo-8-sol" -->    
   
-
-
-      <div id="modulo-1-capitulo-7-sol" class="capitulo">
+      <div id="modulo-1-capitulo-9-sol" class="capitulo">
         <p><strong>Capítulo 9 - Recuperação de Desastres   </strong></p>
         <ul>
           <li><strong> 9.1. Introdução à Recuperação de Desastres. </strong> </li>
@@ -3683,7 +3683,7 @@
             <p> É necessário revisar, reavaliar e testar frequentemente. Lembre-se também da análise de custo-benefício. Talvez o seu negócio seja pequeno a ponto de não justificar um plano de recuperação completo. Mas ainda assim, um plano de contingência pode ser necessário.  </p>
             <p>Se o seu negócio não pode ficar 0 minuto fora do ar, então sim: você precisa de testes, análises, revisões e simulações para garantir a continuidade.   </p>
           
-          <li><strong> 9.1. Introdução à Recuperação de Desastres. </strong> </li>
+          <li><strong> 9.3.  Calculadores de TCO e ROI  </strong> </li>
             <p>  vamos entender um pouco mais sobre isso: como é que funciona, né? O que é TCO? O que é ROI na recuperação de desastres? Como você faz para calcular o seu TCO na recuperação de desastres? Como se calcula um ROI no seu plano? E, finalmente, quais ferramentas te ajudam a estimar o TCO e o ROI na cloud, tá?  </p>
             <p>    o que é o TCO? É o Total Cost of Ownership, ou seja, o custo total de propriedade de uma solução ao longo do tempo. O que isso quer dizer? Pensa bem: quando vou implementar um negócio, não é só o custo da operação. Ele tem um custo de implementação, um custo de marketing, um custo de pessoal, um custo de processo... Todo negócio tem um custo completo. O título de TCO é essa soma, essa avaliação: quanto custa o meu negócio?  </p>
             <p> E o que é ROI? O ROI nada mais é do que o retorno sobre o investimento. Então, você terá um custo, precisará aplicar dinheiro. Eu vou fazer a apresentação de alguns serviços com base naquele empreendimento que estou implementando. Esse empreendimento deve me retornar algum lucro, né? O retorno sobre o investimento é exatamente isso: o benefício financeiro obtido a partir do momento em que implemento essa operação de negócio.   </p>
@@ -3704,79 +3704,211 @@
             <p> Vamos lembrar daquele exemplo de uma empresa gigante que perdeu R$ 1 bilhão em 10 dias. Se ela tivesse um bom plano de recuperação, talvez perdesse só R$ 100 milhões. Teria economizado R$ 900 milhões. Uma diferença brutal.   </p>
             <p> Então precisamos sempre colocar na balança: qual será o retorno sobre investimento ao aplicar um plano de disaster recovery? Neste caso específico, 350%. Gastei R$ 100 mil e tive R$ 350 mil de retorno, evitando perder R$ 500 mil.   </p>
             <p> O disaster recovery, a princípio, pode parecer caro, mas quando pensamos no custo de uma falha, percebemos que não é tão caro assim. Algumas empresas arriscam na sorte — não aplicam plano de recuperação e esperam que nada dê errado. Mas, quando dá, o prejuízo pode ser devastador. Imagine uma empresa perdendo R$ 1 bilhão hoje no Brasil — seria falência instantânea.   </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
+            <p><strong>Algumas ferramentas podem nos ajudar a estimar TCO e ROI: </strong></p>
+            <ul>
+              <li>Na AWS: o TCO Calculator, que estima os custos de infraestrutura na nuvem comparados com ambientes on-premises; </li>
+              <li>Na Azure: o Pricing Calculator, que estima custos de backup e recuperação;</li>
+              <li> Na Google Cloud: o Google Cloud Pricing Calculator, que estima custos de armazenamento e VMs. </li>
+            </ul>
+            <p> Essas ferramentas têm interfaces próprias. Na AWS, você pode estar logado na sua conta, salvar estimativas, colocar todas as etapas, ambientes, tempo de provisionamento, pessoas envolvidas... E ele te dá uma resposta. A Azure tem a mesma ferramenta, e o GCP também.   </p>
           
+          <li><strong> 9.4.  [DEMO] Criação de um ambiente de recuperação de desastres   </strong> </li>
+            <p>  </p>
         </ul>
       </div><!-- "modulo-1-capitulo-9-sol" -->    
 
-      <div id="modulo-1-capitulo-7-sol" class="capitulo">
-        <p><strong>Capítulo 9 - Backups  </strong></p>
+      <div id="modulo-1-capitulo-10-sol" class="capitulo">
+        <p><strong>Capítulo 10 -  Aspectos Econômicos da Nuvem  </strong></p>
         <ul>
-          <li><strong> 9.1. Introdução a Backups na nuvem. </strong> </li>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-          
+          <li><strong>10.1. Capex (Capital Expenditure) vs. Opex (Operational Expenditure).  </strong> </li>
+            <p> A computação em nuvem revolucionou como as empresas gerenciam infraestrutura de TI, oferecendo modelos de pagamento flexíveis e escalabilidade sob demanda. No entanto, para uma adoção eficiente e econômica, é fundamental entender os princípios econômicos que regem a nuvem, incluindo os modelos de investimento, os custos envolvidos e as ferramentas para previsão de gastos. Este Ebook explora os principais aspectos econômicos da computação em nuvem, incluindo a distinção entre Capex e Opex, análise de custos diretos e indiretos, e ferramentas de estimativa de custos fornecidas pelas principais provedoras de nuvem.   </p>
+            <p> O que é Capex (Capital Expenditure)? Capex (Capital Expenditure), ou Despesa de Capital, refere-se ao investimento financeiro realizado por uma empresa para adquirir, atualizar ou manter ativos físicos, como hardware, servidores, data centers e infraestruturas de rede. Esses investimentos são geralmente de longo prazo e impactam diretamente o balanço patrimonial da organização, sendo considerados bens que podem ser depreciados ao longo do tempo.   </p>
+            <p><strong>Características do Capex: </strong></p>
+            <ul>
+              <li>Alto investimento inicial: os custos iniciais podem ser elevados, exigindo um planejamento financeiro robusto. </li>
+              <li>Depreciação contábil: o investimento realizado em hardware e infraestrutura precisa ser amortizado ao longo do tempo.</li>
+              <li>Menor flexibilidade: uma vez adquirida, a infraestrutura precisa ser mantida e gerenciada internamente, sem possibilidade de ajustes dinâmicos.  </li>
+              <li>Custos fixos elevados: as empresas precisam arcar com gastos de energia, refrigeração, licenças de software e manutenção, independentemente da demanda real por recursos.  </li>
+              <li>Exemplos de Capex em TI:  </li>
+                <ul> 
+                  <li>Compra de servidores e equipamentos de rede. </li>
+                  <li> Construção ou expansão de data centers  </li>
+                  <li> Aquisição de licenças perpétuas de software</li>
+                  <li> Instalação de sistemas de armazenamento próprios. </li>
+                </ul>
+            </ul>
+            <p> O que é Opex (Operational Expenditure)? Opex (Operational Expenditure) se refere aos custos contínuos associados às operações diárias de um negócio ou de uma infraestrutura, como servidores, manutenção, pessoal, serviços de suporte, entre outros. Em contraste com Capex (Capital Expenditure), gasto com ativos de longo prazo, o Opex envolve despesas mais recorrentes e de curto prazo. Vamos detalhar alguns pontos importantes sobre o Opex:   </p>
+            <ul> 
+              <li>Definição  </li>
+                <ul> 
+                  <li>Opex é a despesa associada ao funcionamento diário de uma empresa, como salários, aluguel, contas de energia, serviços contínuos de nuvem e manutenção de hardware. </li>
+                </ul>
+              <li>Classificação: </li>
+                <ul> 
+                  <li>Custos fixos: são custos que não mudam com o volume de produção, como aluguel de espaço e salários de pessoal administrativo. </li>
+                  <li>Custos variáveis: são custos que mudam com a produção ou operação, como energia, comissões e custo de insumos.  </li>
+                </ul>
+              <li>Exemplos: </li>
+                <ul>
+                  <li>Infraestrutura de TI em nuvem: o pagamento por serviços em nuvem (como AWS, Azure ou Google Cloud) segue normalmente o modelo Opex, já que você paga conforme o uso.  </li>
+                  <li> o	Salários de funcionários: são uma parte significativa do Opex, englobando tanto os custos de pessoal técnico quanto administrativo </li>
+                </ul>
+              <li>Vantagens: </li>
+                <ul>
+                  <li>Flexibilidade: Opex permite uma gestão mais flexível e ágil dos recursos financeiros, já que a empresa paga apenas pelo que usa ou consome. </li>
+                  <li>Menor impacto no fluxo de caixa: como não há grandes desembolsos iniciais, a empresa consegue manter seu fluxo de caixa mais equilibrado, ao contrário de investimentos pesados em ativos (Capex). </li>
+                </ul>
+              <li>Desafios: </li>
+                <ul>
+                  <li>Custo recorrente: embora a flexibilidade seja uma vantagem, os custos recorrentes podem se acumular ao longo do tempo, tornando-se mais altos do que um pagamento único. </li>
+                  <li> Previsão financeira: pode ser mais difícil prever os gastos com Opex, especialmente em modelos de consumo variável, como os serviços em nuvem. </li>
+                  <li> Opex em Modelos de Nuvem: a migração para a nuvem tem facilitado a adoção de Opex, uma vez que os custos são baseados no uso real de recursos, em vez de investimentos pesados em hardware e infraestrutura. Isso permite que as empresas escalem suas operações conforme necessário, sem a necessidade de grandes investimentos iniciais. </li>
+                </ul>
+              <li>A escolha entre Capex e Opex depende do modelo de negócio e da estratégia financeira da empresa. A nuvem, ao operar sob o modelo Opex, possibilita que organizações de diferentes portes usufruam de infraestrutura robusta sem investimentos iniciais elevados.  </li>
+            </ul>
+
+          <li><strong> 10.2. Custos diretos e indiretos na nuvem.  </strong> </li>
+            <p>  Os custos indiretos na nuvem são despesas que não estão diretamente relacionadas ao uso dos recursos de infraestrutura, mas que impactam ainda assim o orçamento da organização. Eles podem ser difíceis de prever ou calcular, mas são fundamentais para uma visão completa dos gastos com nuvem. Aqui estão alguns exemplos e considerações sobre esses custos:  </p>
+            <p><strong>Custos com Gestão e Governança: </strong></p>
+            <ul>
+              <li>Gerenciamento de conta: muitas vezes, empresas precisam de uma equipe para gerenciar e monitorar a conta na nuvem. Isso pode incluir a administração de diferentes serviços, gerenciamento de permissões e controle de custos </li>
+              <li>Governança de dados: o gerenciamento de dados em nuvem, incluindo a segurança, compliance (como GDPR, HIPAA) e controle de acesso, envolve custos que vão além da infraestrutura de nuvem.</li>
+              <li>Monitoramento e auditoria: ferramentas e equipes responsáveis por garantir que os serviços na nuvem estão operando dentro dos parâmetros e auditando o uso para evitar excessos de consumo. </li>
+            </ul>
+            <p><strong> Custos de Treinamento e Capacitação </strong></p>
+            <ul>
+              <li>Treinamento de equipe: para garantir que as equipes de TI, segurança e operações saibam como usar a nuvem de forma eficiente e segura, é necessário investimento em treinamentos e certificações.    </li>
+              <li>Adaptação a novos modelos de trabalho: a transição para a nuvem pode exigir mudanças nos processos e fluxos de trabalho da empresa, o que pode gerar custos relacionados a adaptação e aprendizagem contínua.  </li>
+            </ul>
+            <p><strong> Custos com Segurança </strong></p>
+            <ul>
+              <li> Ferramentas de segurança: embora as plataformas de nuvem forneçam segurança ao nível de infraestrutura (como firewalls e criptografia), as empresas podem precisar de ferramentas e serviços adicionais para monitoramento de segurança, como proteção contra DDoS, firewalls de aplicação, controle de acessos etc.  </li>
+              <li> Auditoria de segurança: as auditorias periódicas de segurança e conformidade também representam custos indiretos, como a realização de testes de penetração e avaliação contínua de riscos.  </li>
+            </ul>
+            <p><strong> Custos com Transferência de Dados </strong></p>
+            <ul>
+              <li> Transferência de dados para fora da nuvem: o custo de transferência de dados de uma nuvem pública para fora da plataforma (para outras regiões ou entre diferentes provedores) pode ser significativo, principalmente se envolver grandes volumes de dados.  </li>
+              <li> Transferência entre zonas de disponibilidade: embora o tráfego de dados dentro da mesma região de nuvem possa ser barato ou gratuito, a transferência entre zonas ou regiões diferentes pode ter custos adicionais.  </li>
+            </ul>
+            <p><strong>Custos com Backup e Recuperação de Desastres  </strong></p>
+            <ul>
+              <li> Soluções de backup: o armazenamento de backups de dados ou configurações de infraestrutura também gera custos, especialmente quando a retenção de backups é necessária por longos períodos  </li>
+              <li>	Recuperação de Desastres (DR): planejar e implementar soluções de recuperação de desastres em nuvem (usando zonas de disponibilidade diferentes ou até mesmo múltiplos provedores) pode adicionar custos indiretos significativos.  </li>
+            </ul>
+            <p><strong> Custos com Licenciamento de Software </strong></p>
+            <ul>
+              <li> Licenciamento de Software como Serviço (SaaS): embora muitas plataformas em nuvem ofereçam opções de software como serviço, o licenciamento de ferramentas específicas (como sistemas de CRM, ERP, ou ferramentas de produtividade) também pode gerar custos indiretos.  </li>
+              <li> Licenciamento de Software de Terceiros: algumas empresas podem precisar de software de terceiros que não está diretamente incluído na plataforma de nuvem, mas que precisa ser executado nela, gerando custos de licenciamento adicionais. </li>
+            </ul>
+            <p><strong>Custos de Infraestrutura Local Complementar </strong></p>
+            <ul>
+              <li>Interconexões de rede: para garantir que os dados fluam de forma eficiente entre a nuvem e os sistemas locais, pode ser necessário investir em conexões dedicadas de rede, como links privados ou VPNs, o que gera custos adicionais de infraestrutura.  </li>
+              <li>Armazenamento local: algumas empresas podem precisar manter servidores locais (on-premises) para complementar a infraestrutura na nuvem, seja por questões de compliance, latência ou custo. Isso gera custos indiretos relacionados à manutenção de data centers físicos.  </li>
+            </ul>
+            <p><strong> Custos com Suporte </strong></p>
+            <ul>
+              <li>Suporte proativo e consultoria: as empresas frequentemente contratam consultores ou serviços de suporte mais robustos para garantir que sua infraestrutura na nuvem esteja sempre otimizada. Isso inclui consultorias sobre arquitetura de soluções ou suporte especializado.  </li>
+              <li>Planos de suporte: muitos provedores de nuvem oferecem planos de suporte que cobrem serviços especializados (resolução de problemas, desempenho etc.), mas esses planos costumam ter custos adicionais.  </li>
+            </ul>
+            <p><strong>Custos de Escalabilidade  </strong></p>
+            <ul>
+              <li>Provisionamento e ajustes: embora a nuvem seja escalável, os ajustes contínuos de capacidade (para otimizar desempenho ou reduzir custos) podem exigir envolvimento de equipes técnicas, ferramentas de automação e serviços que agregam custos indiretos.  </li>
+              <li>Provisionamento de recursos ociosos: mesmo em ambientes de nuvem, muitas vezes recursos são provisionados em excesso para garantir que a demanda seja atendida. Isso pode gerar gastos desnecessários, mesmo que esses recursos não sejam totalmente utilizados.  </li>
+            </ul>
+            <p>  Esses custos indiretos são importantes para se ter uma visão realista sobre o custo total de propriedade (TCO) da nuvem. Muitas vezes eles não são imediatamente visíveis ou claros, mas são cruciais para um planejamento financeiro bem-sucedido  </p>
+            
+          <li><strong> 10.3. Ferramentas básicas de estimativa de custos em AWS, Azure e GCP.   </strong> </li>  
+            <p> Os principais provedores de nuvem oferecem ferramentas para prever e calcular custos de uso antes da contratação dos serviços.   </p>
+            <p> AWS Pricing Calculator: A AWS fornece o AWS Pricing Calculator, que permite estimar os custos com base no consumo projetado de serviços como EC2, RDS, S3 e mais. A ferramenta está disponível em: https://calculator.aws    </p>
+            <p> Azure Pricing Calculator: A Microsoft oferece o Azure Pricing Calculator, que auxilia na previsão de custos para máquinas virtuais, bancos de dados, redes e outros serviços. • Disponível em: https://azure.microsoft.com/en-us/pricing/calculator/  </p>
+            <p> Google Cloud Pricing Calculator: O Google Cloud Pricing Calculator é a ferramenta do Google Cloud para estimar custos com instâncias de computação, BigQuery, armazenamento e outros serviços. • Acesse: https://cloud.google.com/products/calculator   </p>
+            <p> Compreender os aspectos econômicos da computação em nuvem é essencial para otimizar investimentos e evitar custos inesperados. Atransição de Capex para Opex, a gestão eficiente de custos diretos e indiretos, e o uso de ferramentas de estimativa permitem que empresas tomem decisões mais informadas e alinhadas com seus objetivos estratégicos.   </p>
+            <p>Ao implementar uma estratégia financeira bem-planejada, é possível maximizar os benefícios da nuvem enquanto se mantém um controle rigoroso sobre os gastos.    </p>
+            
+          <li><strong> Resumo dos Conceitos Relacionados à Computação em Nuvem:  </strong> </li>  
+            <p> Auto Scaling Group (ASG): O serviço AWS responsável por criar um grupo de instâncias EC2 que se ajusta automaticamente à demanda. O ASG oferece escalabilidade de instâncias EC2, garantindo alta disponibilidade com base em métricas como o uso de CPU.  </p>
+            <p> Segurança de Portas no Load Balancer: Para permitir que o Load Balancer envie tráfego HTTP para as instâncias EC2, a porta 80 deve estar aberta no Security Group, pois é a porta padrão para tráfego HTTP. Outras portas como 22 (SSH), 443 (HTTPS) e 3306 (MySQL) têm funções específicas.   </p>
+            <p> Target Group no Load Balancer: Ao configurar um Load Balancer, é necessário criar um Target Group, que agrupa as instâncias EC2 que receberão tráfego. Esse recurso é essencial para o balanceamento de carga eficiente e a alta disponibilidade das instâncias.   </p>
+            <p> Nuvens Públicas, Privadas e Híbridas: As nuvens híbridas combinam recursos de nuvens públicas e privadas, oferecendo flexibilidade e eficiência para as organizações. Já as nuvens públicas são gerenciadas por provedores de nuvem, e as privadas são exclusivas para uma única organização.   </p>
+            <p> Cloud Management Platforms (CMP): As CMPs oferecem automação e gerenciamento centralizado de múltiplos ambientes de nuvem, ajudando organizações a monitorar e otimizar seus recursos de nuvem.   </p>
+            <p>	Infrastructure as Code (IaC): O IaC permite que a infraestrutura seja gerenciada automaticamente e reproduzida por meio de código, promovendo consistência e eficiência na nuvem.    </p>
+            <p> Edge Computing: Este conceito visa reduzir a latência processando dados mais próximos dos usuários finais, melhorando o desempenho de aplicações sensíveis ao tempo de resposta, ao invés de depender exclusivamente de data centers remotos.   </p>
+            <p> "R's" da Migração para a Nuvem: O processo de migração envolve estratégias como Rehosting, Refactoring e Retiring, abordando desde a realocação de cargas de trabalho até a desativação de sistemas obsoletos.   </p>
+            <p>	IAM (Identity and Access Management): O IAM controla o acesso a recursos na nuvem com base em identidades e permissões, garantindo a segurança e conformidade das operações.  </p>
+            <p> Backup Incremental: O backup incremental armazena apenas os dados modificados desde o último backup completo, otimizando armazenamento e tempo.   </p>
+            <p> Responsabilidade Compartilhada na Nuvem: O modelo de responsabilidade compartilhada entre o provedor de nuvem e o cliente define quem é responsável pela segurança e conformidade da infraestrutura e dos dados.   </p>
+            <p>	Plano de Continuidade de Negócios (PCN): Um PCN garante a continuidade das operações através de estratégias como backup e recuperação de desastres, essencial para minimizar o impacto de falhas ou incidentes.  </p>
+            <p>	TCO (Total Cost of Ownership): O cálculo do TCO permite estimar os custos totais, incluindo aquisições e manutenção, ajudando nas decisões sobre a migração para a nuvem. </p>
+            <p>	Estimativas de Custos na Nuvem: Ferramentas como AWS Pricing Calculator ajudam empresas a planejar e prever os custos com base no uso real de recursos, evitando surpresas orçamentárias. </p>
+            <P> Opex vs Capex: O Opex refere-se aos custos operacionais recorrentes, enquanto o Capex envolve investimentos de capital iniciais em infraestrutura própria. Na computação em nuvem, o Opex é prevalente, dado que os custos são baseados no consumo de serviços. </P>
         </ul>
-      </div><!-- "modulo-1-capitulo-9-sol" -->    
+      </div><!-- "modulo-1-capitulo-10-sol" -->    
 
-
-
-
-      <div id="modulo-1-capitulo-7-sol" class="capitulo">
-        <p><strong>Capítulo 9 - Backups  </strong></p>
+      <div id="modulo-1-capitulo-11-sol" class="capitulo">
+        <p><strong>Capítulo 11 - Introdução ao Armazenamento de Arquivos e Objetos na Nuvem   </strong></p>
         <ul>
-          <li><strong> 9.1. Introdução a Backups na nuvem. </strong> </li>
+          <li><strong>11.1. Introdução ao S3 AWS.  </strong> </li>
             <p>    </p>
+          <li><strong>11.2. Introdução ao EBS e EFS AWS.   </strong> </li>
             <p>    </p>
+          <li><strong>11.3. Introdução à Conta de Armazenamento (Storage Account) Azure.    </strong> </li>
             <p>    </p>
+          <li><strong> 11.4. [DEMO] Criação de um WebSite estático com AWS S3.  </strong> </li>
             <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-            <p>    </p>
-          
+
         </ul>
-      </div><!-- "modulo-1-capitulo-9-sol" -->    
+      </div><!-- "modulo-1-capitulo-9-sol" -->     
+    </div>  <!-- Conteúdo do módulo solução 1 -->
 
-
-
-    </div>  <!-- Conteúdo do módulo 1 -->
 
     <!-- Conteúdo do módulo 2 -->
     <div id="modulo-2-sol">
-      <p><strong>Capítulo 2 - Overview da Azure, AWS e GCP </strong></p>
-      <div id="modulo-2-capitulo-0-sol" class="capitulo"> 
+      <h1>Soluções de Rede e Cibersegurança</h1>
+      <div id="modulo-2-capitulo-1-sol" class="capitulo"> 
+        <p><strong>Capítulo 1. Fundamentos e Conceitos de Redes de Computadores   </strong></p>
         <ul>
-          <li>3.1. O que são soluções Multicloud  </li>
-            <p> 3.1.1 nfhsdkhjsfsjk</p>
+          <li><strong>1.1. Histórico </strong> </li>
+            <p>udo começou com a ARPANET, lá nos anos 60 – uma época maravilhosa, com o movimento hippie, onde as pessoas começaram a se vestir de forma menos formal. Foi também nessa época que surgiu o primeiro experimento relacionado a redes. Esse sisteminha surgiu nos anos 70 (época de carros maravilhosos, que, para mim, são os mais bonitos que existem!). Mas vamos focar. Em 1969, para ser mais exato, foi criada a ARPANET. </p>
+            <p> O que é a ARPANET? O Departamento de Defesa dos Estados Unidos criou uma agência de pesquisa avançada chamada ARPA (atualmente chamada de DARPA), e ela foi responsável por projetar uma forma de comunicação inicial entre universidades. A ideia foi: “Vamos conectar essas faculdades, esses pontos distantes nos Estados Unidos, para que possamos nos comunicar com mais facilidade.” A partir disso, foi feita uma comunicação entre as universidades. Podemos ver aqui, por exemplo, o UCLA, o MIT e Harvard. Foram feitas conexões entre elas, permitindo a troca de informações. Esse foi o primeiro projeto pensando em redes como conhecemos hoje, com ligações ponto a ponto. Foi conectando vários pontos dos EUA. Olha que legal! Originalmente, foram conectadas quatro instituições: a UCLA, o SRI, a UCSB e a Universidade de Utah. Conectaram essas quatro faculdades e pensaram: "Acho que dá para fazer muito mais com isso." </p>
+            <p> Aí vieram os maravilhosos anos 80! E com eles, além de muita gente legal, rock and roll e outras coisas incríveis, foi criado um protocolo para definir essa comunicação. </p>
+            <p> Ou seja, de 1969 até o início dos anos 80, não existia um protocolo de comunicação. Os computadores eram simplesmente conectados (e, naquela época, ocupavam o tamanho de uma casa!), e não havia um padrão definido para que a comunicação acontecesse corretamente. </p>
+            <p> Foi só em meados dos anos 80 que criamos o famoso protocolo TCP/IP. Sim, já existiam outras formas de comunicação antes disso, mas não existia o IP. Com o TCP/IP, ficou muito mais fácil viabilizar a comunicação. O primeiro IP utilizado foi o IPv4. Um órgão (que falaremos mais adiante) criou esse padrão para definir como a comunicação deveria funcionar. </p>
+            <p> Por que IPv4? Porque era a quarta versão. Existiram as versões 1, 2 e 3, mas nenhuma deu certo. Na versão 4, acertaram: “Agora vai!” Mas ainda tem muita história para contar... </p>
+          
+          <li><strong>1.2. Primeiras Conexões </strong> </li>
+            <p> existiram as primeiras conexões onde levaram cabos e conectaram algumas universidades. Mas o primeiro tipo de conexão criado foi o famoso rede ponto a ponto, também conhecida como comutação de pacotes. Novos roteadores surgiram, que basicamente foram a evolução disso. </p>
+            <p> Inicialmente, as conexões eram diretas entre dois computadores, sem intermediários. Basicamente, alguém estava na universidade, olhou para um computador, olhou para outro computador e pensou: "E se eu pegasse um cabo e ligasse aqui até ali para os dois conversarem?" E foi assim que surgiu a rede. </p>
+            <p> Basicamente foi assim que começou toda essa brincadeira. Com os computadores conectados, eles começaram a trocar pacotes entre si — e aí começou. Mas a primeira rede criada de fato foi isso: ponto a ponto. Um computador ligado diretamente a outro. Só que, com o tempo, a rede evoluiu. Pensaram: "Beleza, esse negócio de ponto a ponto não está tão legal. A gente precisa melhorar isso." E foi aí que surgiu a comutação de pacotes. Basicamente, foi um avanço que permitiu que os dados fossem divididos em pacotes e enviados por caminhos diferentes na rede. Ou seja, antes, só havia o pacote: você pegava um pacote e o computador mandava diretamente para o outro. </p>
+            <p> Com a comutação de pacotes, era possível mandar diversos pacotes pelo mesmo cabo — ou melhor, pelo mesmo caminho — e endereçá-los para outros destinos. Então, com a comutação de pacotes, essa evolução maravilhosa, passou a ser possível mandar, pela mesma via, pacotes diferentes com endereços diferentes.   </p>
+            <p> Mas aí você pode se perguntar: "Como o pacote sabia que tinha que ir para outro lugar?" Por meio de uma outra coisinha maravilhosa chamada: roteamento.  </p>
+            <p>Então, criaram novos roteadores, que eram peças de hardware, e que serviam especificamente para entender os pacotes que estavam chegando e enviá-los para uma rota específica. Então o roteador mandava exatamente para o computador específico, para um ponto específico na rede.  E foi assim que começou essa brincadeira de melhorar o desenvolvimento das redes.  O roteador ajudou a gerenciar e direcionar o tráfego de dados de maneira mais eficiente. Como eu falei, ele pegava os pacotes, interpretava: "Computador 002 está querendo enviar uma informação para o 003? Ah, beleza. Vou pegar e mandar." Mas, ao mesmo tempo, o 002 também quer mandar algo para outro lugar, como o 004. Então o roteador consegue interpretar essa comunicação e o que recebeu, para enviar corretamente para os outros pontos.  Basicamente, essa é a função do roteador.  </p>
+          
+          <li><strong>1.3. Surgimento da Internet (BBS) </strong> </li> 
+            <p>  gente tinha a ARPANET, que era quando conectaram-se as universidades. Aumentou esse nível e criaram uma coisa chamada BBS. Basicamente, era um sistema de troca de mensagens e compartilhamento de arquivos que permitia aos usuários se conectarem por meio de modem e linhas telefônicas para enviar mensagens, ler mensagens, postar mensagens, compartilhar arquivos... até jogar jogos! Imagina você nos anos 80, mexendo nessa brincadeira, jogando com seus amiguinhos do outro lado do país. E sim, essa tela que vocês estão vendo é a tela do famoso Apple II. O Apple II foi quando começou a se popularizar esse negócio de computador, essa cara bonita que vocês estão vendo.  Sim, dali viemos até hoje, estamos praticamente em todos os lugares.  </p>
+            <p> Mas imagina você nos anos 80, imaginar que poderia trocar mensagens por meio de um computador que fica lá do outro lado dos Estados Unidos, em tempo real, usando sua linha telefônica! Se você chegasse nos anos 60 e falasse pra alguém que isso existiria, iam rir da sua cara! Pensa o quanto evoluímos em 20 anos, desde o surgimento da primeira conexão de dados com a ARPANET, que conectava universidades de forma bem difícil. A partir dos anos 80 já tínhamos esse sistema onde você ligava para fazer aquela conexão privada maravilhosa com seu amiguinho do outro lado dos Estados Unidos. Nos EUA, nos anos 80, foi desenvolvido um padrão de comunicação. Essa padronização facilitou um crescimento exponencial da internet, permitindo a comunicação global. </p>
+            <p> O impacto disso veio nos anos 80 e início dos 90. Entusiastas de tecnologia, eram pessoas muito interessadas nisso. Começaram a trocar arquivos... Imagina isso no começo dos anos 90 (principalmente nos EUA, claro, que foi onde tudo começou). As pessoas trocando arquivos – algo inimaginável anos antes. Com isso, a rede foi crescendo, conectando muito mais universidades, o governo, a parte administrativa...  Como falei, começamos nos anos 60.  </p>
+            <p> Antes, a conexão era por telefone. Então pensaram: “Vamos criar um protocolo comum para todos os computadores se comunicarem.”  Veio o TCP/IP, já com isso nativo. E aí, a internet começou de verdade. Entre os anos 80 e 90 – mais especificamente em 1990 – uma organização criou o WWW, que é uma aplicação na internet que permite a navegação por meio de documentos. Foi nessa época que foi criado o primeiro navegador, chamado Nexus. Imagina você em 1993 acessando a internet... Em vez daquela telinha toda verde (sim, a famosa tela verde), você agora podia ver textos melhor formatados, bem mais estruturados. Ele foi criado por Tim Berners-Lee e foi amplamente utilizado. Mas depois surgiu um outro navegador chamado Mosaic (CSA), que começou a tornar a coisa mais popular.  </p>
+            <p> Mas o que realmente podemos considerar o começo da internet como conhecemos hoje foi um carinha chamado Netscape, que popularizou os navegadores de uma forma violenta. Com isso, a navegação ficou muito mais fácil. As pessoas começaram a colocar fotos e boom! A internet explodiu!  </p>
+            <p> Quem tem um pouco mais de idade vai lembrar de uma empresa chamada Microsoft. Talvez você já tenha ouvido falar (ou vai ouvir bastante).  Ela adicionou dentro do seu sistema um navegador chamado Internet Explorer. Pode-se falar muito mal dele hoje, mas ele ajudou muito a popularizar a internet, já que vinha instalado gratuitamente nos computadores. Então, foi aí que essa brincadeira começou de verdade! </p>
+          <li><strong>1.4. Conexão em Casa  </strong> </li> 
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+
           <li> </li>
           <li> </li>
         </ul>
@@ -3795,7 +3927,43 @@
           <li> </li>
         </ul>
       </div><!-- "modulo-2-capitulo-2-sol" -->  
-    </div> <!-- Conteúdo do módulo 2 -->
+    </div> <!-- Conteúdo do módulo 2 solucao -->
+
+
+
+
+      <!-- Conteúdo do módulo 2 -->
+      <div id="modulo-2-sol">
+        <p><strong>Capítulo 2 - Overview da Azure, AWS e GCP </strong></p>
+        <div id="modulo-2-capitulo-0-sol" class="capitulo"> 
+          <ul>
+            <li>3.1. O que são soluções Multicloud  </li>
+              <p> 3.1.1 nfhsdkhjsfsjk</p>
+            <li> </li>
+            <li> </li>
+          </ul>
+        </div><!-- "modulo-2-capitulo-0-sol" -->  
+        <div id="modulo-2-capitulo-1-sol" class="capitulo"> 
+          <ul>
+            <li>3.1. O que são soluções Multicloud  </li>
+            <li> </li>
+            <li> </li>
+          </ul>
+        </div><!-- "modulo-2-capitulo-1-sol" -->  
+        <div id="modulo-2-capitulo-2-sol" class="capitulo"> 
+          <ul>
+            <li>3.1. O que são soluções Multicloud  </li>
+            <li> </li>
+            <li> </li>
+          </ul>
+        </div><!-- "modulo-2-capitulo-2-sol" -->  
+      </div> <!-- Conteúdo do módulo 2 -->
+  
+  
+
+      
+
+
 
     <!-- Conteúdo do módulo 2 -->
     <div id="modulo-2-sol">
