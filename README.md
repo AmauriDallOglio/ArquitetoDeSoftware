@@ -1,173 +1,19 @@
 
 
-# Bootcamp em Arquitetura de Software
+# Arquitetura de Software
 
-Este repositório contém os conteúdos, projetos e estudos do **Bootcamp em Arquitetura de Software**, abordando desde os fundamentos até a aplicação prática em ambientes de nuvem e soluções modernas.
-
----
-
-## Cronograma do Bootcamp
-
-
-### 1. Fundamentos em Arquitetura de Software
-Introdução aos conceitos fundamentais que definem a estrutura e o comportamento de sistemas:
-- Componentes, camadas e módulos
-- Princípios como coesão, acoplamento e separação de responsabilidades
-- Relevância da arquitetura na escalabilidade e manutenibilidade
-
----
-
-### 2. Requisitos Arquiteturais e Modelagem Arquitetural
-Transformação de requisitos de negócio em decisões arquiteturais:
-- Requisitos não funcionais (desempenho, segurança, disponibilidade)
-- Modelagem com diagramas (C4 Model, UML)
-- Técnicas de elicitação e avaliação arquitetural
-
----
-
-### 3. Design Patterns, Estilos e Padrões Arquiteturais
-Soluções reutilizáveis e boas práticas no design de software:
-- Padrões de Projeto (Singleton, Factory, Strategy etc.)
-- Estilos arquiteturais (camadas, orientado a eventos, REST)
-- Arquiteturas como MVC, Clean Architecture, Hexagonal, CQRS
-
----
-
-### 4. Principais Arquiteturas de Software da Atualidade
-Estudo das arquiteturas modernas mais adotadas no mercado:
-- Microsserviços, Serverless e Event-Driven Architecture (EDA)
-- Domain-Driven Design (DDD)
-- Integração via APIs e mensageria (Kafka, RabbitMQ)
-
----
-
-### ☁️ 5. Computação em Nuvem
-Fundamentos e práticas para ambientes cloud:
-- Modelos IaaS, PaaS, SaaS
-- Azure, AWS, GCP
-- Deploy, escalabilidade automática e containers (Docker/Kubernetes)
-
----
-
-### 6. Soluções de Rede e Cibersegurança
-Camada de segurança e conectividade em sistemas distribuídos:
-- VPCs, sub-redes, firewalls, gateways
-- Criptografia, autenticação/autorização (OAuth, JWT)
-- Políticas Zero Trust e IAM
-
----
-
-### 7. Soluções Digitais
-Aplicação de arquitetura para produtos e plataformas digitais:
-- Sistemas Web/Mobile, APIs RESTful
-- Integração com sistemas legados e foco em UX
-- Práticas de DevOps e arquitetura orientada a produto
-
----
-
-### 8. Soluções para Armazenamento de Dados
-Camada de dados moderna e escalável:
-- Bancos de dados relacionais (SQL) e não relacionais (NoSQL)
-- Ferramentas como EF Core, Dapper, CosmosDB, MongoDB
-- Estratégias de replicação, particionamento e alta disponibilidade
-
----
-
-## Tecnologias Utilizadas
-- .NET 8, C#
-- Azure, Docker, Kubernetes
-- Swagger, EF Core, Dapper
-- SQL Server, CosmosDB, MongoDB
-- MediatR, Clean Architecture, MVC, CQRS
-
----
-
-
-
-
-
-Arquitetura de software
-Sumário
-Módulo 1: Fundamentos de Arquitetura de Software
-Capítulo 0: Visão Geral do Módulo
-Capítulo 1: Introdução à Arquitetura de Software
-Capítulo 2: O Profissional de Arquitetura de Software
-Capítulo 3: Arquitetura de Software Moderna
-Capítulo 4: Estilos Arquiteturais Monolíticos
-Capítulo 5: Estilos Arquiteturais Distribuídos
-Exercícios de Fixação
-Capítulo 7: Conduzindo o Processo Decisório
-Capítulo 8: Gerenciando Riscos
-Capítulo 9: Frameworks Arquiteturais
-Capítulo 10: Engenharia e Arquitetura de Software
-Capítulo 11: DEVOPS
-Módulo 2: Requisitos Arquiteturais e Modelagem Arquitetural
-Capítulo 0: Introdução à Engenharia de Requisitos
-Capítulo 1: Fundamentos de Engenharia de Requisitos
-Capítulo 2: Elicitação de Requisitos Arquiteturais
-Capítulo 3: Uso do Trello para Gestão de Requisitos – Parte I
-Capítulo 4: Uso do Trello para Gestão de Requisitos – Parte II
-Capítulo 5: Primeira Aula Interativa – Demonstração de Projeto de Levantamento de Requisitos Arquiteturais
-Capítulo 6: Análise de Requisitos Arquiteturais
-Capítulo 7: Qualidade e Requisitos Arquiteturais
-Capítulo 8: Especificação e Validação de Requisitos Arquiteturais (E-book)
-Capítulo 9: Introdução ao Azure DevOps
-Capítulo 10: Segunda Aula Interativa – Projeto no Azure DevOps
-Material Complementar
-Módulo 3: Design Patterns, Estilos e Padrões Arquiteturais
-Capítulo 0 - Visão Geral do Módulo
-Capítulo 1 – Arquitetura de Software e Qualidade de Código
-Capítulo 2 – Catálogos de Padrões
-Capítulo 3 – GoF – Padrões de Criação
-Capítulo 4 – GoF – Padrões Estruturais
-Capítulo 5 – GoF – Padrões Comportamentais
-Atividade de Fixação
-Primeira Aula Interativa - Capítulo 6 – Princípios SOLID
-Capítulo 7 – Estilos Arquiteturais
-Capítulo 8 – Padrões Arquiteturais
-Capítulo 9 – Arquiteturas de Camadas
-Capítulo 10 – Padrões para Sistemas Distribuídos
-Capítulo 11 – Arquiteturas de Sistemas Distribuídos
-Atividade Modular
-Capítulo 12 – Aplicação de Padrões Arquiteturais
-Módulo 4: Principais Arquiteturas de Software da Atualidade
-Capítulo 0: Visão Geral do Módulo
-Capítulo 1: Introdução a Arquiteturas de Sistemas Web
-Capítulo 2: Frameworks SPA para Desenvolvimento WEB
-Capítulo 3: Introdução às APIs e Arquiteturas REST e GraphQL
-Capítulo 4: Documentação de APIs com SWAGGER
-Capítulo 5: Demonstração de Arquiteturas de Microsserviços
-Capítulo 6: Arquiteturas Orientadas a Eventos
-Capítulo 7: Introdução às Arquiteturas de Sistemas Mobile
-Capítulo 8: Arquiteturas Cloud Native e Serverless
-Capítulo 9: Introdução às FaaS (AWS Lambda e Azure Functions)
-Capítulo 10: Demonstração Prática da Arquitetura FaaS
-Arquitetura de soluções
-Sumário
-Módulo 1: Fundamentos de Arquitetura de soluções
-Capítulo 0 - Apresentação
-Capítulo 1 - Introdução à computação em nuvem
-Capítulo 2 - Overview da Azure, AWS e GCP
-Capítulo 3 - Soluções Multicloud
-Capítulo 4 - Migração para a nuvem
-Arquitetura de software
-Módulo 1: Fundamentos de Arquitetura de Software
-Capítulo 0: Visão Geral do Módulo
 A arquitetura de software é fundamental para o desenvolvimento de sistemas, a arquitetura de software foca na estrutura interna dos sistemas e na organização dos componentes, para garantir desempenho e manutenibilidade. A Arquitetura de soluções que trata da integração de múltiplos sistemas e aplicações dentro de uma organização para resolver problemas específicos. A arquitetura corporativa que alinha a tecnologia, aos objetivos estratégicos de longo prazo da empresa.
 
 O arquiteto de softwares deve ter uma combinação de hard skills, como design patterns e clean cold e soft skills, como comunicação e liderança. Além disso, atua como um elo de comunicação entre diferentes equipes garantindo que as soluções atendam tanto as necessidades técnicas quanto empresariais.
 
-Capitulo 2, gerindo o processo de arquitetura, neste capitulo o foco está na gestão do processo de arquitetura. Um arquiteto precisa conhecer ferramentas como a matriz de decisão que ajuda a escolher em diferentes soluções e a análise de premissas e restrições, que garante que a arquitetura esteja de acordo com os limites do projeto. Além disso, frameworks como Hackman e o togas fornecem estruturas para desenvolver arquiteturas corporativas que atentam às necessidades de negócios.
-
-Capitulo 3, governança da arquitetura, a governança da arquitetura envolve garantir que as soluções arquiteturais estejam sendo implementadas corretamente e que as decisões sigam padrões estabelecidos. O arquiteto deve garantir a conformidade das soluções através de revisões periódicas e assegurar que as decisões sejam documentadas adequadamente, contribuindo para a evolução da arquitetura.
-
-Capitulo 4, evoluções e tendências da arquitetura, neste capitulo o foco é na evolução da arquitetura e nas novas tendências tecnológicas. O arquiteto de software precisa estar atendo às mudanças e inovações para adaptar e melhorar as soluções atuais. Isso inclui a adoção de práticas como DevOps, cloud computing e arquiteturas evolutivas que são essenciais para manter a competividade e atender as demandas dinâmicas do mercado.
-
-Capítulo 1: Introdução à Arquitetura de Software
-1.1. Introdução à Arquitetura
 O termo "arquitetura de software" é relativamente recente, seus princípios foram aplicados esporadicamente a partir dos anos 80 e tornaram-se mais difundidos nos anos 90. No entanto, o conceito remonta às pesquisas de Edsger Dijkstra (1968) e David Parnas (anos 90), que já compreendiam a importância da estrutura do software.
 
 O arquiteto de software é o profissional responsável por projetar a estrutura de todo o sistema, considerando escalabilidade, performance, disponibilidade e a experiência da equipe que trabalhará no código posteriormente. Além disso, define padrões arquiteturais, escolhe tecnologias e negocia com a equipe de produto, trata-se da modelagem do produto, o estudo do fluxo dos dados, especificação das atribuições dos módulos e composição de alto nível. Apenas elementos extremamente importantes são detalhados, evitando decisões prematuras que possam demandar mudanças arquiteturais futuras, a arquitetura é um design de sistema, difícil de modificar e baseada em padrões, a arquitetura de software refere-se à estrutura fundamental de um software, cada estrutura compreende elementos, suas relações e propriedades, é essencial planejar a arquitetura desde o início do projeto, pois cada escolha impacta diretamente no crescimento, nos custos e na manutenção do software. O trabalho do arquiteto é construir um design de sistema. O cliente pode passar horas explicando o que deseja, e o papel do arquiteto é transformar essa informação em um modelo compreensível para os desenvolvedores. Se colocarmos o cliente para conversar diretamente com os programadores, pode haver uma desconexão, pois falam linguagens diferentes. O arquiteto atua como um intermediário técnico, traduzindo requisitos em um desenho que a equipe possa seguir.
+
+
+
+## 1. Fundamentos em Arquitetura de Software
+
 
 O principal objetivo da arquitetura de software é assegurar que o sistema atenda tanto os requisitos funcionais quanto os não funcionais, além disso, deve ser fácil de manter e expandir, criar uma arquitetura é semelhante a elaborar um diagrama arquitetural, onde visualizamos o fluxo de dados, assim como no futebol analisamos a sequência de uma jogada, o diagrama representa módulos, responsabilidades e atribuições. A arquitetura de software estrutura sistemas, definindo componentes tecnológicos e suas interações para formar um sistema coeso. Decisões de alto nível garantem escalabilidade, disponibilidade, confiabilidade, manutenibilidade, portabilidade e segurança.
 
